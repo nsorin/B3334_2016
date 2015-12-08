@@ -17,20 +17,7 @@ public class Session implements SessionItf
         boolean status = false;
         Date date = new Date();
         User user = new User(login,date,output);
-        User current = listUsers.getFirst();
-        if(current!=null)
-        {
-            boolean loginExist = false;
-            do
-            {
-                if(current.getLogin()==login)
-                {
-                    test = true;
-                    break;
-                }
-            }while(!current.equals(listUsers.getLast()));
-        }
-        if(test==false)
+        if(!listUsers.contains(user))
         {
             listUsers.addFirst(user);
             status = true;
@@ -40,22 +27,30 @@ public class Session implements SessionItf
 
     public boolean disconnect(String login, OutputItf output) throws RemoteException
     {
-        boolean status = false;
+        /*boolean status = false;
         int index;
         index = listUsers.indexOf(user);
         listUsers.remove(index);
         status = true;
-        return status;
+        return status;*/
     }
 
-    public String receive(String msg) throws RemoteException
+    public void receive(String content) throws RemoteException
     {
-        return msg;
+
     }
 
     public void send(String notification)
     {
-
+        User current = listUsers.getFirst();
+        if(current!=null)
+        {
+            do
+            {
+                current.getOutput().display(notification);
+                current = listUsers.get(listUsers.indexOf(current)+1);
+            }while(current!=null);
+        }
     }
 
     public Session()
