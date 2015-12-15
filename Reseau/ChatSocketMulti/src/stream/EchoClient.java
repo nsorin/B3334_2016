@@ -10,7 +10,6 @@ import java.io.*;
 import java.net.*;
 
 
-
 public class EchoClient {
 
  
@@ -21,10 +20,12 @@ public class EchoClient {
     public static void main(String[] args) throws IOException {
 
         Socket echoSocket = null;
-        PrintStream socOut = null;
+        //PrintStream socOut = null;
+        ObjectOutputStream socOut = null;
         BufferedReader stdIn = null;
-        BufferedReader socIn = null;
-
+        //BufferedReader socIn = null;
+        ObjectInputStream socIn = null;
+        
         if (args.length != 2) {
           System.out.println("Usage: java EchoClient <EchoServer host> <EchoServer port>");
           System.exit(1);
@@ -33,9 +34,11 @@ public class EchoClient {
         try {
       	    // creation socket ==> connexion
       	    echoSocket = new Socket(args[0],new Integer(args[1]).intValue());
-	    socIn = new BufferedReader(
-	    		          new InputStreamReader(echoSocket.getInputStream()));    
-	    socOut= new PrintStream(echoSocket.getOutputStream());
+	    //socIn = new BufferedReader(
+	    //		          new InputStreamReader(echoSocket.getInputStream()));    
+	    //socOut= new PrintStream(echoSocket.getOutputStream());
+	    socIn = new ObjectInputStream(echoSocket.getInputStream());
+      	socOut = new ObjectOutputStream(echoSocket.getOutputStream());
 	    stdIn = new BufferedReader(new InputStreamReader(System.in));
         } catch (UnknownHostException e) {
             System.err.println("Don't know about host:" + args[0]);
@@ -50,8 +53,36 @@ public class EchoClient {
         while (true) {
         	line=stdIn.readLine();
         	if (line.equals(".")) break;
-        	socOut.println(line);
-        	System.out.println("echo: " + socIn.readLine());
+        	Request req = null;
+        	if(line.charAt(0) != '/') {
+        		req = new Request(Request.MESSAGE_ALL, line, "");
+        	} else {
+        		String[] parts = line.split(" ");
+        		switch(parts[0]) {
+        			case "/connect":
+        				req = new Request(Request.CONNECT, parts[1], "");
+        				break;
+        			case "/disconnect":
+        				req = new Request(Request.DISCONNECT, "", "");
+        				break;
+        			case "/private": 
+        				req = new Request(Request.MESSAGE_PRIVATE, parts[2], parts[1]);
+        				break;
+        			default:
+        				break;
+        		}
+        	}
+        	
+        	
+        	socOut.writeObject(req);
+        	//System.out.println("echo: " + socIn.readLine());
+        	try {
+				Request response = (Request) socIn.readObject();
+				System.out.println(response.toString());
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
         }
       socOut.close();
       socIn.close();
