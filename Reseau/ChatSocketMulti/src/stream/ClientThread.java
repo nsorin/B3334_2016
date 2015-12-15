@@ -5,7 +5,7 @@
  * Authors:
  */
 
-package ChatSocket.src.stream;
+package stream;
 
 import java.io.*;
 import java.net.*;
