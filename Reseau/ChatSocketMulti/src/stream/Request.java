@@ -8,6 +8,7 @@ public class Request {
 	public static final int DISCONNECT = 1;
 	public static final int MESSAGE_ALL = 2;
 	public static final int MESSAGE_PRIVATE = 3;
+	public static final int ERROR = 4;
 	
 	private String username;
 	private Date date;
@@ -30,7 +31,27 @@ public class Request {
 	public void setOption(String option){this.option = option;}
 	
 	public String toString() {
-		return "[" + date + "] " + username + " : " + content;
+		String s = "";
+		switch(type) {
+			case CONNECT:
+				s= "[" + date + "] " + username + " connected.";
+				break;
+			case DISCONNECT:
+				s= "[" + date + "] " + username + " disconnected.";
+				break;
+			case MESSAGE_ALL:
+				s= "[" + date + "] " + username + " : " + content;
+				break;
+			case MESSAGE_PRIVATE:
+				s= "[" + date + "] " + username + " (private) : " + content;
+				break;
+			case ERROR:
+				s = "[" + date + "] ERROR : " + content;
+				break;
+			default:
+				break;
+		}
+		return s;
 	}
 	
 	public Request(int type, String content, String option)
