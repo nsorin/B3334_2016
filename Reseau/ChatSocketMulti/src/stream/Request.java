@@ -1,15 +1,18 @@
 package ChatSocketMulti.src.stream;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Request {
-	
+public class Request implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 	public static final int CONNECT = 0;
 	public static final int DISCONNECT = 1;
 	public static final int MESSAGE_ALL = 2;
 	public static final int MESSAGE_PRIVATE = 3;
 	public static final int ERROR = 4;
 	public static final int SUCCESS = 5;
+	public static final int EMPTY = 6;
 	
 	private String username;
 	private Date date;
@@ -63,5 +66,12 @@ public class Request {
 		this.type = type;
 		this.content = content;
 		this.option = option;
+	}
+	
+	public Request()
+	{
+		this.type = ERROR;
+		this.content = "";
+		this.option = "";
 	}
 }

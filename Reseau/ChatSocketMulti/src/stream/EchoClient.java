@@ -71,14 +71,15 @@ public class EchoClient {
         			default:
         				break;
         		}
-        	}
-        	
-        	
+        	}	
         	socOut.writeObject(req);
         	//System.out.println("echo: " + socIn.readLine());
         	try {
 				Request response = (Request) socIn.readObject();
-				System.out.println(response.toString());
+				if(response.getType()!=Request.EMPTY)
+				{
+					System.out.println(response.toString());
+				}
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

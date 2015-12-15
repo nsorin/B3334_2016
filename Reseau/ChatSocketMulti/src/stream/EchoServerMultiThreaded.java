@@ -30,10 +30,12 @@ public class EchoServerMultiThreaded  {
 	try {
 		listenSocket = new ServerSocket(Integer.parseInt(args[0])); //port
 		System.out.println("Server ready..."); 
+		listUsernames = new LinkedList<String>();
+		listMessages = new LinkedList<Request>();
 		while (true) {
 			Socket clientSocket = listenSocket.accept();
 			System.out.println("Connexion from:" + clientSocket.getInetAddress());
-			ClientThread ct = new ClientThread(clientSocket,listUsernames,listMessages);
+			ClientThread ct = new ClientThread(clientSocket);
 			ct.start();
 		}
         } catch (Exception e) {

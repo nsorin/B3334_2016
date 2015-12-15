@@ -9,20 +9,15 @@ package ChatSocketMulti.src.stream;
 
 import java.io.*;
 import java.net.*;
-import java.util.LinkedList;
+import java.util.Date;
 
-public class ClientThread
-	extends Thread {
+public class ClientThread extends Thread {
 	
 	private Socket clientSocket;
-	private static LinkedList<String> listUsernames;
-	private static LinkedList<Request> listMessages;
 	private String username;
 	
-	ClientThread(Socket s, LinkedList<String> listUsernames, LinkedList<Request> listMessages) {
+	ClientThread(Socket s) {
 		this.clientSocket = s;
-		ClientThread.listUsernames = listUsernames;
-		ClientThread.listMessages = listMessages;
 		username = null;
 	}
 	
@@ -40,14 +35,13 @@ public class ClientThread
 		  ObjectOutputStream oos = new ObjectOutputStream(os);
 		  InputStream is = clientSocket.getInputStream();
 		  ObjectInputStream ois = new ObjectInputStream(is);
+		  MessageThreadServer messageThread = new MessageThreadServer(oos);
+		  messageThread.start();
 		  
 		  while (true) {
-			/*String line = socIn.readLine();
-			socOut.println(line);*/
 			  Request request = (Request)ois.readObject();
 			  Request response = requestProcess(request);
-			  oos.writeObject(response);
-		  
+			  oos.writeObject(response); 
 		  }
 	  	} catch (Exception e) {
 		  System.err.println("Error in EchoServer:" + e); 
@@ -57,36 +51,57 @@ public class ClientThread
 	
 	public Request requestProcess(Request request)
 	{
-		Request response;
+		Request response = new Request();
+		Request message = new Request();
+		Date date = new Date();
 		int typeReq = request.getType();
 		switch(typeReq)
 		{
 			case Request.CONNECT :
 				String username = request.getContent();
-				if(listUsernames.contains(username))
+				if(EchoServerMultiThreaded.listUsernames.contains(username))
 				{
 					response = new Request(Request.ERROR,"Username already used.","");
 				}
 				else
 				{
-					listUsernames.addFirst(username);
+					EchoServerMultiThreaded.listUsernames.addFirst(username);
+					this.username = username;
+					System.out.println(this.username + " connected.");
 					response = new Request(Request.SUCCESS,"Connection successful.","");
+					message = new Request(Request.CONNECT,"","");
+					message.setUsername(this.username);
+					message.setDate(date);
+					EchoServerMultiThreaded.listMessages.addFirst(message);
 				}
 				break;
 			case Request.DISCONNECT :
-				listUsernames.remove(this.username);
-				response = new Request(Request.SUCCESS,"Disconnection successful.","");
+				if(EchoServerMultiThreaded.listUsernames.contains(this.username))
+				{
+					EchoServerMultiThreaded.listUsernames.remove(this.username);
+					System.out.println(this.username + " disconnected.");
+					response = new Request(Request.SUCCESS,"Disconnection successful.","");
+					message = new Request(Request.DISCONNECT,"","");
+					message.setUsername(this.username);
+					message.setDate(date);
+					EchoServerMultiThreaded.listMessages.addFirst(message);
+					this.username = "";
+				}
 				break;
 			case Request.MESSAGE_ALL :
-				response = new Request(Request.SUCCESS,"successful.","");
+				request.setDate(date);
+				request.setUsername(this.username);
+				EchoServerMultiThreaded.listMessages.addFirst(request);
+				response = new Request(Request.EMPTY,"","");
 				break;
 			case Request.MESSAGE_PRIVATE :
-				response = new Request(Request.SUCCESS,"successful.","");
+				response = new Request(Request.EMPTY,"","");
 				break;
 			default :
-				response = new Request(Request.SUCCESS,"successful.","");
+				response = new Request(Request.EMPTY,"","");
 				break;
 		}
+		response.setDate(date);
 		return response;
 	}
  }
