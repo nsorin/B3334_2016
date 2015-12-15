@@ -1,4 +1,4 @@
-package chat.client; 
+package chat.client.protocol; 
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

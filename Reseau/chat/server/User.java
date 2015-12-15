@@ -1,6 +1,7 @@
-package chat.server
+package chat.server;
 
 import java.util.Date;
+import chat.client.protocol.OutputItf;
 
 public class User
 {

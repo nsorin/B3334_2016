@@ -35,13 +35,13 @@
  * intended for use in the design, construction, operation or
  * maintenance of any nuclear facility.
  */
-package chat.server
-
-import chat.server.protocol.SessionItf;
+package chat.server;
 
 import java.rmi.registry.Registry;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
+
+import chat.server.protocol.SessionItf;
 
 public class Server {
 
@@ -49,12 +49,12 @@ public class Server {
 
         try {
             LocateRegistry.createRegistry(1099);
-            Hello obj = new Hello();
-            HelloItf stub = (HelloItf) UnicastRemoteObject.exportObject(obj, 0);
+            Session obj = new Session();
+            SessionItf stub = (SessionItf) UnicastRemoteObject.exportObject(obj, 0);
 
             // Bind the remote object's stub in the registry
             Registry registry = LocateRegistry.getRegistry();
-            registry.bind("Hello1", stub);
+            registry.bind("Session1", stub);
 
             System.err.println("Server ready");
 

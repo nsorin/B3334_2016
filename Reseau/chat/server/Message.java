@@ -1,4 +1,4 @@
-package chat.server
+package chat.server;
 
 import chat.server.User;
 

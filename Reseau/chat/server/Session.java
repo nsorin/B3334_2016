@@ -1,11 +1,14 @@
-package chat.server
+package chat.server;
 
+import chat.client.protocol.OutputItf;
 import chat.server.protocol.SessionItf;
 import chat.server.User;
 import chat.server.Message;
 
 import java.rmi.RemoteException;
 import java.util.Date;
+import java.util.LinkedList;
+
 
 public class Session implements SessionItf
 {
@@ -25,14 +28,14 @@ public class Session implements SessionItf
         return status;
     }
 
-    public boolean disconnect(String login, OutputItf output) throws RemoteException
+    public boolean disconnect(String login) throws RemoteException
     {
-        /*boolean status = false;
+        boolean status = false;
         int index;
-        index = listUsers.indexOf(user);
-        listUsers.remove(index);
+        //index = listUsers.indexOf(user);
+        //listUsers.remove(index);
         status = true;
-        return status;*/
+        return status;
     }
 
     public void receive(String content) throws RemoteException
@@ -47,7 +50,12 @@ public class Session implements SessionItf
         {
             do
             {
-                current.getOutput().display(notification);
+                try {
+					current.getOutput().display(notification);
+				} catch (RemoteException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
                 current = listUsers.get(listUsers.indexOf(current)+1);
             }while(current!=null);
         }
@@ -55,7 +63,7 @@ public class Session implements SessionItf
 
     public Session()
     {
-        listMessages = new LinkedList<Message>;
-        listUsers = new LinkedList<User>;
+        listMessages = new LinkedList<Message>();
+        listUsers = new LinkedList<User>();
     }
 }

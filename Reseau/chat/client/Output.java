@@ -4,6 +4,7 @@ import chat.client.protocol.OutputItf;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
@@ -11,7 +12,7 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Output implements OutputItf extends JFrame {
+public class Output extends JFrame implements OutputItf{
 
 	private JButton sendButton;
 	private JTextField textField;

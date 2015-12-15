@@ -1,6 +1,9 @@
 package chat.client; 
 
+import java.rmi.RemoteException;
+
 import chat.server.protocol.SessionItf;
+import chat.client.protocol.OutputItf;
 
 public class Input {
 
@@ -12,14 +15,14 @@ public class Input {
 	OutputItf output;
 	String currentLogin;
 
-	public Input(SessionItf s, int t) {
+	public Input(SessionItf s, OutputItf o) {
 		session = s;
-		token = t;
 		currentLogin = "";
+		output = o;
 	}
 
-	public void command(String cmd) {
-		if(cmd.charAt(0) == CMD_FLAG {
+	public void command(String cmd) throws RemoteException {
+		if(cmd.charAt(0) == CMD_FLAG) {
 			String[] parts = cmd.split(" ");
 			switch(parts[0]) {
 				case (CMD_FLAG + CMD_CONNECT):
@@ -36,7 +39,7 @@ public class Input {
 					break;
 			}	
 		} else {
-			session.receive(cmd, token);
+			session.receive(cmd);
 		}
 	}
 

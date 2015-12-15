@@ -2,10 +2,13 @@ package chat.client;
 
 import chat.client.Output;
 import chat.client.Input;
-import chat.server.protocol.SessionItf
+import chat.client.protocol.OutputItf;
+import chat.server.protocol.SessionItf;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.rmi.server.UnicastRemoteObject;
+import java.util.Scanner;
 
 public class Client {
 
@@ -23,6 +26,7 @@ public class Client {
             while(true) {
             	Scanner sc = new Scanner(System.in);
      			String cmd = sc.nextLine();
+     			sc.close();
      			input.command(cmd); 
             }
         } catch (Exception e) {
