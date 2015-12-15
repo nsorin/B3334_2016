@@ -35,8 +35,6 @@ public class ClientThread extends Thread {
 		  ObjectOutputStream oos = new ObjectOutputStream(os);
 		  InputStream is = clientSocket.getInputStream();
 		  ObjectInputStream ois = new ObjectInputStream(is);
-		  MessageThreadServer messageThread = new MessageThreadServer(oos);
-		  messageThread.start();
 		  
 		  while (true) {
 			  Request request = (Request)ois.readObject();
@@ -72,7 +70,16 @@ public class ClientThread extends Thread {
 					message = new Request(Request.CONNECT,"","");
 					message.setUsername(this.username);
 					message.setDate(date);
-					EchoServerMultiThreaded.listMessages.addFirst(message);
+					for(Socket s : EchoServerMultiThreaded.listClients) {
+						ObjectOutputStream oos;
+						try {
+							oos = new ObjectOutputStream(s.getOutputStream());
+							oos.writeObject(message);
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}						
+					}
 				}
 				break;
 			case Request.DISCONNECT :
@@ -84,14 +91,34 @@ public class ClientThread extends Thread {
 					message = new Request(Request.DISCONNECT,"","");
 					message.setUsername(this.username);
 					message.setDate(date);
-					EchoServerMultiThreaded.listMessages.addFirst(message);
+					//EchoServerMultiThreaded.listMessages.addFirst(message);
+					for(Socket s : EchoServerMultiThreaded.listClients) {
+						ObjectOutputStream oos;
+						try {
+							oos = new ObjectOutputStream(s.getOutputStream());
+							oos.writeObject(message);
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}						
+					}
 					this.username = "";
 				}
 				break;
 			case Request.MESSAGE_ALL :
 				request.setDate(date);
 				request.setUsername(this.username);
-				EchoServerMultiThreaded.listMessages.addFirst(request);
+				//EchoServerMultiThreaded.listMessages.addFirst(request);
+				for(Socket s : EchoServerMultiThreaded.listClients) {
+					ObjectOutputStream oos;
+					try {
+						oos = new ObjectOutputStream(s.getOutputStream());
+						oos.writeObject(request);
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}						
+				}
 				response = new Request(Request.EMPTY,"","");
 				break;
 			case Request.MESSAGE_PRIVATE :

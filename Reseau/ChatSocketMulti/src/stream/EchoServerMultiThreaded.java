@@ -13,7 +13,7 @@ import java.util.LinkedList;
 public class EchoServerMultiThreaded  {
 	
 	static LinkedList<String> listUsernames;
-	static LinkedList<Request> listMessages;
+	static LinkedList<Socket> listClients;
   
  	/**
   	* main method
@@ -31,9 +31,10 @@ public class EchoServerMultiThreaded  {
 		listenSocket = new ServerSocket(Integer.parseInt(args[0])); //port
 		System.out.println("Server ready..."); 
 		listUsernames = new LinkedList<String>();
-		listMessages = new LinkedList<Request>();
+		listClients = new LinkedList<Socket>();
 		while (true) {
 			Socket clientSocket = listenSocket.accept();
+			listClients.addFirst(clientSocket);
 			System.out.println("Connexion from:" + clientSocket.getInetAddress());
 			ClientThread ct = new ClientThread(clientSocket);
 			ct.start();

@@ -38,6 +38,8 @@ public class EchoClient {
 	    //		          new InputStreamReader(echoSocket.getInputStream()));    
 	    //socOut= new PrintStream(echoSocket.getOutputStream());
 	    socIn = new ObjectInputStream(echoSocket.getInputStream());
+	    MessageThreadClient messageThread = new MessageThreadClient(socIn);
+        messageThread.start();
       	socOut = new ObjectOutputStream(echoSocket.getOutputStream());
 	    stdIn = new BufferedReader(new InputStreamReader(System.in));
         } catch (UnknownHostException e) {
@@ -74,16 +76,6 @@ public class EchoClient {
         	}	
         	socOut.writeObject(req);
         	//System.out.println("echo: " + socIn.readLine());
-        	try {
-				Request response = (Request) socIn.readObject();
-				if(response.getType()!=Request.EMPTY)
-				{
-					System.out.println(response.toString());
-				}
-			} catch (ClassNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
         }
       socOut.close();
       socIn.close();
