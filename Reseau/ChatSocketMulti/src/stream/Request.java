@@ -9,6 +9,7 @@ public class Request {
 	public static final int MESSAGE_ALL = 2;
 	public static final int MESSAGE_PRIVATE = 3;
 	public static final int ERROR = 4;
+	public static final int SUCCESS = 5;
 	
 	private String username;
 	private Date date;
@@ -47,6 +48,9 @@ public class Request {
 				break;
 			case ERROR:
 				s = "[" + date + "] ERROR : " + content;
+				break;
+			case SUCCESS:
+				s = "[" + date + "] SUCCESS : " + content;
 				break;
 			default:
 				break;

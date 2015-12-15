@@ -7,10 +7,13 @@
 
 package ChatSocketMulti.src.stream;
 
-import java.io.*;
 import java.net.*;
+import java.util.LinkedList;
 
 public class EchoServerMultiThreaded  {
+	
+	static LinkedList<String> listUsernames;
+	static LinkedList<Request> listMessages;
   
  	/**
   	* main method
@@ -30,7 +33,7 @@ public class EchoServerMultiThreaded  {
 		while (true) {
 			Socket clientSocket = listenSocket.accept();
 			System.out.println("Connexion from:" + clientSocket.getInetAddress());
-			ClientThread ct = new ClientThread(clientSocket);
+			ClientThread ct = new ClientThread(clientSocket,listUsernames,listMessages);
 			ct.start();
 		}
         } catch (Exception e) {
