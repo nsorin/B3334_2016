@@ -5,3 +5,5 @@
 /Request.class
 /typeReq.class
 /MessageThread.class
+/MessageClienThread.class
+/MessageClientThread.class
