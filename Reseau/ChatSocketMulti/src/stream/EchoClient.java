@@ -5,6 +5,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.AdjustmentEvent;
+import java.awt.event.AdjustmentListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.*;
@@ -41,10 +43,18 @@ public class EchoClient
 		controlPanel.add(text, BorderLayout.WEST);
 		controlPanel.add(send, BorderLayout.EAST);
 		controlPanel.setMaximumSize(new Dimension(FRAME_WIDTH, FRAME_HEIGHT/20));
+		
 		JTextArea messages = new JTextArea("Welcome to B3334Chat. Type /connect <username> to connect to the chat server.");
 		messages.setBackground(Color.WHITE);
 		messages.setEditable(false);
-		frame.add(messages);
+		JScrollPane msgScroll = new JScrollPane(messages);
+		msgScroll.getVerticalScrollBar().addAdjustmentListener(new AdjustmentListener() {  
+	        public void adjustmentValueChanged(AdjustmentEvent e) {  
+	            e.getAdjustable().setValue(e.getAdjustable().getMaximum());  
+	        }
+	    });
+		
+		frame.add(msgScroll);
 		frame.add(controlPanel, BorderLayout.SOUTH);
 		frame.setSize(FRAME_WIDTH,FRAME_HEIGHT);
 		text.addKeyListener(new EchoClient().new KeyAdapter());

@@ -28,7 +28,7 @@ public class MessageClientThread extends Thread
 				Request message = (Request)ois.readObject();
 				if (message.getType()!=Request.EMPTY)
 				{
-					System.out.println(message.toString());
+					//System.out.println(message.toString());
 					msg.setText(msg.getText() + '\n' + message.toString());
 				}		
 			}
