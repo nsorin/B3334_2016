@@ -36,24 +36,26 @@ public class Request implements Serializable {
 	
 	public String toString() {
 		String s = "";
+		@SuppressWarnings("deprecation")
+		String time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 		switch(type) {
 			case CONNECT:
-				s= "[" + date + "] " + username + " connected.";
+				s = "[" + time + "] " + username + " connected.";
 				break;
 			case DISCONNECT:
-				s= "[" + date + "] " + username + " disconnected.";
+				s = "[" + time + "] " + username + " disconnected.";
 				break;
 			case MESSAGE_ALL:
-				s= "[" + date + "] " + username + " : " + content;
+				s = "[" + time + "] " + username + " : " + content;
 				break;
 			case MESSAGE_PRIVATE:
-				s= "[" + date + "] " + username + " (private) : " + content;
+				s = "[" + time + "] " + username + " (private) : " + content;
 				break;
 			case ERROR:
-				s = "[" + date + "] ERROR : " + content;
+				s = "[" + time + "] ERROR : " + content;
 				break;
 			case SUCCESS:
-				s = "[" + date + "] SUCCESS : " + content;
+				s = "[" + time + "] SUCCESS : " + content;
 				break;
 			default:
 				break;

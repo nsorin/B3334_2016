@@ -22,7 +22,10 @@ public class MessageClientThread extends Thread
 			while(true) 
 			{
 				Request message = (Request)ois.readObject();
-				System.out.println(message.toString());
+				if (message.getType()!=Request.EMPTY)
+				{
+					System.out.println(message.toString());
+				}		
 			}
 	  	}
 		catch (Exception e)
