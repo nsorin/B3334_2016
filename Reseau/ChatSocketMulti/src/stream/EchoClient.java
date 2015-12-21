@@ -1,25 +1,46 @@
 package ChatSocketMulti.src.stream;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
 import java.io.*;
 import java.net.*;
 
+import javax.swing.*;
 
 public class EchoClient 
 {
-
- 
+	static final int FRAME_WIDTH = 800;
+	static final int FRAME_HEIGHT = 600;
+	
   /**
   *  main method
   *  accepts a connection, receives a message from client then sends an echo to the client
   **/
     public static void main(String[] args) throws IOException 
     {
-
-        Socket echoSocket = null;
-        //PrintStream socOut = null;
+    	JFrame frame = new JFrame("B3334Chat");
+        JTextField text = new JTextField();
+        text.setPreferredSize(new Dimension(7*FRAME_WIDTH/10, FRAME_HEIGHT/20));
+        JButton send = new JButton("SEND");
+        send.setPreferredSize(new Dimension(FRAME_WIDTH/5, FRAME_HEIGHT/20));
+        send.setMaximumSize(new Dimension(FRAME_WIDTH/5, FRAME_HEIGHT/20));
+        send.setMinimumSize(new Dimension(FRAME_WIDTH/5, FRAME_HEIGHT/20));
+        JPanel controlPanel = new JPanel();
+		controlPanel.add(text, BorderLayout.WEST);
+		controlPanel.add(send, BorderLayout.EAST);
+		controlPanel.setMaximumSize(new Dimension(FRAME_WIDTH, FRAME_HEIGHT/20));
+		JTextArea messages = new JTextArea("Welcome to the chat");
+		messages.setBackground(Color.WHITE);
+		messages.setEditable(false);
+		frame.add(messages);
+		frame.add(controlPanel, BorderLayout.SOUTH);
+		frame.setSize(FRAME_WIDTH,FRAME_HEIGHT);
+		frame.setVisible(true);
+    	
+    	Socket echoSocket = null;
         ObjectOutputStream socOut = null;
         BufferedReader stdIn = null;
-        //BufferedReader socIn = null;
         ObjectInputStream socIn = null;
         
         if (args.length != 2) 
@@ -33,7 +54,7 @@ public class EchoClient
       	    // creation socket ==> connexion
       	    echoSocket = new Socket(args[0],new Integer(args[1]).intValue());
 		    socIn = new ObjectInputStream(echoSocket.getInputStream());
-		    MessageClientThread messageThread = new MessageClientThread(echoSocket, socIn);
+		    MessageClientThread messageThread = new MessageClientThread(echoSocket, socIn, messages);
 	        messageThread.start();     
 	      	socOut = new ObjectOutputStream(echoSocket.getOutputStream());
 		    stdIn = new BufferedReader(new InputStreamReader(System.in));
