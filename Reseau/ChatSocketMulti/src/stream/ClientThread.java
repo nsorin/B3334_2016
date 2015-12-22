@@ -78,6 +78,12 @@ public class ClientThread extends Thread
 					message = new Request(Request.CONNECT,"","");
 					message.setUsername(this.username);
 					message.setDate(date);
+					String list = "";
+					for(String s : EchoServerMultiThreaded.listUsernames) {
+						list += '\n' + s;
+					}
+					Request users = new Request(Request.USERS, list, "");
+					oos.writeObject(users);
 					for(ObjectOutputStream oos : EchoServerMultiThreaded.listClients) 
 					{
 						try 
@@ -137,6 +143,13 @@ public class ClientThread extends Thread
 				break;
 			case Request.MESSAGE_PRIVATE :
 				response = new Request(Request.EMPTY,"","");
+				break;
+			case Request.USERS :
+				String list = "";
+				for(String s : EchoServerMultiThreaded.listUsernames) {
+					list += '\n' + s;
+				}
+				response = new Request(Request.USERS, list, "");
 				break;
 			default :
 				response = new Request(Request.EMPTY,"","");

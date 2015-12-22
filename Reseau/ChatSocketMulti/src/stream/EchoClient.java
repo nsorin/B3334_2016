@@ -20,11 +20,13 @@ public class EchoClient
 	static JFrame frame;
 	static JTextField text;
 	static JTextArea messages;
+	static JTextArea users;
 	static JScrollPane msgScroll;
+	static JScrollPane usrScroll;
 	static Socket echoSocket = null;
     static ObjectOutputStream socOut = null;
     static BufferedReader stdIn = null;
-    static ObjectInputStream socIn = null; 
+    static ObjectInputStream socIn = null;
 	
   /**
   *  main method
@@ -49,13 +51,16 @@ public class EchoClient
 		messages.setBackground(Color.WHITE);
 		messages.setEditable(false);
 		msgScroll = new JScrollPane(messages);
-		/*msgScroll.getVerticalScrollBar().addAdjustmentListener(new AdjustmentListener() {  
-	        public void adjustmentValueChanged(AdjustmentEvent e) {  
-	            e.getAdjustable().setValue(e.getAdjustable().getMaximum());  
-	        }
-	    });*/
+		msgScroll.setPreferredSize(new Dimension(7*FRAME_WIDTH/10, 17*FRAME_HEIGHT/20));
+		users = new JTextArea("CONNECTED USERS :");
+		users.setEditable(false);
+		usrScroll = new JScrollPane(users);
+		usrScroll.setPreferredSize(new Dimension(FRAME_WIDTH/5, 17*FRAME_HEIGHT/20));
+		JPanel displayPanel = new JPanel();
+		displayPanel.add(msgScroll, BorderLayout.WEST);
+		displayPanel.add(usrScroll, BorderLayout.EAST);
 		
-		frame.add(msgScroll);
+		frame.add(displayPanel);
 		frame.add(controlPanel, BorderLayout.SOUTH);
 		frame.setSize(FRAME_WIDTH,FRAME_HEIGHT);
 		text.addKeyListener(new EchoClient().new KeyAdapter());
@@ -120,6 +125,7 @@ public class EchoClient
     					break;
     				case "/disconnect":
     					req = new Request(Request.DISCONNECT, "", "");
+    					users.setText("CONNECTED USERS :");
     					break;
     				case "/private": 
     					req = new Request(Request.MESSAGE_PRIVATE, parts[2], parts[1]);
