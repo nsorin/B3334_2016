@@ -10,7 +10,7 @@ public class User
     OutputItf output;
 
     public boolean equals(User user){return user.getLogin().equals(login);}
-    
+
     public String getLogin(){return login;}
     public Date getTimeConnexion(){return timeConnexion;}
     public OutputItf getOutput(){return output;}
@@ -20,5 +20,12 @@ public class User
         this.login = login;
         this.timeConnexion = date;
         this.output = output;
+    }
+    
+    public User(String login)
+    {
+        this.login = login;
+        this.timeConnexion = null;
+        this.output = null;
     }
 }

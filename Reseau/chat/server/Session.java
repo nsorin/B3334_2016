@@ -23,6 +23,7 @@ public class Session implements SessionItf
         if(!listUsers.contains(user))
         {
             listUsers.addFirst(user);
+            this.send("[" + date.toString().substring(11, 19) + "] " + login + " c'est connecté.");
             status = true;
         }
         return status;
@@ -31,33 +32,46 @@ public class Session implements SessionItf
     public boolean disconnect(String login) throws RemoteException
     {
         boolean status = false;
-        int index;
-        //index = listUsers.indexOf(user);
-        //listUsers.remove(index);
-        status = true;
+        Date date = new Date();
+        User user = new User(login);
+        int index = listUsers.indexOf(user);
+        if(index!=-1)
+        {
+        	listUsers.remove(index);
+        	this.send("[" + date.toString().substring(11, 19) + "] " + login + " c'est connecté.");
+        	status = true;
+        }
         return status;
     }
 
-    public void receive(String content) throws RemoteException
+    public void receive(String content, String login) throws RemoteException
     {
-
+    	Date date = new Date();
+    	for(User u : listUsers)
+        {
+            try 
+            {
+				u.getOutput().display("[" + date.toString().substring(11, 19) + "] " + login + " : " + content);
+			} 
+            catch (RemoteException e) 
+            {
+				e.printStackTrace();
+			}
+        }
     }
 
     public void send(String notification)
     {
-        User current = listUsers.getFirst();
-        if(current!=null)
+        for(User u : listUsers)
         {
-            do
+            try 
             {
-                try {
-					current.getOutput().display(notification);
-				} catch (RemoteException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-                current = listUsers.get(listUsers.indexOf(current)+1);
-            }while(current!=null);
+				u.getOutput().display(notification);
+			} 
+            catch (RemoteException e) 
+            {
+				e.printStackTrace();
+			}
         }
     }
 

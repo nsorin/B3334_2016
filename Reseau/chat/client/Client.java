@@ -10,12 +10,13 @@ import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Scanner;
 
-public class Client {
-
-    public static void main(String[] args) {
-
+public class Client 
+{
+    public static void main(String[] args) 
+    {
         String host = (args.length < 1) ? null : args[0];
-        try {
+        try 
+        {
             Registry registry = LocateRegistry.getRegistry(host);
             SessionItf session = (SessionItf) registry.lookup("Session");
             Output output = new Output();
@@ -23,13 +24,16 @@ public class Client {
             Input input = new Input(session, oItf);
             // Message de bienvenue si tout a réussi
             output.display("Bienvenue. Vous pouvez vous connecter au chat.");
-            while(true) {
+            while(true) 
+            {
             	Scanner sc = new Scanner(System.in);
      			String cmd = sc.nextLine();
-     			sc.close();
+     			sc.reset();
      			input.command(cmd); 
             }
-        } catch (Exception e) {
+        }
+        catch (Exception e) 
+        {
             System.err.println("Client exception: " + e.toString());
             e.printStackTrace();
         }

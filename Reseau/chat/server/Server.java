@@ -43,22 +43,24 @@ import java.rmi.server.UnicastRemoteObject;
 
 import chat.server.protocol.SessionItf;
 
-public class Server {
-
-    public static void main(String args[]) {
-
-        try {
+public class Server 
+{
+    public static void main(String args[]) 
+    {
+        try 
+        {
             LocateRegistry.createRegistry(1099);
             Session obj = new Session();
             SessionItf stub = (SessionItf) UnicastRemoteObject.exportObject(obj, 0);
 
             // Bind the remote object's stub in the registry
             Registry registry = LocateRegistry.getRegistry();
-            registry.bind("Session1", stub);
+            registry.bind("Session", stub);
 
             System.err.println("Server ready");
-
-        } catch (Exception e) {
+        } 
+        catch (Exception e) 
+        {
             System.err.println("Server exception: " + e.toString());
             e.printStackTrace();
         }

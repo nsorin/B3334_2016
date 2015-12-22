@@ -12,15 +12,16 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Output extends JFrame implements OutputItf{
-
+public class Output extends JFrame implements OutputItf
+{
 	private JButton sendButton;
 	private JTextField textField;
 	private JPanel controlPanel;
 	private JLabel msgLabel;
 	private GridLayout layout;
 
-	public Output() {
+	public Output() 
+	{
 		super();
 		this.setTitle("34Chat");
 		sendButton = new JButton("Send");
@@ -35,7 +36,8 @@ public class Output extends JFrame implements OutputItf{
 		this.add(controlPanel);
 	}
 
-	public void display(String notif) {
+	public void display(String notif) 
+	{
 		System.out.println(notif);
 	}
 

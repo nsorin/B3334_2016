@@ -7,3 +7,6 @@
 /MessageThread.class
 /MessageClienThread.class
 /MessageClientThread.class
+/EchoClient$InputListener.class
+/EchoClient$KeyAdapter.class
+/EchoClient$1.class
