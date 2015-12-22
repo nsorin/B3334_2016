@@ -13,6 +13,7 @@ public class Request implements Serializable {
 	public static final int ERROR = 4;
 	public static final int SUCCESS = 5;
 	public static final int EMPTY = 6;
+	public static final int USERS = 7;
 	
 	private String username;
 	private Date date;
