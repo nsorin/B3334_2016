@@ -5,8 +5,6 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.AdjustmentEvent;
-import java.awt.event.AdjustmentListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.*;
@@ -19,11 +17,14 @@ public class EchoClient
 	static final int FRAME_WIDTH = 800;
 	static final int FRAME_HEIGHT = 600;
 	
+	static JFrame frame;
 	static JTextField text;
+	static JTextArea messages;
+	static JScrollPane msgScroll;
 	static Socket echoSocket = null;
     static ObjectOutputStream socOut = null;
     static BufferedReader stdIn = null;
-    static ObjectInputStream socIn = null;
+    static ObjectInputStream socIn = null; 
 	
   /**
   *  main method
@@ -31,7 +32,7 @@ public class EchoClient
   **/
     public static void main(String[] args) throws IOException 
     {
-    	JFrame frame = new JFrame("B3334Chat");
+    	frame = new JFrame("B3334Chat");
         text = new JTextField();
         text.setPreferredSize(new Dimension(7*FRAME_WIDTH/10, FRAME_HEIGHT/20));
         JButton send = new JButton("SEND");
@@ -44,20 +45,21 @@ public class EchoClient
 		controlPanel.add(send, BorderLayout.EAST);
 		controlPanel.setMaximumSize(new Dimension(FRAME_WIDTH, FRAME_HEIGHT/20));
 		
-		JTextArea messages = new JTextArea("Welcome to B3334Chat. Type /connect <username> to connect to the chat server.");
+		messages = new JTextArea("Welcome to B3334Chat. Type /connect <username> to connect to the chat server.");
 		messages.setBackground(Color.WHITE);
 		messages.setEditable(false);
-		JScrollPane msgScroll = new JScrollPane(messages);
-		msgScroll.getVerticalScrollBar().addAdjustmentListener(new AdjustmentListener() {  
+		msgScroll = new JScrollPane(messages);
+		/*msgScroll.getVerticalScrollBar().addAdjustmentListener(new AdjustmentListener() {  
 	        public void adjustmentValueChanged(AdjustmentEvent e) {  
 	            e.getAdjustable().setValue(e.getAdjustable().getMaximum());  
 	        }
-	    });
+	    });*/
 		
 		frame.add(msgScroll);
 		frame.add(controlPanel, BorderLayout.SOUTH);
 		frame.setSize(FRAME_WIDTH,FRAME_HEIGHT);
 		text.addKeyListener(new EchoClient().new KeyAdapter());
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
         
         if (args.length != 2) 
@@ -71,7 +73,7 @@ public class EchoClient
       	    // creation socket ==> connexion
       	    echoSocket = new Socket(args[0],new Integer(args[1]).intValue());
 		    socIn = new ObjectInputStream(echoSocket.getInputStream());
-		    MessageClientThread messageThread = new MessageClientThread(echoSocket, socIn, messages);
+		    MessageClientThread messageThread = new MessageClientThread(echoSocket, socIn);
 	        messageThread.start();     
 	      	socOut = new ObjectOutputStream(echoSocket.getOutputStream());
 		    stdIn = new BufferedReader(new InputStreamReader(System.in));
@@ -102,7 +104,8 @@ public class EchoClient
     
     public static void sendMessage(String line) {
     	if(line != "") {
-			Request req = null;
+			boolean msgOk = true;
+    		Request req = null;
 			if(line.charAt(0) != '/') 
 			{
 				req = new Request(Request.MESSAGE_ALL, line, "");
@@ -122,18 +125,20 @@ public class EchoClient
     					req = new Request(Request.MESSAGE_PRIVATE, parts[2], parts[1]);
     					break;
     				default:
+    					msgOk = false;
     					break;
 				}
-			}	
-			try {
-				socOut.writeObject(req);
-			} catch (IOException e1) {
-			// 	TODO Auto-generated catch block
-				e1.printStackTrace();
+			}
+			if(msgOk) {
+				try {
+					socOut.writeObject(req);
+				} catch (IOException e1) {
+					// 	TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 			text.setText("");
-	
-		}
+    	}
     }
     
     public class InputListener implements ActionListener {
