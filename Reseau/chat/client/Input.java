@@ -10,6 +10,7 @@ public class Input
 	final char CMD_FLAG = '/';
 	final String CMD_CONNECT = "connect";
 	final String CMD_DISCONNECT = "quit";
+	final String CMD_PRIVATE_MESSAGE = "private";
 
 	SessionItf session;
 	OutputItf output;
@@ -38,12 +39,12 @@ public class Input
 						}
 						else
 						{
-							output.display("Connection failed!");
+							output.display("Connection failed.");
 						}
 					}
 					else
 					{
-						output.display("You are already connected!");
+						output.display("You are already connected.");
 					}
 					break;
 				case (CMD_FLAG + CMD_DISCONNECT):
@@ -52,15 +53,33 @@ public class Input
 						if(session.disconnect(currentLogin)) 
 						{
 							currentLogin = null;
+							output.display("Disconnection successful.");
 						}
 						else
 						{
-							output.display("Disconnection failed!");
+							output.display("Disconnection failed.");
 						}
 					}
 					else
 					{
-						output.display("You are not connected!");
+						output.display("You can't disconnect, you are not connected!");
+					}		
+					break;
+				case (CMD_FLAG + CMD_PRIVATE_MESSAGE):
+					if(currentLogin!=null)
+					{
+						if(session.receivePrivate(parts[2],parts[1],currentLogin))
+						{
+							
+						}
+						else
+						{
+							output.display("Sending a private message failed.");
+						}
+					}
+					else
+					{
+						output.display("You can't send a message, you are not connected!");
 					}		
 					break;
 				default:
@@ -71,11 +90,11 @@ public class Input
 		{
 			if(currentLogin!=null)
 			{
-				session.receive(cmd,currentLogin);
+				session.receiveAll(cmd,currentLogin);
 			}
 			else
 			{
-				output.display("You are not connected!");
+				output.display("You can't send a message, you are not connected!");
 			}
 		}
 	}

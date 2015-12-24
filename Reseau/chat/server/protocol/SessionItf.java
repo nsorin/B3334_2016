@@ -8,5 +8,6 @@ public interface SessionItf extends Remote
 {
     boolean connect(String login, OutputItf output) throws RemoteException;
     boolean disconnect(String login) throws RemoteException;
-    void receive(String content,String login) throws RemoteException;
+    boolean receiveAll(String content,String login) throws RemoteException;
+    boolean receivePrivate(String content,String loginRec, String loginExp) throws RemoteException;
 }

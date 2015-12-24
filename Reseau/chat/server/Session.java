@@ -22,8 +22,10 @@ public class Session implements SessionItf
         User user = new User(login,date,output);
         if(!listUsers.contains(user))
         {
+        	String msg = "[" + date.toString().substring(11, 19) + "] " + login + " c'est connecté.";
             listUsers.addFirst(user);
-            this.send("[" + date.toString().substring(11, 19) + "] " + login + " c'est connecté.");
+            this.send(msg);
+            System.out.println(msg);
             status = true;
         }
         return status;
@@ -34,18 +36,23 @@ public class Session implements SessionItf
         boolean status = false;
         Date date = new Date();
         User user = new User(login);
-        int index = listUsers.indexOf(user);
-        if(index!=-1)
+        for(User u : listUsers)
         {
-        	listUsers.remove(index);
-        	this.send("[" + date.toString().substring(11, 19) + "] " + login + " c'est connecté.");
-        	status = true;
+    		if(u.equals(user))
+    		{
+    			listUsers.remove(u);
+				String msg = "[" + date.toString().substring(11, 19) + "] " + login + " c'est déconnecté.";
+				this.send(msg);
+				System.out.println(msg);
+				status = true;
+    		}   
         }
         return status;
     }
 
-    public void receive(String content, String login) throws RemoteException
+    public boolean receiveAll(String content, String login) throws RemoteException
     {
+    	boolean status = false;
     	Date date = new Date();
     	for(User u : listUsers)
         {
@@ -58,6 +65,31 @@ public class Session implements SessionItf
 				e.printStackTrace();
 			}
         }
+    	status = true;
+    	return status;
+    }
+    
+    public boolean receivePrivate(String content, String loginRec, String loginExp) throws RemoteException
+    {
+    	boolean status = false;
+    	Date date = new Date();
+    	User user = new User(loginRec);
+    	for(User u : listUsers)
+        {
+    		if(u.equals(user))
+    		{
+    			try 
+	            {
+					u.getOutput().display("[" + date.toString().substring(11, 19) + "] (private) " + loginExp + " : " + content);
+					status = true;
+				} 
+	            catch (RemoteException e) 
+	            {
+					e.printStackTrace();
+				}
+    		}   
+        }
+    	return status;
     }
 
     public void send(String notification)
