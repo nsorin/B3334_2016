@@ -22,10 +22,25 @@ public class Session implements SessionItf
         User user = new User(login,date,output);
         if(!listUsers.contains(user))
         {
-        	String msg = "[" + date.toString().substring(11, 19) + "] " + login + " c'est connecté.";
+        	String msg = "[" + date.toString().substring(11, 19) + "] " + login + " connected.";
             listUsers.addFirst(user);
             this.send(msg);
-            System.out.println(msg);
+            for(User u : listUsers)
+            {
+                try 
+                {
+    				u.getOutput().addUser(login);
+    				if(u.getLogin() != login)
+    				{
+    					output.addUser(u.getLogin());
+    				}
+    			} 
+                catch (RemoteException e) 
+                {
+    				e.printStackTrace();
+    			}
+            }
+            //System.out.println(msg);
             status = true;
         }
         return status;
@@ -38,12 +53,13 @@ public class Session implements SessionItf
         User user = new User(login);
         for(User u : listUsers)
         {
-    		if(u.equals(user))
+    		u.getOutput().removeUser(login);
+        	if(u.equals(user))
     		{
     			listUsers.remove(u);
-				String msg = "[" + date.toString().substring(11, 19) + "] " + login + " c'est déconnecté.";
+				String msg = "[" + date.toString().substring(11, 19) + "] " + login + " disconnected.";
 				this.send(msg);
-				System.out.println(msg);
+				//System.out.println(msg);
 				status = true;
     		}   
         }

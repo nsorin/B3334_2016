@@ -54,6 +54,7 @@ public class Input
 						{
 							currentLogin = null;
 							output.display("Disconnection successful.");
+							Client.users.setText("CONNECTED USERS :\n");
 						}
 						else
 						{

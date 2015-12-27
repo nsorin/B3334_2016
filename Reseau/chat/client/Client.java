@@ -60,7 +60,7 @@ public class Client
 		messages.setEditable(false);
 		msgScroll = new JScrollPane(messages);
 		msgScroll.setPreferredSize(new Dimension(7*FRAME_WIDTH/10, 17*FRAME_HEIGHT/20));
-		users = new JTextArea("CONNECTED USERS :");
+		users = new JTextArea("CONNECTED USERS :\n");
 		users.setEditable(false);
 		usrScroll = new JScrollPane(users);
 		usrScroll.setPreferredSize(new Dimension(FRAME_WIDTH/5, 17*FRAME_HEIGHT/20));
