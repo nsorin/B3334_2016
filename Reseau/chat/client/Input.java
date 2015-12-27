@@ -9,7 +9,7 @@ public class Input
 {
 	final char CMD_FLAG = '/';
 	final String CMD_CONNECT = "connect";
-	final String CMD_DISCONNECT = "quit";
+	final String CMD_DISCONNECT = "disconnect";
 	final String CMD_PRIVATE_MESSAGE = "private";
 
 	SessionItf session;
@@ -97,6 +97,7 @@ public class Input
 				output.display("You can't send a message, you are not connected!");
 			}
 		}
+		Client.text.setText("");
 	}
 
 }
