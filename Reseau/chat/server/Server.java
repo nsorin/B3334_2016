@@ -40,6 +40,7 @@ package chat.server;
 import java.rmi.registry.Registry;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.Scanner;
 
 import chat.server.protocol.SessionItf;
 
@@ -58,6 +59,20 @@ public class Server
             registry.bind("Session", stub);
 
             System.err.println("Server ready");
+            boolean close = false;
+            while(!close) {
+            	System.out.println("not closed");
+            	Scanner sc = new Scanner(System.in);
+            	String cmd = sc.nextLine();
+            	//System.out.println(cmd);
+            	if(cmd.equals("close")) {
+            		close = true;
+            		break;
+            	}
+            	sc.close();
+            }
+            System.out.println("Server closed");
+            obj.writeLog("chat.log");
         } 
         catch (Exception e) 
         {

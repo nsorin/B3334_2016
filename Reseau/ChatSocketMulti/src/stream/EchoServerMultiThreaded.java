@@ -1,5 +1,6 @@
 package ChatSocketMulti.src.stream;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.*;
 import java.util.LinkedList;
@@ -8,6 +9,7 @@ public class EchoServerMultiThreaded  {
 	
 	static LinkedList<String> listUsernames;
 	static LinkedList<ClientThread> listClients;
+	static FileOutputStream fos;
   
  	/**
   	* main method
@@ -16,7 +18,6 @@ public class EchoServerMultiThreaded  {
   	**/
     public static void main(String args[]){ 
         ServerSocket listenSocket = null;
-        
 	  	if (args.length != 1) 
 	  	{
 	          System.out.println("Usage: java EchoServer <EchoServer port>");
@@ -28,6 +29,7 @@ public class EchoServerMultiThreaded  {
 			System.out.println("Server ready..."); 
 			listUsernames = new LinkedList<String>();
 			listClients = new LinkedList<ClientThread>();
+			fos = new FileOutputStream("chat.log");
 			while (true) 
 			{
 				Socket clientSocket = listenSocket.accept();
@@ -48,7 +50,13 @@ public class EchoServerMultiThreaded  {
 		{
 			e.printStackTrace();
 		}
-	}
+		try {
+			fos.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
   }
 
   

@@ -5,14 +5,19 @@ import chat.server.protocol.SessionItf;
 import chat.server.User;
 import chat.server.Message;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.util.Date;
 import java.util.LinkedList;
 
 
-public class Session implements SessionItf
+public class Session implements SessionItf, Serializable
 {
-    LinkedList<Message> listMessages;
+	private static final long serialVersionUID = -1618331548764071912L;
+	LinkedList<Message> listMessages;
     LinkedList<User> listUsers;
 
     public boolean connect(String login, OutputItf output) throws RemoteException
@@ -134,6 +139,15 @@ public class Session implements SessionItf
 				e.printStackTrace();
 			}
         }
+    }
+    
+    public void writeLog(String filename) throws IOException {
+		FileOutputStream fos = new FileOutputStream(filename);
+		ObjectOutputStream out = new ObjectOutputStream(fos);
+		out.writeObject(this);
+		out.close();
+		fos.close();
+		System.exit(0);
     }
 
     public Session()

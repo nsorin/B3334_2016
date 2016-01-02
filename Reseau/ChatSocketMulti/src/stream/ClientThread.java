@@ -49,7 +49,10 @@ public class ClientThread extends Thread
 			{
 				Request request = (Request)ois.readObject();
 				Request response = requestProcess(request);
-				oos.writeObject(response); 
+				oos.writeObject(response);
+				ObjectOutputStream log = new ObjectOutputStream(EchoServerMultiThreaded.fos);
+				log.writeObject(request);
+				log.close();
 			}
 	  	}
 		catch (Exception e)
