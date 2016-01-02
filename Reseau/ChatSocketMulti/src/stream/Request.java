@@ -50,7 +50,7 @@ public class Request implements Serializable {
 				s = "[" + time + "] " + username + " : " + content;
 				break;
 			case MESSAGE_PRIVATE:
-				s = "[" + time + "] " + username + " (private) : " + content;
+				s = "[" + time + "] " + "(private : " + option + ") " + username + " : " + content;
 				break;
 			case ERROR:
 				s = "[" + time + "] ERROR : " + content;

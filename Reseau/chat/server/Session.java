@@ -89,10 +89,11 @@ public class Session implements SessionItf
     {
     	boolean status = false;
     	Date date = new Date();
-    	User user = new User(loginRec);
+    	User userRec = new User(loginRec);
+    	User userExp = new User(loginExp);
     	for(User u : listUsers)
         {
-    		if(u.equals(user))
+    		if(u.equals(userRec))
     		{
     			try 
 	            {
@@ -103,7 +104,19 @@ public class Session implements SessionItf
 	            {
 					e.printStackTrace();
 				}
-    		}   
+    		}  
+    		else if(u.equals(userExp))
+    		{
+    			try 
+	            {
+					u.getOutput().display("[" + date.toString().substring(11, 19) + "] (private : " + loginRec +") " + loginExp + " : " + content);
+					status = true;
+				} 
+	            catch (RemoteException e) 
+	            {
+					e.printStackTrace();
+				}
+    		}
         }
     	return status;
     }

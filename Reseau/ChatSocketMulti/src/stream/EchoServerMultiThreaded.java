@@ -1,14 +1,13 @@
 package ChatSocketMulti.src.stream;
 
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.net.*;
 import java.util.LinkedList;
 
 public class EchoServerMultiThreaded  {
 	
 	static LinkedList<String> listUsernames;
-	static LinkedList<ObjectOutputStream> listClients;
+	static LinkedList<ClientThread> listClients;
   
  	/**
   	* main method
@@ -28,7 +27,7 @@ public class EchoServerMultiThreaded  {
 			listenSocket = new ServerSocket(Integer.parseInt(args[0])); //port
 			System.out.println("Server ready..."); 
 			listUsernames = new LinkedList<String>();
-			listClients = new LinkedList<ObjectOutputStream>();
+			listClients = new LinkedList<ClientThread>();
 			while (true) 
 			{
 				Socket clientSocket = listenSocket.accept();

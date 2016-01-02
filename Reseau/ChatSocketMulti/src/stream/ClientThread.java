@@ -13,11 +13,19 @@ public class ClientThread extends Thread
 	
 	public Socket getClientSocket(){return clientSocket;}
 	public String getUsername(){return username;}
+	public ObjectOutputStream getObjectOutputStream(){return oos;}
+	
+	public boolean equals(ClientThread client){return client.getUsername().equals(username);}
 	
 	ClientThread(Socket s) 
 	{
 		this.clientSocket = s;
 		username = null;
+	}
+	
+	ClientThread(String username) 
+	{
+		this.username = username;
 	}
 	
 	/**
@@ -71,7 +79,7 @@ public class ClientThread extends Thread
 				else
 				{
 					EchoServerMultiThreaded.listUsernames.addFirst(username);
-					EchoServerMultiThreaded.listClients.addFirst(this.oos);
+					EchoServerMultiThreaded.listClients.addFirst(this);
 					this.username = username;
 					System.out.println(this.username + " connected.");
 					response = new Request(Request.SUCCESS,"Connection successful.","");
@@ -84,11 +92,11 @@ public class ClientThread extends Thread
 					}
 					Request users = new Request(Request.USERS, list, "");
 					oos.writeObject(users);
-					for(ObjectOutputStream oos : EchoServerMultiThreaded.listClients) 
+					for(ClientThread c : EchoServerMultiThreaded.listClients) 
 					{
 						try 
 						{
-							oos.writeObject(message);
+							c.getObjectOutputStream().writeObject(message);
 						} 
 						catch (IOException e) 
 						{
@@ -111,11 +119,11 @@ public class ClientThread extends Thread
 					message = new Request(Request.DISCONNECT,"","");
 					message.setUsername(this.username);
 					message.setDate(date);
-					for(ObjectOutputStream oos : EchoServerMultiThreaded.listClients) 
+					for(ClientThread c : EchoServerMultiThreaded.listClients) 
 					{
 						try 
 						{
-							oos.writeObject(message);
+							c.getObjectOutputStream().writeObject(message);
 						} 
 						catch (IOException e) 
 						{
@@ -128,11 +136,11 @@ public class ClientThread extends Thread
 			case Request.MESSAGE_ALL :
 				request.setDate(date);
 				request.setUsername(this.username);
-				for(ObjectOutputStream oos : EchoServerMultiThreaded.listClients) 
+				for(ClientThread c : EchoServerMultiThreaded.listClients) 
 				{
 					try 
 					{
-						oos.writeObject(request);
+						c.getObjectOutputStream().writeObject(request);
 					} 
 					catch (IOException e) 
 					{
@@ -142,6 +150,24 @@ public class ClientThread extends Thread
 				response = new Request(Request.EMPTY,"","");
 				break;
 			case Request.MESSAGE_PRIVATE :
+				request.setDate(date);
+				request.setUsername(this.username);
+				ClientThread clientRec = new ClientThread(request.getOption());
+				ClientThread clientExp = new ClientThread(this.username);
+				for(ClientThread c : EchoServerMultiThreaded.listClients) 
+				{
+					if(c.equals(clientRec) || c.equals(clientExp))
+					{
+						try 
+						{
+							c.getObjectOutputStream().writeObject(request);
+						} 
+						catch (IOException e) 
+						{
+							e.printStackTrace();
+						}
+					}						
+				}
 				response = new Request(Request.EMPTY,"","");
 				break;
 			case Request.USERS :

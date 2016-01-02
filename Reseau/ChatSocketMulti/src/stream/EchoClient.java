@@ -128,7 +128,12 @@ public class EchoClient
     					users.setText("CONNECTED USERS :");
     					break;
     				case "/private": 
-    					req = new Request(Request.MESSAGE_PRIVATE, parts[2], parts[1]);
+    					String contentMsgPrivate = "";
+    					for(int compt = 2;compt<parts.length;compt++)
+    					{
+    						contentMsgPrivate += parts[compt] + " ";
+    					}
+    					req = new Request(Request.MESSAGE_PRIVATE, contentMsgPrivate, parts[1]);
     					break;
     				default:
     					msgOk = false;
