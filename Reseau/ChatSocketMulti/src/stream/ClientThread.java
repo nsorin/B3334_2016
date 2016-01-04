@@ -229,7 +229,7 @@ public class ClientThread extends Thread
 				String list = "";
 				for(String s : EchoServerMultiThreaded.listUsernames) 
 				{
-					list += '\n' + s;
+					list += s + '\n';
 				}
 				response = new Request(Request.USERS, list, "");
 				break;
