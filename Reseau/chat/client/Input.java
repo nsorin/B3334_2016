@@ -5,17 +5,40 @@ import java.rmi.RemoteException;
 import chat.server.protocol.SessionItf;
 import chat.client.protocol.OutputItf;
 
+/**
+ * The Class Input is a class treat all the command of the user
+ * to send it properly to the server depending on the type of the command.
+ */
 public class Input 
 {
+	
+	/** The command flag. */
 	final char CMD_FLAG = '/';
+	
+	/** The command connect. */
 	final String CMD_CONNECT = "connect";
+	
+	/** The command disconnect. */
 	final String CMD_DISCONNECT = "disconnect";
+	
+	/** The command private message. */
 	final String CMD_PRIVATE_MESSAGE = "private";
 
+	/** The session. */
 	SessionItf session;
+	
+	/** The output object. */
 	OutputItf output;
+	
+	/** The current login of the user. */
 	String currentLogin;
 
+	/**
+	 * Instantiates a new input.
+	 *
+	 * @param s the current session of the chat(server)
+	 * @param o the output object of the current user
+	 */
 	public Input(SessionItf s, OutputItf o) 
 	{
 		session = s;
@@ -23,6 +46,13 @@ public class Input
 		output = o;
 	}
 
+	/**
+	 * Method that treat the input of the user to send it 
+	 * correctly to the server.
+	 *
+	 * @param cmd the command
+	 * @throws RemoteException the remote exception
+	 */
 	public void command(String cmd) throws RemoteException 
 	{
 		if(cmd.charAt(0) == CMD_FLAG) 

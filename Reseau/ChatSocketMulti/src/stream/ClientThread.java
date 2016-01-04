@@ -4,34 +4,75 @@ import java.io.*;
 import java.net.*;
 import java.util.Date;
 
+/**
+ * The Class ClientThread is a thread linked to a specific client where
+ * all the request sending by this client are treated.
+ */
 public class ClientThread extends Thread 
 {
 	
+	/** The server side client socket. */
 	private Socket clientSocket;
+	
+	/** The name of the user. */
 	private String username;
+	
+	/** The output stream linked to the client side socket. */
 	private ObjectOutputStream oos;
 	
+	/**
+	 * Gets the client socket.
+	 *
+	 * @return the client socket
+	 */
 	public Socket getClientSocket(){return clientSocket;}
+	
+	/**
+	 * Gets the username.
+	 *
+	 * @return the username
+	 */
 	public String getUsername(){return username;}
+	
+	/**
+	 * Gets the object output stream.
+	 *
+	 * @return the object output stream
+	 */
 	public ObjectOutputStream getObjectOutputStream(){return oos;}
 	
+	/**
+	 * Method that test if the current ClientThread is equal to a ClientThread put in argument.
+	 *
+	 * @param client the client that will be compared
+	 * @return true, if the current ClientThread is equal to the ClientThread in argument.
+	 */
 	public boolean equals(ClientThread client){return client.getUsername().equals(username);}
 	
+	/**
+	 * Instantiates a new client thread.
+	 *
+	 * @param s the server side client socket
+	 */
 	ClientThread(Socket s) 
 	{
 		this.clientSocket = s;
 		username = null;
 	}
 	
+	/**
+	 * Instantiates a new client thread.
+	 *
+	 * @param username the name of the user
+	 */
 	ClientThread(String username) 
 	{
 		this.username = username;
 	}
 	
 	/**
-	* receives a request from client then sends an echo to the client
-	* @param clientSocket the client socket
-	**/
+	 * Method run of the thread that receives a request from client then sends an echo to the client.
+	 */
 	public void run() 
 	{
 		OutputStream os = null;
@@ -61,6 +102,13 @@ public class ClientThread extends Thread
 	  	}
 	}
 	
+	/**
+	 * Method that treat the request depending on its type.
+	 *
+	 * @param request the request
+	 * @return the response request
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	public Request requestProcess(Request request) throws IOException
 	{
 		Request response = new Request();
@@ -90,7 +138,8 @@ public class ClientThread extends Thread
 					message.setUsername(this.username);
 					message.setDate(date);
 					String list = "";
-					for(String s : EchoServerMultiThreaded.listUsernames) {
+					for(String s : EchoServerMultiThreaded.listUsernames) 
+					{
 						list += '\n' + s;
 					}
 					Request users = new Request(Request.USERS, list, "");
@@ -175,7 +224,8 @@ public class ClientThread extends Thread
 				break;
 			case Request.USERS :
 				String list = "";
-				for(String s : EchoServerMultiThreaded.listUsernames) {
+				for(String s : EchoServerMultiThreaded.listUsernames) 
+				{
 					list += '\n' + s;
 				}
 				response = new Request(Request.USERS, list, "");

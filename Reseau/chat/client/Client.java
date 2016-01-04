@@ -24,20 +24,45 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+/**
+ * The Class Client is a class that create the interface for the client side of the 
+ * Chat application.
+ */
 public class Client 
 {
+	
+	/** The Constant FRAME_WIDTH. */
 	static final int FRAME_WIDTH = 800;
+	
+	/** The Constant FRAME_HEIGHT. */
 	static final int FRAME_HEIGHT = 600;
 	
+	/** The frame. */
 	static JFrame frame;
+	
+	/** The field where the user can write. */
 	static JTextField text;
+	
+	/** The area where are displayed messages */
 	static JTextArea messages;
+	
+	/** The area that display the list of connected users. */
 	static JTextArea users;
+	
+	/** The scroll panel of the chat. */
 	static JScrollPane msgScroll;
+	
+	/** The scroll panel of the list of connected users. */
 	static JScrollPane usrScroll;
 	
+	/** The input object. */
 	static Input input;
 	
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) 
     {
         String host = (args.length < 1) ? null : args[0];
@@ -81,9 +106,7 @@ public class Client
             SessionItf session = (SessionItf) registry.lookup("Session");
             Output output = new Output();
             OutputItf oItf = (OutputItf) UnicastRemoteObject.exportObject(output, 0);
-            input = new Input(session, oItf);
-            // Message de bienvenue si tout a réussi
-            //output.display("Bienvenue. Vous pouvez vous connecter au chat.");       
+            input = new Input(session, oItf);     
         }
         catch (Exception e) 
         {
@@ -92,50 +115,86 @@ public class Client
         }
     }
 
-	 public class InputListener implements ActionListener {
+	 /**
+ 	 * The listener interface for receiving input events.
+ 	 * The class that is interested in processing a input
+ 	 * event implements this interface, and the object created
+ 	 * with that class is registered with a component using the
+ 	 * component's <code>addInputListener<code> method. When
+ 	 * the input event occurs, that object's appropriate
+ 	 * method is invoked.
+ 	 *
+ 	 * @see InputEvent
+ 	 */
+ 	public class InputListener implements ActionListener 
+ 	{
 
+			/* (non-Javadoc)
+			 * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)
+			 */
 			@Override
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent e) 
+			{
 				String line = text.getText();
-				try {
+				try 
+				{
 					input.command(line);
-				} catch (RemoteException e1) {
-					// TODO Auto-generated catch block
+				} 
+				catch (RemoteException e1) 
+				{
 					e1.printStackTrace();
 				}
 			}
 	    }
 	    
-	    public class KeyAdapter implements KeyListener {
-
+	    /**
+    	 * The Class KeyAdapter.
+    	 */
+    	public class KeyAdapter implements KeyListener 
+    	{
+			/* (non-Javadoc)
+			 * @see java.awt.event.KeyListener#keyPressed(java.awt.event.KeyEvent)
+			 */
 			@Override
-			public void keyPressed(KeyEvent e) {
-				// TODO Auto-generated method stub
+			public void keyPressed(KeyEvent e) 
+			{
 			}
 
+			/* (non-Javadoc)
+			 * @see java.awt.event.KeyListener#keyReleased(java.awt.event.KeyEvent)
+			 */
 			@Override
-			public void keyReleased(KeyEvent e) {
-				// TODO Auto-generated method stub
-				if(e.getKeyCode() == KeyEvent.VK_ENTER) {
+			public void keyReleased(KeyEvent e) 
+			{
+				if(e.getKeyCode() == KeyEvent.VK_ENTER) 
+				{
 					String line = text.getText();
-					try {
+					try 
+					{
 						input.command(line);
-					} catch (RemoteException e1) {
-						// TODO Auto-generated catch block
+					} 
+					catch (RemoteException e1) 
+					{
 						e1.printStackTrace();
 					}
 				}
 			}
 
+			/* (non-Javadoc)
+			 * @see java.awt.event.KeyListener#keyTyped(java.awt.event.KeyEvent)
+			 */
 			@Override
-			public void keyTyped(KeyEvent e) {
-				// TODO Auto-generated method stub
-				if(e.getKeyCode() == KeyEvent.VK_ENTER) {
+			public void keyTyped(KeyEvent e) 
+			{
+				if(e.getKeyCode() == KeyEvent.VK_ENTER) 
+				{
 					String line = text.getText();
-					try {
+					try 
+					{
 						input.command(line);
-					} catch (RemoteException e1) {
-						// TODO Auto-generated catch block
+					} 
+					catch (RemoteException e1) 
+					{
 						e1.printStackTrace();
 					}
 				}

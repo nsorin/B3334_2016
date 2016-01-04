@@ -13,13 +13,24 @@ import java.rmi.RemoteException;
 import java.util.Date;
 import java.util.LinkedList;
 
-
+/**
+ * The Class Session is the class that characterize the session entity which is symbolized the status of the chat.
+ */
 public class Session implements SessionItf, Serializable
 {
+	
+	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = -1618331548764071912L;
+	
+	/** The list of the messages. */
 	private LinkedList<String> listMessages;
+    
+    /** The list of the connected users. */
     private LinkedList<User> listUsers;
 
+    /* (non-Javadoc)
+     * @see chat.server.protocol.SessionItf#connect(java.lang.String, chat.client.protocol.OutputItf)
+     */
     public boolean connect(String login, OutputItf output) throws RemoteException
     {
         boolean status = false;
@@ -51,6 +62,9 @@ public class Session implements SessionItf, Serializable
         return status;
     }
 
+    /* (non-Javadoc)
+     * @see chat.server.protocol.SessionItf#disconnect(java.lang.String)
+     */
     public boolean disconnect(String login) throws RemoteException
     {
         boolean status = false;
@@ -58,19 +72,27 @@ public class Session implements SessionItf, Serializable
         User user = new User(login);
         for(User u : listUsers)
         {
-    		u.getOutput().removeUser(login);
         	if(u.equals(user))
     		{
     			listUsers.remove(u);
 				String msg = "[" + date.toString().substring(11, 19) + "] " + login + " disconnected.";
 				this.send(msg);
-				//System.out.println(msg);
 				status = true;
-    		}   
+    		}
         }
+        if(status)
+    	{
+        	for(User u : listUsers)
+            {
+        		u.getOutput().removeUser(login);
+            }
+    	}
         return status;
     }
 
+    /* (non-Javadoc)
+     * @see chat.server.protocol.SessionItf#receiveAll(java.lang.String, java.lang.String)
+     */
     public boolean receiveAll(String content, String login) throws RemoteException
     {
     	boolean status = false;
@@ -92,6 +114,9 @@ public class Session implements SessionItf, Serializable
     	return status;
     }
     
+    /* (non-Javadoc)
+     * @see chat.server.protocol.SessionItf#receivePrivate(java.lang.String, java.lang.String, java.lang.String)
+     */
     public boolean receivePrivate(String content, String loginRec, String loginExp) throws RemoteException
     {
     	boolean status = false;
@@ -128,6 +153,11 @@ public class Session implements SessionItf, Serializable
     	return status;
     }
 
+    /**
+     * Method that display a notification to all connected users.
+     *
+     * @param notification the notification that will be sent to the user.
+     */
     public void send(String notification)
     {
         for(User u : listUsers)
@@ -143,7 +173,14 @@ public class Session implements SessionItf, Serializable
         }
     }
     
-    public void writeLog(String filename) throws IOException {
+    /**
+     * Method that write a log in the log File
+     *
+     * @param filename the filename of the log File
+     * @throws IOException Signals that an I/O exception has occurred.
+     */
+    public void writeLog(String filename) throws IOException 
+    {
 		FileOutputStream fos = new FileOutputStream(filename, false);
 		ObjectOutputStream out = new ObjectOutputStream(fos);
 		out.writeObject(this);
@@ -152,42 +189,68 @@ public class Session implements SessionItf, Serializable
 		System.exit(0);
     }
     
-    public static Session readLog(String filename) {
+    /**
+     * Method that read a log from a log File
+     *
+     * @param filename the filename
+     * @return the session
+     */
+    public static Session readLog(String filename) 
+    {
     	Session session = null;
     	FileInputStream fis;
-		try {
+		try 
+		{
 			fis = new FileInputStream(filename);
 			ObjectInputStream in = new ObjectInputStream(fis);
 	    	session = (Session) in.readObject();	    	
 	    	session.listUsers.clear();
 	    	in.close();
 	    	fis.close();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
+		} 
+		catch (Exception e) 
+		{
 			session = new Session();
 			System.out.println("No log to read");
 		}
     	return session;
     }
 
-    public void restoreSession(OutputItf output) {
-    	for(String msg : listMessages) {
-    		try {
+    /**
+     * Method that restore the session of the chat in the UI of a user.
+     *
+     * @param output the output linked to the UI of the user
+     */
+    public void restoreSession(OutputItf output) 
+    {
+    	for(String msg : listMessages) 
+    	{
+    		try 
+    		{
 				output.display(msg);
-			} catch (RemoteException e) {
-				// TODO Auto-generated catch block
+			} 
+    		catch (RemoteException e) 
+    		{
 				e.printStackTrace();
 			}
     	}
     }
     
-    public void checkMessageList() {
+    /**
+     * Method that show in the console the messages restored
+     */
+    public void checkMessageList() 
+    {
     	System.out.println("Restored messages :");
-    	for(String msg : listMessages) {
+    	for(String msg : listMessages) 
+    	{
     		System.out.println(msg);
     	}
     }
     
+    /**
+     * Instantiates a new session.
+     */
     public Session()
     {
         listMessages = new LinkedList<String>();

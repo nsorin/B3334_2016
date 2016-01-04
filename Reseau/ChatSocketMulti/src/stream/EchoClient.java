@@ -12,26 +12,57 @@ import java.net.*;
 
 import javax.swing.*;
 
+/**
+ * The Class EchoClient is a class that create the interface for the client side of the 
+ * Chat application. This class also creates a socket and streams(input/output) linked to the server 
+ * that will be used to communicate with it.
+ */
 public class EchoClient 
 {
+	
+	/** The Constant FRAME_WIDTH. */
 	static final int FRAME_WIDTH = 800;
+	
+	/** The Constant FRAME_HEIGHT. */
 	static final int FRAME_HEIGHT = 600;
 	
+	/** The frame. */
 	static JFrame frame;
+	
+	/** The field where the user can write. */
 	static JTextField text;
+	
+	/** The area where are displayed messages. */
 	static JTextArea messages;
+	
+	/** The area that display the list of connected users. */
 	static JTextArea users;
+	
+	/** The scroll panel of the chat. */
 	static JScrollPane msgScroll;
+	
+	/** The scroll panel of the list of connected users. */
 	static JScrollPane usrScroll;
+	
+	/** The client side socket. */
 	static Socket echoSocket = null;
+    
+    /** The output stream linked to the server. */
     static ObjectOutputStream socOut = null;
+    
+    /** The bufferedReader. */
     static BufferedReader stdIn = null;
+    
+    /** The input stream linked to the server. */
     static ObjectInputStream socIn = null;
 	
   /**
-  *  main method
-  *  accepts a connection, receives a message from client then sends an echo to the client
-  **/
+   *  main method
+   *  accepts a connection, receives a message from client then sends an echo to the client.
+   *
+   * @param args the arguments
+   * @throws IOException Signals that an I/O exception has occurred.
+   */
     public static void main(String[] args) throws IOException 
     {
     	frame = new JFrame("B3334Chat");
@@ -107,8 +138,15 @@ public class EchoClient
       echoSocket.close();
     }
     
-    public static void sendMessage(String line) {
-    	if(line != "") {
+    /**
+     * Method that send a request to the server depending on the command written by the user.
+     *
+     * @param line the line written by the user
+     */
+    public static void sendMessage(String line) 
+    {
+    	if(line != "") 
+    	{
 			boolean msgOk = true;
     		Request req = null;
 			if(line.charAt(0) != '/') 
@@ -140,11 +178,14 @@ public class EchoClient
     					break;
 				}
 			}
-			if(msgOk) {
-				try {
+			if(msgOk) 
+			{
+				try 
+				{
 					socOut.writeObject(req);
-				} catch (IOException e1) {
-					// 	TODO Auto-generated catch block
+				} 
+				catch (IOException e1) 
+				{
 					e1.printStackTrace();
 				}
 			}
@@ -152,35 +193,67 @@ public class EchoClient
     	}
     }
     
-    public class InputListener implements ActionListener {
+    /**
+     * The listener interface for receiving input events.
+     * The class that is interested in processing a input
+     * event implements this interface, and the object created
+     * with that class is registered with a component using the
+     * component's <code>addInputListener<code> method. When
+     * the input event occurs, that object's appropriate
+     * method is invoked.
+     *
+     * @see InputEvent
+     */
+    public class InputListener implements ActionListener 
+    {
 
+		/* (non-Javadoc)
+		 * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)
+		 */
 		@Override
-		public void actionPerformed(ActionEvent e) {
+		public void actionPerformed(ActionEvent e) 
+		{
 			String line = text.getText();
 			sendMessage(line);
 		}
     }
     
-    public class KeyAdapter implements KeyListener {
+    /**
+     * The Class KeyAdapter.
+     */
+    public class KeyAdapter implements KeyListener 
+    {
 
+		/* (non-Javadoc)
+		 * @see java.awt.event.KeyListener#keyPressed(java.awt.event.KeyEvent)
+		 */
 		@Override
-		public void keyPressed(KeyEvent e) {
-			// TODO Auto-generated method stub
+		public void keyPressed(KeyEvent e) 
+		{
 		}
 
+		/* (non-Javadoc)
+		 * @see java.awt.event.KeyListener#keyReleased(java.awt.event.KeyEvent)
+		 */
 		@Override
-		public void keyReleased(KeyEvent e) {
+		public void keyReleased(KeyEvent e) 
+		{
 			// TODO Auto-generated method stub
-			if(e.getKeyCode() == KeyEvent.VK_ENTER) {
+			if(e.getKeyCode() == KeyEvent.VK_ENTER) 
+			{
 				String line = text.getText();
 				sendMessage(line);
 			}
 		}
 
+		/* (non-Javadoc)
+		 * @see java.awt.event.KeyListener#keyTyped(java.awt.event.KeyEvent)
+		 */
 		@Override
-		public void keyTyped(KeyEvent e) {
-			// TODO Auto-generated method stub
-			if(e.getKeyCode() == KeyEvent.VK_ENTER) {
+		public void keyTyped(KeyEvent e) 
+		{
+			if(e.getKeyCode() == KeyEvent.VK_ENTER)
+			{
 				String line = text.getText();
 				sendMessage(line);
 			}
