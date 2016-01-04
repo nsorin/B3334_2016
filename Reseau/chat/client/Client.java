@@ -75,7 +75,6 @@ public class Client
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
         
-        
         try 
         {
             Registry registry = LocateRegistry.getRegistry(host);

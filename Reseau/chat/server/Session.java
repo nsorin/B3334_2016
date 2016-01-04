@@ -3,10 +3,10 @@ package chat.server;
 import chat.client.protocol.OutputItf;
 import chat.server.protocol.SessionItf;
 import chat.server.User;
-import chat.server.Message;
-
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.rmi.RemoteException;
@@ -17,8 +17,8 @@ import java.util.LinkedList;
 public class Session implements SessionItf, Serializable
 {
 	private static final long serialVersionUID = -1618331548764071912L;
-	LinkedList<Message> listMessages;
-    LinkedList<User> listUsers;
+	private LinkedList<String> listMessages;
+    private LinkedList<User> listUsers;
 
     public boolean connect(String login, OutputItf output) throws RemoteException
     {
@@ -29,6 +29,7 @@ public class Session implements SessionItf, Serializable
         {
         	String msg = "[" + date.toString().substring(11, 19) + "] " + login + " connected.";
             listUsers.addFirst(user);
+            restoreSession(output);
             this.send(msg);
             for(User u : listUsers)
             {
@@ -45,7 +46,6 @@ public class Session implements SessionItf, Serializable
     				e.printStackTrace();
     			}
             }
-            //System.out.println(msg);
             status = true;
         }
         return status;
@@ -75,17 +75,19 @@ public class Session implements SessionItf, Serializable
     {
     	boolean status = false;
     	Date date = new Date();
+    	String msg = "[" + date.toString().substring(11, 19) + "] " + login + " : " + content;
     	for(User u : listUsers)
         {
             try 
             {
-				u.getOutput().display("[" + date.toString().substring(11, 19) + "] " + login + " : " + content);
+				u.getOutput().display(msg);
 			} 
             catch (RemoteException e) 
             {
 				e.printStackTrace();
 			}
         }
+    	listMessages.addLast(msg);
     	status = true;
     	return status;
     }
@@ -142,17 +144,53 @@ public class Session implements SessionItf, Serializable
     }
     
     public void writeLog(String filename) throws IOException {
-		FileOutputStream fos = new FileOutputStream(filename);
+		FileOutputStream fos = new FileOutputStream(filename, false);
 		ObjectOutputStream out = new ObjectOutputStream(fos);
 		out.writeObject(this);
 		out.close();
 		fos.close();
 		System.exit(0);
     }
+    
+    public static Session readLog(String filename) {
+    	Session session = null;
+    	FileInputStream fis;
+		try {
+			fis = new FileInputStream(filename);
+			ObjectInputStream in = new ObjectInputStream(fis);
+	    	session = (Session) in.readObject();	    	
+	    	session.listUsers.clear();
+	    	in.close();
+	    	fis.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			session = new Session();
+			System.out.println("No log to read");
+		}
+    	return session;
+    }
 
+    public void restoreSession(OutputItf output) {
+    	for(String msg : listMessages) {
+    		try {
+				output.display(msg);
+			} catch (RemoteException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    	}
+    }
+    
+    public void checkMessageList() {
+    	System.out.println("Restored messages :");
+    	for(String msg : listMessages) {
+    		System.out.println(msg);
+    	}
+    }
+    
     public Session()
     {
-        listMessages = new LinkedList<Message>();
+        listMessages = new LinkedList<String>();
         listUsers = new LinkedList<User>();
     }
 }

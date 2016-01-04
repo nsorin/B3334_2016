@@ -1,11 +1,16 @@
 package chat.server;
 
+import java.io.Serializable;
 import java.util.Date;
 import chat.client.protocol.OutputItf;
 
-public class User
+public class User implements Serializable
 {
-    String login;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 7681488508531964229L;
+	String login;
     Date timeConnexion;
     OutputItf output;
 

@@ -51,20 +51,18 @@ public class Server
         try 
         {
             LocateRegistry.createRegistry(1099);
-            Session obj = new Session();
+            Session obj = Session.readLog("chat.log");
             SessionItf stub = (SessionItf) UnicastRemoteObject.exportObject(obj, 0);
-
+            obj.checkMessageList();
             // Bind the remote object's stub in the registry
             Registry registry = LocateRegistry.getRegistry();
             registry.bind("Session", stub);
 
             System.err.println("Server ready");
             boolean close = false;
-            while(!close) {
-            	System.out.println("not closed");
+            while(!close) {            	
             	Scanner sc = new Scanner(System.in);
             	String cmd = sc.nextLine();
-            	//System.out.println(cmd);
             	if(cmd.equals("close")) {
             		close = true;
             		break;
