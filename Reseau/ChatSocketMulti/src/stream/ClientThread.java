@@ -86,14 +86,13 @@ public class ClientThread extends Thread
 			this.oos = oos;
 			is = clientSocket.getInputStream();
 			ois = new ObjectInputStream(is);
+			//ObjectOutputStream log = new ObjectOutputStream(EchoServerMultiThreaded.fos);
 			while(true) 
 			{
 				Request request = (Request)ois.readObject();
 				Request response = requestProcess(request);
 				oos.writeObject(response);
-				ObjectOutputStream log = new ObjectOutputStream(EchoServerMultiThreaded.fos);
-				log.writeObject(request);
-				log.close();
+				//log.writeObject(request);
 			}
 	  	}
 		catch (Exception e)
@@ -129,6 +128,8 @@ public class ClientThread extends Thread
 				}
 				else
 				{
+					
+					//restoreLog();
 					EchoServerMultiThreaded.listUsernames.addFirst(username);
 					EchoServerMultiThreaded.listClients.addFirst(this);
 					this.username = username;
@@ -140,7 +141,9 @@ public class ClientThread extends Thread
 					String list = "";
 					for(String s : EchoServerMultiThreaded.listUsernames) 
 					{
-						list += '\n' + s;
+						if(!s.equals(username)) {
+							list += '\n' + s;					
+						}
 					}
 					Request users = new Request(Request.USERS, list, "");
 					oos.writeObject(users);
@@ -236,6 +239,40 @@ public class ClientThread extends Thread
 		}
 		response.setDate(date);
 		return response;
+	}
+	
+	@SuppressWarnings("resource")
+	public void restoreLog() {
+		FileInputStream fis = null;
+		try {
+			fis = new FileInputStream(EchoServerMultiThreaded.LOG_PATH);
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		ObjectInputStream in = null;
+		try {
+			in = new ObjectInputStream(fis);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		Request request = null;
+		while(true) {
+			try {
+				request = (Request) in.readObject();
+			} catch (ClassNotFoundException | IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			System.out.println(request.toString());
+			try {
+				getObjectOutputStream().writeObject(request);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
  }
 

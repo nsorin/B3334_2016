@@ -12,6 +12,7 @@ import chat.server.protocol.SessionItf;
  */
 public class Server 
 {
+	public static final String LOG_PATH = "chat/chat.log";
     
     /**
      * The main method that create the registry and the restore the session saved on a log file and bind it to the registry.
@@ -23,7 +24,7 @@ public class Server
         try 
         {
             LocateRegistry.createRegistry(1099);
-            Session obj = Session.readLog("chat.log");
+            Session obj = Session.readLog(LOG_PATH);
             SessionItf stub = (SessionItf) UnicastRemoteObject.exportObject(obj, 0);
             obj.checkMessageList();
             // Bind the remote object's stub in the registry
@@ -44,7 +45,7 @@ public class Server
             	sc.close();
             }
             System.out.println("Server closed");
-            obj.writeLog("chat.log");
+            obj.writeLog(LOG_PATH);
         } 
         catch (Exception e) 
         {

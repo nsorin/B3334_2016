@@ -54,7 +54,7 @@ public class MessageClientThread extends Thread
 					} 
 					else if(message.getType() == Request.DISCONNECT) 
 					{
-						EchoClient.users.setText(EchoClient.users.getText().replaceAll("\n" + message.getUserName() + "\n", "\n"));
+						EchoClient.users.setText(EchoClient.users.getText().replaceAll("\n" + message.getUserName() + "\n", "\n"));					
 					}
 				}
 			}

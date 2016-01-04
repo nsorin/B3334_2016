@@ -10,6 +10,7 @@ import java.util.LinkedList;
  */
 public class EchoServerMultiThreaded 
 {
+	static final String LOG_PATH = "ChatSocketMulti/chat.log";
 	
 	/** The list of the name of connected users. */
 	static LinkedList<String> listUsernames;
@@ -39,7 +40,7 @@ public class EchoServerMultiThreaded
 			System.out.println("Server ready..."); 
 			listUsernames = new LinkedList<String>();
 			listClients = new LinkedList<ClientThread>();
-			fos = new FileOutputStream("chat.log");
+			//fos = new FileOutputStream(LOG_PATH);
 			while (true) 
 			{
 				Socket clientSocket = listenSocket.accept();
