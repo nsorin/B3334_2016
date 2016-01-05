@@ -43,10 +43,15 @@ public class Server
             		close = true;
             		break;
             	}
+            	else if(cmd.equals("save"))
+            	{
+            		obj.writeLog(LOG_PATH);
+            	}
             	sc.close();
             }
             System.out.println("Server closed");
             obj.writeLog(LOG_PATH);
+    		System.exit(0);
         } 
         catch (Exception e) 
         {
