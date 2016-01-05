@@ -163,7 +163,7 @@ public class EchoClient
     					break;
     				case "/disconnect":
     					req = new Request(Request.DISCONNECT, "", "");
-    					users.setText("CONNECTED USERS :");
+    					users.setText("CONNECTED USERS :\n");
     					break;
     				case "/private": 
     					String contentMsgPrivate = "";

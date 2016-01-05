@@ -141,9 +141,7 @@ public class ClientThread extends Thread
 					String list = "";
 					for(String s : EchoServerMultiThreaded.listUsernames) 
 					{
-						if(!s.equals(username)) {
-							list += '\n' + s;					
-						}
+						list += s + '\n';					
 					}
 					Request users = new Request(Request.USERS, list, "");
 					oos.writeObject(users);

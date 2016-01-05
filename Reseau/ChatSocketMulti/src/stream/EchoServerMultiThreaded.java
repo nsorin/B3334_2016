@@ -40,7 +40,7 @@ public class EchoServerMultiThreaded
 			System.out.println("Server ready..."); 
 			listUsernames = new LinkedList<String>();
 			listClients = new LinkedList<ClientThread>();
-			//fos = new FileOutputStream(LOG_PATH);
+			fos = new FileOutputStream(LOG_PATH);
 			while (true) 
 			{
 				Socket clientSocket = listenSocket.accept();

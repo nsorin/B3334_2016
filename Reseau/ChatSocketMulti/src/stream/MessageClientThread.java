@@ -45,16 +45,15 @@ public class MessageClientThread extends Thread
 				} 
 				else if (message.getType()!=Request.EMPTY)
 				{
-					//System.out.println(message.toString());
 					EchoClient.messages.setText(EchoClient.messages.getText() + '\n' + message.toString());
 					EchoClient.messages.setCaretPosition(EchoClient.messages.getText().length());
-					if(message.getType() == Request.CONNECT && EchoClient.users.getText().indexOf("\n" + message.getUserName() + "\n") == -1) 
+					if(message.getType() == Request.CONNECT && EchoClient.users.getText().indexOf('\n' + message.getUserName() + "\n") == -1) 
 					{
-						EchoClient.users.setText(EchoClient.users.getText() + '\n' + message.getUserName());
-					} 
+						EchoClient.users.setText(EchoClient.users.getText() + message.getUserName() + '\n');
+					}
 					else if(message.getType() == Request.DISCONNECT) 
 					{
-						EchoClient.users.setText(EchoClient.users.getText().replaceAll("\n" + message.getUserName() + "\n", "\n"));					
+						EchoClient.users.setText(EchoClient.users.getText().replaceAll('\n' + message.getUserName() + '\n', "\n"));					
 					}
 				}
 			}
