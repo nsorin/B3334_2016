@@ -129,13 +129,13 @@ public class EchoClient
         while (true) 
         {
         	line=stdIn.readLine();
-        	if (line.equals(".")) break;
-        	sendMessage(line);
+        	if (line.equals("exit")) break;
         }
       socOut.close();
       socIn.close();
       stdIn.close();
       echoSocket.close();
+      System.exit(0);
     }
     
     /**
@@ -158,7 +158,7 @@ public class EchoClient
 				String[] parts = line.split(" ");
 				switch(parts[0]) 
 				{
-				case "/connect":
+					case "/connect":
     					req = new Request(Request.CONNECT, parts[1], "");
     					break;
     				case "/disconnect":

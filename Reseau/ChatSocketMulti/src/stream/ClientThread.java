@@ -20,6 +20,9 @@ public class ClientThread extends Thread
 	/** The output stream linked to the client side socket. */
 	private ObjectOutputStream oos;
 	
+	/** The input stream linked to the client side socket. */
+	private ObjectInputStream ois;
+	
 	/**
 	 * Gets the client socket.
 	 *
@@ -58,6 +61,12 @@ public class ClientThread extends Thread
 	{
 		this.clientSocket = s;
 		username = null;
+		try {
+			this.oos = new ObjectOutputStream(clientSocket.getOutputStream());
+			this.ois = new ObjectInputStream(clientSocket.getInputStream());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -68,6 +77,9 @@ public class ClientThread extends Thread
 	ClientThread(String username) 
 	{
 		this.username = username;
+		this.clientSocket = null;
+		this.oos = null;
+		this.ois = null;
 	}
 	
 	/**
@@ -75,17 +87,8 @@ public class ClientThread extends Thread
 	 */
 	public void run() 
 	{
-		OutputStream os = null;
-		ObjectOutputStream oos = null;
-		InputStream is = null;
-		ObjectInputStream ois = null;
-		try 
+		try
 		{		  
-			os = clientSocket.getOutputStream();
-			oos = new ObjectOutputStream(os);
-			this.oos = oos;
-			is = clientSocket.getInputStream();
-			ois = new ObjectInputStream(is);
 			//ObjectOutputStream log = new ObjectOutputStream(EchoServerMultiThreaded.fos);
 			while(true) 
 			{
@@ -128,7 +131,6 @@ public class ClientThread extends Thread
 				}
 				else
 				{
-					
 					//restoreLog();
 					EchoServerMultiThreaded.listUsernames.addFirst(username);
 					EchoServerMultiThreaded.listClients.addFirst(this);
@@ -166,7 +168,7 @@ public class ClientThread extends Thread
 				else if(EchoServerMultiThreaded.listUsernames.contains(this.username))
 				{
 					EchoServerMultiThreaded.listUsernames.remove(this.username);
-					EchoServerMultiThreaded.listClients.remove(this.oos);
+					EchoServerMultiThreaded.listClients.remove(this);
 					System.out.println(this.username + " disconnected.");
 					response = new Request(Request.SUCCESS,"Disconnection successful.","");
 					message = new Request(Request.DISCONNECT,"","");
