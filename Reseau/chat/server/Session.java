@@ -187,7 +187,6 @@ public class Session implements SessionItf, Serializable
 		out.writeObject(this);
 		out.close();
 		fos.close();
-		System.exit(0);
     }
     
     /**
