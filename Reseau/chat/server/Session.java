@@ -74,10 +74,11 @@ public class Session implements SessionItf, Serializable
         {
         	if(u.equals(user))
     		{
-    			listUsers.remove(u);
 				String msg = "[" + date.toString().substring(11, 19) + "] " + login + " disconnected.";
 				this.send(msg);
+				listUsers.remove(u);
 				status = true;
+				break;
     		}
         }
         if(status)
