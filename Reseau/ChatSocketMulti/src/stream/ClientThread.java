@@ -23,6 +23,12 @@ public class ClientThread extends Thread
 	/** The input stream linked to the client side socket. */
 	private ObjectInputStream ois;
 	
+	///** The output stream linked to the log File. */
+	//private ObjectOutputStream logOut;
+	
+	///** The input stream linked to the log File. */
+	//private ObjectInputStream logIn;
+	
 	/**
 	 * Gets the client socket.
 	 *
@@ -64,6 +70,8 @@ public class ClientThread extends Thread
 		try {
 			this.oos = new ObjectOutputStream(clientSocket.getOutputStream());
 			this.ois = new ObjectInputStream(clientSocket.getInputStream());
+			//this.logOut = new ObjectOutputStream(EchoServerMultiThreaded.fos);
+			//this.logIn = new ObjectInputStream(EchoServerMultiThreaded.fis);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -89,13 +97,12 @@ public class ClientThread extends Thread
 	{
 		try
 		{		  
-			//ObjectOutputStream log = new ObjectOutputStream(EchoServerMultiThreaded.fos);
 			while(true) 
 			{
 				Request request = (Request)ois.readObject();
 				Request response = requestProcess(request);
 				oos.writeObject(response);
-				//log.writeObject(request);
+				//logOut.writeObject(request);
 			}
 	  	}
 		catch (Exception e)
@@ -191,27 +198,13 @@ public class ClientThread extends Thread
 			case Request.MESSAGE_ALL :
 				request.setDate(date);
 				request.setUsername(this.username);
-				for(ClientThread c : EchoServerMultiThreaded.listClients) 
+				if(this.username==null)
 				{
-					try 
-					{
-						c.getObjectOutputStream().writeObject(request);
-					} 
-					catch (IOException e) 
-					{
-						e.printStackTrace();
-					}						
+					response = new Request(Request.ERROR,"You are not connected.","");
 				}
-				response = new Request(Request.EMPTY,"","");
-				break;
-			case Request.MESSAGE_PRIVATE :
-				request.setDate(date);
-				request.setUsername(this.username);
-				ClientThread clientRec = new ClientThread(request.getOption());
-				ClientThread clientExp = new ClientThread(this.username);
-				for(ClientThread c : EchoServerMultiThreaded.listClients) 
+				else
 				{
-					if(c.equals(clientRec) || c.equals(clientExp))
+					for(ClientThread c : EchoServerMultiThreaded.listClients) 
 					{
 						try 
 						{
@@ -220,10 +213,38 @@ public class ClientThread extends Thread
 						catch (IOException e) 
 						{
 							e.printStackTrace();
-						}
-					}						
+						}						
+					}
+					response = new Request(Request.EMPTY,"","");
 				}
-				response = new Request(Request.EMPTY,"","");
+				break;
+			case Request.MESSAGE_PRIVATE :
+				request.setDate(date);
+				request.setUsername(this.username);
+				ClientThread clientRec = new ClientThread(request.getOption());
+				ClientThread clientExp = new ClientThread(this.username);
+				if(this.username==null)
+				{
+					response = new Request(Request.ERROR,"You are not connected.","");
+				}
+				else
+				{
+					for(ClientThread c : EchoServerMultiThreaded.listClients) 
+					{
+						if(c.equals(clientRec) || c.equals(clientExp))
+						{
+							try 
+							{
+								c.getObjectOutputStream().writeObject(request);
+							} 
+							catch (IOException e) 
+							{
+								e.printStackTrace();
+							}
+						}						
+					}
+					response = new Request(Request.EMPTY,"","");
+				}
 				break;
 			case Request.USERS :
 				String list = "";
@@ -241,33 +262,16 @@ public class ClientThread extends Thread
 		return response;
 	}
 	
-	@SuppressWarnings("resource")
+	/*Method used to save logs
 	public void restoreLog() 
 	{
-		FileInputStream fis = null;
-		try 
-		{
-			fis = new FileInputStream(EchoServerMultiThreaded.LOG_PATH);
-		} 
-		catch (FileNotFoundException e1) 
-		{
-			e1.printStackTrace();
-		}
-		ObjectInputStream in = null;
-		try 
-		{
-			in = new ObjectInputStream(fis);
-		} 
-		catch (IOException e1) 
-		{
-			e1.printStackTrace();
-		}
 		Request request = null;
 		while(true) 
 		{
 			try 
 			{
-				request = (Request) in.readObject();
+				request = (Request) logIn.readObject();
+				if(request == null) break;
 			} 
 			catch (ClassNotFoundException | IOException e) 
 			{
@@ -283,7 +287,7 @@ public class ClientThread extends Thread
 				e.printStackTrace();
 			}
 		}
-	}
+	}*/
  }
 
   

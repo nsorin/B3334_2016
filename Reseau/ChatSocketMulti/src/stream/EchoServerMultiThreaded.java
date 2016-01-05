@@ -1,6 +1,5 @@
 package ChatSocketMulti.src.stream;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.*;
 import java.util.LinkedList;
@@ -18,8 +17,11 @@ public class EchoServerMultiThreaded
 	/** The list of the ClientThread of all connected clients. */
 	static LinkedList<ClientThread> listClients;
 	
-	/** The file output stream linked to the log File */
-	static FileOutputStream fos;
+	///** The file output stream linked to the log File */
+	//static FileOutputStream fos;
+	
+	///** The file input stream linked to the log File */
+	//static FileInputStream fis;
   
  	/**
 	  * main method that create and launch a ClientSocket for each client that tries to connect to the server.
@@ -40,7 +42,8 @@ public class EchoServerMultiThreaded
 			System.out.println("Server ready..."); 
 			listUsernames = new LinkedList<String>();
 			listClients = new LinkedList<ClientThread>();
-			fos = new FileOutputStream(LOG_PATH);
+			//fos = new FileOutputStream(LOG_PATH);
+			//fis = new FileInputStream(LOG_PATH);
 			while (true) 
 			{
 				Socket clientSocket = listenSocket.accept();
@@ -61,14 +64,14 @@ public class EchoServerMultiThreaded
 		{
 			e.printStackTrace();
 		}
-		try 
+		/*try 
 		{
 			fos.close();
 		} 
 		catch (IOException e) 
 		{
 			e.printStackTrace();
-		}
+		}*/
     }
   }
 
