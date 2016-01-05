@@ -242,34 +242,44 @@ public class ClientThread extends Thread
 	}
 	
 	@SuppressWarnings("resource")
-	public void restoreLog() {
+	public void restoreLog() 
+	{
 		FileInputStream fis = null;
-		try {
+		try 
+		{
 			fis = new FileInputStream(EchoServerMultiThreaded.LOG_PATH);
-		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
+		} 
+		catch (FileNotFoundException e1) 
+		{
 			e1.printStackTrace();
 		}
 		ObjectInputStream in = null;
-		try {
+		try 
+		{
 			in = new ObjectInputStream(fis);
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
+		} 
+		catch (IOException e1) 
+		{
 			e1.printStackTrace();
 		}
 		Request request = null;
-		while(true) {
-			try {
+		while(true) 
+		{
+			try 
+			{
 				request = (Request) in.readObject();
-			} catch (ClassNotFoundException | IOException e) {
-				// TODO Auto-generated catch block
+			} 
+			catch (ClassNotFoundException | IOException e) 
+			{
 				e.printStackTrace();
 			}
 			System.out.println(request.toString());
-			try {
+			try 
+			{
 				getObjectOutputStream().writeObject(request);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
+			} 
+			catch (IOException e) 
+			{
 				e.printStackTrace();
 			}
 		}

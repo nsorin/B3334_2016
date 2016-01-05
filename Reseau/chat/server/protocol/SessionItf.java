@@ -11,7 +11,7 @@ public interface SessionItf extends Remote
 {
     
     /**
-     * Method used by a client to connect to the Session as a user
+     * Method used by a client to connect to the Session as a user.
      *
      * @param login the login of the user
      * @param output the output of the user
@@ -21,7 +21,7 @@ public interface SessionItf extends Remote
     boolean connect(String login, OutputItf output) throws RemoteException;
     
     /**
-     * Method used by a client to disconnect from the Session
+     * Method used by a client to disconnect from the Session.
      *
      * @param login the login of the user
      * @return true, if the disconnection is successful
@@ -30,7 +30,7 @@ public interface SessionItf extends Remote
     boolean disconnect(String login) throws RemoteException;
     
     /**
-     * Method used by client when he send a message to all users of the chat
+     * Method used by client when he send a message to all users of the chat.
      *
      * @param content the content of the message
      * @param login the login of the user that send the message
@@ -40,7 +40,7 @@ public interface SessionItf extends Remote
     boolean receiveAll(String content,String login) throws RemoteException;
     
     /**
-     * Method used by client when he send a private message to one of a connected user
+     * Method used by client when he send a private message to one of a connected user.
      *
      * @param content the content of the message
      * @param loginRec the login of the receiver of the message

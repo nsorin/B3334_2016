@@ -12,6 +12,7 @@ import chat.server.protocol.SessionItf;
  */
 public class Server 
 {
+	/** The path of the log File */
 	public static final String LOG_PATH = "chat/chat.log";
     
     /**
