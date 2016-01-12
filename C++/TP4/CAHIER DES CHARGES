@@ -1,0 +1,15 @@
+CAHIER DES CHARGES
+Réaliser un éditeur de gestion de formes géométriques.
+Fonctionnalités à implémenter :
+- Stocker des objets : formes géométriques possédant un nom et des points
+- Ajout d'objet nommé de type segment, rectangle, polygone convexe
+- Suppression d'objet à partir du nom
+- Déplacement d'objet à partir du nom
+- Création d'objets complexes à partir d'opérations sur d'autres objets (réunion, intersection)
+- Appartenance d'un point à un objet
+- Persistance de la liste d'objets (fichier .scutu) : sauvegarder et charger
+- Annuler jusqu'à 20 opérations à la suite
+- Restaurer la dernière opération annulée (une seule fois)
+- Lister les formes stockées
+- Vider la liste des formes
+- Fermer l'application
