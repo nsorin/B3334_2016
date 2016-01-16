@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               AddPolygone  -  description
+                               ComplexObject  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <AddPolygone> (fichier AddPolygone) --
+    //---------- Réalisation de la classe <ComplexObject> (fichier ComplexObject) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "AddPolygone.h"
+    #include "../header/ComplexObject.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type AddPolygone::Méthode ( liste de paramètres )
+    // type ComplexObject::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    AddPolygone & AddPolygone::operator = ( const AddPolygone & unAddPolygone )
+    /*ComplexObject & ComplexObject::operator = ( const ComplexObject & unComplexObject )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    AddPolygone::AddPolygone ( const AddPolygone & unAddPolygone )
+    ComplexObject::ComplexObject ( const ComplexObject & unComplexObject )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <AddPolygone>" << endl;
+        cout << "Appel au constructeur de copie de <ComplexObject>" << endl;
     #endif
-    } //----- Fin de AddPolygone (constructeur de copie)
+    } //----- Fin de ComplexObject (constructeur de copie)
 
 
-    AddPolygone::AddPolygone ( )
+    ComplexObject::ComplexObject ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <AddPolygone>" << endl;
+        cout << "Appel au constructeur de <ComplexObject>" << endl;
     #endif
-    } //----- Fin de AddPolygone
+    } //----- Fin de ComplexObject
 
 
-    AddPolygone::~AddPolygone ( )
+    ComplexObject::~ComplexObject ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <AddPolygone>" << endl;
+        cout << "Appel au destructeur de <ComplexObject>" << endl;
     #endif
-    } //----- Fin de ~AddPolygone
+    } //----- Fin de ~ComplexObject
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               Delete  -  description
+                               UnionObject  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <Delete> (fichier Delete) --
+    //---------- Réalisation de la classe <UnionObject> (fichier UnionObject) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "Delete.h"
+    #include "../header/UnionObject.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Delete::Méthode ( liste de paramètres )
+    // type UnionObject::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    Delete & Delete::operator = ( const Delete & unDelete )
+    /*UnionObject & UnionObject::operator = ( const UnionObject & unUnionObject )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    Delete::Delete ( const Delete & unDelete )
+    UnionObject::UnionObject ( const UnionObject & unUnionObject )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <Delete>" << endl;
+        cout << "Appel au constructeur de copie de <UnionObject>" << endl;
     #endif
-    } //----- Fin de Delete (constructeur de copie)
+    } //----- Fin de UnionObject (constructeur de copie)
 
 
-    Delete::Delete ( )
+    UnionObject::UnionObject ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <Delete>" << endl;
+        cout << "Appel au constructeur de <UnionObject>" << endl;
     #endif
-    } //----- Fin de Delete
+    } //----- Fin de UnionObject
 
 
-    Delete::~Delete ( )
+    UnionObject::~UnionObject ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <Delete>" << endl;
+        cout << "Appel au destructeur de <UnionObject>" << endl;
     #endif
-    } //----- Fin de ~Delete
+    } //----- Fin de ~UnionObject
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

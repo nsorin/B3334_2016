@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               Command  -  description
+                               Segment  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <Command> (fichier Command) --
+    //---------- Réalisation de la classe <Segment> (fichier Segment) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "Command.h"
+    #include "../header/Segment.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Command::Méthode ( liste de paramètres )
+    // type Segment::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    Command & Command::operator = ( const Command & unCommand )
+    /*Segment & Segment::operator = ( const Segment & unSegment )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    Command::Command ( const Command & unCommand )
+    Segment::Segment ( const Segment & unSegment )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <Command>" << endl;
+        cout << "Appel au constructeur de copie de <Segment>" << endl;
     #endif
-    } //----- Fin de Command (constructeur de copie)
+    } //----- Fin de Segment (constructeur de copie)
 
 
-    Command::Command ( )
+    Segment::Segment ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <Command>" << endl;
+        cout << "Appel au constructeur de <Segment>" << endl;
     #endif
-    } //----- Fin de Command
+    } //----- Fin de Segment
 
 
-    Command::~Command ( )
+    Segment::~Segment ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <Command>" << endl;
+        cout << "Appel au destructeur de <Segment>" << endl;
     #endif
-    } //----- Fin de ~Command
+    } //----- Fin de ~Segment
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

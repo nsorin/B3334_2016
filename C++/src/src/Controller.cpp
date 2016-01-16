@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               Intersection  -  description
+                               Controller  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <Intersection> (fichier Intersection) --
+    //---------- Réalisation de la classe <Controller> (fichier Controller) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "Intersection.h"
+    #include "../header/Controller.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Intersection::Méthode ( liste de paramètres )
+    // type Controller::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    Intersection & Intersection::operator = ( const Intersection & unIntersection )
+    /*Controller & Controller::operator = ( const Controller & unController )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    Intersection::Intersection ( const Intersection & unIntersection )
+    Controller::Controller ( const Controller & unController )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <Intersection>" << endl;
+        cout << "Appel au constructeur de copie de <Controller>" << endl;
     #endif
-    } //----- Fin de Intersection (constructeur de copie)
+    } //----- Fin de Controller (constructeur de copie)
 
 
-    Intersection::Intersection ( )
+    Controller::Controller ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <Intersection>" << endl;
+        cout << "Appel au constructeur de <Controller>" << endl;
     #endif
-    } //----- Fin de Intersection
+    } //----- Fin de Controller
 
 
-    Intersection::~Intersection ( )
+    Controller::~Controller ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <Intersection>" << endl;
+        cout << "Appel au destructeur de <Controller>" << endl;
     #endif
-    } //----- Fin de ~Intersection
+    } //----- Fin de ~Controller
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

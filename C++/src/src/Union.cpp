@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               UnionObject  -  description
+                               Union  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <UnionObject> (fichier UnionObject) --
+    //---------- Réalisation de la classe <Union> (fichier Union) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "UnionObject.h"
+    #include "../header/Union.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type UnionObject::Méthode ( liste de paramètres )
+    // type Union::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    UnionObject & UnionObject::operator = ( const UnionObject & unUnionObject )
+    /*Union & Union::operator = ( const Union & unUnion )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    UnionObject::UnionObject ( const UnionObject & unUnionObject )
+    Union::Union ( const Union & unUnion )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <UnionObject>" << endl;
+        cout << "Appel au constructeur de copie de <Union>" << endl;
     #endif
-    } //----- Fin de UnionObject (constructeur de copie)
+    } //----- Fin de Union (constructeur de copie)
 
 
-    UnionObject::UnionObject ( )
+    Union::Union ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <UnionObject>" << endl;
+        cout << "Appel au constructeur de <Union>" << endl;
     #endif
-    } //----- Fin de UnionObject
+    } //----- Fin de Union
 
 
-    UnionObject::~UnionObject ( )
+    Union::~Union ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <UnionObject>" << endl;
+        cout << "Appel au destructeur de <Union>" << endl;
     #endif
-    } //----- Fin de ~UnionObject
+    } //----- Fin de ~Union
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

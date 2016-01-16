@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               Polygone  -  description
+                               SimpleObject  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <Polygone> (fichier Polygone) --
+    //---------- Réalisation de la classe <SimpleObject> (fichier SimpleObject) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "Polygone.h"
+    #include "../header/SimpleObject.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Polygone::Méthode ( liste de paramètres )
+    // type SimpleObject::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    Polygone & Polygone::operator = ( const Polygone & unPolygone )
+    /*SimpleObject & SimpleObject::operator = ( const SimpleObject & unSimpleObject )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    Polygone::Polygone ( const Polygone & unPolygone )
+    SimpleObject::SimpleObject ( const SimpleObject & unSimpleObject )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <Polygone>" << endl;
+        cout << "Appel au constructeur de copie de <SimpleObject>" << endl;
     #endif
-    } //----- Fin de Polygone (constructeur de copie)
+    } //----- Fin de SimpleObject (constructeur de copie)
 
 
-    Polygone::Polygone ( )
+    SimpleObject::SimpleObject ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <Polygone>" << endl;
+        cout << "Appel au constructeur de <SimpleObject>" << endl;
     #endif
-    } //----- Fin de Polygone
+    } //----- Fin de SimpleObject
 
 
-    Polygone::~Polygone ( )
+    SimpleObject::~SimpleObject ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <Polygone>" << endl;
+        cout << "Appel au destructeur de <SimpleObject>" << endl;
     #endif
-    } //----- Fin de ~Polygone
+    } //----- Fin de ~SimpleObject
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

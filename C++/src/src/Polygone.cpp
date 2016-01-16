@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               Point  -  description
+                               Polygone  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <Point> (fichier Point) --
+    //---------- Réalisation de la classe <Polygone> (fichier Polygone) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "Point.h"
+    #include "../header/Polygone.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Point::Méthode ( liste de paramètres )
+    // type Polygone::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    Point & Point::operator = ( const Point & unPoint )
+    /*Polygone & Polygone::operator = ( const Polygone & unPolygone )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    Point::Point ( const Point & unPoint )
+    Polygone::Polygone ( const Polygone & unPolygone )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <Point>" << endl;
+        cout << "Appel au constructeur de copie de <Polygone>" << endl;
     #endif
-    } //----- Fin de Point (constructeur de copie)
+    } //----- Fin de Polygone (constructeur de copie)
 
 
-    Point::Point ( )
+    Polygone::Polygone ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <Point>" << endl;
+        cout << "Appel au constructeur de <Polygone>" << endl;
     #endif
-    } //----- Fin de Point
+    } //----- Fin de Polygone
 
 
-    Point::~Point ( )
+    Polygone::~Polygone ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <Point>" << endl;
+        cout << "Appel au destructeur de <Polygone>" << endl;
     #endif
-    } //----- Fin de ~Point
+    } //----- Fin de ~Polygone
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

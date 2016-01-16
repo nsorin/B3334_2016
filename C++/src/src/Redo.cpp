@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               Load  -  description
+                               Redo  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <Load> (fichier Load) --
+    //---------- Réalisation de la classe <Redo> (fichier Redo) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "Load.h"
+    #include "../header/Redo.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Load::Méthode ( liste de paramètres )
+    // type Redo::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    Load & Load::operator = ( const Load & unLoad )
+    /*Redo & Redo::operator = ( const Redo & unRedo )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    Load::Load ( const Load & unLoad )
+    Redo::Redo ( const Redo & unRedo )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <Load>" << endl;
+        cout << "Appel au constructeur de copie de <Redo>" << endl;
     #endif
-    } //----- Fin de Load (constructeur de copie)
+    } //----- Fin de Redo (constructeur de copie)
 
 
-    Load::Load ( )
+    Redo::Redo ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <Load>" << endl;
+        cout << "Appel au constructeur de <Redo>" << endl;
     #endif
-    } //----- Fin de Load
+    } //----- Fin de Redo
 
 
-    Load::~Load ( )
+    Redo::~Redo ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <Load>" << endl;
+        cout << "Appel au destructeur de <Redo>" << endl;
     #endif
-    } //----- Fin de ~Load
+    } //----- Fin de ~Redo
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

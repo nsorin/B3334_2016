@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "Object.h"
+    #include "../header/Object.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -36,11 +36,11 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    Object & Object::operator = ( const Object & unObject )
+    /*Object & Object::operator = ( const Object & unObject )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

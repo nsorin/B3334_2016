@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               Controller  -  description
+                               Move  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <Controller> (fichier Controller) --
+    //---------- Réalisation de la classe <Move> (fichier Move) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "Controller.h"
+    #include "../header/Move.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Controller::Méthode ( liste de paramètres )
+    // type Move::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    Controller & Controller::operator = ( const Controller & unController )
+    /*Move & Move::operator = ( const Move & unMove )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    Controller::Controller ( const Controller & unController )
+    Move::Move ( const Move & unMove )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <Controller>" << endl;
+        cout << "Appel au constructeur de copie de <Move>" << endl;
     #endif
-    } //----- Fin de Controller (constructeur de copie)
+    } //----- Fin de Move (constructeur de copie)
 
 
-    Controller::Controller ( )
+    Move::Move ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <Controller>" << endl;
+        cout << "Appel au constructeur de <Move>" << endl;
     #endif
-    } //----- Fin de Controller
+    } //----- Fin de Move
 
 
-    Controller::~Controller ( )
+    Move::~Move ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <Controller>" << endl;
+        cout << "Appel au destructeur de <Move>" << endl;
     #endif
-    } //----- Fin de ~Controller
+    } //----- Fin de ~Move
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               Rectangle  -  description
+                               AddRectangle  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <Rectangle> (fichier Rectangle) --
+    //---------- Réalisation de la classe <AddRectangle> (fichier AddRectangle) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "Rectangle.h"
+    #include "../header/AddRectangle.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Rectangle::Méthode ( liste de paramètres )
+    // type AddRectangle::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    Rectangle & Rectangle::operator = ( const Rectangle & unRectangle )
+    /*AddRectangle & AddRectangle::operator = ( const AddRectangle & unAddRectangle )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    Rectangle::Rectangle ( const Rectangle & unRectangle )
+    AddRectangle::AddRectangle ( const AddRectangle & unAddRectangle )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <Rectangle>" << endl;
+        cout << "Appel au constructeur de copie de <AddRectangle>" << endl;
     #endif
-    } //----- Fin de Rectangle (constructeur de copie)
+    } //----- Fin de AddRectangle (constructeur de copie)
 
 
-    Rectangle::Rectangle ( )
+    AddRectangle::AddRectangle ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <Rectangle>" << endl;
+        cout << "Appel au constructeur de <AddRectangle>" << endl;
     #endif
-    } //----- Fin de Rectangle
+    } //----- Fin de AddRectangle
 
 
-    Rectangle::~Rectangle ( )
+    AddRectangle::~AddRectangle ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <Rectangle>" << endl;
+        cout << "Appel au destructeur de <AddRectangle>" << endl;
     #endif
-    } //----- Fin de ~Rectangle
+    } //----- Fin de ~AddRectangle
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               SimpleObject  -  description
+                               Clear  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <SimpleObject> (fichier SimpleObject) --
+    //---------- Réalisation de la classe <Clear> (fichier Clear) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "SimpleObject.h"
+    #include "../header/Clear.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type SimpleObject::Méthode ( liste de paramètres )
+    // type Clear::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    SimpleObject & SimpleObject::operator = ( const SimpleObject & unSimpleObject )
+    /*Clear & Clear::operator = ( const Clear & unClear )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    SimpleObject::SimpleObject ( const SimpleObject & unSimpleObject )
+    Clear::Clear ( const Clear & unClear )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <SimpleObject>" << endl;
+        cout << "Appel au constructeur de copie de <Clear>" << endl;
     #endif
-    } //----- Fin de SimpleObject (constructeur de copie)
+    } //----- Fin de Clear (constructeur de copie)
 
 
-    SimpleObject::SimpleObject ( )
+    Clear::Clear ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <SimpleObject>" << endl;
+        cout << "Appel au constructeur de <Clear>" << endl;
     #endif
-    } //----- Fin de SimpleObject
+    } //----- Fin de Clear
 
 
-    SimpleObject::~SimpleObject ( )
+    Clear::~Clear ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <SimpleObject>" << endl;
+        cout << "Appel au destructeur de <Clear>" << endl;
     #endif
-    } //----- Fin de ~SimpleObject
+    } //----- Fin de ~Clear
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

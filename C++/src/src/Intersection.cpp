@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               Save  -  description
+                               Intersection  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <Save> (fichier Save) --
+    //---------- Réalisation de la classe <Intersection> (fichier Intersection) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "Save.h"
+    #include "../header/Intersection.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Save::Méthode ( liste de paramètres )
+    // type Intersection::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    Save & Save::operator = ( const Save & unSave )
+    /*Intersection & Intersection::operator = ( const Intersection & unIntersection )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    Save::Save ( const Save & unSave )
+    Intersection::Intersection ( const Intersection & unIntersection )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <Save>" << endl;
+        cout << "Appel au constructeur de copie de <Intersection>" << endl;
     #endif
-    } //----- Fin de Save (constructeur de copie)
+    } //----- Fin de Intersection (constructeur de copie)
 
 
-    Save::Save ( )
+    Intersection::Intersection ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <Save>" << endl;
+        cout << "Appel au constructeur de <Intersection>" << endl;
     #endif
-    } //----- Fin de Save
+    } //----- Fin de Intersection
 
 
-    Save::~Save ( )
+    Intersection::~Intersection ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <Save>" << endl;
+        cout << "Appel au destructeur de <Intersection>" << endl;
     #endif
-    } //----- Fin de ~Save
+    } //----- Fin de ~Intersection
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

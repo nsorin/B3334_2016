@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               ComplexObject  -  description
+                               AddSegment  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <ComplexObject> (fichier ComplexObject) --
+    //---------- Réalisation de la classe <AddSegment> (fichier AddSegment) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "ComplexObject.h"
+    #include "../header/AddSegment.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type ComplexObject::Méthode ( liste de paramètres )
+    // type AddSegment::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    ComplexObject & ComplexObject::operator = ( const ComplexObject & unComplexObject )
+    /*AddSegment & AddSegment::operator = ( const AddSegment & unAddSegment )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    ComplexObject::ComplexObject ( const ComplexObject & unComplexObject )
+    AddSegment::AddSegment ( const AddSegment & unAddSegment )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <ComplexObject>" << endl;
+        cout << "Appel au constructeur de copie de <AddSegment>" << endl;
     #endif
-    } //----- Fin de ComplexObject (constructeur de copie)
+    } //----- Fin de AddSegment (constructeur de copie)
 
 
-    ComplexObject::ComplexObject ( )
+    AddSegment::AddSegment ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <ComplexObject>" << endl;
+        cout << "Appel au constructeur de <AddSegment>" << endl;
     #endif
-    } //----- Fin de ComplexObject
+    } //----- Fin de AddSegment
 
 
-    ComplexObject::~ComplexObject ( )
+    AddSegment::~AddSegment ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <ComplexObject>" << endl;
+        cout << "Appel au destructeur de <AddSegment>" << endl;
     #endif
-    } //----- Fin de ~ComplexObject
+    } //----- Fin de ~AddSegment
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

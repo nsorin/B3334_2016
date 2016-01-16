@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               InterObject  -  description
+                               List  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <InterObject> (fichier InterObject) --
+    //---------- Réalisation de la classe <List> (fichier List) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "InterObject.h"
+    #include "../header/List.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type InterObject::Méthode ( liste de paramètres )
+    // type List::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    InterObject & InterObject::operator = ( const InterObject & unInterObject )
+    /*List & List::operator = ( const List & unList )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    InterObject::InterObject ( const InterObject & unInterObject )
+    List::List ( const List & unList )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <InterObject>" << endl;
+        cout << "Appel au constructeur de copie de <List>" << endl;
     #endif
-    } //----- Fin de InterObject (constructeur de copie)
+    } //----- Fin de List (constructeur de copie)
 
 
-    InterObject::InterObject ( )
+    List::List ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <InterObject>" << endl;
+        cout << "Appel au constructeur de <List>" << endl;
     #endif
-    } //----- Fin de InterObject
+    } //----- Fin de List
 
 
-    InterObject::~InterObject ( )
+    List::~List ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <InterObject>" << endl;
+        cout << "Appel au destructeur de <List>" << endl;
     #endif
-    } //----- Fin de ~InterObject
+    } //----- Fin de ~List
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

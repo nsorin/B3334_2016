@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               List  -  description
+                               Add  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <List> (fichier List) --
+    //---------- Réalisation de la classe <Add> (fichier Add) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "List.h"
+    #include "../header/Add.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type List::Méthode ( liste de paramètres )
+    // type Add::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    List & List::operator = ( const List & unList )
+    /*Add & Add::operator = ( const Add & unAdd )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    List::List ( const List & unList )
+    Add::Add ( const Add & unAdd )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <List>" << endl;
+        cout << "Appel au constructeur de copie de <Add>" << endl;
     #endif
-    } //----- Fin de List (constructeur de copie)
+    } //----- Fin de Add (constructeur de copie)
 
 
-    List::List ( )
+    Add::Add ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <List>" << endl;
+        cout << "Appel au constructeur de <Add>" << endl;
     #endif
-    } //----- Fin de List
+    } //----- Fin de Add
 
 
-    List::~List ( )
+    Add::~Add ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <List>" << endl;
+        cout << "Appel au destructeur de <Add>" << endl;
     #endif
-    } //----- Fin de ~List
+    } //----- Fin de ~Add
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

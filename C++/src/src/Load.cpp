@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               Add  -  description
+                               Load  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <Add> (fichier Add) --
+    //---------- Réalisation de la classe <Load> (fichier Load) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "Add.h"
+    #include "../header/Load.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Add::Méthode ( liste de paramètres )
+    // type Load::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    Add & Add::operator = ( const Add & unAdd )
+    /*Load & Load::operator = ( const Load & unLoad )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    Add::Add ( const Add & unAdd )
+    Load::Load ( const Load & unLoad )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <Add>" << endl;
+        cout << "Appel au constructeur de copie de <Load>" << endl;
     #endif
-    } //----- Fin de Add (constructeur de copie)
+    } //----- Fin de Load (constructeur de copie)
 
 
-    Add::Add ( )
+    Load::Load ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <Add>" << endl;
+        cout << "Appel au constructeur de <Load>" << endl;
     #endif
-    } //----- Fin de Add
+    } //----- Fin de Load
 
 
-    Add::~Add ( )
+    Load::~Load ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <Add>" << endl;
+        cout << "Appel au destructeur de <Load>" << endl;
     #endif
-    } //----- Fin de ~Add
+    } //----- Fin de ~Load
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

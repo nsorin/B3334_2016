@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               Redo  -  description
+                               Rectangle  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <Redo> (fichier Redo) --
+    //---------- Réalisation de la classe <Rectangle> (fichier Rectangle) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "Redo.h"
+    #include "../header/Rectangle.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Redo::Méthode ( liste de paramètres )
+    // type Rectangle::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    Redo & Redo::operator = ( const Redo & unRedo )
+    /*Rectangle & Rectangle::operator = ( const Rectangle & unRectangle )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    Redo::Redo ( const Redo & unRedo )
+    Rectangle::Rectangle ( const Rectangle & unRectangle )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <Redo>" << endl;
+        cout << "Appel au constructeur de copie de <Rectangle>" << endl;
     #endif
-    } //----- Fin de Redo (constructeur de copie)
+    } //----- Fin de Rectangle (constructeur de copie)
 
 
-    Redo::Redo ( )
+    Rectangle::Rectangle ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <Redo>" << endl;
+        cout << "Appel au constructeur de <Rectangle>" << endl;
     #endif
-    } //----- Fin de Redo
+    } //----- Fin de Rectangle
 
 
-    Redo::~Redo ( )
+    Rectangle::~Rectangle ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <Redo>" << endl;
+        cout << "Appel au destructeur de <Rectangle>" << endl;
     #endif
-    } //----- Fin de ~Redo
+    } //----- Fin de ~Rectangle
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

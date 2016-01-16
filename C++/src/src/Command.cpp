@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               AddRectangle  -  description
+                               Command  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <AddRectangle> (fichier AddRectangle) --
+    //---------- Réalisation de la classe <Command> (fichier Command) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "AddRectangle.h"
+    #include "../header/Command.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type AddRectangle::Méthode ( liste de paramètres )
+    // type Command::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    AddRectangle & AddRectangle::operator = ( const AddRectangle & unAddRectangle )
+    /*Command & Command::operator = ( const Command & unCommand )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    AddRectangle::AddRectangle ( const AddRectangle & unAddRectangle )
+    Command::Command ( const Command & unCommand )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <AddRectangle>" << endl;
+        cout << "Appel au constructeur de copie de <Command>" << endl;
     #endif
-    } //----- Fin de AddRectangle (constructeur de copie)
+    } //----- Fin de Command (constructeur de copie)
 
 
-    AddRectangle::AddRectangle ( )
+    Command::Command ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <AddRectangle>" << endl;
+        cout << "Appel au constructeur de <Command>" << endl;
     #endif
-    } //----- Fin de AddRectangle
+    } //----- Fin de Command
 
 
-    AddRectangle::~AddRectangle ( )
+    Command::~Command ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <AddRectangle>" << endl;
+        cout << "Appel au destructeur de <Command>" << endl;
     #endif
-    } //----- Fin de ~AddRectangle
+    } //----- Fin de ~Command
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

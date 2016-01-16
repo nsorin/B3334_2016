@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "Operation.h"
+    #include "../header/Operation.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -36,11 +36,11 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    Operation & Operation::operator = ( const Operation & unOperation )
+    /*Operation & Operation::operator = ( const Operation & unOperation )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               AddSegment  -  description
+                               Save  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <AddSegment> (fichier AddSegment) --
+    //---------- Réalisation de la classe <Save> (fichier Save) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "AddSegment.h"
+    #include "../header/Save.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type AddSegment::Méthode ( liste de paramètres )
+    // type Save::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    AddSegment & AddSegment::operator = ( const AddSegment & unAddSegment )
+    /*Save & Save::operator = ( const Save & unSave )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    AddSegment::AddSegment ( const AddSegment & unAddSegment )
+    Save::Save ( const Save & unSave )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <AddSegment>" << endl;
+        cout << "Appel au constructeur de copie de <Save>" << endl;
     #endif
-    } //----- Fin de AddSegment (constructeur de copie)
+    } //----- Fin de Save (constructeur de copie)
 
 
-    AddSegment::AddSegment ( )
+    Save::Save ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <AddSegment>" << endl;
+        cout << "Appel au constructeur de <Save>" << endl;
     #endif
-    } //----- Fin de AddSegment
+    } //----- Fin de Save
 
 
-    AddSegment::~AddSegment ( )
+    Save::~Save ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <AddSegment>" << endl;
+        cout << "Appel au destructeur de <Save>" << endl;
     #endif
-    } //----- Fin de ~AddSegment
+    } //----- Fin de ~Save
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

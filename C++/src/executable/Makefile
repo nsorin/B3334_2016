@@ -8,16 +8,15 @@ RMFLAGS  =-f
 OUTPUT   =-o
 CPPFLAGS =-Wall #-DMAP
 EDLFLAGS =
-INT      =Controller.h Object.h ComplexObject.h SimpleObject.h Point.h InterObject.h UnionObject.h Polygone.h Rectangle.h Segment.h
+INT      =Add.h AddPolygone.h AddRectangle.h AddSegment.h Clear.h Command.h ComplexObject.h Delete.h InterObject.h Intersection.h List.h Load.h Move.h Object.h Operation.h Point.h Polygone.h Rectangle.h Redo.h Save.h Segment.h SimpleObject.h Union.h UnionObject.h
 INTPATH  =../header/
-REAL     =$(REALPATH)$(INT:.h=.cpp) $(REALPATH)Application.cpp
-REALPATH =../src/
-OBJ      =$(OBJPATH)$(INT:.h=.o) $(OBJPATH)Application.o
+REAL     =$(REALPATH)$(INT:.h=.cpp) $(REALPATH)Controller.cpp
+OBJ      =$(OBJPATH)$(INT:.h=.o) $(OBJPATH)Controller.o
 OBJPATH  =
 LIBS     =
 LIBPATH  =#-L
 INCPATH  =#-I
-EXE      =analog
+EXE      =exe
 CLEAN    =clean
 .PHONY:$(CLEAN)
 
@@ -37,4 +36,3 @@ $(CLEAN):
 	$(RM) $(RMFLAGS) $(EXE) $(OBJ) Core
 
 #Gestion des dépendances
-Application.o: $(INTPATH)Object.o

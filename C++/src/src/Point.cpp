@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               Clear  -  description
+                               Point  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <Clear> (fichier Clear) --
+    //---------- Réalisation de la classe <Point> (fichier Point) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "Clear.h"
+    #include "../header/Point.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Clear::Méthode ( liste de paramètres )
+    // type Point::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    Clear & Clear::operator = ( const Clear & unClear )
+    /*Point & Point::operator = ( const Point & unPoint )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    Clear::Clear ( const Clear & unClear )
+    Point::Point ( const Point & unPoint )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <Clear>" << endl;
+        cout << "Appel au constructeur de copie de <Point>" << endl;
     #endif
-    } //----- Fin de Clear (constructeur de copie)
+    } //----- Fin de Point (constructeur de copie)
 
 
-    Clear::Clear ( )
+    Point::Point ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <Clear>" << endl;
+        cout << "Appel au constructeur de <Point>" << endl;
     #endif
-    } //----- Fin de Clear
+    } //----- Fin de Point
 
 
-    Clear::~Clear ( )
+    Point::~Point ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <Clear>" << endl;
+        cout << "Appel au destructeur de <Point>" << endl;
     #endif
-    } //----- Fin de ~Clear
+    } //----- Fin de ~Point
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

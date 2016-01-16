@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               Segment  -  description
+                               InterObject  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <Segment> (fichier Segment) --
+    //---------- Réalisation de la classe <InterObject> (fichier InterObject) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "Segment.h"
+    #include "../header/InterObject.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Segment::Méthode ( liste de paramètres )
+    // type InterObject::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    Segment & Segment::operator = ( const Segment & unSegment )
+    /*InterObject & InterObject::operator = ( const InterObject & unInterObject )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    Segment::Segment ( const Segment & unSegment )
+    InterObject::InterObject ( const InterObject & unInterObject )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <Segment>" << endl;
+        cout << "Appel au constructeur de copie de <InterObject>" << endl;
     #endif
-    } //----- Fin de Segment (constructeur de copie)
+    } //----- Fin de InterObject (constructeur de copie)
 
 
-    Segment::Segment ( )
+    InterObject::InterObject ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <Segment>" << endl;
+        cout << "Appel au constructeur de <InterObject>" << endl;
     #endif
-    } //----- Fin de Segment
+    } //----- Fin de InterObject
 
 
-    Segment::~Segment ( )
+    InterObject::~InterObject ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <Segment>" << endl;
+        cout << "Appel au destructeur de <InterObject>" << endl;
     #endif
-    } //----- Fin de ~Segment
+    } //----- Fin de ~InterObject
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    

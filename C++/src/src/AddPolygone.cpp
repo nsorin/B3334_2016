@@ -1,12 +1,12 @@
 
     /*************************************************************************
-                               Move  -  description
+                               AddPolygone  -  description
                                  -------------------
         début                : 16/1/2016
         copyright            : (C) 2016 par nsorin
     *************************************************************************/
 
-    //---------- Réalisation de la classe <Move> (fichier Move) --
+    //---------- Réalisation de la classe <AddPolygone> (fichier AddPolygone) --
 
     //---------------------------------------------------------------- INCLUDE
 
@@ -15,7 +15,7 @@
     #include <iostream>
 
     //------------------------------------------------------ Include personnel
-    #include "Move.h"
+    #include "../header/AddPolygone.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Move::Méthode ( liste de paramètres )
+    // type AddPolygone::Méthode ( liste de paramètres )
     // Algorithme :
     //
     //{
@@ -36,42 +36,42 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    Move & Move::operator = ( const Move & unMove )
+    /*AddPolygone & AddPolygone::operator = ( const AddPolygone & unAddPolygone )
     // Algorithme :
     //
     {
-    } //----- Fin de operator =
+    } //----- Fin de operator =*/
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    Move::Move ( const Move & unMove )
+    AddPolygone::AddPolygone ( const AddPolygone & unAddPolygone )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de copie de <Move>" << endl;
+        cout << "Appel au constructeur de copie de <AddPolygone>" << endl;
     #endif
-    } //----- Fin de Move (constructeur de copie)
+    } //----- Fin de AddPolygone (constructeur de copie)
 
 
-    Move::Move ( )
+    AddPolygone::AddPolygone ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au constructeur de <Move>" << endl;
+        cout << "Appel au constructeur de <AddPolygone>" << endl;
     #endif
-    } //----- Fin de Move
+    } //----- Fin de AddPolygone
 
 
-    Move::~Move ( )
+    AddPolygone::~AddPolygone ( )
     // Algorithme :
     //
     {
     #ifdef MAP
-        cout << "Appel au destructeur de <Move>" << endl;
+        cout << "Appel au destructeur de <AddPolygone>" << endl;
     #endif
-    } //----- Fin de ~Move
+    } //----- Fin de ~AddPolygone
 
 
     //------------------------------------------------------------------ PRIVE
@@ -79,4 +79,3 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
-    
