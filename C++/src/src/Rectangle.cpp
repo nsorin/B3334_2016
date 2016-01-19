@@ -51,16 +51,26 @@
     #ifdef MAP
         cout << "Appel au constructeur de copie de <Rectangle>" << endl;
     #endif
+        this->name = unRectangle.name;
+        tabPoints = new Point[2];
+        tabPoints[0] = unRectangle.tabPoints[0];
+        tabPoints[1] = unRectangle.tabPoints[1];
     } //----- Fin de Rectangle (constructeur de copie)
 
 
-    Rectangle::Rectangle ( )
+    Rectangle::Rectangle (string name, int x1, int y1, int x2, int y2)
     // Algorithme :
     //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <Rectangle>" << endl;
     #endif
+        this->name = name;
+        Point p1(x1,y1);
+        Point p2(x2,y2);
+        tabPoints = new Point[2];
+        tabPoints[0] = p1;
+        tabPoints[1] = p2;
     } //----- Fin de Rectangle
 
 
@@ -71,6 +81,7 @@
     #ifdef MAP
         cout << "Appel au destructeur de <Rectangle>" << endl;
     #endif
+        delete [] this->tabPoints;
     } //----- Fin de ~Rectangle
 
 

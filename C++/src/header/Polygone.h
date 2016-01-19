@@ -28,16 +28,16 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        //void display() const;
+        void Display() const;
         // Mode d'emploi :
         //
 
-        //bool isConvex() const;
+        bool IsConvex() const;
         // Mode d'emploi :
         //
 
     //------------------------------------------------- Surcharge d'opérateurs
-        //Polygone & operator = ( const Polygone & unPolygone );
+        Polygone & operator = ( const Polygone & unPolygone );
         // Mode d'emploi :
         //
         // Contrat :
@@ -51,7 +51,7 @@
         // Contrat :
         //
 
-        Polygone ( );
+        Polygone (vector<Point> & points);
         // Mode d'emploi :
         //
         // Contrat :

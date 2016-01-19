@@ -28,7 +28,7 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        //void display() const;
+        void Display() const;
 
     //------------------------------------------------- Surcharge d'opérateurs
         //Segment & operator = ( const Segment & unSegment );
@@ -45,7 +45,7 @@
         // Contrat :
         //
 
-        Segment ( );
+        Segment (string name, int x1, int y1, int x2, int y2);
         // Mode d'emploi :
         //
         // Contrat :

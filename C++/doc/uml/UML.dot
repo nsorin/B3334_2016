@@ -27,21 +27,21 @@ digraph UML
 		Object
 		[
 			label =
-				"{Object|- Name : string\l|+ Contains(Point *) : bool\l+ Move(int,int) : void\l+ Display() : void\l+ GetName() : string\l+ SetName() : void\l}",
+				"{Object|# Name : string\l|+ Contains(Point *) : bool\l+ Move(int,int) : void\l+ Display() : void\l+ GetName() : string\l+ SetName() : void\l}",
 			shape=record
 		];
 
 		SimpleObject
 		[
 			label =
-				"{SimpleObject|- tabPoints : Point*\l|+ GetTabPoints() : Point*\l+ Move(int,int) : void\l+ Contains(Point *) : bool\l}",
+				"{SimpleObject|# tabPoints : Point*\l|+ GetTabPoints() : Point*\l+ Move(int,int) : void\l+ Contains(Point *) : bool\l}",
 			shape=record
 		];
 
 	    ComplexObject
 		[
 			label =
-				"{ComplexObject|- tabObjects : Object* \l|+ GetTabObjects() : Object*\l+ Move(int,int) : void\l+ Contains(Point *) : bool\l}",
+				"{ComplexObject|# tabObjects : vector\<Object\>\l|+ GetTabObjects() : vector\<Object\>\l+ AddObject(Object) : void\l+ Move(int,int) : void\l+ Contains(Point *) : bool\l}",
 			shape=record
 		];
 
@@ -98,7 +98,7 @@ digraph UML
 		Command
 		[
 			label =
-				"{Command|- ERROR : string\l- SUCCESS : string\l|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{Command|# ERROR : string\l# SUCCESS : string\l|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
@@ -112,42 +112,42 @@ digraph UML
 		AddSegment
 		[
 			label =
-				"{AddSegment|- object : Segment*|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{AddSegment|# object : Segment*|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
 		AddRectangle
 		[
 			label =
-				"{AddRectangle|- object : Rectangle*|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{AddRectangle|# object : Rectangle*|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
 		AddPolygone
 		[
 			label =
-				"{AddPolygone|- object : Polygone*|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{AddPolygone|# object : Polygone*|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
 		Delete
 		[
 			label =
-				"{Delete|- mapObject : map\<string,Object\>|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{Delete|# mapObject : map\<string,Object\>|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
 		Move
 		[
 			label =
-				"{Move|- name : string\l- dx : int\l- dy : int\l|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{Move|# name : string\l# dx : int\l# dy : int\l|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
 		Load
 		[
 			label =
-				"{Load|- mapObject : map\<string,Object\>|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{Load|# mapObject : map\<string,Object\>|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
@@ -161,7 +161,7 @@ digraph UML
 		Clear
 		[
 			label =
-				"{Clear|- mapObject : map\<string,Object\>|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{Clear|# mapObject : map\<string,Object\>|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 

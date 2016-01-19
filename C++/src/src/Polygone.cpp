@@ -13,6 +13,7 @@
     //-------------------------------------------------------- Include système
     using namespace std;
     #include <iostream>
+    #include <vector>
 
     //------------------------------------------------------ Include personnel
     #include "../header/Polygone.h"
@@ -28,15 +29,18 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Polygone::Méthode ( liste de paramètres )
-    // Algorithme :
-    //
-    //{
-    //} //----- Fin de Méthode
+    void Polygone::Display() const
+    {
 
+    }
+
+    bool Polygone::IsConvex() const
+    {
+        return true;
+    }
 
     //------------------------------------------------- Surcharge d'opérateurs
-    /*Polygone & Polygone::operator = ( const Polygone & unPolygone )
+    Polygone & Polygone::operator = ( const Polygone & unPolygone )
     // Algorithme :
     //
     {
@@ -50,17 +54,23 @@
     {
     #ifdef MAP
         cout << "Appel au constructeur de copie de <Polygone>" << endl;
-    #endif
+    #endif        
     } //----- Fin de Polygone (constructeur de copie)
 
 
-    Polygone::Polygone ( )
+    Polygone::Polygone( vector<Point> & points )
     // Algorithme :
     //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <Polygone>" << endl;
     #endif
+        int taille = points.size();
+        this->tabPoints = new Point[taille];
+        for(int i=0;i<taille;i++)
+        {
+            tabPoints[i] = points[i];
+        }
     } //----- Fin de Polygone
 
 
@@ -71,6 +81,7 @@
     #ifdef MAP
         cout << "Appel au destructeur de <Polygone>" << endl;
     #endif
+        delete [] tabPoints;
     } //----- Fin de ~Polygone
 
 

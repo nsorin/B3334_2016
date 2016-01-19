@@ -28,12 +28,25 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type ComplexObject::Méthode ( liste de paramètres )
-    // Algorithme :
-    //
-    //{
-    //} //----- Fin de Méthode
+    std::vector<Object> ComplexObject::GetTabObjects() const
+    {
+        return this->tabObjects;
+    }
 
+    void ComplexObject::AddObject(Object object)
+    {
+        this->tabObjects.push_back(object);
+    }
+
+    void ComplexObject::Move(int dx, int dy)
+    {
+        
+    }
+
+    bool ComplexObject::Contains(Point * point) const
+    {
+        return true;
+    }
 
     //------------------------------------------------- Surcharge d'opérateurs
     /*ComplexObject & ComplexObject::operator = ( const ComplexObject & unComplexObject )
