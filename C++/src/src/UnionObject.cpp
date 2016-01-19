@@ -28,12 +28,10 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type UnionObject::Méthode ( liste de paramètres )
-    // Algorithme :
-    //
-    //{
-    //} //----- Fin de Méthode
+    void UnionObject::Display() const
+    {
 
+    }
 
     //------------------------------------------------- Surcharge d'opérateurs
     /*UnionObject & UnionObject::operator = ( const UnionObject & unUnionObject )
@@ -54,13 +52,14 @@
     } //----- Fin de UnionObject (constructeur de copie)
 
 
-    UnionObject::UnionObject ( )
+    UnionObject::UnionObject (string name)
     // Algorithme :
     //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <UnionObject>" << endl;
     #endif
+        this->name = name;
     } //----- Fin de UnionObject
 
 

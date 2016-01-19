@@ -12,6 +12,8 @@
 
     //--------------------------------------------------- Interfaces utilisées
     #include "Object.h"
+    #include "Point.h"
+    #include <vector>
     //------------------------------------------------------------- Constantes
 
     //------------------------------------------------------------------ Types
@@ -28,15 +30,19 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        //Object * getTabObjects() const;
+        std::vector<Object> GetTabObjects() const;
         // Mode d'emploi :
         //
 
-        //void move();
+        void AddObject(Object o);
         // Mode d'emploi :
         //
 
-        //bool contains() const;
+        void Move(int dx, int dy);
+        // Mode d'emploi :
+        //
+
+        bool Contains(Point * ) const;
         // Mode d'emploi :
         //
 
@@ -80,7 +86,7 @@
 
     private:
     //------------------------------------------------------- Attributs privés
-        Object * tabObjects;
+        std::vector<Object> tabObjects;
     //---------------------------------------------------------- Classes amies
 
     //-------------------------------------------------------- Classes privées

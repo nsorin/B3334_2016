@@ -35,30 +35,22 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-        Point & operator = ( const Point & unPoint );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
 
     //-------------------------------------------- Constructeurs - destructeur
-        Point ( const Point & unPoint );
+        Point ( const Point & unPoint ):x(unPoint.getX()), y(unPoint.getY()){}
         // Mode d'emploi (constructeur de copie) :
         //
-        // Contrat :
-        //
 
-        Point ( );
+        Point (int x1, int y1) : x(x1), y(y1){}
         // Mode d'emploi :
         //
-        // Contrat :
+
+        Point (){}
+        // Mode d'emploi :
         //
 
         virtual ~Point ( );
         // Mode d'emploi :
-        //
-        // Contrat :
         //
 
     //------------------------------------------------------------------ PRIVE

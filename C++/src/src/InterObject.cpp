@@ -28,12 +28,10 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type InterObject::Méthode ( liste de paramètres )
-    // Algorithme :
-    //
-    //{
-    //} //----- Fin de Méthode
+    void InterObject::Display() const
+    {
 
+    }
 
     //------------------------------------------------- Surcharge d'opérateurs
     /*InterObject & InterObject::operator = ( const InterObject & unInterObject )
@@ -54,13 +52,14 @@
     } //----- Fin de InterObject (constructeur de copie)
 
 
-    InterObject::InterObject ( )
+    InterObject::InterObject (string name)
     // Algorithme :
     //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <InterObject>" << endl;
     #endif
+        this->name = name;
     } //----- Fin de InterObject
 
 

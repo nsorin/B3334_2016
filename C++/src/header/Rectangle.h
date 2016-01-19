@@ -43,10 +43,8 @@
         Rectangle ( const Rectangle & unRectangle );
         // Mode d'emploi (constructeur de copie) :
         //
-        // Contrat :
-        //
 
-        Rectangle ( );
+        Rectangle (std::string name, int x1, int y1, int x2, int y2);
         // Mode d'emploi :
         //
         // Contrat :

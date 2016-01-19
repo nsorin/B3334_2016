@@ -12,6 +12,7 @@
 
     //--------------------------------------------------- Interfaces utilisées
     #include "ComplexObject.h"
+    #include <string>
     //------------------------------------------------------------- Constantes
 
     //------------------------------------------------------------------ Types
@@ -28,7 +29,7 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        //void display() const;
+        void Display() const;
         // Mode d'emploi :
         //
 
@@ -47,7 +48,7 @@
         // Contrat :
         //
 
-        InterObject ( );
+        InterObject (std::string name);
         // Mode d'emploi :
         //
         // Contrat :
