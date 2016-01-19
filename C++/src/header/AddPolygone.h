@@ -11,6 +11,8 @@
     #define ADDPOLYGONE_H
 
     //--------------------------------------------------- Interfaces utilisées
+    #include "Add.h"
+    #include "Polygone.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -22,13 +24,25 @@
     //
     //------------------------------------------------------------------------
 
-    class AddPolygone
+    class AddPolygone : public Add
     {
     //----------------------------------------------------------------- PUBLIC
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        // type Méthode ( liste de paramètres );
+        virtual void Display ( );
+        // Mode d'emploi :
+        //
+        // Contrat :
+        //
+
+        virtual bool Do ( std::map<std::string, Object> & model );
+        // Mode d'emploi :
+        //
+        // Contrat :
+        //
+
+        virtual bool Undo ( std::map<std::string, Object> & model );
         // Mode d'emploi :
         //
         // Contrat :
@@ -50,7 +64,7 @@
         // Contrat :
         //
 
-        AddPolygone ( );
+        AddPolygone ( std::string & data );
         // Mode d'emploi :
         //
         // Contrat :
@@ -75,6 +89,7 @@
 
     private:
     //------------------------------------------------------- Attributs privés
+    Polygone object;
 
     //---------------------------------------------------------- Classes amies
 

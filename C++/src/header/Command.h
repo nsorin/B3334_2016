@@ -11,8 +11,13 @@
     #define COMMAND_H
 
     //--------------------------------------------------- Interfaces utilisées
+    #include <string>
+    #include <map>
+    #include "Object.h"
 
     //------------------------------------------------------------- Constantes
+    std::string ERROR = "ERR";
+    std::string SUCCESS = "OK";
 
     //------------------------------------------------------------------ Types
 
@@ -28,12 +33,23 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        // type Méthode ( liste de paramètres );
+        virtual void Display ( );
         // Mode d'emploi :
         //
         // Contrat :
         //
 
+        virtual bool Do ( std::map<std::string, Object> & model );
+        // Mode d'emploi :
+        //
+        // Contrat :
+        //
+
+        virtual bool Undo ( std::map<std::string, Object> & model );
+        // Mode d'emploi :
+        //
+        // Contrat :
+        //
 
     //------------------------------------------------- Surcharge d'opérateurs
         Command & operator = ( const Command & unCommand );

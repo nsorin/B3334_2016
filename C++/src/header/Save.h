@@ -11,7 +11,8 @@
     #define SAVE_H
 
     //--------------------------------------------------- Interfaces utilisées
-
+    #include "Command.h"
+        
     //------------------------------------------------------------- Constantes
 
     //------------------------------------------------------------------ Types
@@ -22,17 +23,30 @@
     //
     //------------------------------------------------------------------------
 
-    class Save
+    class Save : public Command
     {
     //----------------------------------------------------------------- PUBLIC
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        // type Méthode ( liste de paramètres );
+        virtual void Display ( );
         // Mode d'emploi :
         //
         // Contrat :
         //
+
+        virtual bool Do ( std::map<std::string, Object> & model );
+        // Mode d'emploi :
+        //
+        // Contrat :
+        //
+
+        virtual bool Undo ( std::map<std::string, Object> & model );
+        // Mode d'emploi :
+        //
+        // Contrat :
+        //
+
 
 
     //------------------------------------------------- Surcharge d'opérateurs
@@ -50,7 +64,7 @@
         // Contrat :
         //
 
-        Save ( );
+        Save ( std::string & data );
         // Mode d'emploi :
         //
         // Contrat :

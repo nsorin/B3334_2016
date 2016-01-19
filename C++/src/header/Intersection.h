@@ -11,6 +11,8 @@
     #define INTERSECTION_H
 
     //--------------------------------------------------- Interfaces utilisées
+    #include "Operation.h"
+    #include "InterObject.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -22,17 +24,30 @@
     //
     //------------------------------------------------------------------------
 
-    class Intersection
+    class Intersection : public Operation
     {
     //----------------------------------------------------------------- PUBLIC
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        // type Méthode ( liste de paramètres );
+        virtual void Display ( );
         // Mode d'emploi :
         //
         // Contrat :
         //
+
+        virtual bool Do ( std::map<std::string, Object> & model );
+        // Mode d'emploi :
+        //
+        // Contrat :
+        //
+
+        virtual bool Undo ( std::map<std::string, Object> & model );
+        // Mode d'emploi :
+        //
+        // Contrat :
+        //
+
 
 
     //------------------------------------------------- Surcharge d'opérateurs
@@ -50,7 +65,7 @@
         // Contrat :
         //
 
-        Intersection ( );
+        Intersection ( std::string & data );
         // Mode d'emploi :
         //
         // Contrat :
@@ -75,6 +90,7 @@
 
     private:
     //------------------------------------------------------- Attributs privés
+    InterObject object;
 
     //---------------------------------------------------------- Classes amies
 
