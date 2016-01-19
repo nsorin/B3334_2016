@@ -28,11 +28,33 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Delete::Méthode ( liste de paramètres )
+    void Delete::Display ( )
     // Algorithme :
     //
-    //{
-    //} //----- Fin de Méthode
+    {
+    } //----- Fin de Display
+
+    void Delete::Do ( map<string, Object> & model )
+    // Algorithme :
+    //
+    {   
+        for(unsigned int i=0; i<toDelete.size(); i++)
+        {
+            mapObject[toDelete[i]] = model[toDelete[i]];
+            model.erase(toDelete[i]);
+        }
+    } //----- Fin de Do
+
+    void Delete::Undo ( map<string, Object> & model )
+    // Algorithme :
+    //
+    {
+        for(unsigned int i=0; i<toDelete.size(); i++)
+        {
+            model[toDelete[i]] = mapObject[toDelete[i]];
+            mapObject.erase(toDelete[i]);
+        }
+    } //----- Fin de Undo
 
 
     //------------------------------------------------- Surcharge d'opérateurs
@@ -54,13 +76,20 @@
     } //----- Fin de Delete (constructeur de copie)
 
 
-    Delete::Delete ( )
+    Delete::Delete ( string & data )
     // Algorithme :
     //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <Delete>" << endl;
     #endif
+        istringstream iss(data);
+        do
+        {
+            string sub;
+            iss >> sub;
+            toDelete.push_back(sub);
+        } while (iss);
     } //----- Fin de Delete
 
 

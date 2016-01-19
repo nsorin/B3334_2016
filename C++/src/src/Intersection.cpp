@@ -28,11 +28,47 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Intersection::Méthode ( liste de paramètres )
+    void Intersection::Display ( )
     // Algorithme :
     //
-    //{
-    //} //----- Fin de Méthode
+    {
+    } //----- Fin de Display
+
+    bool Intersection::Do ( map<string, Object> & model )
+    // Algorithme :
+    //
+    {
+        if ( model.find(components[i]) == model.end() ) 
+        {
+            object = new InterObject(name);
+            for(unsigned int i=0; i<components.size(); i++)
+            {
+
+                if ( model.find(components[i]) == model.end() ) 
+                {
+                    object.AddObject(model[components[i]]);
+                }   
+                else 
+                {
+                    delete object;
+                    return false;
+                }
+            }
+            return true;
+        } 
+        else 
+        {
+            return false;
+        }
+    } //----- Fin de Do
+
+    bool Intersection::Undo ( map<string, Object> & model )
+    // Algorithme :
+    //
+    {
+        model[object->GetName()].erase();
+        delete object;
+    } //----- Fin de Undo
 
 
     //------------------------------------------------- Surcharge d'opérateurs
@@ -54,13 +90,22 @@
     } //----- Fin de Intersection (constructeur de copie)
 
 
-    Intersection::Intersection ( )
+    Intersection::Intersection ( string & data, map<string, Object> & model )
     // Algorithme :
     //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <Intersection>" << endl;
     #endif
+        istringstream iss(data);
+        iss >> name;
+
+        do
+        {
+            string n;
+            iss >> n;
+            components.push_back(n);
+        } while (iss);
     } //----- Fin de Intersection
 
 
@@ -71,6 +116,10 @@
     #ifdef MAP
         cout << "Appel au destructeur de <Intersection>" << endl;
     #endif
+        if(object)
+        {
+            delete object;
+        }
     } //----- Fin de ~Intersection
 
 

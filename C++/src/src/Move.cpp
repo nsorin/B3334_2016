@@ -28,12 +28,42 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Move::Méthode ( liste de paramètres )
+    void Move::Display ( )
     // Algorithme :
     //
-    //{
-    //} //----- Fin de Méthode
+    {
 
+    } //----- Fin de Display
+
+    bool Move::Do ( map<string, Object> & model )
+    // Algorithme :
+    //
+    {
+        if ( model.find(objectName == model.end() ) 
+        {
+            return false;
+        } 
+        else 
+        {
+            model[objectName].Move(dx, dy);
+            return true;
+        }
+    } //----- Fin de Do
+
+    bool Move::Undo ( map<string, Object> & model )
+    // Algorithme :
+    //
+    {
+        if ( model.find(objectName == model.end() ) 
+        {
+            return false;
+        } 
+        else 
+        {
+            model[objectName].Move(-1*dx, -1*dy);
+            return true;
+        }
+    } //----- Fin de Undo
 
     //------------------------------------------------- Surcharge d'opérateurs
     /*Move & Move::operator = ( const Move & unMove )
@@ -51,16 +81,23 @@
     #ifdef MAP
         cout << "Appel au constructeur de copie de <Move>" << endl;
     #endif
+        this->objectName = unMove.objectName;
+        this->dx = unMove.dx;
+        this->dy = unMove.dy;
     } //----- Fin de Move (constructeur de copie)
 
 
-    Move::Move ( )
+    Move::Move ( string & data )
     // Algorithme :
     //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <Move>" << endl;
     #endif
+        istringstream iss(data);
+        iss >> objectName;
+        iss >> dx;
+        iss >> dy;
     } //----- Fin de Move
 
 

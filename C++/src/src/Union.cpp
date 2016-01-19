@@ -28,11 +28,46 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Union::Méthode ( liste de paramètres )
+    void Union::Display ( )
     // Algorithme :
     //
-    //{
-    //} //----- Fin de Méthode
+    {
+    } //----- Fin de Display
+
+    bool Union::Do()
+    // Algorithme :
+    //
+    {
+        if ( model.find(components[i]) == model.end() ) 
+        {
+            object = new UnionObject(name);
+            for(unsigned int i=0; i<components.size(); i++)
+            {
+                if ( model.find(components[i]) == model.end() ) 
+                {
+                    object.AddObject(model[components[i]]);
+                } 
+                else 
+                {
+                    delete object;
+                    return false;
+                }
+            }
+            return true;
+        } 
+        else 
+        {
+            return false;
+        }
+    } //----- Fin de Do
+
+    bool Union::Undo ( map<string, Object> & model )
+    // Algorithme :
+    //
+    {
+        model[name].erase();
+        delete object;
+    } //----- Fin de Undo
 
 
     //------------------------------------------------- Surcharge d'opérateurs
@@ -61,6 +96,15 @@
     #ifdef MAP
         cout << "Appel au constructeur de <Union>" << endl;
     #endif
+        istringstream iss(data);
+        iss >> name;
+
+        do
+        {
+            string n;
+            iss >> n;
+            components.push_back(n);
+        } while (iss);
     } //----- Fin de Union
 
 
@@ -71,6 +115,10 @@
     #ifdef MAP
         cout << "Appel au destructeur de <Union>" << endl;
     #endif
+        if(object)
+        {
+            delete object;
+        }
     } //----- Fin de ~Union
 
 

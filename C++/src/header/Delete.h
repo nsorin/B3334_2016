@@ -29,12 +29,23 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        // type Méthode ( liste de paramètres );
+        virtual void Display ( );
         // Mode d'emploi :
         //
         // Contrat :
         //
 
+        virtual bool Do ( std::map<std::string, Object> & model);
+        // Mode d'emploi :
+        //
+        // Contrat :
+        //
+
+        virtual bool Undo ( std::map<std::string, Object> & model);
+        // Mode d'emploi :
+        //
+        // Contrat :
+        //
 
     //------------------------------------------------- Surcharge d'opérateurs
         //Delete & operator = ( const Delete & unDelete );
@@ -77,6 +88,7 @@
     private:
     //------------------------------------------------------- Attributs privés
     std::map<std::string, Object> mapObject;
+    std::vector<std::string> toDelete;
 
     //---------------------------------------------------------- Classes amies
 

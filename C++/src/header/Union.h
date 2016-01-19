@@ -30,19 +30,19 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        //virtual void Display ( );
+        virtual void Display ( );
         // Mode d'emploi :
         //
         // Contrat :
         //
 
-        //virtual bool Do ( std::map<std::string, Object> & model );
+        virtual bool Do ( std::map<std::string, Object> & model );
         // Mode d'emploi :
         //
         // Contrat :
         //
 
-        //virtual bool Undo ( std::map<std::string, Object> & model );
+        virtual bool Undo ( std::map<std::string, Object> & model );
         // Mode d'emploi :
         //
         // Contrat :
@@ -90,7 +90,9 @@
 
     private:
     //------------------------------------------------------- Attributs privés
-    UnionObject object;
+    UnionObject *object;
+    std::vector<std::string> components;
+    std::string name;
 
     //---------------------------------------------------------- Classes amies
 

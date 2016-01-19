@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    bool AddSegment::Display ( )
+    void AddSegment::Display ( )
     // Algorithme :
     //
     {
