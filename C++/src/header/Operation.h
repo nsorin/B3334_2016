@@ -11,6 +11,7 @@
     #define OPERATION_H
 
     //--------------------------------------------------- Interfaces utilisées
+    #include "Command.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -22,17 +23,30 @@
     //
     //------------------------------------------------------------------------
 
-    class Operation
+    class Operation : public Command
     {
     //----------------------------------------------------------------- PUBLIC
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        // type Méthode ( liste de paramètres );
+        virtual void Display ( );
         // Mode d'emploi :
         //
         // Contrat :
         //
+
+        virtual bool Do ( std::map<std::string, Object> & model );
+        // Mode d'emploi :
+        //
+        // Contrat :
+        //
+
+        virtual bool Undo ( std::map<std::string, Object> & model );
+        // Mode d'emploi :
+        //
+        // Contrat :
+        //
+
 
 
     //------------------------------------------------- Surcharge d'opérateurs

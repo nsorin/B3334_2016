@@ -11,6 +11,7 @@
     #define CLEAR_H
 
     //--------------------------------------------------- Interfaces utilisées
+    #include "Command.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -22,13 +23,25 @@
     //
     //------------------------------------------------------------------------
 
-    class Clear
+    class Clear : public Command
     {
     //----------------------------------------------------------------- PUBLIC
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        // type Méthode ( liste de paramètres );
+        virtual void Display ( );
+        // Mode d'emploi :
+        //
+        // Contrat :
+        //
+
+        virtual bool Do ( std::map<std::string, Object> & model );
+        // Mode d'emploi :
+        //
+        // Contrat :
+        //
+
+        virtual bool Undo ( std::map<std::string, Object> & model );
         // Mode d'emploi :
         //
         // Contrat :
@@ -75,6 +88,7 @@
 
     private:
     //------------------------------------------------------- Attributs privés
+    std::map<std::string, Object> mapObject;
 
     //---------------------------------------------------------- Classes amies
 

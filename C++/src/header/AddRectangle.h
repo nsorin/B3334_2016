@@ -11,6 +11,8 @@
     #define ADDRECTANGLE_H
 
     //--------------------------------------------------- Interfaces utilisées
+    #include "Add.h"
+    #include "Rectangle.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -22,13 +24,25 @@
     //
     //------------------------------------------------------------------------
 
-    class AddRectangle
+    class AddRectangle : public Add
     {
     //----------------------------------------------------------------- PUBLIC
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        // type Méthode ( liste de paramètres );
+        virtual void Display ( );
+        // Mode d'emploi :
+        //
+        // Contrat :
+        //
+
+        virtual bool Do ( std::map<std::string, Object> & model );
+        // Mode d'emploi :
+        //
+        // Contrat :
+        //
+
+        virtual bool Undo ( std::map<std::string, Object> & model );
         // Mode d'emploi :
         //
         // Contrat :
@@ -50,7 +64,7 @@
         // Contrat :
         //
 
-        AddRectangle ( );
+        AddRectangle ( std::string & data );
         // Mode d'emploi :
         //
         // Contrat :
@@ -75,6 +89,7 @@
 
     private:
     //------------------------------------------------------- Attributs privés
+    Rectangle object;
 
     //---------------------------------------------------------- Classes amies
 

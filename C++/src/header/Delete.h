@@ -11,6 +11,7 @@
     #define DELETE_H
 
     //--------------------------------------------------- Interfaces utilisées
+#include "Command.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -22,7 +23,7 @@
     //
     //------------------------------------------------------------------------
 
-    class Delete
+    class Delete : public Command
     {
     //----------------------------------------------------------------- PUBLIC
 
@@ -50,7 +51,7 @@
         // Contrat :
         //
 
-        Delete ( );
+        Delete ( std::string & data );
         // Mode d'emploi :
         //
         // Contrat :
@@ -75,6 +76,7 @@
 
     private:
     //------------------------------------------------------- Attributs privés
+    std::map<std::string, Object> mapObject;
 
     //---------------------------------------------------------- Classes amies
 
