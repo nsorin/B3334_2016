@@ -11,7 +11,7 @@
     #define UNIONOBJECT_H
 
     //--------------------------------------------------- Interfaces utilisées
-
+    #include "ComplexObject.h"
     //------------------------------------------------------------- Constantes
 
     //------------------------------------------------------------------ Types
@@ -22,18 +22,15 @@
     //
     //------------------------------------------------------------------------
 
-    class UnionObject
+    class UnionObject : public ComplexObject
     {
     //----------------------------------------------------------------- PUBLIC
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        // type Méthode ( liste de paramètres );
+        void display() const;
         // Mode d'emploi :
         //
-        // Contrat :
-        //
-
 
     //------------------------------------------------- Surcharge d'opérateurs
         UnionObject & operator = ( const UnionObject & unUnionObject );
@@ -87,4 +84,3 @@
     //----------------------------------------- Types dépendants de <UnionObject>
 
     #endif // UNIONOBJECT_H
-    

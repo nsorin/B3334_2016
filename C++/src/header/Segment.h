@@ -11,7 +11,7 @@
     #define SEGMENT_H
 
     //--------------------------------------------------- Interfaces utilisées
-
+    #include "SimpleObject.h"
     //------------------------------------------------------------- Constantes
 
     //------------------------------------------------------------------ Types
@@ -22,18 +22,13 @@
     //
     //------------------------------------------------------------------------
 
-    class Segment
+    class Segment : public SimpleObject
     {
     //----------------------------------------------------------------- PUBLIC
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        // type Méthode ( liste de paramètres );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
+        void display() const;
 
     //------------------------------------------------- Surcharge d'opérateurs
         Segment & operator = ( const Segment & unSegment );
@@ -87,4 +82,3 @@
     //----------------------------------------- Types dépendants de <Segment>
 
     #endif // SEGMENT_H
-    

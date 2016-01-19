@@ -11,7 +11,7 @@
     #define COMPLEXOBJECT_H
 
     //--------------------------------------------------- Interfaces utilisées
-
+    #include "Object.h"
     //------------------------------------------------------------- Constantes
 
     //------------------------------------------------------------------ Types
@@ -22,18 +22,23 @@
     //
     //------------------------------------------------------------------------
 
-    class ComplexObject
+    class ComplexObject : public Object
     {
     //----------------------------------------------------------------- PUBLIC
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        // type Méthode ( liste de paramètres );
+        Object * getTabObjects() const;
         // Mode d'emploi :
         //
-        // Contrat :
+
+        void move();
+        // Mode d'emploi :
         //
 
+        bool contains() const;
+        // Mode d'emploi :
+        //
 
     //------------------------------------------------- Surcharge d'opérateurs
         ComplexObject & operator = ( const ComplexObject & unComplexObject );
@@ -75,7 +80,7 @@
 
     private:
     //------------------------------------------------------- Attributs privés
-
+        Object * tabObjects;
     //---------------------------------------------------------- Classes amies
 
     //-------------------------------------------------------- Classes privées
@@ -87,4 +92,3 @@
     //----------------------------------------- Types dépendants de <ComplexObject>
 
     #endif // COMPLEXOBJECT_H
-    

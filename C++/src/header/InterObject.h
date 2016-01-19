@@ -11,7 +11,7 @@
     #define INTEROBJECT_H
 
     //--------------------------------------------------- Interfaces utilisées
-
+    #include "ComplexObject.h"
     //------------------------------------------------------------- Constantes
 
     //------------------------------------------------------------------ Types
@@ -22,19 +22,16 @@
     //
     //------------------------------------------------------------------------
 
-    class InterObject
+    class InterObject : public ComplexObject
     {
     //----------------------------------------------------------------- PUBLIC
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        // type Méthode ( liste de paramètres );
+        void display() const;
         // Mode d'emploi :
         //
-        // Contrat :
-        //
-
-
+        
     //------------------------------------------------- Surcharge d'opérateurs
         InterObject & operator = ( const InterObject & unInterObject );
         // Mode d'emploi :
@@ -87,4 +84,3 @@
     //----------------------------------------- Types dépendants de <InterObject>
 
     #endif // INTEROBJECT_H
-    

@@ -28,11 +28,10 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        // type Méthode ( liste de paramètres );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+        int getX() const{return x;}
+        int getY() const{return y;}
+        void setX(int x){this->x = x;}
+        void setY(int y){this->y = y;}
 
 
     //------------------------------------------------- Surcharge d'opérateurs
@@ -75,7 +74,8 @@
 
     private:
     //------------------------------------------------------- Attributs privés
-
+        int x;
+        int y;
     //---------------------------------------------------------- Classes amies
 
     //-------------------------------------------------------- Classes privées
@@ -87,4 +87,3 @@
     //----------------------------------------- Types dépendants de <Point>
 
     #endif // POINT_H
-    

@@ -1,81 +1,37 @@
+/*************************************************************************
+                           Controller -  description
+                             -------------------
+    début                : 24/11/2015
+    copyright            : (C) 2015 par B3334
+*************************************************************************/
 
-    /*************************************************************************
-                               Controller  -  description
-                                 -------------------
-        début                : 16/1/2016
-        copyright            : (C) 2016 par nsorin
-    *************************************************************************/
+//---------- Réalisation de la classe <Controller> (fichier Controller.cpp) --
 
-    //---------- Réalisation de la classe <Controller> (fichier Controller) --
+//---------------------------------------------------------------- INCLUDE
 
-    //---------------------------------------------------------------- INCLUDE
+//-------------------------------------------------------- Include système
+#include <iostream>
+#include <deque>
+#include <map>
 
-    //-------------------------------------------------------- Include système
-    using namespace std;
-    #include <iostream>
+using namespace std;
 
-    //------------------------------------------------------ Include personnel
-    #include "../header/Controller.h"
+//------------------------------------------------------ Include personnel
+#include "../header/Command.h"
+#include "../header/Object.h"
+//-------------------------------------------------- Déclarations Méthodes
+void treatCmd(string cmd);
 
-    //------------------------------------------------------------- Constantes
+//------------------------------------------------------------------- Main
+int main(int argc, char** argv)
+{
+    deque<Command> dequeCmd;
+    map<string,Object> mapObjects;
+    Command lastUndoCmd();
+    return 0;
+}
 
-    //---------------------------------------------------- Variables de classe
+void treatCmd(string cmd)
+{
 
-    //----------------------------------------------------------- Types privés
-
-
-    //----------------------------------------------------------------- PUBLIC
-    //-------------------------------------------------------- Fonctions amies
-
-    //----------------------------------------------------- Méthodes publiques
-    // type Controller::Méthode ( liste de paramètres )
-    // Algorithme :
-    //
-    //{
-    //} //----- Fin de Méthode
-
-
-    //------------------------------------------------- Surcharge d'opérateurs
-    /*Controller & Controller::operator = ( const Controller & unController )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
-
-    //-------------------------------------------- Constructeurs - destructeur
-    Controller::Controller ( const Controller & unController )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de copie de <Controller>" << endl;
-    #endif
-    } //----- Fin de Controller (constructeur de copie)
-
-
-    Controller::Controller ( )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de <Controller>" << endl;
-    #endif
-    } //----- Fin de Controller
-
-
-    Controller::~Controller ( )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au destructeur de <Controller>" << endl;
-    #endif
-    } //----- Fin de ~Controller
-
-
-    //------------------------------------------------------------------ PRIVE
-
-    //----------------------------------------------------- Méthodes protégées
-
-    //------------------------------------------------------- Méthodes privées
+}

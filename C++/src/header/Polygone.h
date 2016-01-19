@@ -11,7 +11,7 @@
     #define POLYGONE_H
 
     //--------------------------------------------------- Interfaces utilisées
-
+    #include "SimpleObject.h"
     //------------------------------------------------------------- Constantes
 
     //------------------------------------------------------------------ Types
@@ -22,19 +22,20 @@
     //
     //------------------------------------------------------------------------
 
-    class Polygone
+    class Polygone : public SimpleObject
     {
     //----------------------------------------------------------------- PUBLIC
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        // type Méthode ( liste de paramètres );
+        void display() const;
         // Mode d'emploi :
         //
-        // Contrat :
+
+        bool isConvex() const;
+        // Mode d'emploi :
         //
-
-
+        
     //------------------------------------------------- Surcharge d'opérateurs
         Polygone & operator = ( const Polygone & unPolygone );
         // Mode d'emploi :
@@ -87,4 +88,3 @@
     //----------------------------------------- Types dépendants de <Polygone>
 
     #endif // POLYGONE_H
-    

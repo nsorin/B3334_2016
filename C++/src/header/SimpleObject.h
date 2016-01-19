@@ -11,7 +11,8 @@
     #define SIMPLEOBJECT_H
 
     //--------------------------------------------------- Interfaces utilisées
-
+    #include "Object.h"
+    #include "Point.h"
     //------------------------------------------------------------- Constantes
 
     //------------------------------------------------------------------ Types
@@ -22,18 +23,19 @@
     //
     //------------------------------------------------------------------------
 
-    class SimpleObject
+    class SimpleObject : public Object
     {
     //----------------------------------------------------------------- PUBLIC
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        // type Méthode ( liste de paramètres );
+        Point * getTabPoints() const;
         // Mode d'emploi :
         //
-        // Contrat :
-        //
 
+        void move();
+        // Mode d'emploi :
+        //
 
     //------------------------------------------------- Surcharge d'opérateurs
         SimpleObject & operator = ( const SimpleObject & unSimpleObject );
@@ -75,7 +77,7 @@
 
     private:
     //------------------------------------------------------- Attributs privés
-
+        Point * tabPoints;
     //---------------------------------------------------------- Classes amies
 
     //-------------------------------------------------------- Classes privées
@@ -87,4 +89,3 @@
     //----------------------------------------- Types dépendants de <SimpleObject>
 
     #endif // SIMPLEOBJECT_H
-    

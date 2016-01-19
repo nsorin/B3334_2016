@@ -13,185 +13,193 @@ digraph UML
 	*
 	*/
 
-	Point
-	[
-		label =
-			"{Point|- x : int\l- y : int\l|+ getX() : int\l+ getY() : int\l+ setX() : void\l+ setY() : void\l}",
-		shape=record
-	]
+	subgraph cluster_Model {
+		label="Model";
+		style=filled;
+		bgcolor="#1F7872";
+		Point
+		[
+			label =
+				"{Point|- x : int\l- y : int\l|+ getX() : int\l+ getY() : int\l+ setX() : void\l+ setY() : void\l}",
+			shape=record
+		];
 
-	Object
-	[
-		label =
-			"{Object|- Name : string\l|+ contains() : bool\l+ move() : void\l+ display() : void\l+ getName() : string\l+ setName() : void\l}",
-		shape=record
-	]
+		Object
+		[
+			label =
+				"{Object|- Name : string\l|+ contains() : bool\l+ move() : void\l+ display() : void\l+ getName() : string\l+ setName() : void\l}",
+			shape=record
+		];
 
-	SimpleObject
-	[
-		label =
-			"{SimpleObject|- tabPoints : Point[]\l|+ getTabPoints() : Point[]\l+ move() : void\l}",
-		shape=record
-	]
+		SimpleObject
+		[
+			label =
+				"{SimpleObject|- tabPoints : Point[]\l|+ getTabPoints() : Point[]\l+ move() : void\l}",
+			shape=record
+		];
 
-    ComplexObject
-	[
-		label =
-			"{ComplexObject|- tabObjects : Object[] \l|+ getTabObjects() : Object[]\l+ move() : void\l+ contains() : bool\l}",
-		shape=record
-	]
+	    ComplexObject
+		[
+			label =
+				"{ComplexObject|- tabObjects : Object[] \l|+ getTabObjects() : Object[]\l+ move() : void\l+ contains() : bool\l}",
+			shape=record
+		];
 
-    Segment
-	[
-		label =
-			"{Segment||+ display() : void\l}",
-		shape=record
-	]
+	    Segment
+		[
+			label =
+				"{Segment||+ display() : void\l}",
+			shape=record
+		];
 
-	Rectangle
-	[
-		label =
-			"{Rectangle||+ display() : void\l}",
-		shape=record
-	]
+		Rectangle
+		[
+			label =
+				"{Rectangle||+ display() : void\l}",
+			shape=record
+		];
 
-	Polygone
-	[
-		label =
-			"{Polygone||+ display() : void\l+ isConvex() : bool\l}",
-		shape=record
-	]
+		Polygone
+		[
+			label =
+				"{Polygone||+ display() : void\l+ isConvex() : bool\l}",
+			shape=record
+		];
 
-	UnionObject
-	[
-		label =
-			"{UnionObject||+ display() : void\l}",
-		shape=record
-	]
+		UnionObject
+		[
+			label =
+				"{UnionObject||+ display() : void\l}",
+			shape=record
+		];
 
-	InterObject
-	[
-		label =
-			"{InterObject||+ display() : void\l}",
-		shape=record
-	]
-
+		InterObject
+		[
+			label =
+				"{InterObject||+ display() : void\l}",
+			shape=record
+		];
+	}
 	/*
 	* 								Controller
 	*
 	*/
+	subgraph cluster_Controller {
+		label="Controller";
+		style=filled;
+		bgcolor="#1F7872";
+		Controller
+		[
+			label =
+				"{Controller|+ dequeCmd : deque\<Command\>\l+ mapObjects : map\<string,Object\>\l+ lastUndo : Command\l|+ main(int, char**) : int\l+ treatCmd() : void\l}",
+			shape=record
+		]
 
-	Controller
-	[
-		label =
-			"{Controller|- dequeueCmd : dequeue\<Command\>\l- mapObjects : map\<string,Object\>\l- lastUndo : Command\l|+ main(int, char**) : int\l+ treatCmd() : void\l}",
-		shape=record
-	]
+		Command
+		[
+			label =
+				"{Command|- ERROR : string\l- SUCCESS : string\l|+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+			shape=record
+		]
 
-	Command
-	[
-		label =
-			"{Command|- ERROR : string\l- SUCCESS : string\l|+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
-		shape=record
-	]
+		Add
+		[
+			label =
+				"{Add||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+			shape=record
+		]
 
-	Add
-	[
-		label =
-			"{Add||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
-		shape=record
-	]
+		AddSegment
+		[
+			label =
+				"{AddSegment|- object : Segment|+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+			shape=record
+		]
 
-	AddSegment
-	[
-		label =
-			"{AddSegment|- object : Segment|+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
-		shape=record
-	]
+		AddRectangle
+		[
+			label =
+				"{AddRectangle|- object : Rectangle|+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+			shape=record
+		]
 
-	AddRectangle
-	[
-		label =
-			"{AddRectangle|- object : Rectangle|+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
-		shape=record
-	]
+		AddPolygone
+		[
+			label =
+				"{AddPolygone|- object : Polygone|+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+			shape=record
+		]
 
-	AddPolygone
-	[
-		label =
-			"{AddPolygone|- object : Polygone|+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
-		shape=record
-	]
+		Delete
+		[
+			label =
+				"{Delete|- mapObject : map\<string,Object\>|+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+			shape=record
+		]
 
-	Delete
-	[
-		label =
-			"{Delete|- mapObject : map\<string,Object\>|+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
-		shape=record
-	]
+		Move
+		[
+			label =
+				"{Move||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+			shape=record
+		]
 
-	Move
-	[
-		label =
-			"{Move||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
-		shape=record
-	]
+		List
+		[
+			label =
+				"{List||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+			shape=record
+		]
 
-	List
-	[
-		label =
-			"{List||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
-		shape=record
-	]
+		Load
+		[
+			label =
+				"{Load||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+			shape=record
+		]
 
-	Load
-	[
-		label =
-			"{Load||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
-		shape=record
-	]
+		Save
+		[
+			label =
+				"{Save||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+			shape=record
+		]
 
-	Save
-	[
-		label =
-			"{Save||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
-		shape=record
-	]
+		Redo
+		[
+			label =
+				"{Redo||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+			shape=record
+		]
 
-	Redo
-	[
-		label =
-			"{Redo||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
-		shape=record
-	]
+		Clear
+		[
+			label =
+				"{Clear|- mapObject : map\<string,Object\>|+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+			shape=record
+		]
 
-	Clear
-	[
-		label =
-			"{Clear|- mapObject : map\<string,Object\>|+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
-		shape=record
-	]
+		Operation
+		[
+			label =
+				"{Operation||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+			shape=record
+		]
 
-	Operation
-	[
-		label =
-			"{Operation||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
-		shape=record
-	]
+		Union
+		[
+			label =
+				"{Union||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+			shape=record
+		]
 
-	Union
-	[
-		label =
-			"{Union||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
-		shape=record
-	]
-
-	Intersection
-	[
-		label =
-			"{Intersection||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
-		shape=record
-	]
+		Intersection
+		[
+			label =
+				"{Intersection||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+			shape=record
+		]
+	}
 /*
 * 						Links between classes
 *
@@ -333,75 +341,4 @@ digraph UML
 		arrowhead=normal,
 	]
 
-/*	Cibles -> Application
-	[
-		arrowhead=diamond,
-		taillabel=1,
-		headlabel="1 "
-	]
-
-	LecteurFichier -> Application
-	[
-		arrowhead=diamond,
-		taillabel=1,
-		headlabel="1 "
-	]
-
-	GraphCreateur -> Application
-	[
-		arrowhead=open,
-		taillabel=1,
-		headlabel="1 "
-	]
-
-	Cibles -> LecteurFichier
-	[
-		arrowhead=odiamond,
-		taillabel=1,
-		headlabel="1 "
-	]
-
-	Log -> LecteurFichier
-	[
-		arrowhead=diamond,
-		taillabel=1,
-		headlabel="1 "
-	]
-
-	Options -> GraphCreateur
-	[
-		arrowhead=odiamond,
-		taillabel=1,
-		headlabel="1 "
-	]
-
-	Cibles -> GraphCreateur
-	[
-		arrowhead=odiamond,
-		taillabel=1,
-		headlabel="1 "
-	]
-
-	Log -> Cibles
-	[
-		arrowhead=odiamond,
-		taillabel=1,
-		headlabel="1 "
-	]
-
-	Options -> Cibles
-	[
-		arrowhead=diamond,
-		taillabel=1,
-		headlabel="1 "
-	]
-
-	Referents -> Cibles
-	[
-		arrowhead=diamond,
-		taillabel="1..N ",
-		headlabel="1 "
-	]
-
-	*/
 }

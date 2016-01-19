@@ -11,7 +11,7 @@
     #define RECTANGLE_H
 
     //--------------------------------------------------- Interfaces utilisées
-
+    #include "SimpleObject.h"
     //------------------------------------------------------------- Constantes
 
     //------------------------------------------------------------------ Types
@@ -22,17 +22,13 @@
     //
     //------------------------------------------------------------------------
 
-    class Rectangle
+    class Rectangle : public SimpleObject
     {
     //----------------------------------------------------------------- PUBLIC
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        // type Méthode ( liste de paramètres );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+        void display() const;
 
 
     //------------------------------------------------- Surcharge d'opérateurs
@@ -87,4 +83,3 @@
     //----------------------------------------- Types dépendants de <Rectangle>
 
     #endif // RECTANGLE_H
-    

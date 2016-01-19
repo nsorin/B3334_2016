@@ -28,12 +28,25 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        // type Méthode ( liste de paramètres );
+        bool contains() const;
         // Mode d'emploi :
         //
-        // Contrat :
+
+        void move();
+        // Mode d'emploi :
         //
 
+        void display() const;
+        // Mode d'emploi :
+        //
+
+        string getName() const;
+        // Mode d'emploi :
+        //
+
+        void setName();
+        // Mode d'emploi :
+        //
 
     //------------------------------------------------- Surcharge d'opérateurs
         Object & operator = ( const Object & unObject );
@@ -75,7 +88,7 @@
 
     private:
     //------------------------------------------------------- Attributs privés
-
+        string Name;
     //---------------------------------------------------------- Classes amies
 
     //-------------------------------------------------------- Classes privées
@@ -87,4 +100,3 @@
     //----------------------------------------- Types dépendants de <Object>
 
     #endif // OBJECT_H
-    
