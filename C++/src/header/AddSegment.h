@@ -50,7 +50,7 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-        AddSegment & operator = ( const AddSegment & unAddSegment );
+        //AddSegment & operator = ( const AddSegment & unAddSegment );
         // Mode d'emploi :
         //
         // Contrat :
@@ -102,4 +102,3 @@
     //----------------------------------------- Types dépendants de <AddSegment>
 
     #endif // ADDSEGMENT_H
-    

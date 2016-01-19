@@ -28,12 +28,12 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        void display() const;
+        //void display() const;
         // Mode d'emploi :
         //
-        
+
     //------------------------------------------------- Surcharge d'opérateurs
-        InterObject & operator = ( const InterObject & unInterObject );
+        //InterObject & operator = ( const InterObject & unInterObject );
         // Mode d'emploi :
         //
         // Contrat :

@@ -28,11 +28,11 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        void display() const;
+        //void display() const;
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-        Rectangle & operator = ( const Rectangle & unRectangle );
+        //Rectangle & operator = ( const Rectangle & unRectangle );
         // Mode d'emploi :
         //
         // Contrat :

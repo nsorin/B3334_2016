@@ -28,12 +28,12 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        void display() const;
+        //void display() const;
         // Mode d'emploi :
         //
 
     //------------------------------------------------- Surcharge d'opérateurs
-        UnionObject & operator = ( const UnionObject & unUnionObject );
+        //UnionObject & operator = ( const UnionObject & unUnionObject );
         // Mode d'emploi :
         //
         // Contrat :

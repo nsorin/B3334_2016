@@ -37,7 +37,7 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-        Delete & operator = ( const Delete & unDelete );
+        //Delete & operator = ( const Delete & unDelete );
         // Mode d'emploi :
         //
         // Contrat :
@@ -89,4 +89,3 @@
     //----------------------------------------- Types dépendants de <Delete>
 
     #endif // DELETE_H
-    

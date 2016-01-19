@@ -28,12 +28,20 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type AddPolygone::Méthode ( liste de paramètres )
-    // Algorithme :
-    //
-    //{
-    //} //----- Fin de Méthode
+    void Display ( )
+    {
 
+    }
+
+    bool Do ( std::map<std::string, Object> & model )
+    {
+        return false;
+    }
+
+    bool Undo ( std::map<std::string, Object> & model )
+    {
+        return false;
+    }
 
     //------------------------------------------------- Surcharge d'opérateurs
     /*AddPolygone & AddPolygone::operator = ( const AddPolygone & unAddPolygone )
@@ -54,7 +62,7 @@
     } //----- Fin de AddPolygone (constructeur de copie)
 
 
-    AddPolygone::AddPolygone ( )
+    AddPolygone::AddPolygone ( std::string & data )
     // Algorithme :
     //
     {

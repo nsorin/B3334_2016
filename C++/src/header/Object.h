@@ -28,28 +28,28 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        bool contains() const;
+        //virtual bool contains() const;
         // Mode d'emploi :
         //
 
-        void move();
+        //virtual void move();
         // Mode d'emploi :
         //
 
-        void display() const;
+        //virtual void display() const;
         // Mode d'emploi :
         //
 
-        string getName() const;
+        //string getName() const{return name;}
         // Mode d'emploi :
         //
 
-        void setName();
+        //void setName(string name){this->name = name;};
         // Mode d'emploi :
         //
 
     //------------------------------------------------- Surcharge d'opérateurs
-        Object & operator = ( const Object & unObject );
+        //Object & operator = ( const Object & unObject );
         // Mode d'emploi :
         //
         // Contrat :
@@ -60,19 +60,13 @@
         Object ( const Object & unObject );
         // Mode d'emploi (constructeur de copie) :
         //
-        // Contrat :
-        //
 
         Object ( );
         // Mode d'emploi :
         //
-        // Contrat :
-        //
 
         virtual ~Object ( );
         // Mode d'emploi :
-        //
-        // Contrat :
         //
 
     //------------------------------------------------------------------ PRIVE
@@ -88,7 +82,7 @@
 
     private:
     //------------------------------------------------------- Attributs privés
-        string Name;
+        string name;
     //---------------------------------------------------------- Classes amies
 
     //-------------------------------------------------------- Classes privées

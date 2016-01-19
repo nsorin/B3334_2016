@@ -12,7 +12,7 @@
 
     //--------------------------------------------------- Interfaces utilisées
     #include "Command.h"
-        
+
     //------------------------------------------------------------- Constantes
 
     //------------------------------------------------------------------ Types
@@ -29,19 +29,19 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        virtual void Display ( );
+        //virtual void Display ( );
         // Mode d'emploi :
         //
         // Contrat :
         //
 
-        virtual bool Do ( std::map<std::string, Object> & model );
+        //virtual bool Do ( std::map<std::string, Object> & model );
         // Mode d'emploi :
         //
         // Contrat :
         //
 
-        virtual bool Undo ( std::map<std::string, Object> & model );
+        //virtual bool Undo ( std::map<std::string, Object> & model );
         // Mode d'emploi :
         //
         // Contrat :
@@ -50,7 +50,7 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-        Save & operator = ( const Save & unSave );
+        //Save & operator = ( const Save & unSave );
         // Mode d'emploi :
         //
         // Contrat :
@@ -101,4 +101,3 @@
     //----------------------------------------- Types dépendants de <Save>
 
     #endif // SAVE_H
-    

@@ -30,19 +30,19 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        virtual void Display ( );
+        //virtual void Display ( );
         // Mode d'emploi :
         //
         // Contrat :
         //
 
-        virtual bool Do ( std::map<std::string, Object> & model );
+        //virtual bool Do ( std::map<std::string, Object> & model );
         // Mode d'emploi :
         //
         // Contrat :
         //
 
-        virtual bool Undo ( std::map<std::string, Object> & model );
+        //virtual bool Undo ( std::map<std::string, Object> & model );
         // Mode d'emploi :
         //
         // Contrat :
@@ -51,7 +51,7 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-        Union & operator = ( const Union & unUnion );
+        //Union & operator = ( const Union & unUnion );
         // Mode d'emploi :
         //
         // Contrat :
@@ -103,4 +103,3 @@
     //----------------------------------------- Types dépendants de <Union>
 
     #endif // UNION_H
-    

@@ -50,7 +50,7 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-        AddRectangle & operator = ( const AddRectangle & unAddRectangle );
+        //AddRectangle & operator = ( const AddRectangle & unAddRectangle );
         // Mode d'emploi :
         //
         // Contrat :
@@ -102,4 +102,3 @@
     //----------------------------------------- Types dépendants de <AddRectangle>
 
     #endif // ADDRECTANGLE_H
-    

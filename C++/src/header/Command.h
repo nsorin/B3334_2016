@@ -34,26 +34,26 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        virtual void Display ( );
+        //virtual void Display ( );
         // Mode d'emploi :
         //
         // Contrat :
         //
 
-        virtual bool Do ( std::map<std::string, Object> & model );
+        //virtual bool Do ( std::map<std::string, Object> & model );
         // Mode d'emploi :
         //
         // Contrat :
         //
 
-        virtual bool Undo ( std::map<std::string, Object> & model );
+        //virtual bool Undo ( std::map<std::string, Object> & model );
         // Mode d'emploi :
         //
         // Contrat :
         //
 
     //------------------------------------------------- Surcharge d'opérateurs
-        Command & operator = ( const Command & unCommand );
+        //Command & operator = ( const Command & unCommand );
         // Mode d'emploi :
         //
         // Contrat :
@@ -104,4 +104,3 @@
     //----------------------------------------- Types dépendants de <Command>
 
     #endif // COMMAND_H
-    

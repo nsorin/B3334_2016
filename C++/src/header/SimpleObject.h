@@ -29,16 +29,16 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        Point * getTabPoints() const;
+        //Point * getTabPoints() const;
         // Mode d'emploi :
         //
 
-        void move();
+        //void move();
         // Mode d'emploi :
         //
 
     //------------------------------------------------- Surcharge d'opérateurs
-        SimpleObject & operator = ( const SimpleObject & unSimpleObject );
+        //SimpleObject & operator = ( const SimpleObject & unSimpleObject );
         // Mode d'emploi :
         //
         // Contrat :

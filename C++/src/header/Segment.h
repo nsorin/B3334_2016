@@ -28,10 +28,10 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        void display() const;
+        //void display() const;
 
     //------------------------------------------------- Surcharge d'opérateurs
-        Segment & operator = ( const Segment & unSegment );
+        //Segment & operator = ( const Segment & unSegment );
         // Mode d'emploi :
         //
         // Contrat :
