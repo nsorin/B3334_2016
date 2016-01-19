@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    bool AddRectangle::Display ( )
+    void AddRectangle::Display ( )
     // Algorithme :
     //
     {

@@ -28,12 +28,33 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type AddPolygone::Méthode ( liste de paramètres )
+    void AddPolygone::Display ( )
     // Algorithme :
     //
-    //{
-    //} //----- Fin de Méthode
+    {
+    } //----- Fin de Display
 
+    void AddPolygone::Do ( )
+    // Algorithme :
+    //
+    {
+        if ( model.find(object->GetName()) == model.end() ) 
+        {
+            model[object->GetName()] = object;
+            return true;
+        } 
+        else 
+        {
+            return false;
+        }
+    } //----- Fin de Display
+
+    void AddPolygone::Undo ( )
+    // Algorithme :
+    //
+    {
+        model.erase(object->GetName());
+    } //----- Fin de Display
 
     //------------------------------------------------- Surcharge d'opérateurs
     /*AddPolygone & AddPolygone::operator = ( const AddPolygone & unAddPolygone )
@@ -61,6 +82,17 @@
     #ifdef MAP
         cout << "Appel au constructeur de <AddPolygone>" << endl;
     #endif
+        istringstream iss(data);
+        string name;
+        vector<int> coord;
+        iss >> name;
+        do
+        {
+            int xy;
+            iss >> xy;
+            coord.push_back(xy);
+        } while (iss);
+        object = new Polygone(name, coord);
     } //----- Fin de AddPolygone
 
 
@@ -71,6 +103,7 @@
     #ifdef MAP
         cout << "Appel au destructeur de <AddPolygone>" << endl;
     #endif
+        delete object;
     } //----- Fin de ~AddPolygone
 
 

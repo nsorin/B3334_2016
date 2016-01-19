@@ -90,7 +90,9 @@
 
     private:
     //------------------------------------------------------- Attributs privés
-    InterObject object;
+    InterObject *object;
+    std::vector<std::string> components;
+    std::string objectName;
 
     //---------------------------------------------------------- Classes amies
 

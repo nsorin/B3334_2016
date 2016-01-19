@@ -13,6 +13,7 @@
     //--------------------------------------------------- Interfaces utilisées
     #include <string>
     #include <map>
+    #include <vector>
     #include <sstream>
     #include "Object.h"
 

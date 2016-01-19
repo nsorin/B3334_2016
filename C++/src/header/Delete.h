@@ -77,6 +77,7 @@
     private:
     //------------------------------------------------------- Attributs privés
     std::map<std::string, Object> mapObject;
+    std::vector<std::string> toDelete;
 
     //---------------------------------------------------------- Classes amies
 

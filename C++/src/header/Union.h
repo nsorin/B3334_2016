@@ -90,7 +90,9 @@
 
     private:
     //------------------------------------------------------- Attributs privés
-    UnionObject object;
+    UnionObject *object;
+    std::vector<std::string> components;
+    std::string name;
 
     //---------------------------------------------------------- Classes amies
 

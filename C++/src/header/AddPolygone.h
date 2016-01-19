@@ -89,7 +89,7 @@
 
     private:
     //------------------------------------------------------- Attributs privés
-    Polygone object;
+    Polygone *object;
 
     //---------------------------------------------------------- Classes amies
 
