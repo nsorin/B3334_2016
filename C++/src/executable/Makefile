@@ -8,9 +8,10 @@ RMFLAGS  =-f
 OUTPUT   =-o
 CPPFLAGS =-Wall #-DMAP
 EDLFLAGS =
-INT      =Add.h AddPolygone.h AddRectangle.h AddSegment.h Clear.h Command.h ComplexObject.h Delete.h InterObject.h Intersection.h List.h Load.h Move.h Object.h Operation.h Point.h Polygone.h Rectangle.h Redo.h Save.h Segment.h SimpleObject.h Union.h UnionObject.h
+INT      =Add.h AddPolygone.h AddRectangle.h AddSegment.h Clear.h Command.h ComplexObject.h Delete.h InterObject.h Intersection.h List.h Load.h Move.h Object.h Operation.h Polygone.h Rectangle.h Redo.h Save.h Segment.h SimpleObject.h Union.h UnionObject.h
 INTPATH  =../header/
 REAL     =$(REALPATH)$(INT:.h=.cpp) $(REALPATH)Controller.cpp
+REALPATH =../src/
 OBJ      =$(OBJPATH)$(INT:.h=.o) $(OBJPATH)Controller.o
 OBJPATH  =
 LIBS     =
@@ -36,3 +37,12 @@ $(CLEAN):
 	$(RM) $(RMFLAGS) $(EXE) $(OBJ) Core
 
 #Gestion des dépendances
+#Model
+Object.o: $(INCPATH)Object.h $(INCPATH)Point.h
+SimpleObject.o: $(INCPATH)SimpleObject.h $(INCPATH)Object.h $(INCPATH)Point.h
+ComplexObject.o: $(INCPATH)ComplexObject.h $(INCPATH)Object.h $(INCPATH)Point.h
+InterObject.o: $(INCPATH)InterObject.h $(INCPATH)ComplexObject.h
+UnionObject.o: $(INCPATH)UnionObject.h $(INCPATH)ComplexObject.h
+Polygone.o: $(INCPATH)Polygone.h $(INCPATH)SimpleObject.h
+Rectangle.o: $(INCPATH)Rectangle.h $(INCPATH)SimpleObject.h
+Segment.o: $(INCPATH)Segment.h $(INCPATH)SimpleObject.h

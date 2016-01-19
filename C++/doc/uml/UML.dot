@@ -20,63 +20,63 @@ digraph UML
 		Point
 		[
 			label =
-				"{Point|- x : int\l- y : int\l|+ getX() : int\l+ getY() : int\l+ setX() : void\l+ setY() : void\l}",
+				"{Point|- x : int\l- y : int\l|+ GetX() : int\l+ GetY() : int\l+ SetX() : void\l+ SetY() : void\l}",
 			shape=record
 		];
 
 		Object
 		[
 			label =
-				"{Object|- Name : string\l|+ contains() : bool\l+ move() : void\l+ display() : void\l+ getName() : string\l+ setName() : void\l}",
+				"{Object|- Name : string\l|+ Contains(Point *) : bool\l+ Move(int,int) : void\l+ Display() : void\l+ GetName() : string\l+ SetName() : void\l}",
 			shape=record
 		];
 
 		SimpleObject
 		[
 			label =
-				"{SimpleObject|- tabPoints : Point[]\l|+ getTabPoints() : Point[]\l+ move() : void\l}",
+				"{SimpleObject|- tabPoints : Point*\l|+ GetTabPoints() : Point*\l+ Move(int,int) : void\l+ Contains(Point *) : bool\l}",
 			shape=record
 		];
 
 	    ComplexObject
 		[
 			label =
-				"{ComplexObject|- tabObjects : Object[] \l|+ getTabObjects() : Object[]\l+ move() : void\l+ contains() : bool\l}",
+				"{ComplexObject|- tabObjects : Object* \l|+ GetTabObjects() : Object*\l+ Move(int,int) : void\l+ Contains(Point *) : bool\l}",
 			shape=record
 		];
 
 	    Segment
 		[
 			label =
-				"{Segment||+ display() : void\l}",
+				"{Segment||+ Display() : void\l}",
 			shape=record
 		];
 
 		Rectangle
 		[
 			label =
-				"{Rectangle||+ display() : void\l}",
+				"{Rectangle||+ Display() : void\l}",
 			shape=record
 		];
 
 		Polygone
 		[
 			label =
-				"{Polygone||+ display() : void\l+ isConvex() : bool\l}",
+				"{Polygone||+ Display() : void\l+ IsConvex() : bool\l}",
 			shape=record
 		];
 
 		UnionObject
 		[
 			label =
-				"{UnionObject||+ display() : void\l}",
+				"{UnionObject||+ Display() : void\l}",
 			shape=record
 		];
 
 		InterObject
 		[
 			label =
-				"{InterObject||+ display() : void\l}",
+				"{InterObject||+ Display() : void\l}",
 			shape=record
 		];
 	}
@@ -91,112 +91,98 @@ digraph UML
 		Controller
 		[
 			label =
-				"{Controller|+ dequeCmd : deque\<Command\>\l+ mapObjects : map\<string,Object\>\l+ lastUndo : Command\l|+ main(int, char**) : int\l+ treatCmd() : void\l}",
+				"{Controller|+ dequeCmd : deque\<Command\>\l+ mapObjects : map\<string,Object\>\l+ lastUndo : Command*\l|+ main(int, char**) : int\l+ TreatCmd(string) : void\l}",
 			shape=record
 		]
 
 		Command
 		[
 			label =
-				"{Command|- ERROR : string\l- SUCCESS : string\l|+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+				"{Command|- ERROR : string\l- SUCCESS : string\l|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
 		Add
 		[
 			label =
-				"{Add||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+				"{Add||+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
 		AddSegment
 		[
 			label =
-				"{AddSegment|- object : Segment|+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+				"{AddSegment|- object : Segment|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
 		AddRectangle
 		[
 			label =
-				"{AddRectangle|- object : Rectangle|+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+				"{AddRectangle|- object : Rectangle|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
 		AddPolygone
 		[
 			label =
-				"{AddPolygone|- object : Polygone|+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+				"{AddPolygone|- object : Polygone|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
 		Delete
 		[
 			label =
-				"{Delete|- mapObject : map\<string,Object\>|+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+				"{Delete|- mapObject : map\<string,Object\>|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
 		Move
 		[
 			label =
-				"{Move||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
-			shape=record
-		]
-
-		List
-		[
-			label =
-				"{List||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+				"{Move||+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
 		Load
 		[
 			label =
-				"{Load||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+				"{Load||+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
 		Save
 		[
 			label =
-				"{Save||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
-			shape=record
-		]
-
-		Redo
-		[
-			label =
-				"{Redo||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+				"{Save||+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
 		Clear
 		[
 			label =
-				"{Clear|- mapObject : map\<string,Object\>|+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+				"{Clear|- mapObject : map\<string,Object\>|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
 		Operation
 		[
 			label =
-				"{Operation||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+				"{Operation||+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
 		Union
 		[
 			label =
-				"{Union||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+				"{Union||+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
 		Intersection
 		[
 			label =
-				"{Intersection||+ display() : void\l+ do() : bool\l+ undo() : bool\l}",
+				"{Intersection||+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 	}
@@ -316,11 +302,6 @@ digraph UML
 		arrowhead=normal,
 	]
 
-	List -> Command
-	[
-		arrowhead=normal,
-	]
-
 	Save -> Command
 	[
 		arrowhead=normal,
@@ -332,11 +313,6 @@ digraph UML
 	]
 
 	Clear -> Command
-	[
-		arrowhead=normal,
-	]
-
-	Redo -> Command
 	[
 		arrowhead=normal,
 	]
