@@ -28,16 +28,16 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        void display() const;
+        //void display() const;
         // Mode d'emploi :
         //
 
-        bool isConvex() const;
+        //bool isConvex() const;
         // Mode d'emploi :
         //
-        
+
     //------------------------------------------------- Surcharge d'opérateurs
-        Polygone & operator = ( const Polygone & unPolygone );
+        //Polygone & operator = ( const Polygone & unPolygone );
         // Mode d'emploi :
         //
         // Contrat :

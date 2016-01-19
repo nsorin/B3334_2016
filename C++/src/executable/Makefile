@@ -8,7 +8,7 @@ RMFLAGS  =-f
 OUTPUT   =-o
 CPPFLAGS =-Wall #-DMAP
 EDLFLAGS =
-INT      =Add.h AddPolygone.h AddRectangle.h AddSegment.h Clear.h Command.h ComplexObject.h Delete.h InterObject.h Intersection.h List.h Load.h Move.h Object.h Operation.h Polygone.h Rectangle.h Redo.h Save.h Segment.h SimpleObject.h Union.h UnionObject.h
+INT      =Add.h AddPolygone.h AddRectangle.h AddSegment.h Clear.h Command.h ComplexObject.h Delete.h InterObject.h Intersection.h Load.h Move.h Object.h Operation.h Polygone.h Rectangle.h Save.h Segment.h SimpleObject.h Union.h UnionObject.h
 INTPATH  =../header/
 REAL     =$(REALPATH)$(INT:.h=.cpp) $(REALPATH)Controller.cpp
 REALPATH =../src/
@@ -38,11 +38,26 @@ $(CLEAN):
 
 #Gestion des dépendances
 #Model
-Object.o: $(INCPATH)Object.h $(INCPATH)Point.h
-SimpleObject.o: $(INCPATH)SimpleObject.h $(INCPATH)Object.h $(INCPATH)Point.h
-ComplexObject.o: $(INCPATH)ComplexObject.h $(INCPATH)Object.h $(INCPATH)Point.h
-InterObject.o: $(INCPATH)InterObject.h $(INCPATH)ComplexObject.h
-UnionObject.o: $(INCPATH)UnionObject.h $(INCPATH)ComplexObject.h
-Polygone.o: $(INCPATH)Polygone.h $(INCPATH)SimpleObject.h
-Rectangle.o: $(INCPATH)Rectangle.h $(INCPATH)SimpleObject.h
-Segment.o: $(INCPATH)Segment.h $(INCPATH)SimpleObject.h
+#Object.o: $(INCPATH)Object.h $(INCPATH)Point.h
+#SimpleObject.o: $(INCPATH)SimpleObject.h $(INCPATH)Object.h $(INCPATH)Point.h
+#ComplexObject.o: $(INCPATH)ComplexObject.h $(INCPATH)Object.h $(INCPATH)Point.h
+#InterObject.o: $(INCPATH)InterObject.h $(INCPATH)ComplexObject.h
+#UnionObject.o: $(INCPATH)UnionObject.h $(INCPATH)ComplexObject.h
+#Polygone.o: $(INCPATH)Polygone.h $(INCPATH)SimpleObject.h
+#Rectangle.o: $(INCPATH)Rectangle.h $(INCPATH)SimpleObject.h
+#Segment.o: $(INCPATH)Segment.h $(INCPATH)SimpleObject.h
+#Controller
+#Controller.o: $(INCPATH)Command.h $(INCPATH)Object.h
+#Command.o: $(INCPATH)Object.h $(INCPATH)Command.h
+#Operation.o: $(INCPATH)Command.h $(INCPATH)Object.h $(INCPATH)Operation.h
+#Intersection.o: $(INCPATH)Command.h $(INCPATH)Object.h $(INCPATH)Operation.h $(INCPATH)Intersection.h
+#Union.o: $(INCPATH)Command.h $(INCPATH)Object.h $(INCPATH)Operation.h $(INCPATH)Union.h
+#Clear.o: $(INCPATH)Command.h $(INCPATH)Object.h $(INCPATH)Clear.h
+#Save.o: $(INCPATH)Command.h $(INCPATH)Object.h $(INCPATH)Save.h
+#Load.o: $(INCPATH)Command.h $(INCPATH)Object.h $(INCPATH)Load.h
+#Move.o: $(INCPATH)Command.h $(INCPATH)Object.h $(INCPATH)Move.h
+#Delete.o: $(INCPATH)Command.h $(INCPATH)Object.h $(INCPATH)Delete.h
+#Add.o: $(INCPATH)Command.h $(INCPATH)Object.h $(INCPATH)Add.h
+#AddPolygone.o: $(INCPATH)Command.h $(INCPATH)Object.h $(INCPATH)Add.h $(INCPATH)AddPolygone.h
+#AddRectangle.o: $(INCPATH)Command.h $(INCPATH)Object.h $(INCPATH)Add.h $(INCPATH)AddRectangle.h
+#AddSegment.o: $(INCPATH)Command.h $(INCPATH)Object.h $(INCPATH)Add.h $(INCPATH)AddSegment.h

@@ -28,6 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
+    
     void AddPolygone::Display ( )
     // Algorithme :
     //
@@ -75,7 +76,7 @@
     } //----- Fin de AddPolygone (constructeur de copie)
 
 
-    AddPolygone::AddPolygone ( )
+    AddPolygone::AddPolygone ( std::string & data )
     // Algorithme :
     //
     {

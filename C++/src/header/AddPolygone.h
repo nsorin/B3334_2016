@@ -102,4 +102,3 @@
     //----------------------------------------- Types dépendants de <AddPolygone>
 
     #endif // ADDPOLYGONE_H
-    

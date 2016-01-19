@@ -54,7 +54,7 @@
         //
 
     //------------------------------------------------- Surcharge d'opérateurs
-        Command & operator = ( const Command & unCommand );
+        //Command & operator = ( const Command & unCommand );
         // Mode d'emploi :
         //
         // Contrat :
@@ -105,4 +105,3 @@
     //----------------------------------------- Types dépendants de <Command>
 
     #endif // COMMAND_H
-    

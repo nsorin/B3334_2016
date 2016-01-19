@@ -28,20 +28,20 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        Object * getTabObjects() const;
+        //Object * getTabObjects() const;
         // Mode d'emploi :
         //
 
-        void move();
+        //void move();
         // Mode d'emploi :
         //
 
-        bool contains() const;
+        //bool contains() const;
         // Mode d'emploi :
         //
 
     //------------------------------------------------- Surcharge d'opérateurs
-        ComplexObject & operator = ( const ComplexObject & unComplexObject );
+        //ComplexObject & operator = ( const ComplexObject & unComplexObject );
         // Mode d'emploi :
         //
         // Contrat :

@@ -51,7 +51,7 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-        Intersection & operator = ( const Intersection & unIntersection );
+        //Intersection & operator = ( const Intersection & unIntersection );
         // Mode d'emploi :
         //
         // Contrat :
@@ -105,4 +105,3 @@
     //----------------------------------------- Types dépendants de <Intersection>
 
     #endif // INTERSECTION_H
-    

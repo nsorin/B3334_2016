@@ -112,21 +112,21 @@ digraph UML
 		AddSegment
 		[
 			label =
-				"{AddSegment|- object : Segment|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{AddSegment|- object : Segment*|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
 		AddRectangle
 		[
 			label =
-				"{AddRectangle|- object : Rectangle|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{AddRectangle|- object : Rectangle*|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
 		AddPolygone
 		[
 			label =
-				"{AddPolygone|- object : Polygone|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{AddPolygone|- object : Polygone*|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
@@ -140,14 +140,14 @@ digraph UML
 		Move
 		[
 			label =
-				"{Move||+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{Move|- name : string\l- dx : int\l- dy : int\l|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 
 		Load
 		[
 			label =
-				"{Load||+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{Load|- mapObject : map\<string,Object\>|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
 			shape=record
 		]
 

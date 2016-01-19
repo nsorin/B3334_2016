@@ -51,7 +51,7 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-        Union & operator = ( const Union & unUnion );
+        //Union & operator = ( const Union & unUnion );
         // Mode d'emploi :
         //
         // Contrat :
@@ -105,4 +105,3 @@
     //----------------------------------------- Types dépendants de <Union>
 
     #endif // UNION_H
-    
