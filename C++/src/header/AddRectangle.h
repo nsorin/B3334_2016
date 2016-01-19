@@ -89,7 +89,7 @@
 
     private:
     //------------------------------------------------------- Attributs privés
-    Rectangle object;
+    Rectangle *object;
 
     //---------------------------------------------------------- Classes amies
 

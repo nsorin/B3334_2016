@@ -28,11 +28,32 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Clear::Méthode ( liste de paramètres )
+    void Clear::Display ( )
     // Algorithme :
     //
-    //{
-    //} //----- Fin de Méthode
+    {
+        cout << SUCCESS << endl;
+    } //----- Fin de Display
+
+    bool Clear::Do ( map<string, Object> & model )
+    // Algorithme :
+    //
+    {
+        mapObject = model;
+        model.clear();
+        Display();
+        return true;
+    } //----- Fin de Display
+
+    bool Clear::Undo ( map<string, Object> & model )
+    // Algorithme :
+    //
+    {
+        model = mapObject;
+        mapObject.clear();
+        Display();
+        return true;
+    } //----- Fin de Display
 
 
     //------------------------------------------------- Surcharge d'opérateurs

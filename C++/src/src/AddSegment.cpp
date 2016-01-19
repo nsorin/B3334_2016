@@ -28,11 +28,33 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type AddSegment::Méthode ( liste de paramètres )
+    bool AddSegment::Display ( )
     // Algorithme :
     //
-    //{
-    //} //----- Fin de Méthode
+    {
+    } //----- Fin de Display
+
+    bool AddSegment::Do ( map<string, Object> & model )
+    // Algorithme :
+    //
+    {
+        if ( model.find(object->GetName()) == model.end() ) 
+        {
+            model[object->GetName()] = object;
+            return true;
+        } 
+        else 
+        {
+            return false;
+        }
+    } //----- Fin de Do
+
+    bool AddSegment::Undo ( map<string, Object> & model )
+    // Algorithme :
+    //
+    {
+        model.erase(object->GetName());
+    } //----- Fin de Undo
 
 
     //------------------------------------------------- Surcharge d'opérateurs
@@ -54,13 +76,25 @@
     } //----- Fin de AddSegment (constructeur de copie)
 
 
-    AddSegment::AddSegment ( )
+    AddSegment::AddSegment ( string & data )
     // Algorithme :
     //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <AddSegment>" << endl;
     #endif
+        string name;
+        int x1;
+        int x2;
+        int y1;
+        int y2;
+        istringstream iss(data);
+        iss >> name;
+        iss >> x1;
+        iss >> y1;
+        iss >> x2;
+        iss >> y2;
+        object = new Segment(name, x1, y1, x2, y2);
     } //----- Fin de AddSegment
 
 
