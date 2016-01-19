@@ -13,6 +13,23 @@
 #include <iostream>
 #include <deque>
 #include <map>
+#include <sstream>
+#include "InterObject.h"
+#include "UnionObject.h"
+#include "Polygone.h"
+#include "Rectangle.h"
+#include "Segment.h"
+#include "Point.h"
+#include "Intersection.h"
+#include "Union.h"
+#include "Clear.h"
+#include "Save.h"
+#include "Load.h"
+#include "Move.h"
+#include "Delete.h"
+#include "AddPolygone.h"
+#include "AddRectangle.h"
+#include "AddSegment.h"
 
 using namespace std;
 
@@ -23,15 +40,94 @@ using namespace std;
 void treatCmd(string cmd);
 
 //------------------------------------------------------------------- Main
-int main(int argc, char** argv)
+int main()
 {
-    deque<Command> dequeCmd;
+    Command *currentCmd;
+    deque<Command*> dequeCmd;
     map<string,Object> mapObjects;
     Command lastUndoCmd();
-    return 0;
+    string cmd;
+    string data;
+    while(true)
+    {
+    	getline(cin, cmd);
+    	unsigned int separator = cmd.find(" ");
+    	firstWord = cmd.substr(0, separator);
+    	data = cmd.substr(separator);
+    	if(firstWord == exit)
+    	{
+    		return 0;
+    	}
+    	else if(firstWord == "S")
+    	{
+    		currentCmd = new AddSegment(data);
+    	}
+    	else if(firstWord == "R")
+    	{
+    		currentCmd = new AddRectangle(data);
+    	}
+    	else if(firstWord == "PC")
+    	{
+    		currentCmd = new AddPolygone(data);
+    	}
+    	else if(firstWord == "OR")
+    	{
+    		currentCmd = new Union(data);
+    	}
+    	else if(firstWord == "OI")
+    	{
+    		currentCmd = new Intersection(data);
+    	}
+    	else if(firstWord == "HIT")
+    	{
+
+    	}
+    	else if(firstWord == "DELETE")
+    	{
+    		currentCmd = new Delete(data);
+    	}
+    	else if(firstWord == "MOVE")
+    	{
+    		currentCmd = new Move(data);
+    	}
+    	else if(firstWord == "LIST")
+    	{
+
+    	}
+    	else if(firstWord == "UNDO")
+    	{
+
+    	}
+    	else if(firstWord == "REDO")
+    	{
+
+    	}
+    	else if(firstWord == "LOAD")
+    	{
+    		currentCmd = new Load(data);
+    	}
+    	else if(firstWord == "SAVE")
+    	{
+    		currentCmd = new Data(data);
+    	}
+    	else if(firstWord == "CLEAR")
+    	{
+    		currentCmd = new Clear();
+    	}
+    	//sale
+    	if(currentCmd->Do(mapObjects))
+    	{
+    		dequeCmd.addFirst(currentCmd);
+    		//Enlever dernière
+    	}
+    	else
+    	{
+    		delete currentCmd;
+    	}
+    }
 }
 
-void treatCmd(string cmd)
+void processCmd(string cmd)
 {
 
 }
