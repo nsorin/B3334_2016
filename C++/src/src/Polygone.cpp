@@ -46,6 +46,15 @@
     {
     } //----- Fin de operator =*/
 
+    ostream & operator<< (ostream & stream, const Polygone & object)
+    {
+        stream << "PC ";
+        /*for(unsigned int i = 0; i<object.GetTabPoints().size(); i++)
+        {
+            stream << object.GetTabPoints()[i]->GetX() << " " << object.GetTabPoints()[i]->GetY() << " ";
+        }*/
+        stream << endl;
+    }
 
     //-------------------------------------------- Constructeurs - destructeur
     Polygone::Polygone ( const Polygone & unPolygone )
@@ -54,11 +63,11 @@
     {
     #ifdef MAP
         cout << "Appel au constructeur de copie de <Polygone>" << endl;
-    #endif        
+    #endif
     } //----- Fin de Polygone (constructeur de copie)
 
 
-    Polygone::Polygone( vector<Point> & points )
+    Polygone::Polygone( string & n, vector<Point> & points ) : SimpleObject(n)
     // Algorithme :
     //
     {

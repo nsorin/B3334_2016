@@ -28,10 +28,11 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type SimpleObject::Méthode ( liste de paramètres )
+    //Point* SimpleObject::GetTabPoints( )
     // Algorithme :
     //
     //{
+      //  return tabPoints;
     //} //----- Fin de Méthode
 
 
@@ -54,7 +55,7 @@
     } //----- Fin de SimpleObject (constructeur de copie)
 
 
-    SimpleObject::SimpleObject ( )
+    SimpleObject::SimpleObject ( string n ) : Object(n)
     // Algorithme :
     //
     {

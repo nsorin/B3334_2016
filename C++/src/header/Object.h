@@ -32,7 +32,7 @@
         // Mode d'emploi :
         //
 
-        //virtual void move();
+        virtual void Move( int dx, int dy );
         // Mode d'emploi :
         //
 
@@ -40,7 +40,7 @@
         // Mode d'emploi :
         //
 
-        //string getName() const{return name;}
+        std::string GetName( );
         // Mode d'emploi :
         //
 
@@ -55,13 +55,15 @@
         // Contrat :
         //
 
+        friend std::ostream & operator<< (std::ostream & stream, const Object & object);
+
 
     //-------------------------------------------- Constructeurs - destructeur
         Object ( const Object & unObject );
         // Mode d'emploi (constructeur de copie) :
         //
 
-        Object ( );
+        Object ( std::string n = "" );
         // Mode d'emploi :
         //
 
@@ -79,8 +81,8 @@
 
     protected:
     //----------------------------------------------------- Attributs protégés
-        string name;
-        
+        std::string name;
+
     private:
     //------------------------------------------------------- Attributs privés
 

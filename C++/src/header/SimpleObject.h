@@ -29,7 +29,7 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        //Point * getTabPoints() const;
+        Point * GetTabPoints() const;
         // Mode d'emploi :
         //
 
@@ -44,6 +44,8 @@
         // Contrat :
         //
 
+        friend std::ostream & operator<< (std::ostream & stream, const SimpleObject & object);
+
 
     //-------------------------------------------- Constructeurs - destructeur
         SimpleObject ( const SimpleObject & unSimpleObject );
@@ -52,7 +54,7 @@
         // Contrat :
         //
 
-        SimpleObject ( );
+        SimpleObject ( std::string n = "" );
         // Mode d'emploi :
         //
         // Contrat :

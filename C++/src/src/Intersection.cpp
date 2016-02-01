@@ -38,25 +38,25 @@
     // Algorithme :
     //
     {
-        if ( model.find(components[i]) == model.end() ) 
+        if ( model.find(objectName) == model.end() )
         {
-            object = new InterObject(name);
+            object = new InterObject(objectName);
             for(unsigned int i=0; i<components.size(); i++)
             {
 
-                if ( model.find(components[i]) == model.end() ) 
+                if ( model.find(components[i]) == model.end() )
                 {
-                    object.AddObject(model[components[i]]);
-                }   
-                else 
+                    object->AddObject(model[components[i]]);
+                }
+                else
                 {
                     delete object;
                     return false;
                 }
             }
             return true;
-        } 
-        else 
+        }
+        else
         {
             return false;
         }
@@ -66,8 +66,9 @@
     // Algorithme :
     //
     {
-        model[object->GetName()].erase();
+        model.erase(object->GetName());
         delete object;
+        return true;
     } //----- Fin de Undo
 
 
@@ -90,7 +91,7 @@
     } //----- Fin de Intersection (constructeur de copie)
 
 
-    Intersection::Intersection ( string & data, map<string, Object> & model )
+    Intersection::Intersection ( string & data )
     // Algorithme :
     //
     {
@@ -98,7 +99,7 @@
         cout << "Appel au constructeur de <Intersection>" << endl;
     #endif
         istringstream iss(data);
-        iss >> name;
+        iss >> objectName;
 
         do
         {

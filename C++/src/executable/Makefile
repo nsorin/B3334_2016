@@ -6,7 +6,7 @@ RM       =@rm
 ECHO     =@echo
 RMFLAGS  =-f
 OUTPUT   =-o
-CPPFLAGS =-Wall #-DMAP
+CPPFLAGS =-std=c++11 -Wall #-DMAP
 EDLFLAGS =
 INT      =Add.h AddPolygone.h AddRectangle.h AddSegment.h Clear.h Command.h ComplexObject.h Delete.h InterObject.h Intersection.h Load.h Move.h Object.h Operation.h Polygone.h Rectangle.h Save.h Segment.h SimpleObject.h Union.h UnionObject.h
 INTPATH  =../header/

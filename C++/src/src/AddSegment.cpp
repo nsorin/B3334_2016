@@ -38,12 +38,12 @@
     // Algorithme :
     //
     {
-        if ( model.find(object->GetName()) == model.end() ) 
+        if ( model.find(object->GetName()) == model.end() )
         {
-            model[object->GetName()] = object;
+            model[object->GetName()] = *object;
             return true;
-        } 
-        else 
+        }
+        else
         {
             return false;
         }
@@ -54,6 +54,7 @@
     //
     {
         model.erase(object->GetName());
+        return true;
     } //----- Fin de Undo
 
 

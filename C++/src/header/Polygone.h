@@ -43,6 +43,8 @@
         // Contrat :
         //
 
+        friend std::ostream & operator<< (std::ostream & stream, const Polygone & object);
+
 
     //-------------------------------------------- Constructeurs - destructeur
         Polygone ( const Polygone & unPolygone );
@@ -51,7 +53,7 @@
         // Contrat :
         //
 
-        Polygone (vector<Point> & points);
+        Polygone (std::string & n, std::vector<Point> & points);
         // Mode d'emploi :
         //
         // Contrat :

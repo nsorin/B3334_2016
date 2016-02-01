@@ -28,12 +28,19 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Object::Méthode ( liste de paramètres )
+    string Object::GetName ( )
     // Algorithme :
     //
-    //{
-    //} //----- Fin de Méthode
+    {
+        return name;
+    } //----- Fin de GetName
 
+    void Object::Move ( int dx, int dy )
+    // Algorithme :
+    //
+    {
+
+    } //----- Fin de GetName
 
     //------------------------------------------------- Surcharge d'opérateurs
     /*Object & Object::operator = ( const Object & unObject )
@@ -54,7 +61,7 @@
     } //----- Fin de Object (constructeur de copie)
 
 
-    Object::Object ( )
+    Object::Object ( string n ) : name(n)
     // Algorithme :
     //
     {

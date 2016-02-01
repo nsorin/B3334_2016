@@ -34,18 +34,19 @@
     {
     } //----- Fin de Display
 
-    void Delete::Do ( map<string, Object> & model )
+    bool Delete::Do ( map<string, Object> & model )
     // Algorithme :
     //
-    {   
+    {
         for(unsigned int i=0; i<toDelete.size(); i++)
         {
             mapObject[toDelete[i]] = model[toDelete[i]];
             model.erase(toDelete[i]);
         }
+        return true;
     } //----- Fin de Do
 
-    void Delete::Undo ( map<string, Object> & model )
+    bool Delete::Undo ( map<string, Object> & model )
     // Algorithme :
     //
     {
@@ -54,6 +55,7 @@
             model[toDelete[i]] = mapObject[toDelete[i]];
             mapObject.erase(toDelete[i]);
         }
+        return true;
     } //----- Fin de Undo
 
 

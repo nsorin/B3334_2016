@@ -34,28 +34,28 @@
     {
     } //----- Fin de Display
 
-    bool Union::Do()
+    bool Union::Do( map<string, Object> & model )
     // Algorithme :
     //
     {
-        if ( model.find(components[i]) == model.end() ) 
+        if ( model.find(objectName) == model.end() )
         {
-            object = new UnionObject(name);
+            object = new UnionObject(objectName);
             for(unsigned int i=0; i<components.size(); i++)
             {
-                if ( model.find(components[i]) == model.end() ) 
+                if ( model.find(components[i]) == model.end() )
                 {
-                    object.AddObject(model[components[i]]);
-                } 
-                else 
+                    object->AddObject(model[components[i]]);
+                }
+                else
                 {
                     delete object;
                     return false;
                 }
             }
             return true;
-        } 
-        else 
+        }
+        else
         {
             return false;
         }
@@ -65,8 +65,9 @@
     // Algorithme :
     //
     {
-        model[name].erase();
+        model.erase(objectName);
         delete object;
+        return true;
     } //----- Fin de Undo
 
 
@@ -89,7 +90,7 @@
     } //----- Fin de Union (constructeur de copie)
 
 
-    Union::Union ( )
+    Union::Union ( string & data )
     // Algorithme :
     //
     {
@@ -97,7 +98,7 @@
         cout << "Appel au constructeur de <Union>" << endl;
     #endif
         istringstream iss(data);
-        iss >> name;
+        iss >> objectName;
 
         do
         {

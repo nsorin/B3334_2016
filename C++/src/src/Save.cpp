@@ -28,11 +28,25 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Save::Méthode ( liste de paramètres )
+    void Save::Display ( )
     // Algorithme :
     //
-    //{
-    //} //----- Fin de Méthode
+    {
+    } //----- Fin de Display
+
+    bool Save::Do ( map<string, Object> & model )
+    // Algorithme :
+    //
+    {
+        return true;
+    } //----- Fin de Do
+
+    bool Save::Undo ( map<string, Object> & model )
+    // Algorithme :
+    //
+    {
+        return true;
+    } //----- Fin de Undo
 
 
     //------------------------------------------------- Surcharge d'opérateurs
@@ -54,7 +68,7 @@
     } //----- Fin de Save (constructeur de copie)
 
 
-    Save::Save ( )
+    Save::Save ( string & data )
     // Algorithme :
     //
     {

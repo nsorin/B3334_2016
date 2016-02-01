@@ -45,7 +45,7 @@
         // Contrat :
         //
 
-        Segment (string name, int x1, int y1, int x2, int y2);
+        Segment ( std::string name, int x1, int y1, int x2, int y2 );
         // Mode d'emploi :
         //
         // Contrat :

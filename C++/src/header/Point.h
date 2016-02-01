@@ -41,15 +41,11 @@
         // Mode d'emploi (constructeur de copie) :
         //
 
-        Point (int x1, int y1) : x(x1), y(y1){}
+        Point (int x1 = 0, int y1 = 0) : x(x1), y(y1){}
         // Mode d'emploi :
         //
 
-        Point (){}
-        // Mode d'emploi :
-        //
-
-        virtual ~Point ( );
+        virtual ~Point ( ) {}
         // Mode d'emploi :
         //
 

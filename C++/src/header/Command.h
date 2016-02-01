@@ -18,8 +18,8 @@
     #include "Object.h"
 
     //------------------------------------------------------------- Constantes
-    std::string ERROR = "ERR";
-    std::string SUCCESS = "OK";
+    static std::string ERROR = "ERR";
+    static std::string SUCCESS = "OK";
 
     //------------------------------------------------------------------ Types
 
@@ -35,19 +35,19 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        virtual void Display ( );
+        virtual void Display ( ) = 0;
         // Mode d'emploi :
         //
         // Contrat :
         //
 
-        virtual bool Do ( std::map<std::string, Object> & model );
+        virtual bool Do ( std::map<std::string, Object> & model ) = 0;
         // Mode d'emploi :
         //
         // Contrat :
         //
 
-        virtual bool Undo ( std::map<std::string, Object> & model );
+        virtual bool Undo ( std::map<std::string, Object> & model ) = 0;
         // Mode d'emploi :
         //
         // Contrat :

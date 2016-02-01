@@ -40,6 +40,8 @@
         // Contrat :
         //
 
+        friend std::ostream & operator<< (std::ostream & stream, const InterObject & object);
+
 
     //-------------------------------------------- Constructeurs - destructeur
         InterObject ( const InterObject & unInterObject );

@@ -92,7 +92,7 @@
     //------------------------------------------------------- Attributs privés
     UnionObject *object;
     std::vector<std::string> components;
-    std::string name;
+    std::string objectName;
 
     //---------------------------------------------------------- Classes amies
 

@@ -28,11 +28,25 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Load::Méthode ( liste de paramètres )
+    void Load::Display ( )
     // Algorithme :
     //
-    //{
-    //} //----- Fin de Méthode
+    {
+    } //----- Fin de Display
+
+    bool Load::Do ( map<string, Object> & model )
+    // Algorithme :
+    //
+    {
+        return true;
+    } //----- Fin de Do
+
+    bool Load::Undo ( map<string, Object> & model )
+    // Algorithme :
+    //
+    {
+        return true;
+    } //----- Fin de Undo
 
 
     //------------------------------------------------- Surcharge d'opérateurs
@@ -54,7 +68,7 @@
     } //----- Fin de Load (constructeur de copie)
 
 
-    Load::Load ( )
+    Load::Load ( string & data )
     // Algorithme :
     //
     {

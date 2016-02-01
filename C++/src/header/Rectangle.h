@@ -38,6 +38,7 @@
         // Contrat :
         //
 
+    friend std::ostream & operator<< (std::ostream & stream, const Rectangle & object);
 
     //-------------------------------------------- Constructeurs - destructeur
         Rectangle ( const Rectangle & unRectangle );

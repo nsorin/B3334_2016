@@ -53,6 +53,8 @@
         // Contrat :
         //
 
+        friend std::ostream & operator<< (std::ostream & stream, const ComplexObject & object);
+
 
     //-------------------------------------------- Constructeurs - destructeur
         ComplexObject ( const ComplexObject & unComplexObject );

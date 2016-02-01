@@ -39,11 +39,11 @@
     // Algorithme :
     //
     {
-        if ( model.find(objectName == model.end() ) 
+        if ( model.find(objectName) == model.end() )
         {
             return false;
-        } 
-        else 
+        }
+        else
         {
             model[objectName].Move(dx, dy);
             return true;
@@ -54,11 +54,11 @@
     // Algorithme :
     //
     {
-        if ( model.find(objectName == model.end() ) 
+        if ( model.find(objectName) == model.end() )
         {
             return false;
-        } 
-        else 
+        }
+        else
         {
             model[objectName].Move(-1*dx, -1*dy);
             return true;

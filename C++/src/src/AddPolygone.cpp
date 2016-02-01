@@ -28,33 +28,34 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    
+
     void AddPolygone::Display ( )
     // Algorithme :
     //
     {
     } //----- Fin de Display
 
-    void AddPolygone::Do ( )
+    bool AddPolygone::Do ( map<string, Object> & model )
     // Algorithme :
     //
     {
-        if ( model.find(object->GetName()) == model.end() ) 
+        if ( model.find(object->GetName()) == model.end() )
         {
-            model[object->GetName()] = object;
+            model[object->GetName()] = *object;
             return true;
-        } 
-        else 
+        }
+        else
         {
             return false;
         }
     } //----- Fin de Display
 
-    void AddPolygone::Undo ( )
+    bool AddPolygone::Undo ( map<string, Object> & model )
     // Algorithme :
     //
     {
         model.erase(object->GetName());
+        return true;
     } //----- Fin de Display
 
     //------------------------------------------------- Surcharge d'opérateurs
@@ -93,7 +94,13 @@
             iss >> xy;
             coord.push_back(xy);
         } while (iss);
-        object = new Polygone(name, coord);
+        vector<Point> points;
+        for(unsigned int i=0; i<coord.size(); i+=2)
+        {
+            Point p(coord[i], coord[i+1]);
+            points.push_back(p);
+        }
+        object = new Polygone(name, points);
     } //----- Fin de AddPolygone
 
 
