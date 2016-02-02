@@ -38,7 +38,7 @@
         // Contrat :
         //
 
-    friend std::ostream & operator<< (std::ostream & stream, const Rectangle & object);
+        friend std::ostream & operator<< (std::ostream & stream, const Rectangle & object);
 
     //-------------------------------------------- Constructeurs - destructeur
         Rectangle ( const Rectangle & unRectangle );
@@ -64,6 +64,7 @@
 
     private:
     //------------------------------------------------------- Méthodes privées
+    virtual std::ostream & doPrint(std::ostream & os) const;
 
     protected:
     //----------------------------------------------------- Attributs protégés

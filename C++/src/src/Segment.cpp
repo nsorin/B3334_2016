@@ -40,6 +40,17 @@
     {
     } //----- Fin de operator =*/
 
+    /*ostream & operator<< (ostream & stream, const Segment & object)
+    {
+        stream << "S ";
+        stream << object.GetName();
+        for(unsigned int i = 0; i<object.GetSize(); i++)
+        {
+            stream << object.GetTabPoints()[i].GetX() << " " << object.GetTabPoints()[i].GetY() << " ";
+        }
+        stream << endl;
+        return stream;
+    }*/
 
     //-------------------------------------------- Constructeurs - destructeur
     Segment::Segment ( const Segment & unSegment )
@@ -56,19 +67,17 @@
     } //----- Fin de Segment (constructeur de copie)
 
 
-    Segment::Segment (string name, int x1, int y1, int x2, int y2)
+    Segment::Segment (string name, int x1, int y1, int x2, int y2) : SimpleObject(name, 2)
     // Algorithme :
     //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <Segment>" << endl;
     #endif
-        Point p1(x1,y1);
-        Point p2(x2,y2);
-        this->name = name;
-        tabPoints = new Point[2];
-        tabPoints[0] = p1;
-        tabPoints[1] = p2;
+        tabPoints[0].SetX(x1);
+        tabPoints[0].SetY(y1);
+        tabPoints[1].SetX(x2);
+        tabPoints[1].SetY(y2);
     } //----- Fin de Segment
 
 
@@ -88,3 +97,14 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
+    ostream & Segment::doPrint(ostream & os) const
+    {
+        os << "S ";
+        os << name << " ";
+        for(unsigned int i = 0; i<nPoints; i++)
+        {
+            os << tabPoints[i].GetX() << " " << tabPoints[i].GetY() << " ";
+        }
+        os << endl;
+        return os;
+    }

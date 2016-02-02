@@ -41,7 +41,7 @@
         // Mode d'emploi :
         //
 
-        std::string GetName( );
+        std::string GetName( ) const;
         // Mode d'emploi :
         //
 
@@ -56,7 +56,7 @@
         // Contrat :
         //
 
-        friend std::ostream & operator<< (std::ostream & stream, const Object & object);
+        friend std::ostream & operator<< (std::ostream & stream, Object & object);
 
 
     //-------------------------------------------- Constructeurs - destructeur
@@ -64,7 +64,7 @@
         // Mode d'emploi (constructeur de copie) :
         //
 
-        Object ( std::string n = "" );
+        Object ( std::string n = "undefined" );
         // Mode d'emploi :
         //
 
@@ -79,6 +79,7 @@
 
     private:
     //------------------------------------------------------- Méthodes privées
+    virtual std::ostream & doPrint(std::ostream & os) const;
 
     protected:
     //----------------------------------------------------- Attributs protégés

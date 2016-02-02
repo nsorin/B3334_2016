@@ -61,7 +61,7 @@ int main()
     	else
     	{
             firstWord = cmd.substr(0, separator);
-            data = cmd.substr(separator);
+            data = cmd.substr(separator+1);
     	}
     	if(firstWord == "exit")
     	{
@@ -168,6 +168,6 @@ void list(map<string, Object*> & model)
     cout << "Liste of all objects :" << endl;
     for(it_model i = model.begin(); i != model.end(); i++)
     {
-        cout << i->first << endl;
+        cout << *i->second;
     }
 }

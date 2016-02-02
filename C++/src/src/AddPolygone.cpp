@@ -95,9 +95,10 @@
             coord.push_back(xy);
         } while (iss);
         vector<Point> points;
-        for(unsigned int i=0; i<coord.size(); i+=2)
+        for(unsigned int i=0; i<coord.size()-1; i+=2)
         {
             Point p(coord[i], coord[i+1]);
+            cout << i << "/" << coord.size() << " " << coord[i] << "," << coord[i+1] << endl;
             points.push_back(p);
         }
         object = new Polygone(name, points);

@@ -28,16 +28,16 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        int getX() const{return x;}
-        int getY() const{return y;}
-        void setX(int x){this->x = x;}
-        void setY(int y){this->y = y;}
-
+        int GetX() const{return x;}
+        int GetY() const{return y;}
+        void SetX(int x){this->x = x;}
+        void SetY(int y){this->y = y;}
+        void Move(int dx, int dy){x+=dx; y+=dy;}
 
     //------------------------------------------------- Surcharge d'opérateurs
-
+        Point & operator=( const Point & unPoint ) {this->x = unPoint.x; this->y = unPoint.y; return *this;}
     //-------------------------------------------- Constructeurs - destructeur
-        Point ( const Point & unPoint ):x(unPoint.getX()), y(unPoint.getY()){}
+        Point ( const Point & unPoint ):x(unPoint.GetX()), y(unPoint.GetY()){}
         // Mode d'emploi (constructeur de copie) :
         //
 

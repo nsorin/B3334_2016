@@ -40,8 +40,15 @@
     {
         for(unsigned int i=0; i<toDelete.size(); i++)
         {
-            mapObject[toDelete[i]] = model[toDelete[i]];
-            model.erase(toDelete[i]);
+            if(model.find(toDelete[i]) != model.end() )
+            {
+                mapObject[toDelete[i]] = model[toDelete[i]];
+                model.erase(toDelete[i]);
+            }
+            else
+            {
+                toDelete.erase(toDelete.begin()+i);
+            }
         }
         return true;
     } //----- Fin de Do
@@ -53,8 +60,8 @@
         for(unsigned int i=0; i<toDelete.size(); i++)
         {
             model[toDelete[i]] = mapObject[toDelete[i]];
-            mapObject.erase(toDelete[i]);
         }
+        mapObject.clear();
         return true;
     } //----- Fin de Undo
 

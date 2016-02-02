@@ -29,11 +29,15 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        Point * GetTabPoints() const;
+        Point * GetTabPoints( ) const;
         // Mode d'emploi :
         //
 
-        //void move();
+        unsigned int GetSize() const;
+        // Mode d'emploi :
+        //
+
+        void Move(int dx, int dy);
         // Mode d'emploi :
         //
 
@@ -54,7 +58,7 @@
         // Contrat :
         //
 
-        SimpleObject ( std::string n = "" );
+        SimpleObject ( std::string n = "", unsigned int np = 2 );
         // Mode d'emploi :
         //
         // Contrat :
@@ -73,10 +77,12 @@
 
     private:
     //------------------------------------------------------- Méthodes privées
+    virtual std::ostream & doPrint(std::ostream & os) const;
 
     protected:
     //----------------------------------------------------- Attributs protégés
         Point * tabPoints;
+        unsigned int nPoints;
 
     private:
     //------------------------------------------------------- Attributs privés

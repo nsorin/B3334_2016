@@ -40,21 +40,23 @@
     }
 
     //------------------------------------------------- Surcharge d'opérateurs
-    Polygone & Polygone::operator = ( const Polygone & unPolygone )
+    /*Polygone & Polygone::operator = ( const Polygone & unPolygone )
     // Algorithme :
     //
     {
     } //----- Fin de operator =*/
 
-    ostream & operator<< (ostream & stream, const Polygone & object)
+    /*ostream & operator<< (ostream & stream, const Polygone & object)
     {
         stream << "PC ";
-        /*for(unsigned int i = 0; i<object.GetTabPoints().size(); i++)
+        stream << object.GetName();
+        for(unsigned int i = 0; i<object.GetSize(); i++)
         {
-            stream << object.GetTabPoints()[i]->GetX() << " " << object.GetTabPoints()[i]->GetY() << " ";
-        }*/
+            stream << object.GetTabPoints()[i].GetX() << " " << object.GetTabPoints()[i].GetY() << " ";
+        }
         stream << endl;
-    }
+        return stream;
+    }*/
 
     //-------------------------------------------- Constructeurs - destructeur
     Polygone::Polygone ( const Polygone & unPolygone )
@@ -67,16 +69,14 @@
     } //----- Fin de Polygone (constructeur de copie)
 
 
-    Polygone::Polygone( string & n, vector<Point> & points ) : SimpleObject(n)
+    Polygone::Polygone( string & n, vector<Point> & points ) : SimpleObject(n, points.size())
     // Algorithme :
     //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <Polygone>" << endl;
     #endif
-        int taille = points.size();
-        this->tabPoints = new Point[taille];
-        for(int i=0;i<taille;i++)
+        for(unsigned int i=0;i<nPoints;i++)
         {
             tabPoints[i] = points[i];
         }
@@ -99,3 +99,14 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
+    ostream & Polygone::doPrint(ostream & os) const
+    {
+        os << "PC ";
+        os << name<< " ";
+        for(unsigned int i = 0; i<nPoints; i++)
+        {
+            os << tabPoints[i].GetX() << " " << tabPoints[i].GetY() << " ";
+        }
+        os << endl;
+        return os;
+    }

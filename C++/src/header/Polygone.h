@@ -72,6 +72,7 @@
 
     private:
     //------------------------------------------------------- Méthodes privées
+    virtual std::ostream & doPrint(std::ostream & os) const;
 
     protected:
     //----------------------------------------------------- Attributs protégés

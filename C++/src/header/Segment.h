@@ -37,6 +37,8 @@
         // Contrat :
         //
 
+        friend std::ostream & operator<< (std::ostream & stream, const Segment & object);
+
 
     //-------------------------------------------- Constructeurs - destructeur
         Segment ( const Segment & unSegment );
@@ -64,6 +66,7 @@
 
     private:
     //------------------------------------------------------- Méthodes privées
+    virtual std::ostream & doPrint(std::ostream & os) const;
 
     protected:
     //----------------------------------------------------- Attributs protégés

@@ -28,7 +28,7 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    string Object::GetName ( )
+    string Object::GetName ( ) const
     // Algorithme :
     //
     {
@@ -49,6 +49,11 @@
     {
     } //----- Fin de operator =*/
 
+
+    ostream & operator<< (ostream & stream, Object & object)
+    {
+        return object.doPrint(stream);
+    }
 
     //-------------------------------------------- Constructeurs - destructeur
     Object::Object ( const Object & unObject )
@@ -86,3 +91,8 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
+    ostream & Object::doPrint(ostream & os) const
+    {
+        os << "undefined object " << name;
+        return os;
+    }
