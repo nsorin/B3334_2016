@@ -34,7 +34,7 @@
     {
     } //----- Fin de Display
 
-    bool Delete::Do ( map<string, Object> & model )
+    bool Delete::Do ( map<string, Object*> & model )
     // Algorithme :
     //
     {
@@ -46,7 +46,7 @@
         return true;
     } //----- Fin de Do
 
-    bool Delete::Undo ( map<string, Object> & model )
+    bool Delete::Undo ( map<string, Object*> & model )
     // Algorithme :
     //
     {
@@ -102,6 +102,10 @@
     #ifdef MAP
         cout << "Appel au destructeur de <Delete>" << endl;
     #endif
+        for(it_model i = mapObject.begin(); i != mapObject.end(); i++)
+        {
+            delete i->second;
+        }
     } //----- Fin de ~Delete
 
 

@@ -34,7 +34,7 @@
     {
     } //----- Fin de Display
 
-    bool Intersection::Do ( map<string, Object> & model )
+    bool Intersection::Do ( map<string, Object*> & model )
     // Algorithme :
     //
     {
@@ -46,7 +46,7 @@
 
                 if ( model.find(components[i]) == model.end() )
                 {
-                    object->AddObject(model[components[i]]);
+                    object->AddObject(*model[components[i]]);
                 }
                 else
                 {
@@ -62,7 +62,7 @@
         }
     } //----- Fin de Do
 
-    bool Intersection::Undo ( map<string, Object> & model )
+    bool Intersection::Undo ( map<string, Object*> & model )
     // Algorithme :
     //
     {

@@ -34,14 +34,14 @@
     {
     } //----- Fin de Display
 
-    bool Load::Do ( map<string, Object> & model )
+    bool Load::Do ( map<string, Object*> & model )
     // Algorithme :
     //
     {
         return true;
     } //----- Fin de Do
 
-    bool Load::Undo ( map<string, Object> & model )
+    bool Load::Undo ( map<string, Object*> & model )
     // Algorithme :
     //
     {

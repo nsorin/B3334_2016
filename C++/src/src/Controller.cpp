@@ -37,23 +37,32 @@ using namespace std;
 #include "../header/Command.h"
 #include "../header/Object.h"
 //-------------------------------------------------- Déclarations Méthodes
-void list(map<string, Object> & model);
+void list(map<string, Object*> & model);
 
 //------------------------------------------------------------------- Main
 int main()
 {
     Command *currentCmd;
     deque<Command*> dequeCmd;
-    map<string,Object> mapObjects;
+    map<string,Object*> mapObjects;
     Command *lastUndoCmd;
-    string cmd;
-    string data;
+    string cmd = "";
+    string data = "";
     while(true)
     {
     	getline(cin, cmd);
     	unsigned int separator = cmd.find(" ");
-    	string firstWord = cmd.substr(0, separator);
-    	data = cmd.substr(separator);
+    	string firstWord;
+    	if(separator == string::npos || separator >= cmd.size() )
+    	{
+            firstWord = cmd;
+            data = "";
+    	}
+    	else
+    	{
+            firstWord = cmd.substr(0, separator);
+            data = cmd.substr(separator);
+    	}
     	if(firstWord == "exit")
     	{
     		return 0;
@@ -131,7 +140,12 @@ int main()
     		{
     			currentCmd = new Clear();
     		}
-    		//sale
+    		else
+    		{
+                cerr << "Unknown command" << endl;
+                break; // temp
+    		}
+
     		if(currentCmd->Do(mapObjects))
     		{
     			dequeCmd.push_front(currentCmd);
@@ -149,9 +163,9 @@ int main()
     }
 }
 
-void list(map<string, Object> & model)
+void list(map<string, Object*> & model)
 {
-    typedef map<string, Object>::iterator it_model;
+    cout << "Liste of all objects :" << endl;
     for(it_model i = model.begin(); i != model.end(); i++)
     {
         cout << i->first << endl;

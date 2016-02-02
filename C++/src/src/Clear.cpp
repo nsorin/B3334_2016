@@ -35,7 +35,7 @@
         cout << SUCCESS << endl;
     } //----- Fin de Display
 
-    bool Clear::Do ( map<string, Object> & model )
+    bool Clear::Do ( map<string, Object*> & model )
     // Algorithme :
     //
     {
@@ -45,7 +45,7 @@
         return true;
     } //----- Fin de Display
 
-    bool Clear::Undo ( map<string, Object> & model )
+    bool Clear::Undo ( map<string, Object*> & model )
     // Algorithme :
     //
     {
@@ -92,6 +92,10 @@
     #ifdef MAP
         cout << "Appel au destructeur de <Clear>" << endl;
     #endif
+        for(it_model i = mapObject.begin(); i != mapObject.end(); i++)
+        {
+            delete i->second;
+        }
     } //----- Fin de ~Clear
 
 

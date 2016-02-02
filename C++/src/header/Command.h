@@ -41,13 +41,13 @@
         // Contrat :
         //
 
-        virtual bool Do ( std::map<std::string, Object> & model ) = 0;
+        virtual bool Do ( std::map<std::string, Object*> & model ) = 0;
         // Mode d'emploi :
         //
         // Contrat :
         //
 
-        virtual bool Undo ( std::map<std::string, Object> & model ) = 0;
+        virtual bool Undo ( std::map<std::string, Object*> & model ) = 0;
         // Mode d'emploi :
         //
         // Contrat :

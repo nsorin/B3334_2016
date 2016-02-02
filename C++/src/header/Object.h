@@ -11,6 +11,7 @@
     #define OBJECT_H
 
     //--------------------------------------------------- Interfaces utilisées
+    #include <map>
 
     //------------------------------------------------------------- Constantes
 
@@ -95,5 +96,6 @@
     };
 
     //----------------------------------------- Types dépendants de <Object>
+    typedef std::map<std::string, Object*>::iterator it_model;
 
     #endif // OBJECT_H

@@ -34,13 +34,13 @@
     {
     } //----- Fin de Display
 
-    bool AddSegment::Do ( map<string, Object> & model )
+    bool AddSegment::Do ( map<string, Object*> & model )
     // Algorithme :
     //
     {
         if ( model.find(object->GetName()) == model.end() )
         {
-            model[object->GetName()] = *object;
+            model[object->GetName()] = object;
             return true;
         }
         else
@@ -49,7 +49,7 @@
         }
     } //----- Fin de Do
 
-    bool AddSegment::Undo ( map<string, Object> & model )
+    bool AddSegment::Undo ( map<string, Object*> & model )
     // Algorithme :
     //
     {

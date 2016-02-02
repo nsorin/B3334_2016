@@ -29,19 +29,19 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        //virtual void Display ( );
+        virtual void Display ( ) = 0;
         // Mode d'emploi :
         //
         // Contrat :
         //
 
-        //virtual bool Do ( std::map<std::string, Object> & model );
+        virtual bool Do ( std::map<std::string, Object*> & model ) = 0;
         // Mode d'emploi :
         //
         // Contrat :
         //
 
-        //virtual bool Undo ( std::map<std::string, Object> & model );
+        virtual bool Undo ( std::map<std::string, Object*> & model ) = 0;
         // Mode d'emploi :
         //
         // Contrat :

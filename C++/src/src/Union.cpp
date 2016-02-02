@@ -34,7 +34,7 @@
     {
     } //----- Fin de Display
 
-    bool Union::Do( map<string, Object> & model )
+    bool Union::Do( map<string, Object*> & model )
     // Algorithme :
     //
     {
@@ -45,7 +45,7 @@
             {
                 if ( model.find(components[i]) == model.end() )
                 {
-                    object->AddObject(model[components[i]]);
+                    object->AddObject(*model[components[i]]);
                 }
                 else
                 {
@@ -61,7 +61,7 @@
         }
     } //----- Fin de Do
 
-    bool Union::Undo ( map<string, Object> & model )
+    bool Union::Undo ( map<string, Object*> & model )
     // Algorithme :
     //
     {

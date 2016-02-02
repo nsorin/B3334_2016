@@ -35,7 +35,7 @@
 
     } //----- Fin de Display
 
-    bool Move::Do ( map<string, Object> & model )
+    bool Move::Do ( map<string, Object*> & model )
     // Algorithme :
     //
     {
@@ -45,12 +45,12 @@
         }
         else
         {
-            model[objectName].Move(dx, dy);
+            model[objectName]->Move(dx, dy);
             return true;
         }
     } //----- Fin de Do
 
-    bool Move::Undo ( map<string, Object> & model )
+    bool Move::Undo ( map<string, Object*> & model )
     // Algorithme :
     //
     {
@@ -60,7 +60,7 @@
         }
         else
         {
-            model[objectName].Move(-1*dx, -1*dy);
+            model[objectName]->Move(-1*dx, -1*dy);
             return true;
         }
     } //----- Fin de Undo

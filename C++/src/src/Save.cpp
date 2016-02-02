@@ -34,14 +34,14 @@
     {
     } //----- Fin de Display
 
-    bool Save::Do ( map<string, Object> & model )
+    bool Save::Do ( map<string, Object*> & model )
     // Algorithme :
     //
     {
         return true;
     } //----- Fin de Do
 
-    bool Save::Undo ( map<string, Object> & model )
+    bool Save::Undo ( map<string, Object*> & model )
     // Algorithme :
     //
     {

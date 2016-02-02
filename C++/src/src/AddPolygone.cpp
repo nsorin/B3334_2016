@@ -35,13 +35,13 @@
     {
     } //----- Fin de Display
 
-    bool AddPolygone::Do ( map<string, Object> & model )
+    bool AddPolygone::Do ( map<string, Object*> & model )
     // Algorithme :
     //
     {
         if ( model.find(object->GetName()) == model.end() )
         {
-            model[object->GetName()] = *object;
+            model[object->GetName()] = object;
             return true;
         }
         else
@@ -50,7 +50,7 @@
         }
     } //----- Fin de Display
 
-    bool AddPolygone::Undo ( map<string, Object> & model )
+    bool AddPolygone::Undo ( map<string, Object*> & model )
     // Algorithme :
     //
     {
@@ -111,7 +111,6 @@
     #ifdef MAP
         cout << "Appel au destructeur de <AddPolygone>" << endl;
     #endif
-        delete object;
     } //----- Fin de ~AddPolygone
 
 

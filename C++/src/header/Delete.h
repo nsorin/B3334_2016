@@ -35,13 +35,13 @@
         // Contrat :
         //
 
-        virtual bool Do ( std::map<std::string, Object> & model);
+        virtual bool Do ( std::map<std::string, Object*> & model);
         // Mode d'emploi :
         //
         // Contrat :
         //
 
-        virtual bool Undo ( std::map<std::string, Object> & model);
+        virtual bool Undo ( std::map<std::string, Object*> & model);
         // Mode d'emploi :
         //
         // Contrat :
@@ -87,7 +87,7 @@
 
     private:
     //------------------------------------------------------- Attributs privés
-    std::map<std::string, Object> mapObject;
+    std::map<std::string, Object*> mapObject;
     std::vector<std::string> toDelete;
 
     //---------------------------------------------------------- Classes amies

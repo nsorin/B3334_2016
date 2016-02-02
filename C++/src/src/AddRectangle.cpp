@@ -34,13 +34,13 @@
     {
     } //----- Fin de Display
 
-    bool AddRectangle::Do ( map<string, Object> & model )
+    bool AddRectangle::Do ( map<string, Object*> & model )
     // Algorithme :
     //
     {
         if ( model.find(object->GetName()) == model.end() )
         {
-            model[object->GetName()] = *object;
+            model[object->GetName()] = object;
             return true;
         }
         else
@@ -49,7 +49,7 @@
         }
     } //----- Fin de Do
 
-    bool AddRectangle::Undo ( map<string, Object> & model )
+    bool AddRectangle::Undo ( map<string, Object*> & model )
     // Algorithme :
     //
     {
@@ -106,7 +106,6 @@
     #ifdef MAP
         cout << "Appel au destructeur de <AddRectangle>" << endl;
     #endif
-        delete object;
     } //----- Fin de ~AddRectangle
 
 
