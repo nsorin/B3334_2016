@@ -28,6 +28,13 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
+    bool SimpleObject::Contains ( Point & p ) const
+    // Algorithme :
+    //
+    {
+        return false;
+    } //----- Fin de Contains
+
     void SimpleObject::Move( int dx, int dy )
     // Algorithme :
     //

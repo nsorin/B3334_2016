@@ -29,6 +29,13 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
+    bool Polygone::Contains ( Point & p ) const
+    // Algorithme :
+    //
+    {
+        return false;
+    } //----- Fin de Contains
+
     void Polygone::Display() const
     {
 

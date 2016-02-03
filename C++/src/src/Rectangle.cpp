@@ -34,6 +34,17 @@
     //{
     //} //----- Fin de Méthode
 
+    bool Rectangle::Contains ( Point & p ) const
+    // Algorithme :
+    //
+    {
+        int minX = min(tabPoints[0].GetX(), tabPoints[1].GetX());
+        int maxX = max(tabPoints[0].GetX(), tabPoints[1].GetX());
+        int minY = min(tabPoints[0].GetY(), tabPoints[1].GetY());
+        int maxY = max(tabPoints[0].GetY(), tabPoints[1].GetY());
+        return (p.GetX() <= maxX && p.GetX() >= minX && p.GetY() <= maxY && p.GetY() >= minY);
+    } //----- Fin de Contains
+
 
     //------------------------------------------------- Surcharge d'opérateurs
     /*Rectangle & Rectangle::operator = ( const Rectangle & unRectangle )

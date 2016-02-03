@@ -28,6 +28,20 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
+    bool InterObject::Contains ( Point & p ) const
+    // Algorithme :
+    //
+    {
+        for(unsigned int i = 0; i<tabObjects.size(); i++)
+        {
+            if(!tabObjects[i]->Contains(p))
+            {
+                return false;
+            }
+        }
+        return true;
+    } //----- Fin de Contains
+
     void InterObject::Display() const
     {
 
@@ -42,16 +56,6 @@
 
 
     //-------------------------------------------- Constructeurs - destructeur
-    InterObject::InterObject ( const InterObject & unInterObject )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de copie de <InterObject>" << endl;
-    #endif
-    } //----- Fin de InterObject (constructeur de copie)
-
-
     InterObject::InterObject (string n) : ComplexObject(n)
     // Algorithme :
     //

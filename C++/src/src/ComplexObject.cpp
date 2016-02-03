@@ -40,10 +40,13 @@
 
     void ComplexObject::Move(int dx, int dy)
     {
-
+        for(unsigned int i=0; i<tabObjects.size(); i++)
+        {
+            tabObjects[i]->Move(dx, dy);
+        }
     }
 
-    bool ComplexObject::Contains(Point * point) const
+    bool ComplexObject::Contains(Point & point) const
     {
         return true;
     }

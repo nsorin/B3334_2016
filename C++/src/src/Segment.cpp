@@ -28,6 +28,42 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
+    bool Segment::Contains ( Point & p ) const
+    // Algorithme :
+    //
+    {
+        int dy = p.GetY() - tabPoints[0].GetY();
+        int dx = p.GetX() - tabPoints[0].GetX();
+        int dyTh = tabPoints[1].GetY() - tabPoints[0].GetY();
+        int dxTh = tabPoints[1].GetX() - tabPoints[0].GetX();
+
+        int crossProduct = dy*dxTh - dx*dyTh;
+        if(crossProduct != 0) //Remplacer par tolérance ?
+        {
+            return false;
+        }
+        int dotProduct = dx*dxTh + dy*dyTh;
+        if(dotProduct < 0)
+        {
+            return false;
+        }
+        int squareLength = dxTh*dxTh + dyTh*dyTh;
+        if(dotProduct > squareLength)
+        {
+            return false;
+        }
+        return true;
+        /*if(dy == 0 && dx == 0)
+        {
+            return true;
+        }
+        if((dy == 0 && dx != 0) || (dx == 0 && dy != 0))
+        {
+            return false;
+        }
+        return (dy/dx == dyTh/dxTh && dy <= dyTh && dx <= dxTh);*/
+    } //----- Fin de Contains
+
     void Segment::Display() const
     {
 

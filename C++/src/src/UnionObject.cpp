@@ -28,6 +28,20 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
+    bool UnionObject::Contains ( Point & p ) const
+    // Algorithme :
+    //
+    {
+        for(unsigned int i = 0; i<tabObjects.size(); i++)
+        {
+            if(tabObjects[i]->Contains(p))
+            {
+                return true;
+            }
+        }
+        return false;
+    } //----- Fin de Contains
+
     void UnionObject::Display() const
     {
 

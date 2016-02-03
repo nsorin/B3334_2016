@@ -37,7 +37,8 @@ using namespace std;
 #include "../header/Command.h"
 #include "../header/Object.h"
 //-------------------------------------------------- Déclarations Méthodes
-void list(map<string, Object*> & model);
+void List(map<string, Object*> & model);
+bool Hit(map<string, Object*> & model, string & data);
 
 //------------------------------------------------------------------- Main
 int main()
@@ -69,11 +70,11 @@ int main()
     	}
     	else if(firstWord == "LIST")
     	{
-    		list(mapObjects);
+    		List(mapObjects);
     	}
     	else if(firstWord == "HIT")
     	{
-
+            Hit(mapObjects, data);
     	}
     	else if(firstWord == "UNDO")
     	{
@@ -163,11 +164,37 @@ int main()
     }
 }
 
-void list(map<string, Object*> & model)
+void List(map<string, Object*> & model)
 {
     cout << "Liste of all objects :" << endl;
     for(it_model i = model.begin(); i != model.end(); i++)
     {
         cout << *i->second;
     }
+}
+
+bool Hit(map<string, Object*> & model, string & data)
+{
+    istringstream iss(data);
+    string name;
+    iss >> name;
+    if(model.find(name) == model.end())
+    {
+        return false;
+    }
+    int x;
+    int y;
+    iss >> x;
+    iss >> y;
+    Point p(x, y);
+    bool result = model[name]->Contains(p);
+    if(result)
+    {
+        cout << "YES" << endl;
+    }
+    else
+    {
+        cout << "NO" << endl;
+    }
+    return result;
 }

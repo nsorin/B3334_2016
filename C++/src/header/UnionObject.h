@@ -29,6 +29,10 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
+        virtual bool Contains(Point & p) const;
+        // Mode d'emploi :
+        //
+
         void Display() const;
         // Mode d'emploi :
         //

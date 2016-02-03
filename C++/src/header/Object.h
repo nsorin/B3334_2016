@@ -13,6 +13,7 @@
     //--------------------------------------------------- Interfaces utilisées
     #include <map>
     #include <vector>
+    #include "Point.h"
 
     //------------------------------------------------------------- Constantes
 
@@ -30,7 +31,7 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        //virtual bool contains() const;
+        virtual bool Contains(Point & p) const;
         // Mode d'emploi :
         //
 

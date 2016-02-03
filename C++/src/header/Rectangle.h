@@ -29,7 +29,9 @@
     public:
     //----------------------------------------------------- Méthodes publiques
         //void display() const;
-
+    virtual bool Contains(Point & p) const;
+    // Mode d'emploi :
+    //
 
     virtual std::ostream & doPrint(std::ostream & os) const;
 

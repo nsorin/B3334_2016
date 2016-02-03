@@ -42,7 +42,7 @@
         // Mode d'emploi :
         //
 
-        bool Contains(Point * ) const;
+        virtual bool Contains(Point & p) const;
         // Mode d'emploi :
         //
 
