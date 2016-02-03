@@ -38,6 +38,7 @@
     // Algorithme :
     //
     {
+        undone = false;
         if ( model.find(object->GetName()) == model.end() )
         {
             model[object->GetName()] = object;
@@ -56,6 +57,7 @@
     // Algorithme :
     //
     {
+        undone = true;
         model.erase(object->GetName());
         cout << "OK" << endl;
         return true;
@@ -71,6 +73,7 @@
     #ifdef MAP
         cout << "Appel au constructeur de <AddRectangle>" << endl;
     #endif
+        undone = false;
         string name;
         int x1;
         int x2;
@@ -94,6 +97,10 @@
     #ifdef MAP
         cout << "Appel au destructeur de <AddRectangle>" << endl;
     #endif
+        if(undone)
+        {
+            delete object;
+        }
     } //----- Fin de ~AddRectangle
 
 

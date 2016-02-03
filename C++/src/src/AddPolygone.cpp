@@ -39,6 +39,7 @@
     // Algorithme :
     //
     {
+        undone = false;
         if ( model.find(object->GetName()) == model.end() )
         {
             if(object->IsConvex())
@@ -66,6 +67,7 @@
     // Algorithme :
     //
     {
+        undone = true;
         model.erase(object->GetName());
         cout << "OK" << endl;
         return true;
@@ -74,13 +76,14 @@
     //------------------------------------------------- Surcharge d'opérateurs
 
     //-------------------------------------------- Constructeurs - destructeur
-    AddPolygone::AddPolygone ( std::string & data )
+    AddPolygone::AddPolygone ( std::string & data ) //: undone(false)
     // Algorithme :
     //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <AddPolygone>" << endl;
     #endif
+        undone = false;
         istringstream iss(data);
         string name;
         vector<int> coord;
@@ -108,6 +111,10 @@
     #ifdef MAP
         cout << "Appel au destructeur de <AddPolygone>" << endl;
     #endif
+        if(undone)
+        {
+            delete object;
+        }
     } //----- Fin de ~AddPolygone
 
 

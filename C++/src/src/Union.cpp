@@ -38,6 +38,7 @@
     // Algorithme :
     //
     {
+        undone = false;
         if ( model.find(objectName) == model.end() )
         {
             for(unsigned int i=0; i<components.size()-1; i++)
@@ -69,6 +70,7 @@
     // Algorithme :
     //
     {
+        undone = true;
         model.erase(objectName);
         cout << "OK" << endl;
         return true;
@@ -85,6 +87,7 @@
     #ifdef MAP
         cout << "Appel au constructeur de <Union>" << endl;
     #endif
+        undone = false;
         istringstream iss(data);
         iss >> objectName;
 
@@ -105,6 +108,10 @@
     #ifdef MAP
         cout << "Appel au destructeur de <Union>" << endl;
     #endif
+        if(undone)
+        {
+            delete object;
+        }
     } //----- Fin de ~Union
 
 

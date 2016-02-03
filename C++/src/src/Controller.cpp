@@ -46,7 +46,7 @@ int main()
     Command *currentCmd;
     deque<Command*> dequeCmd;
     map<string,Object*> mapObjects;
-    Command *lastUndoCmd;
+    Command *lastUndoCmd = nullptr;
     string cmd = "";
     string data = "";
     while(true)
@@ -64,7 +64,7 @@ int main()
             firstWord = cmd.substr(0, separator);
             data = cmd.substr(separator+1);
     	}
-    	if(firstWord == "exit")
+    	if(firstWord == "EXIT")
     	{
     		return 0;
     	}
@@ -82,6 +82,11 @@ int main()
     		{
     			if(dequeCmd.front()->Undo(mapObjects))
     			{
+    				if(lastUndoCmd != nullptr)
+                    {
+                        delete lastUndoCmd;
+                        lastUndoCmd = nullptr;
+                    }
     				lastUndoCmd = dequeCmd.front();
     				dequeCmd.pop_front();
     			}
@@ -97,6 +102,10 @@ int main()
     				dequeCmd.push_front(lastUndoCmd);
     				lastUndoCmd = nullptr;
     			}
+    		}
+    		else
+    		{
+                cout << "ERR" << endl;
     		}
     	}
     	else
@@ -150,6 +159,11 @@ int main()
     		if(currentCmd->Do(mapObjects))
     		{
     			dequeCmd.push_front(currentCmd);
+    			if(lastUndoCmd != nullptr)
+                {
+                    delete lastUndoCmd;
+                    lastUndoCmd = nullptr;
+                }
     			if(dequeCmd.size() > 20)
     			{
     				delete dequeCmd.back();

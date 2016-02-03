@@ -39,6 +39,7 @@
     // Algorithme :
     //
     {
+        undone = false;
         mapObject = model;
         model.clear();
         cout << "OK" << endl;
@@ -49,6 +50,7 @@
     // Algorithme :
     //
     {
+        undone = true;
         model = mapObject;
         mapObject.clear();
         cout << "OK" << endl;
@@ -66,6 +68,7 @@
     #ifdef MAP
         cout << "Appel au constructeur de <Clear>" << endl;
     #endif
+        undone = false;
     } //----- Fin de Clear
 
 

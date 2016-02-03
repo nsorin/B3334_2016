@@ -38,6 +38,7 @@
     // Algorithme :
     //
     {
+        undone = false;
         return true;
     } //----- Fin de Do
 
@@ -45,6 +46,7 @@
     // Algorithme :
     //
     {
+        undone = true;
         return true;
     } //----- Fin de Undo
 
@@ -60,6 +62,7 @@
     #ifdef MAP
         cout << "Appel au constructeur de <Save>" << endl;
     #endif
+        undone = false;
     } //----- Fin de Save
 
 

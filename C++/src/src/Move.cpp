@@ -39,6 +39,7 @@
     // Algorithme :
     //
     {
+        undone = false;
         if ( model.find(objectName) == model.end() )
         {
             cout << "ERR" << endl;
@@ -56,6 +57,7 @@
     // Algorithme :
     //
     {
+        undone = true;
         if ( model.find(objectName) == model.end() )
         {
             cout << "ERR" << endl;
@@ -79,6 +81,7 @@
     #ifdef MAP
         cout << "Appel au constructeur de <Move>" << endl;
     #endif
+        undone = false;
         istringstream iss(data);
         iss >> objectName;
         iss >> dx;

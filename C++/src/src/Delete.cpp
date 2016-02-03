@@ -38,6 +38,7 @@
     // Algorithme :
     //
     {
+        undone = false;
         for(unsigned int i=0; i<toDelete.size(); i++)
         {
             if(model.find(toDelete[i]) == model.end())
@@ -60,6 +61,7 @@
     // Algorithme :
     //
     {
+        undone = true;
         for(unsigned int i=0; i<toDelete.size(); i++)
         {
             model[toDelete[i]] = mapObject[toDelete[i]];
@@ -80,6 +82,7 @@
     #ifdef MAP
         cout << "Appel au constructeur de <Delete>" << endl;
     #endif
+        undone = false;
         istringstream iss(data);
         do
         {
