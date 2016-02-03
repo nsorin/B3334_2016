@@ -36,6 +36,10 @@
         // Mode d'emploi :
         //
 
+        virtual std::ostream & doPrint(std::ostream & os) const;
+
+        virtual Object * clone();
+
     //------------------------------------------------- Surcharge d'opérateurs
         Polygone & operator = ( const Polygone & unPolygone );
         // Mode d'emploi :
@@ -72,7 +76,6 @@
 
     private:
     //------------------------------------------------------- Méthodes privées
-    virtual std::ostream & doPrint(std::ostream & os) const;
 
     protected:
     //----------------------------------------------------- Attributs protégés

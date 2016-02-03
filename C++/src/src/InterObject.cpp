@@ -52,14 +52,13 @@
     } //----- Fin de InterObject (constructeur de copie)
 
 
-    InterObject::InterObject (string name)
+    InterObject::InterObject (string n) : ComplexObject(n)
     // Algorithme :
     //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <InterObject>" << endl;
     #endif
-        this->name = name;
     } //----- Fin de InterObject
 
 
@@ -70,6 +69,10 @@
     #ifdef MAP
         cout << "Appel au destructeur de <InterObject>" << endl;
     #endif
+        for(unsigned int i = 0; i<tabObjects.size(); i++)
+        {
+            delete tabObjects[i];
+        }
     } //----- Fin de ~InterObject
 
 
@@ -78,3 +81,24 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
+    ostream & InterObject::doPrint(ostream & os) const
+    {
+        os << "OI ";
+        os << name << " " << "(" << tabObjects.size() << ")" << " " << endl;
+        for(unsigned int i = 0; i<tabObjects.size(); i++)
+        {
+            os << "    --> ";
+            tabObjects[i]->doPrint(os);
+        }
+        return os;
+    }
+
+    Object * InterObject::clone()
+    {
+        ComplexObject* o = new InterObject(name);
+        for(unsigned int i = 0; i<tabObjects.size(); i++)
+        {
+            o->AddObject(tabObjects[i]);
+        }
+        return o;
+    }

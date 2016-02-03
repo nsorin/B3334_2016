@@ -40,20 +40,19 @@
     {
         if ( model.find(objectName) == model.end() )
         {
-            object = new InterObject(objectName);
-            for(unsigned int i=0; i<components.size(); i++)
+            for(unsigned int i=0; i<components.size()-1; i++)
             {
-
-                if ( model.find(components[i]) == model.end() )
+                if ( model.find(components[i]) != model.end() )
                 {
-                    object->AddObject(*model[components[i]]);
+                    object->AddObject(model[components[i]]);
                 }
                 else
                 {
-                    delete object;
+                    cout << "ERR" << endl;
                     return false;
                 }
             }
+            model[objectName] = object;
             return true;
         }
         else
@@ -67,7 +66,6 @@
     //
     {
         model.erase(object->GetName());
-        delete object;
         return true;
     } //----- Fin de Undo
 
@@ -107,6 +105,7 @@
             iss >> n;
             components.push_back(n);
         } while (iss);
+        object = new InterObject(objectName);
     } //----- Fin de Intersection
 
 

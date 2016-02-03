@@ -12,6 +12,7 @@
 
     //--------------------------------------------------- Interfaces utilisées
     #include <map>
+    #include <vector>
 
     //------------------------------------------------------------- Constantes
 
@@ -45,6 +46,12 @@
         // Mode d'emploi :
         //
 
+        virtual std::ostream & doPrint(std::ostream & os) const;
+        // Mode d'emploi :
+        //
+
+        virtual Object * clone();
+
         //void setName(string name){this->name = name;};
         // Mode d'emploi :
         //
@@ -57,7 +64,6 @@
         //
 
         friend std::ostream & operator<< (std::ostream & stream, Object & object);
-
 
     //-------------------------------------------- Constructeurs - destructeur
         Object ( const Object & unObject );
@@ -79,7 +85,6 @@
 
     private:
     //------------------------------------------------------- Méthodes privées
-    virtual std::ostream & doPrint(std::ostream & os) const;
 
     protected:
     //----------------------------------------------------- Attributs protégés
@@ -98,5 +103,6 @@
 
     //----------------------------------------- Types dépendants de <Object>
     typedef std::map<std::string, Object*>::iterator it_model;
+    typedef std::vector<Object>::const_iterator it_objvect;
 
     #endif // OBJECT_H

@@ -33,6 +33,10 @@
         // Mode d'emploi :
         //
 
+        virtual std::ostream & doPrint(std::ostream & os) const;
+
+        virtual Object * clone();
+
     //------------------------------------------------- Surcharge d'opérateurs
         //InterObject & operator = ( const InterObject & unInterObject );
         // Mode d'emploi :

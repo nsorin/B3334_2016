@@ -104,3 +104,9 @@
         os << "undefined simple object " << name;
         return os;
     }
+
+    Object * SimpleObject::clone()
+    {
+        Object* o = new SimpleObject(name, nPoints);
+        return o;
+    }

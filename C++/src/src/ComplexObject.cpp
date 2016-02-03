@@ -28,19 +28,19 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    std::vector<Object> ComplexObject::GetTabObjects() const
+    std::vector<Object*> ComplexObject::GetTabObjects() const
     {
         return this->tabObjects;
     }
 
-    void ComplexObject::AddObject(Object object)
+    void ComplexObject::AddObject(Object *object)
     {
-        this->tabObjects.push_back(object);
+        this->tabObjects.push_back(object->clone());
     }
 
     void ComplexObject::Move(int dx, int dy)
     {
-        
+
     }
 
     bool ComplexObject::Contains(Point * point) const
@@ -67,7 +67,7 @@
     } //----- Fin de ComplexObject (constructeur de copie)
 
 
-    ComplexObject::ComplexObject ( )
+    ComplexObject::ComplexObject ( string n ) : Object(n)
     // Algorithme :
     //
     {
@@ -84,6 +84,10 @@
     #ifdef MAP
         cout << "Appel au destructeur de <ComplexObject>" << endl;
     #endif
+        for(unsigned int i = 0; i<tabObjects.size(); i++)
+        {
+            delete tabObjects[i];
+        }
     } //----- Fin de ~ComplexObject
 
 
@@ -92,3 +96,18 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
+    ostream & ComplexObject::doPrint(ostream & os) const
+    {
+        os << "undefined complex object";
+        return os;
+    }
+
+    Object * ComplexObject::clone()
+    {
+        ComplexObject* o = new ComplexObject(name);
+        for(unsigned int i = 0; i<tabObjects.size(); i++)
+        {
+            o->AddObject(tabObjects[i]);
+        }
+        return o;
+    }

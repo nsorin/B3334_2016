@@ -41,6 +41,10 @@
         // Mode d'emploi :
         //
 
+        virtual std::ostream & doPrint(std::ostream & os) const;
+
+        virtual Object * clone();
+
     //------------------------------------------------- Surcharge d'opérateurs
         //SimpleObject & operator = ( const SimpleObject & unSimpleObject );
         // Mode d'emploi :
@@ -77,7 +81,6 @@
 
     private:
     //------------------------------------------------------- Méthodes privées
-    virtual std::ostream & doPrint(std::ostream & os) const;
 
     protected:
     //----------------------------------------------------- Attributs protégés

@@ -30,11 +30,11 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        std::vector<Object> GetTabObjects() const;
+        std::vector<Object*> GetTabObjects() const;
         // Mode d'emploi :
         //
 
-        void AddObject(Object o);
+        void AddObject(Object * o);
         // Mode d'emploi :
         //
 
@@ -45,6 +45,12 @@
         bool Contains(Point * ) const;
         // Mode d'emploi :
         //
+
+        virtual std::ostream & doPrint(std::ostream & os) const;
+        // Mode d'emploi :
+        //
+
+        virtual Object * clone();
 
     //------------------------------------------------- Surcharge d'opérateurs
         //ComplexObject & operator = ( const ComplexObject & unComplexObject );
@@ -63,7 +69,7 @@
         // Contrat :
         //
 
-        ComplexObject ( );
+        ComplexObject ( std::string n = "" );
         // Mode d'emploi :
         //
         // Contrat :
@@ -85,10 +91,11 @@
 
     protected:
     //----------------------------------------------------- Attributs protégés
+    std::vector<Object*> tabObjects;
 
     private:
     //------------------------------------------------------- Attributs privés
-        std::vector<Object> tabObjects;
+
     //---------------------------------------------------------- Classes amies
 
     //-------------------------------------------------------- Classes privées

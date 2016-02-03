@@ -93,6 +93,12 @@
     //------------------------------------------------------- Méthodes privées
     ostream & Object::doPrint(ostream & os) const
     {
-        os << "undefined object " << name;
+        os << "undefined object " << name << endl;
         return os;
+    }
+
+    Object * Object::clone()
+    {
+        Object* o = new Object(name);
+        return o;
     }

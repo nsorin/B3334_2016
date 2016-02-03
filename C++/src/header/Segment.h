@@ -30,6 +30,10 @@
     //----------------------------------------------------- Méthodes publiques
         void Display() const;
 
+        virtual std::ostream & doPrint(std::ostream & os) const;
+
+        virtual Object * clone();
+
     //------------------------------------------------- Surcharge d'opérateurs
         //Segment & operator = ( const Segment & unSegment );
         // Mode d'emploi :
@@ -66,7 +70,6 @@
 
     private:
     //------------------------------------------------------- Méthodes privées
-    virtual std::ostream & doPrint(std::ostream & os) const;
 
     protected:
     //----------------------------------------------------- Attributs protégés

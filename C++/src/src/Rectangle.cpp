@@ -111,3 +111,9 @@
         os << endl;
         return os;
     }
+
+    Object * Rectangle::clone()
+    {
+        Object* o = new Rectangle(name, tabPoints[0].GetX(), tabPoints[0].GetY(), tabPoints[1].GetX(), tabPoints[1].GetY());
+        return o;
+    }

@@ -110,3 +110,14 @@
         os << endl;
         return os;
     }
+
+    Object * Polygone::clone()
+    {
+        vector<Point> temp;
+        for(unsigned int i = 0; i <nPoints; i++)
+        {
+            temp.push_back(tabPoints[i]);
+        }
+        Object* o = new Polygone(name, temp);
+        return o;
+    }
