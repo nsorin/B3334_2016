@@ -41,6 +41,7 @@
         if ( model.find(object->GetName()) == model.end() )
         {
             model[object->GetName()] = object;
+            cout << "OK" << endl;
             return true;
         }
         else
@@ -56,6 +57,7 @@
     //
     {
         model.erase(object->GetName());
+        cout << "OK" << endl;
         return true;
     } //----- Fin de Undo
 

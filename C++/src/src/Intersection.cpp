@@ -54,6 +54,7 @@
                 }
             }
             model[objectName] = object;
+            cout << "OK" << endl;
             return true;
         }
         else
@@ -69,6 +70,7 @@
     //
     {
         model.erase(object->GetName());
+        cout << "OK" << endl;
         return true;
     } //----- Fin de Undo
 

@@ -41,7 +41,7 @@
     {
         mapObject = model;
         model.clear();
-        Display();
+        cout << "OK" << endl;
         return true;
     } //----- Fin de Display
 
@@ -51,7 +51,7 @@
     {
         model = mapObject;
         mapObject.clear();
-        Display();
+        cout << "OK" << endl;
         return true;
     } //----- Fin de Display
 
@@ -80,6 +80,7 @@
         {
             delete i->second;
         }
+        mapObject.clear();
     } //----- Fin de ~Clear
 
 

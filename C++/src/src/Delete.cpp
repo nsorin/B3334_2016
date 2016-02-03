@@ -40,16 +40,19 @@
     {
         for(unsigned int i=0; i<toDelete.size(); i++)
         {
-            if(model.find(toDelete[i]) != model.end() )
+            if(model.find(toDelete[i]) == model.end())
             {
-                mapObject[toDelete[i]] = model[toDelete[i]];
-                model.erase(toDelete[i]);
-            }
-            else
-            {
-                toDelete.erase(toDelete.begin()+i);
+                cout << "ERR" << endl;
+                return false;
             }
         }
+
+        for(unsigned int i=0; i<toDelete.size(); i++)
+        {
+            mapObject[toDelete[i]] = model[toDelete[i]];
+            model.erase(toDelete[i]);
+        }
+        cout << "OK" << endl;
         return true;
     } //----- Fin de Do
 
@@ -62,6 +65,7 @@
             model[toDelete[i]] = mapObject[toDelete[i]];
         }
         mapObject.clear();
+        cout << "OK" << endl;
         return true;
     } //----- Fin de Undo
 
@@ -81,7 +85,10 @@
         {
             string sub;
             iss >> sub;
-            toDelete.push_back(sub);
+            if(sub != "")
+            {
+                toDelete.push_back(sub);
+            }
         } while (iss);
     } //----- Fin de Delete
 
@@ -97,6 +104,7 @@
         {
             delete i->second;
         }
+        mapObject.clear();
     } //----- Fin de ~Delete
 
 
