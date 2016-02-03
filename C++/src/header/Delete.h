@@ -48,20 +48,8 @@
         //
 
     //------------------------------------------------- Surcharge d'opérateurs
-        //Delete & operator = ( const Delete & unDelete );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
 
     //-------------------------------------------- Constructeurs - destructeur
-        Delete ( const Delete & unDelete );
-        // Mode d'emploi (constructeur de copie) :
-        //
-        // Contrat :
-        //
-
         Delete ( std::string & data );
         // Mode d'emploi :
         //

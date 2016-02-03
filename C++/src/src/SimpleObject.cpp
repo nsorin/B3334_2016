@@ -61,24 +61,8 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    /*SimpleObject & SimpleObject::operator = ( const SimpleObject & unSimpleObject )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
 
     //-------------------------------------------- Constructeurs - destructeur
-    SimpleObject::SimpleObject ( const SimpleObject & unSimpleObject )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de copie de <SimpleObject>" << endl;
-    #endif
-    } //----- Fin de SimpleObject (constructeur de copie)
-
-
     SimpleObject::SimpleObject ( string n, unsigned int np ) : Object(n), nPoints(np)
     // Algorithme :
     //

@@ -41,11 +41,22 @@
     {
         if ( model.find(object->GetName()) == model.end() )
         {
-            model[object->GetName()] = object;
-            return true;
+            if(object->IsConvex())
+            {
+                model[object->GetName()] = object;
+                return true;
+            }
+            else
+            {
+                cout << "ERR" << endl;
+                delete object;
+                return false;
+            }
         }
         else
         {
+            cout << "ERR" << endl;
+            delete object;
             return false;
         }
     } //----- Fin de Display
@@ -59,24 +70,8 @@
     } //----- Fin de Display
 
     //------------------------------------------------- Surcharge d'opérateurs
-    /*AddPolygone & AddPolygone::operator = ( const AddPolygone & unAddPolygone )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
 
     //-------------------------------------------- Constructeurs - destructeur
-    AddPolygone::AddPolygone ( const AddPolygone & unAddPolygone )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de copie de <AddPolygone>" << endl;
-    #endif
-    } //----- Fin de AddPolygone (constructeur de copie)
-
-
     AddPolygone::AddPolygone ( std::string & data )
     // Algorithme :
     //
@@ -98,7 +93,6 @@
         for(unsigned int i=0; i<coord.size()-1; i+=2)
         {
             Point p(coord[i], coord[i+1]);
-            cout << i << "/" << coord.size() << " " << coord[i] << "," << coord[i+1] << endl;
             points.push_back(p);
         }
         object = new Polygone(name, points);

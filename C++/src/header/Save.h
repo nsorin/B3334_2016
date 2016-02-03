@@ -50,20 +50,8 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-        //Save & operator = ( const Save & unSave );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
 
     //-------------------------------------------- Constructeurs - destructeur
-        Save ( const Save & unSave );
-        // Mode d'emploi (constructeur de copie) :
-        //
-        // Contrat :
-        //
-
         Save ( std::string & data );
         // Mode d'emploi :
         //

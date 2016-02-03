@@ -53,22 +53,10 @@
         virtual Object * clone();
 
     //------------------------------------------------- Surcharge d'opérateurs
-        //ComplexObject & operator = ( const ComplexObject & unComplexObject );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
-        friend std::ostream & operator<< (std::ostream & stream, const ComplexObject & object);
+    friend std::ostream & operator<< (std::ostream & stream, const ComplexObject & object);
 
 
     //-------------------------------------------- Constructeurs - destructeur
-        ComplexObject ( const ComplexObject & unComplexObject );
-        // Mode d'emploi (constructeur de copie) :
-        //
-        // Contrat :
-        //
-
         ComplexObject ( std::string n = "" );
         // Mode d'emploi :
         //

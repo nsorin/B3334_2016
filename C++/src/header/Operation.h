@@ -50,20 +50,8 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-        //Operation & operator = ( const Operation & unOperation );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
 
     //-------------------------------------------- Constructeurs - destructeur
-        Operation ( const Operation & unOperation );
-        // Mode d'emploi (constructeur de copie) :
-        //
-        // Contrat :
-        //
-
         Operation ( );
         // Mode d'emploi :
         //

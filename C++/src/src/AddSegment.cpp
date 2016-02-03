@@ -45,6 +45,8 @@
         }
         else
         {
+            cout << "ERR" << endl;
+            delete object;
             return false;
         }
     } //----- Fin de Do
@@ -59,24 +61,8 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    /*AddSegment & AddSegment::operator = ( const AddSegment & unAddSegment )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
 
     //-------------------------------------------- Constructeurs - destructeur
-    AddSegment::AddSegment ( const AddSegment & unAddSegment )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de copie de <AddSegment>" << endl;
-    #endif
-    } //----- Fin de AddSegment (constructeur de copie)
-
-
     AddSegment::AddSegment ( string & data )
     // Algorithme :
     //

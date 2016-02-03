@@ -38,19 +38,9 @@
     virtual Object * clone();
 
     //------------------------------------------------- Surcharge d'opérateurs
-        //Rectangle & operator = ( const Rectangle & unRectangle );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
         friend std::ostream & operator<< (std::ostream & stream, const Rectangle & object);
 
     //-------------------------------------------- Constructeurs - destructeur
-        Rectangle ( const Rectangle & unRectangle );
-        // Mode d'emploi (constructeur de copie) :
-        //
-
         Rectangle (std::string name, int x1, int y1, int x2, int y2);
         // Mode d'emploi :
         //

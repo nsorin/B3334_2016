@@ -57,24 +57,8 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    /*Clear & Clear::operator = ( const Clear & unClear )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
 
     //-------------------------------------------- Constructeurs - destructeur
-    Clear::Clear ( const Clear & unClear )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de copie de <Clear>" << endl;
-    #endif
-    } //----- Fin de Clear (constructeur de copie)
-
-
     Clear::Clear ( )
     // Algorithme :
     //

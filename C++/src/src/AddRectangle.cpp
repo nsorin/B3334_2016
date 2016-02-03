@@ -45,6 +45,8 @@
         }
         else
         {
+            cout << "ERR" << endl;
+            delete object;
             return false;
         }
     } //----- Fin de Do
@@ -58,24 +60,8 @@
     } //----- Fin de Undo
 
     //------------------------------------------------- Surcharge d'opérateurs
-    /*AddRectangle & AddRectangle::operator = ( const AddRectangle & unAddRectangle )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
 
     //-------------------------------------------- Constructeurs - destructeur
-    AddRectangle::AddRectangle ( const AddRectangle & unAddRectangle )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de copie de <AddRectangle>" << endl;
-    #endif
-    } //----- Fin de AddRectangle (constructeur de copie)
-
-
     AddRectangle::AddRectangle ( string & data )
     // Algorithme :
     //

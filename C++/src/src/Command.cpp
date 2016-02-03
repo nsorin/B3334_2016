@@ -28,32 +28,10 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Command::Méthode ( liste de paramètres )
-    // Algorithme :
-    //
-    //{
-    //} //----- Fin de Méthode
-
 
     //------------------------------------------------- Surcharge d'opérateurs
-    /*Command & Command::operator = ( const Command & unCommand )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
 
     //-------------------------------------------- Constructeurs - destructeur
-    Command::Command ( const Command & unCommand )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de copie de <Command>" << endl;
-    #endif
-    } //----- Fin de Command (constructeur de copie)
-
-
     Command::Command ( )
     // Algorithme :
     //

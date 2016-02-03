@@ -50,20 +50,8 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-        //AddRectangle & operator = ( const AddRectangle & unAddRectangle );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
 
     //-------------------------------------------- Constructeurs - destructeur
-        AddRectangle ( const AddRectangle & unAddRectangle );
-        // Mode d'emploi (constructeur de copie) :
-        //
-        // Contrat :
-        //
-
         AddRectangle ( std::string & data );
         // Mode d'emploi :
         //

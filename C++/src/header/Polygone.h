@@ -45,22 +45,10 @@
         virtual Object * clone();
 
     //------------------------------------------------- Surcharge d'opérateurs
-        Polygone & operator = ( const Polygone & unPolygone );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
         friend std::ostream & operator<< (std::ostream & stream, const Polygone & object);
 
 
     //-------------------------------------------- Constructeurs - destructeur
-        Polygone ( const Polygone & unPolygone );
-        // Mode d'emploi (constructeur de copie) :
-        //
-        // Contrat :
-        //
-
         Polygone (std::string & n, std::vector<Point> & points);
         // Mode d'emploi :
         //

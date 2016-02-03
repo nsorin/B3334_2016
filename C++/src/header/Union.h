@@ -51,20 +51,8 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-        //Union & operator = ( const Union & unUnion );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
 
     //-------------------------------------------- Constructeurs - destructeur
-        Union ( const Union & unUnion );
-        // Mode d'emploi (constructeur de copie) :
-        //
-        // Contrat :
-        //
-
         Union ( std::string & data );
         // Mode d'emploi :
         //

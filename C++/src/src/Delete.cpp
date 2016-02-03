@@ -67,24 +67,8 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    /*Delete & Delete::operator = ( const Delete & unDelete )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
 
     //-------------------------------------------- Constructeurs - destructeur
-    Delete::Delete ( const Delete & unDelete )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de copie de <Delete>" << endl;
-    #endif
-    } //----- Fin de Delete (constructeur de copie)
-
-
     Delete::Delete ( string & data )
     // Algorithme :
     //

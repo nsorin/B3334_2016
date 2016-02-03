@@ -50,23 +50,8 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    /*Save & Save::operator = ( const Save & unSave )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
 
     //-------------------------------------------- Constructeurs - destructeur
-    Save::Save ( const Save & unSave )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de copie de <Save>" << endl;
-    #endif
-    } //----- Fin de Save (constructeur de copie)
-
 
     Save::Save ( string & data )
     // Algorithme :

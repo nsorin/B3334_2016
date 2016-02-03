@@ -53,17 +53,7 @@
 
         virtual Object * clone();
 
-        //void setName(string name){this->name = name;};
-        // Mode d'emploi :
-        //
-
     //------------------------------------------------- Surcharge d'opérateurs
-        //Object & operator = ( const Object & unObject );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
         friend std::ostream & operator<< (std::ostream & stream, Object & object);
 
     //-------------------------------------------- Constructeurs - destructeur

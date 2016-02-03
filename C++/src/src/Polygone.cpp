@@ -47,35 +47,8 @@
     }
 
     //------------------------------------------------- Surcharge d'opérateurs
-    /*Polygone & Polygone::operator = ( const Polygone & unPolygone )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
-    /*ostream & operator<< (ostream & stream, const Polygone & object)
-    {
-        stream << "PC ";
-        stream << object.GetName();
-        for(unsigned int i = 0; i<object.GetSize(); i++)
-        {
-            stream << object.GetTabPoints()[i].GetX() << " " << object.GetTabPoints()[i].GetY() << " ";
-        }
-        stream << endl;
-        return stream;
-    }*/
 
     //-------------------------------------------- Constructeurs - destructeur
-    Polygone::Polygone ( const Polygone & unPolygone )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de copie de <Polygone>" << endl;
-    #endif
-    } //----- Fin de Polygone (constructeur de copie)
-
-
     Polygone::Polygone( string & n, vector<Point> & points ) : SimpleObject(n, points.size())
     // Algorithme :
     //
@@ -97,7 +70,6 @@
     #ifdef MAP
         cout << "Appel au destructeur de <Polygone>" << endl;
     #endif
-        delete [] tabPoints;
     } //----- Fin de ~Polygone
 
 

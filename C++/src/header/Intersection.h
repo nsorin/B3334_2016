@@ -51,20 +51,8 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-        //Intersection & operator = ( const Intersection & unIntersection );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
 
     //-------------------------------------------- Constructeurs - destructeur
-        Intersection ( const Intersection & unIntersection );
-        // Mode d'emploi (constructeur de copie) :
-        //
-        // Contrat :
-        //
-
         Intersection ( std::string & data );
         // Mode d'emploi :
         //

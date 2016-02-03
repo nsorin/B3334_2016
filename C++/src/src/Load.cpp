@@ -50,24 +50,8 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    /*Load & Load::operator = ( const Load & unLoad )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
 
     //-------------------------------------------- Constructeurs - destructeur
-    Load::Load ( const Load & unLoad )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de copie de <Load>" << endl;
-    #endif
-    } //----- Fin de Load (constructeur de copie)
-
-
     Load::Load ( string & data )
     // Algorithme :
     //

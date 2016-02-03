@@ -48,24 +48,8 @@
     }
 
     //------------------------------------------------- Surcharge d'opérateurs
-    /*UnionObject & UnionObject::operator = ( const UnionObject & unUnionObject )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
 
     //-------------------------------------------- Constructeurs - destructeur
-    UnionObject::UnionObject ( const UnionObject & unUnionObject )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de copie de <UnionObject>" << endl;
-    #endif
-    } //----- Fin de UnionObject (constructeur de copie)
-
-
     UnionObject::UnionObject (string n) : ComplexObject(n)
     // Algorithme :
     //
@@ -83,10 +67,6 @@
     #ifdef MAP
         cout << "Appel au destructeur de <UnionObject>" << endl;
     #endif
-        for(unsigned int i = 0; i<tabObjects.size(); i++)
-        {
-            delete tabObjects[i];
-        }
     } //----- Fin de ~UnionObject
 
 

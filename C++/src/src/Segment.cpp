@@ -89,20 +89,6 @@
     }*/
 
     //-------------------------------------------- Constructeurs - destructeur
-    Segment::Segment ( const Segment & unSegment )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de copie de <Segment>" << endl;
-    #endif
-        this->name = unSegment.name;
-        tabPoints = new Point[2];
-        tabPoints[0] = unSegment.tabPoints[0];
-        tabPoints[1] = unSegment.tabPoints[1];
-    } //----- Fin de Segment (constructeur de copie)
-
-
     Segment::Segment (string name, int x1, int y1, int x2, int y2) : SimpleObject(name, 2)
     // Algorithme :
     //
@@ -124,7 +110,7 @@
     #ifdef MAP
         cout << "Appel au destructeur de <Segment>" << endl;
     #endif
-        delete [] this->tabPoints;
+
     } //----- Fin de ~Segment
 
 

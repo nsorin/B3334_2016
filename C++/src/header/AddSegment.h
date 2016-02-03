@@ -50,20 +50,8 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-        //AddSegment & operator = ( const AddSegment & unAddSegment );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
 
     //-------------------------------------------- Constructeurs - destructeur
-        AddSegment ( const AddSegment & unAddSegment );
-        // Mode d'emploi (constructeur de copie) :
-        //
-        // Contrat :
-        //
-
         AddSegment ( std::string & data );
         // Mode d'emploi :
         //

@@ -49,6 +49,7 @@
                 else
                 {
                     cout << "ERR" << endl;
+                    delete object;
                     return false;
                 }
             }
@@ -57,6 +58,8 @@
         }
         else
         {
+            cout << "ERR" << endl;
+            delete object;
             return false;
         }
     } //----- Fin de Do
@@ -71,24 +74,8 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    /*Intersection & Intersection::operator = ( const Intersection & unIntersection )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
 
     //-------------------------------------------- Constructeurs - destructeur
-    Intersection::Intersection ( const Intersection & unIntersection )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de copie de <Intersection>" << endl;
-    #endif
-    } //----- Fin de Intersection (constructeur de copie)
-
-
     Intersection::Intersection ( string & data )
     // Algorithme :
     //
@@ -116,10 +103,6 @@
     #ifdef MAP
         cout << "Appel au destructeur de <Intersection>" << endl;
     #endif
-        if(object)
-        {
-            delete object;
-        }
     } //----- Fin de ~Intersection
 
 

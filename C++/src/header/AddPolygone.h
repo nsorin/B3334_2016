@@ -50,20 +50,8 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-        AddPolygone & operator = ( const AddPolygone & unAddPolygone );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
 
     //-------------------------------------------- Constructeurs - destructeur
-        AddPolygone ( const AddPolygone & unAddPolygone );
-        // Mode d'emploi (constructeur de copie) :
-        //
-        // Contrat :
-        //
-
         AddPolygone ( std::string & data );
         // Mode d'emploi :
         //

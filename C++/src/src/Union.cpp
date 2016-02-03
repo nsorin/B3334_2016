@@ -49,6 +49,7 @@
                 else
                 {
                     cout << "ERR" << endl;
+                    delete object;
                     return false;
                 }
             }
@@ -57,6 +58,8 @@
         }
         else
         {
+            cout << "ERR" << endl;
+            delete object;
             return false;
         }
     } //----- Fin de Do
@@ -71,24 +74,8 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    /*Union & Union::operator = ( const Union & unUnion )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
 
     //-------------------------------------------- Constructeurs - destructeur
-    Union::Union ( const Union & unUnion )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de copie de <Union>" << endl;
-    #endif
-    } //----- Fin de Union (constructeur de copie)
-
-
     Union::Union ( string & data )
     // Algorithme :
     //
@@ -116,10 +103,6 @@
     #ifdef MAP
         cout << "Appel au destructeur de <Union>" << endl;
     #endif
-        if(object)
-        {
-            delete object;
-        }
     } //----- Fin de ~Union
 
 

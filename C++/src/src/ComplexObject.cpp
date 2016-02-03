@@ -52,24 +52,8 @@
     }
 
     //------------------------------------------------- Surcharge d'opérateurs
-    /*ComplexObject & ComplexObject::operator = ( const ComplexObject & unComplexObject )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
 
     //-------------------------------------------- Constructeurs - destructeur
-    ComplexObject::ComplexObject ( const ComplexObject & unComplexObject )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de copie de <ComplexObject>" << endl;
-    #endif
-    } //----- Fin de ComplexObject (constructeur de copie)
-
-
     ComplexObject::ComplexObject ( string n ) : Object(n)
     // Algorithme :
     //
@@ -91,6 +75,7 @@
         {
             delete tabObjects[i];
         }
+        tabObjects.clear();
     } //----- Fin de ~ComplexObject
 
 

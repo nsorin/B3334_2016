@@ -54,20 +54,8 @@
         //
 
     //------------------------------------------------- Surcharge d'opérateurs
-        //Command & operator = ( const Command & unCommand );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
 
     //-------------------------------------------- Constructeurs - destructeur
-        Command ( const Command & unCommand );
-        // Mode d'emploi (constructeur de copie) :
-        //
-        // Contrat :
-        //
-
         Command ( );
         // Mode d'emploi :
         //

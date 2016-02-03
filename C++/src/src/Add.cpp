@@ -31,24 +31,8 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    /*Add & Add::operator = ( const Add & unAdd )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
 
     //-------------------------------------------- Constructeurs - destructeur
-    Add::Add ( const Add & unAdd )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de copie de <Add>" << endl;
-    #endif
-    } //----- Fin de Add (constructeur de copie)
-
-
     Add::Add ( )
     // Algorithme :
     //

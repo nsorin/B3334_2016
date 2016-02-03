@@ -48,12 +48,6 @@
     }
 
     //------------------------------------------------- Surcharge d'opérateurs
-    /*InterObject & InterObject::operator = ( const InterObject & unInterObject )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
 
     //-------------------------------------------- Constructeurs - destructeur
     InterObject::InterObject (string n) : ComplexObject(n)
@@ -73,10 +67,6 @@
     #ifdef MAP
         cout << "Appel au destructeur de <InterObject>" << endl;
     #endif
-        for(unsigned int i = 0; i<tabObjects.size(); i++)
-        {
-            delete tabObjects[i];
-        }
     } //----- Fin de ~InterObject
 
 

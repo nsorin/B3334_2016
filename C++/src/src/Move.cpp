@@ -66,27 +66,8 @@
     } //----- Fin de Undo
 
     //------------------------------------------------- Surcharge d'opérateurs
-    /*Move & Move::operator = ( const Move & unMove )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
 
     //-------------------------------------------- Constructeurs - destructeur
-    Move::Move ( const Move & unMove )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de copie de <Move>" << endl;
-    #endif
-        this->objectName = unMove.objectName;
-        this->dx = unMove.dx;
-        this->dy = unMove.dy;
-    } //----- Fin de Move (constructeur de copie)
-
-
     Move::Move ( string & data )
     // Algorithme :
     //

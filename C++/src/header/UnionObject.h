@@ -42,22 +42,10 @@
         virtual Object * clone();
 
     //------------------------------------------------- Surcharge d'opérateurs
-        //UnionObject & operator = ( const UnionObject & unUnionObject );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
         friend std::ostream & operator<< (std::ostream & stream, const UnionObject & object);
 
 
     //-------------------------------------------- Constructeurs - destructeur
-        UnionObject ( const UnionObject & unUnionObject );
-        // Mode d'emploi (constructeur de copie) :
-        //
-        // Contrat :
-        //
-
         UnionObject (std::string name);
         // Mode d'emploi :
         //

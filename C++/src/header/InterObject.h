@@ -42,21 +42,10 @@
         virtual Object * clone();
 
     //------------------------------------------------- Surcharge d'opérateurs
-        //InterObject & operator = ( const InterObject & unInterObject );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
         friend std::ostream & operator<< (std::ostream & stream, const InterObject & object);
 
 
     //-------------------------------------------- Constructeurs - destructeur
-        InterObject ( const InterObject & unInterObject );
-        // Mode d'emploi (constructeur de copie) :
-        //
-        // Contrat :
-        //
 
         InterObject (std::string name);
         // Mode d'emploi :

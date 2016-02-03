@@ -48,20 +48,8 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-        //Add & operator = ( const Add & unAdd );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
 
     //-------------------------------------------- Constructeurs - destructeur
-        Add ( const Add & unAdd );
-        // Mode d'emploi (constructeur de copie) :
-        //
-        // Contrat :
-        //
-
         Add ( );
         // Mode d'emploi :
         //

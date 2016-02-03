@@ -39,22 +39,10 @@
         virtual Object * clone();
 
     //------------------------------------------------- Surcharge d'opérateurs
-        //Segment & operator = ( const Segment & unSegment );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
         friend std::ostream & operator<< (std::ostream & stream, const Segment & object);
 
 
     //-------------------------------------------- Constructeurs - destructeur
-        Segment ( const Segment & unSegment );
-        // Mode d'emploi (constructeur de copie) :
-        //
-        // Contrat :
-        //
-
         Segment ( std::string name, int x1, int y1, int x2, int y2 );
         // Mode d'emploi :
         //

@@ -49,20 +49,8 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-        Clear & operator = ( const Clear & unClear );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
 
     //-------------------------------------------- Constructeurs - destructeur
-        Clear ( const Clear & unClear );
-        // Mode d'emploi (constructeur de copie) :
-        //
-        // Contrat :
-        //
-
         Clear ( );
         // Mode d'emploi :
         //

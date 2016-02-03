@@ -28,12 +28,6 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    // type Rectangle::Méthode ( liste de paramètres )
-    // Algorithme :
-    //
-    //{
-    //} //----- Fin de Méthode
-
     bool Rectangle::Contains ( Point & p ) const
     // Algorithme :
     //
@@ -47,40 +41,8 @@
 
 
     //------------------------------------------------- Surcharge d'opérateurs
-    /*Rectangle & Rectangle::operator = ( const Rectangle & unRectangle )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
-    /*ostream & operator<< (ostream & stream, const Rectangle & object)
-    {
-        stream << "R ";
-        stream << object.GetName();
-        for(unsigned int i = 0; i<object.GetSize(); i++)
-        {
-            stream << object.GetTabPoints()[i].GetX() << " " << object.GetTabPoints()[i].GetY() << " ";
-        }
-        stream << endl;
-        return stream;
-    }*/
-
 
     //-------------------------------------------- Constructeurs - destructeur
-    Rectangle::Rectangle ( const Rectangle & unRectangle )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au constructeur de copie de <Rectangle>" << endl;
-    #endif
-        this->name = unRectangle.name;
-        tabPoints = new Point[2];
-        tabPoints[0] = unRectangle.tabPoints[0];
-        tabPoints[1] = unRectangle.tabPoints[1];
-    } //----- Fin de Rectangle (constructeur de copie)
-
-
     Rectangle::Rectangle (string name, int x1, int y1, int x2, int y2) : SimpleObject(name, 2)
     // Algorithme :
     //
@@ -102,7 +64,6 @@
     #ifdef MAP
         cout << "Appel au destructeur de <Rectangle>" << endl;
     #endif
-        delete [] tabPoints;
     } //----- Fin de ~Rectangle
 
 
