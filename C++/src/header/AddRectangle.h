@@ -1,92 +1,85 @@
+/*************************************************************************
+                            AddRectangle  -  description
+                                -------------------
+    début                : 16/1/2016
+    copyright            : (C) 2016 par nsorin
+*************************************************************************/
 
-    /*************************************************************************
-                               AddRectangle  -  description
-                                 -------------------
-        début                : 16/1/2016
-        copyright            : (C) 2016 par nsorin
-    *************************************************************************/
+//-------------- Interface de la classe <AddRectangle> (fichier AddRectangle) --------------
+#if ! defined ( ADDRECTANGLE_H )
+#define ADDRECTANGLE_H
 
-    //-------------- Interface de la classe <AddRectangle> (fichier AddRectangle) --------------
-    #if ! defined ( ADDRECTANGLE_H )
-    #define ADDRECTANGLE_H
+//--------------------------------------------------- Interfaces utilisées
+#include "Command.h"
+#include "Rectangle.h"
 
-    //--------------------------------------------------- Interfaces utilisées
-    #include "Add.h"
-    #include "Rectangle.h"
+//------------------------------------------------------------- Constantes
 
-    //------------------------------------------------------------- Constantes
+//------------------------------------------------------------------ Types
 
-    //------------------------------------------------------------------ Types
+//------------------------------------------------------------------------
+// Rôle de la classe <AddRectangle>
+//
+//
+//------------------------------------------------------------------------
 
-    //------------------------------------------------------------------------
-    // Rôle de la classe <AddRectangle>
+class AddRectangle : public Command
+{
+//----------------------------------------------------------------- PUBLIC
+
+public:
+//----------------------------------------------------- Méthodes publiques
+    virtual bool Do ( std::map<std::string, Object*> & model );
+    // Mode d'emploi :
     //
+    // Contrat :
     //
-    //------------------------------------------------------------------------
 
-    class AddRectangle : public Add
-    {
-    //----------------------------------------------------------------- PUBLIC
-
-    public:
-    //----------------------------------------------------- Méthodes publiques
-        virtual void Display ( );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
-        virtual bool Do ( std::map<std::string, Object*> & model );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
-        virtual bool Undo ( std::map<std::string, Object*> & model );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+    virtual bool Undo ( std::map<std::string, Object*> & model );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
 
-    //------------------------------------------------- Surcharge d'opérateurs
+//------------------------------------------------- Surcharge d'opérateurs
 
-    //-------------------------------------------- Constructeurs - destructeur
-        AddRectangle ( std::string & data );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+//-------------------------------------------- Constructeurs - destructeur
+    AddRectangle ( std::string & data );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-        virtual ~AddRectangle ( );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+    virtual ~AddRectangle ( );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-    //------------------------------------------------------------------ PRIVE
+//------------------------------------------------------------------ PRIVE
 
-    protected:
-    //----------------------------------------------------- Méthodes protégées
+protected:
+//----------------------------------------------------- Méthodes protégées
 
-    private:
-    //------------------------------------------------------- Méthodes privées
+private:
+//------------------------------------------------------- Méthodes privées
 
-    protected:
-    //----------------------------------------------------- Attributs protégés
+protected:
+//----------------------------------------------------- Attributs protégés
 
-    private:
-    //------------------------------------------------------- Attributs privés
+private:
+//------------------------------------------------------- Attributs privés
     Rectangle *object;
 
-    //---------------------------------------------------------- Classes amies
+//---------------------------------------------------------- Classes amies
 
-    //-------------------------------------------------------- Classes privées
+//-------------------------------------------------------- Classes privées
 
-    //----------------------------------------------------------- Types privés
+//----------------------------------------------------------- Types privés
 
-    };
+};
 
-    //----------------------------------------- Types dépendants de <AddRectangle>
+//----------------------------------------- Types dépendants de <AddRectangle>
 
-    #endif // ADDRECTANGLE_H
+#endif // ADDRECTANGLE_H

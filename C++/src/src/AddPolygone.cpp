@@ -28,13 +28,6 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-
-    void AddPolygone::Display ( )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de Display
-
     bool AddPolygone::Do ( map<string, Object*> & model )
     // Algorithme :
     //

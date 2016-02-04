@@ -28,12 +28,6 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    void AddRectangle::Display ( )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de Display
-
     bool AddRectangle::Do ( map<string, Object*> & model )
     // Algorithme :
     //

@@ -208,6 +208,7 @@ bool Hit(map<string, Object*> & model, string & data)
     iss >> name;
     if(model.find(name) == model.end())
     {
+        cout << "ERR" << endl;
         return false;
     }
     int x;

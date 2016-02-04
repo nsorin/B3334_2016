@@ -1,95 +1,87 @@
+/*************************************************************************
+                            Intersection  -  description
+                                -------------------
+    début                : 16/1/2016
+    copyright            : (C) 2016 par nsorin
+*************************************************************************/
 
-    /*************************************************************************
-                               Intersection  -  description
-                                 -------------------
-        début                : 16/1/2016
-        copyright            : (C) 2016 par nsorin
-    *************************************************************************/
+//-------------- Interface de la classe <Intersection> (fichier Intersection) --------------
+#if ! defined ( INTERSECTION_H )
+#define INTERSECTION_H
 
-    //-------------- Interface de la classe <Intersection> (fichier Intersection) --------------
-    #if ! defined ( INTERSECTION_H )
-    #define INTERSECTION_H
+//--------------------------------------------------- Interfaces utilisées
+#include "Command.h"
+#include "InterObject.h"
 
-    //--------------------------------------------------- Interfaces utilisées
-    #include "Operation.h"
-    #include "InterObject.h"
+//------------------------------------------------------------- Constantes
 
-    //------------------------------------------------------------- Constantes
+//------------------------------------------------------------------ Types
 
-    //------------------------------------------------------------------ Types
+//------------------------------------------------------------------------
+// Rôle de la classe <Intersection>
+//
+//
+//------------------------------------------------------------------------
 
-    //------------------------------------------------------------------------
-    // Rôle de la classe <Intersection>
+class Intersection : public Command
+{
+//----------------------------------------------------------------- PUBLIC
+
+public:
+//----------------------------------------------------- Méthodes publiques
+    virtual bool Do ( std::map<std::string, Object*> & model );
+    // Mode d'emploi :
     //
+    // Contrat :
     //
-    //------------------------------------------------------------------------
 
-    class Intersection : public Operation
-    {
-    //----------------------------------------------------------------- PUBLIC
-
-    public:
-    //----------------------------------------------------- Méthodes publiques
-        virtual void Display ( );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
-        virtual bool Do ( std::map<std::string, Object*> & model );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
-        virtual bool Undo ( std::map<std::string, Object*> & model );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+    virtual bool Undo ( std::map<std::string, Object*> & model );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
 
+//------------------------------------------------- Surcharge d'opérateurs
 
-    //------------------------------------------------- Surcharge d'opérateurs
+//-------------------------------------------- Constructeurs - destructeur
+    Intersection ( std::string & data );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-    //-------------------------------------------- Constructeurs - destructeur
-        Intersection ( std::string & data );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+    virtual ~Intersection ( );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-        virtual ~Intersection ( );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+//------------------------------------------------------------------ PRIVE
 
-    //------------------------------------------------------------------ PRIVE
+protected:
+//----------------------------------------------------- Méthodes protégées
 
-    protected:
-    //----------------------------------------------------- Méthodes protégées
+private:
+//------------------------------------------------------- Méthodes privées
 
-    private:
-    //------------------------------------------------------- Méthodes privées
+protected:
+//----------------------------------------------------- Attributs protégés
 
-    protected:
-    //----------------------------------------------------- Attributs protégés
-
-    private:
-    //------------------------------------------------------- Attributs privés
+private:
+//------------------------------------------------------- Attributs privés
     InterObject *object;
     std::vector<std::string> components;
     std::string objectName;
 
-    //---------------------------------------------------------- Classes amies
+//---------------------------------------------------------- Classes amies
 
-    //-------------------------------------------------------- Classes privées
+//-------------------------------------------------------- Classes privées
 
-    //----------------------------------------------------------- Types privés
+//----------------------------------------------------------- Types privés
 
-    };
+};
 
-    //----------------------------------------- Types dépendants de <Intersection>
+//----------------------------------------- Types dépendants de <Intersection>
 
-    #endif // INTERSECTION_H
+#endif // INTERSECTION_H

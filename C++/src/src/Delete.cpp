@@ -28,11 +28,6 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    void Delete::Display ( )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de Display
 
     bool Delete::Do ( map<string, Object*> & model )
     // Algorithme :

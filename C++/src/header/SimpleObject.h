@@ -1,95 +1,93 @@
+/*************************************************************************
+                            SimpleObject  -  description
+                                -------------------
+    début                : 16/1/2016
+    copyright            : (C) 2016 par nsorin
+*************************************************************************/
 
-    /*************************************************************************
-                               SimpleObject  -  description
-                                 -------------------
-        début                : 16/1/2016
-        copyright            : (C) 2016 par nsorin
-    *************************************************************************/
+//-------------- Interface de la classe <SimpleObject> (fichier SimpleObject) --------------
+#if ! defined ( SIMPLEOBJECT_H )
+#define SIMPLEOBJECT_H
 
-    //-------------- Interface de la classe <SimpleObject> (fichier SimpleObject) --------------
-    #if ! defined ( SIMPLEOBJECT_H )
-    #define SIMPLEOBJECT_H
+//--------------------------------------------------- Interfaces utilisées
+#include "Object.h"
+#include "Point.h"
+//------------------------------------------------------------- Constantes
 
-    //--------------------------------------------------- Interfaces utilisées
-    #include "Object.h"
-    #include "Point.h"
-    //------------------------------------------------------------- Constantes
+//------------------------------------------------------------------ Types
 
-    //------------------------------------------------------------------ Types
+//------------------------------------------------------------------------
+// Rôle de la classe <SimpleObject>
+//
+//
+//------------------------------------------------------------------------
 
-    //------------------------------------------------------------------------
-    // Rôle de la classe <SimpleObject>
+class SimpleObject : public Object
+{
+//----------------------------------------------------------------- PUBLIC
+
+public:
+//----------------------------------------------------- Méthodes publiques
+    virtual bool Contains(Point & p) const;
+    // Mode d'emploi :
     //
+
+    Point * GetTabPoints( ) const;
+    // Mode d'emploi :
     //
-    //------------------------------------------------------------------------
 
-    class SimpleObject : public Object
-    {
-    //----------------------------------------------------------------- PUBLIC
+    unsigned int GetSize() const;
+    // Mode d'emploi :
+    //
 
-    public:
-    //----------------------------------------------------- Méthodes publiques
-        virtual bool Contains(Point & p) const;
-        // Mode d'emploi :
-        //
+    void Move(int dx, int dy);
+    // Mode d'emploi :
+    //
 
-        Point * GetTabPoints( ) const;
-        // Mode d'emploi :
-        //
+    virtual std::ostream & doPrint(std::ostream & os) const;
 
-        unsigned int GetSize() const;
-        // Mode d'emploi :
-        //
+    virtual Object * clone();
 
-        void Move(int dx, int dy);
-        // Mode d'emploi :
-        //
+//------------------------------------------------- Surcharge d'opérateurs
+    friend std::ostream & operator<< (std::ostream & stream, const SimpleObject & object);
 
-        virtual std::ostream & doPrint(std::ostream & os) const;
+//-------------------------------------------- Constructeurs - destructeur
+    SimpleObject ( std::string n = "", unsigned int np = 2 );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-        virtual Object * clone();
+    virtual ~SimpleObject ( );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-    //------------------------------------------------- Surcharge d'opérateurs
-        friend std::ostream & operator<< (std::ostream & stream, const SimpleObject & object);
+//------------------------------------------------------------------ PRIVE
 
+protected:
+//----------------------------------------------------- Méthodes protégées
 
-    //-------------------------------------------- Constructeurs - destructeur
-        SimpleObject ( std::string n = "", unsigned int np = 2 );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+private:
+//------------------------------------------------------- Méthodes privées
 
-        virtual ~SimpleObject ( );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+protected:
+//----------------------------------------------------- Attributs protégés
+    Point * tabPoints;
+    unsigned int nPoints;
 
-    //------------------------------------------------------------------ PRIVE
+private:
+//------------------------------------------------------- Attributs privés
 
-    protected:
-    //----------------------------------------------------- Méthodes protégées
+//---------------------------------------------------------- Classes amies
 
-    private:
-    //------------------------------------------------------- Méthodes privées
+//-------------------------------------------------------- Classes privées
 
-    protected:
-    //----------------------------------------------------- Attributs protégés
-        Point * tabPoints;
-        unsigned int nPoints;
+//----------------------------------------------------------- Types privés
 
-    private:
-    //------------------------------------------------------- Attributs privés
+};
 
-    //---------------------------------------------------------- Classes amies
+//----------------------------------------- Types dépendants de <SimpleObject>
 
-    //-------------------------------------------------------- Classes privées
-
-    //----------------------------------------------------------- Types privés
-
-    };
-
-    //----------------------------------------- Types dépendants de <SimpleObject>
-
-    #endif // SIMPLEOBJECT_H
+#endif // SIMPLEOBJECT_HŜ

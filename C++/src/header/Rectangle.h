@@ -1,34 +1,32 @@
+/*************************************************************************
+                            Rectangle  -  description
+                                -------------------
+    début                : 16/1/2016
+    copyright            : (C) 2016 par nsorin
+*************************************************************************/
 
-    /*************************************************************************
-                               Rectangle  -  description
-                                 -------------------
-        début                : 16/1/2016
-        copyright            : (C) 2016 par nsorin
-    *************************************************************************/
+//-------------- Interface de la classe <Rectangle> (fichier Rectangle) --------------
+#if ! defined ( RECTANGLE_H )
+#define RECTANGLE_H
 
-    //-------------- Interface de la classe <Rectangle> (fichier Rectangle) --------------
-    #if ! defined ( RECTANGLE_H )
-    #define RECTANGLE_H
+//--------------------------------------------------- Interfaces utilisées
+#include "SimpleObject.h"
+//------------------------------------------------------------- Constantes
 
-    //--------------------------------------------------- Interfaces utilisées
-    #include "SimpleObject.h"
-    //------------------------------------------------------------- Constantes
+//------------------------------------------------------------------ Types
 
-    //------------------------------------------------------------------ Types
+//------------------------------------------------------------------------
+// Rôle de la classe <Rectangle>
+//
+//
+//------------------------------------------------------------------------
 
-    //------------------------------------------------------------------------
-    // Rôle de la classe <Rectangle>
-    //
-    //
-    //------------------------------------------------------------------------
+class Rectangle : public SimpleObject
+{
+//----------------------------------------------------------------- PUBLIC
 
-    class Rectangle : public SimpleObject
-    {
-    //----------------------------------------------------------------- PUBLIC
-
-    public:
-    //----------------------------------------------------- Méthodes publiques
-        //void display() const;
+public:
+//----------------------------------------------------- Méthodes publiques
     virtual bool Contains(Point & p) const;
     // Mode d'emploi :
     //
@@ -37,44 +35,44 @@
 
     virtual Object * clone();
 
-    //------------------------------------------------- Surcharge d'opérateurs
-        friend std::ostream & operator<< (std::ostream & stream, const Rectangle & object);
+//------------------------------------------------- Surcharge d'opérateurs
+    friend std::ostream & operator<< (std::ostream & stream, const Rectangle & object);
 
-    //-------------------------------------------- Constructeurs - destructeur
-        Rectangle (std::string name, int x1, int y1, int x2, int y2);
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+//-------------------------------------------- Constructeurs - destructeur
+    Rectangle (std::string name, int x1, int y1, int x2, int y2);
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-        virtual ~Rectangle ( );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+    virtual ~Rectangle ( );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-    //------------------------------------------------------------------ PRIVE
+//------------------------------------------------------------------ PRIVE
 
-    protected:
-    //----------------------------------------------------- Méthodes protégées
+protected:
+//----------------------------------------------------- Méthodes protégées
 
-    private:
-    //------------------------------------------------------- Méthodes privées
+private:
+//------------------------------------------------------- Méthodes privées
 
-    protected:
-    //----------------------------------------------------- Attributs protégés
+protected:
+//----------------------------------------------------- Attributs protégés
 
-    private:
-    //------------------------------------------------------- Attributs privés
+private:
+//------------------------------------------------------- Attributs privés
 
-    //---------------------------------------------------------- Classes amies
+//---------------------------------------------------------- Classes amies
 
-    //-------------------------------------------------------- Classes privées
+//-------------------------------------------------------- Classes privées
 
-    //----------------------------------------------------------- Types privés
+//----------------------------------------------------------- Types privés
 
-    };
+};
 
-    //----------------------------------------- Types dépendants de <Rectangle>
+//----------------------------------------- Types dépendants de <Rectangle>
 
-    #endif // RECTANGLE_H
+#endif // RECTANGLE_H

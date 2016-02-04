@@ -53,40 +53,9 @@
             return false;
         }
         return true;
-        /*if(dy == 0 && dx == 0)
-        {
-            return true;
-        }
-        if((dy == 0 && dx != 0) || (dx == 0 && dy != 0))
-        {
-            return false;
-        }
-        return (dy/dx == dyTh/dxTh && dy <= dyTh && dx <= dxTh);*/
     } //----- Fin de Contains
 
-    void Segment::Display() const
-    {
-
-    }
-
     //------------------------------------------------- Surcharge d'opérateurs
-    /*Segment & Segment::operator = ( const Segment & unSegment )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
-    /*ostream & operator<< (ostream & stream, const Segment & object)
-    {
-        stream << "S ";
-        stream << object.GetName();
-        for(unsigned int i = 0; i<object.GetSize(); i++)
-        {
-            stream << object.GetTabPoints()[i].GetX() << " " << object.GetTabPoints()[i].GetY() << " ";
-        }
-        stream << endl;
-        return stream;
-    }*/
 
     //-------------------------------------------- Constructeurs - destructeur
     Segment::Segment (string name, int x1, int y1, int x2, int y2) : SimpleObject(name, 2)

@@ -1,91 +1,84 @@
+/*************************************************************************
+                            Delete  -  description
+                              -------------------
+    début                : 16/1/2016
+    copyright            : (C) 2016 par nsorin
+*************************************************************************/
 
-    /*************************************************************************
-                               Delete  -  description
-                                 -------------------
-        début                : 16/1/2016
-        copyright            : (C) 2016 par nsorin
-    *************************************************************************/
+//-------------- Interface de la classe <Delete> (fichier Delete) --------------
+#if ! defined ( DELETE_H )
+#define DELETE_H
 
-    //-------------- Interface de la classe <Delete> (fichier Delete) --------------
-    #if ! defined ( DELETE_H )
-    #define DELETE_H
-
-    //--------------------------------------------------- Interfaces utilisées
+//--------------------------------------------------- Interfaces utilisées
 #include "Command.h"
 
-    //------------------------------------------------------------- Constantes
+//------------------------------------------------------------- Constantes
 
-    //------------------------------------------------------------------ Types
+//------------------------------------------------------------------ Types
 
-    //------------------------------------------------------------------------
-    // Rôle de la classe <Delete>
+//------------------------------------------------------------------------
+// Rôle de la classe <Delete>
+//
+//
+//------------------------------------------------------------------------
+
+class Delete : public Command
+{
+//----------------------------------------------------------------- PUBLIC
+
+public:
+//----------------------------------------------------- Méthodes publiques
+    virtual bool Do ( std::map<std::string, Object*> & model);
+    // Mode d'emploi :
     //
+    // Contrat :
     //
-    //------------------------------------------------------------------------
 
-    class Delete : public Command
-    {
-    //----------------------------------------------------------------- PUBLIC
+    virtual bool Undo ( std::map<std::string, Object*> & model);
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-    public:
-    //----------------------------------------------------- Méthodes publiques
-        virtual void Display ( );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+//------------------------------------------------- Surcharge d'opérateurs
 
-        virtual bool Do ( std::map<std::string, Object*> & model);
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+//-------------------------------------------- Constructeurs - destructeur
+    Delete ( std::string & data );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-        virtual bool Undo ( std::map<std::string, Object*> & model);
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+    virtual ~Delete ( );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-    //------------------------------------------------- Surcharge d'opérateurs
+//------------------------------------------------------------------ PRIVE
 
-    //-------------------------------------------- Constructeurs - destructeur
-        Delete ( std::string & data );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+protected:
+//----------------------------------------------------- Méthodes protégées
 
-        virtual ~Delete ( );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+private:
+//------------------------------------------------------- Méthodes privées
 
-    //------------------------------------------------------------------ PRIVE
+protected:
+//----------------------------------------------------- Attributs protégés
 
-    protected:
-    //----------------------------------------------------- Méthodes protégées
-
-    private:
-    //------------------------------------------------------- Méthodes privées
-
-    protected:
-    //----------------------------------------------------- Attributs protégés
-
-    private:
-    //------------------------------------------------------- Attributs privés
+private:
+//------------------------------------------------------- Attributs privés
     std::map<std::string, Object*> mapObject;
     std::vector<std::string> toDelete;
 
-    //---------------------------------------------------------- Classes amies
+//---------------------------------------------------------- Classes amies
 
-    //-------------------------------------------------------- Classes privées
+//-------------------------------------------------------- Classes privées
 
-    //----------------------------------------------------------- Types privés
+//----------------------------------------------------------- Types privés
 
-    };
+};
 
-    //----------------------------------------- Types dépendants de <Delete>
+//----------------------------------------- Types dépendants de <Delete>
 
-    #endif // DELETE_H
+#endif // DELETE_H

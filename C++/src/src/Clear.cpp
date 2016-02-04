@@ -28,13 +28,6 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    void Clear::Display ( )
-    // Algorithme :
-    //
-    {
-        cout << SUCCESS << endl;
-    } //----- Fin de Display
-
     bool Clear::Do ( map<string, Object*> & model )
     // Algorithme :
     //

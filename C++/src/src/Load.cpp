@@ -28,12 +28,6 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    void Load::Display ( )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de Display
-
     bool Load::Do ( map<string, Object*> & model )
     // Algorithme :
     //

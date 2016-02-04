@@ -28,12 +28,6 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    void AddSegment::Display ( )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de Display
-
     bool AddSegment::Do ( map<string, Object*> & model )
     // Algorithme :
     //

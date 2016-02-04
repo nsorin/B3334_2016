@@ -1,92 +1,85 @@
+/*************************************************************************
+                            AddPolygone  -  description
+                                -------------------
+    début                : 16/1/2016
+    copyright            : (C) 2016 par nsorin
+*************************************************************************/
 
-    /*************************************************************************
-                               AddPolygone  -  description
-                                 -------------------
-        début                : 16/1/2016
-        copyright            : (C) 2016 par nsorin
-    *************************************************************************/
+//-------------- Interface de la classe <AddPolygone> (fichier AddPolygone) --------------
+#if ! defined ( ADDPOLYGONE_H )
+#define ADDPOLYGONE_H
 
-    //-------------- Interface de la classe <AddPolygone> (fichier AddPolygone) --------------
-    #if ! defined ( ADDPOLYGONE_H )
-    #define ADDPOLYGONE_H
+//--------------------------------------------------- Interfaces utilisées
+#include "Command.h"
+#include "Polygone.h"
 
-    //--------------------------------------------------- Interfaces utilisées
-    #include "Add.h"
-    #include "Polygone.h"
+//------------------------------------------------------------- Constantes
 
-    //------------------------------------------------------------- Constantes
+//------------------------------------------------------------------ Types
 
-    //------------------------------------------------------------------ Types
+//------------------------------------------------------------------------
+// Rôle de la classe <AddPolygone>
+//
+//
+//------------------------------------------------------------------------
 
-    //------------------------------------------------------------------------
-    // Rôle de la classe <AddPolygone>
+class AddPolygone : public Command
+{
+//----------------------------------------------------------------- PUBLIC
+
+public:
+//----------------------------------------------------- Méthodes publiques
+    virtual bool Do ( std::map<std::string, Object*> & model );
+    // Mode d'emploi :
     //
+    // Contrat :
     //
-    //------------------------------------------------------------------------
 
-    class AddPolygone : public Add
-    {
-    //----------------------------------------------------------------- PUBLIC
-
-    public:
-    //----------------------------------------------------- Méthodes publiques
-        virtual void Display ( );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
-        virtual bool Do ( std::map<std::string, Object*> & model );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
-        virtual bool Undo ( std::map<std::string, Object*> & model );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+    virtual bool Undo ( std::map<std::string, Object*> & model );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
 
-    //------------------------------------------------- Surcharge d'opérateurs
+//------------------------------------------------- Surcharge d'opérateurs
 
-    //-------------------------------------------- Constructeurs - destructeur
-        AddPolygone ( std::string & data );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+//-------------------------------------------- Constructeurs - destructeur
+    AddPolygone ( std::string & data );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-        virtual ~AddPolygone ( );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+    virtual ~AddPolygone ( );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-    //------------------------------------------------------------------ PRIVE
+//------------------------------------------------------------------ PRIVE
 
-    protected:
-    //----------------------------------------------------- Méthodes protégées
+protected:
+//----------------------------------------------------- Méthodes protégées
 
-    private:
-    //------------------------------------------------------- Méthodes privées
+private:
+//------------------------------------------------------- Méthodes privées
 
-    protected:
-    //----------------------------------------------------- Attributs protégés
+protected:
+//----------------------------------------------------- Attributs protégés
 
-    private:
-    //------------------------------------------------------- Attributs privés
+private:
+//------------------------------------------------------- Attributs privés
     Polygone *object;
 
-    //---------------------------------------------------------- Classes amies
+//---------------------------------------------------------- Classes amies
 
-    //-------------------------------------------------------- Classes privées
+//-------------------------------------------------------- Classes privées
 
-    //----------------------------------------------------------- Types privés
+//----------------------------------------------------------- Types privés
 
-    };
+};
 
-    //----------------------------------------- Types dépendants de <AddPolygone>
+//----------------------------------------- Types dépendants de <AddPolygone>
 
-    #endif // ADDPOLYGONE_H
+#endif // ADDPOLYGONE_H

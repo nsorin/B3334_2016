@@ -1,94 +1,92 @@
+/*************************************************************************
+                            Move  -  description
+                             -------------------
+    début                : 16/1/2016
+    copyright            : (C) 2016 par nsorin
+*************************************************************************/
 
-    /*************************************************************************
-                               Move  -  description
-                                 -------------------
-        début                : 16/1/2016
-        copyright            : (C) 2016 par nsorin
-    *************************************************************************/
+//-------------- Interface de la classe <Move> (fichier Move) --------------
+#if ! defined ( MOVE_H )
+#define MOVE_H
 
-    //-------------- Interface de la classe <Move> (fichier Move) --------------
-    #if ! defined ( MOVE_H )
-    #define MOVE_H
+//--------------------------------------------------- Interfaces utilisées
+#include "Command.h"
 
-    //--------------------------------------------------- Interfaces utilisées
-    #include "Command.h"
+//------------------------------------------------------------- Constantes
 
-    //------------------------------------------------------------- Constantes
+//------------------------------------------------------------------ Types
 
-    //------------------------------------------------------------------ Types
+//------------------------------------------------------------------------
+// Rôle de la classe <Move>
+//
+//
+//------------------------------------------------------------------------
 
-    //------------------------------------------------------------------------
-    // Rôle de la classe <Move>
+class Move : public Command
+{
+//----------------------------------------------------------------- PUBLIC
+
+public:
+//----------------------------------------------------- Méthodes publiques
+    virtual void Display ( );
+    // Mode d'emploi :
     //
+    // Contrat :
     //
-    //------------------------------------------------------------------------
 
-    class Move : public Command
-    {
-    //----------------------------------------------------------------- PUBLIC
+    virtual bool Do ( std::map<std::string, Object*> & model );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-    public:
-    //----------------------------------------------------- Méthodes publiques
-        virtual void Display ( );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
-        virtual bool Do ( std::map<std::string, Object*> & model );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
-
-        virtual bool Undo ( std::map<std::string, Object*> & model );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+    virtual bool Undo ( std::map<std::string, Object*> & model );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
 
+//------------------------------------------------- Surcharge d'opérateurs
 
-    //------------------------------------------------- Surcharge d'opérateurs
+//-------------------------------------------- Constructeurs - destructeur
+    Move ( std::string & data );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-    //-------------------------------------------- Constructeurs - destructeur
-        Move ( std::string & data );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+    virtual ~Move ( );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-        virtual ~Move ( );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+//------------------------------------------------------------------ PRIVE
 
-    //------------------------------------------------------------------ PRIVE
+protected:
+//----------------------------------------------------- Méthodes protégées
 
-    protected:
-    //----------------------------------------------------- Méthodes protégées
+private:
+//------------------------------------------------------- Méthodes privées
 
-    private:
-    //------------------------------------------------------- Méthodes privées
+protected:
+//----------------------------------------------------- Attributs protégés
 
-    protected:
-    //----------------------------------------------------- Attributs protégés
-
-    private:
-    //------------------------------------------------------- Attributs privés
+private:
+//------------------------------------------------------- Attributs privés
     std::string objectName;
     int dx;
     int dy;
 
-    //---------------------------------------------------------- Classes amies
+//---------------------------------------------------------- Classes amies
 
-    //-------------------------------------------------------- Classes privées
+//-------------------------------------------------------- Classes privées
 
-    //----------------------------------------------------------- Types privés
+//----------------------------------------------------------- Types privés
 
-    };
+};
 
-    //----------------------------------------- Types dépendants de <Move>
+//----------------------------------------- Types dépendants de <Move>
 
-    #endif // MOVE_H
+#endif // MOVE_H

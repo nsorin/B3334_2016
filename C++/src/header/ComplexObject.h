@@ -1,101 +1,100 @@
+/*************************************************************************
+                            ComplexObject  -  description
+                                -------------------
+    début                : 16/1/2016
+    copyright            : (C) 2016 par nsorin
+*************************************************************************/
 
-    /*************************************************************************
-                               ComplexObject  -  description
-                                 -------------------
-        début                : 16/1/2016
-        copyright            : (C) 2016 par nsorin
-    *************************************************************************/
+//-------------- Interface de la classe <ComplexObject> (fichier ComplexObject) --------------
+#if ! defined ( COMPLEXOBJECT_H )
+#define COMPLEXOBJECT_H
 
-    //-------------- Interface de la classe <ComplexObject> (fichier ComplexObject) --------------
-    #if ! defined ( COMPLEXOBJECT_H )
-    #define COMPLEXOBJECT_H
+//--------------------------------------------------- Interfaces utilisées
+#include "Object.h"
+#include "Point.h"
+#include <vector>
+//------------------------------------------------------------- Constantes
 
-    //--------------------------------------------------- Interfaces utilisées
-    #include "Object.h"
-    #include "Point.h"
-    #include <vector>
-    //------------------------------------------------------------- Constantes
+//------------------------------------------------------------------ Types
 
-    //------------------------------------------------------------------ Types
+//------------------------------------------------------------------------
+// Rôle de la classe <ComplexObject>
+//
+//
+//------------------------------------------------------------------------
 
-    //------------------------------------------------------------------------
-    // Rôle de la classe <ComplexObject>
+class ComplexObject : public Object
+{
+//----------------------------------------------------------------- PUBLIC
+
+public:
+//----------------------------------------------------- Méthodes publiques
+    std::vector<Object*> GetTabObjects() const;
+    // Mode d'emploi :
     //
+
+    void AddObject(Object * o);
+    // Mode d'emploi :
     //
-    //------------------------------------------------------------------------
 
-    class ComplexObject : public Object
-    {
-    //----------------------------------------------------------------- PUBLIC
+    void ClearObjects();
+    // Mode d'emploi :
+    //
 
-    public:
-    //----------------------------------------------------- Méthodes publiques
-        std::vector<Object*> GetTabObjects() const;
-        // Mode d'emploi :
-        //
+    void Move(int dx, int dy);
+    // Mode d'emploi :
+    //
 
-        void AddObject(Object * o);
-        // Mode d'emploi :
-        //
+    virtual bool Contains(Point & p) const;
+    // Mode d'emploi :
+    //
 
-        void ClearObjects();
-        // Mode d'emploi :
-        //
+    virtual std::ostream & doPrint(std::ostream & os) const;
+    // Mode d'emploi :
+    //
 
-        void Move(int dx, int dy);
-        // Mode d'emploi :
-        //
+    virtual Object * clone();
 
-        virtual bool Contains(Point & p) const;
-        // Mode d'emploi :
-        //
-
-        virtual std::ostream & doPrint(std::ostream & os) const;
-        // Mode d'emploi :
-        //
-
-        virtual Object * clone();
-
-    //------------------------------------------------- Surcharge d'opérateurs
+//------------------------------------------------- Surcharge d'opérateurs
     friend std::ostream & operator<< (std::ostream & stream, const ComplexObject & object);
 
 
-    //-------------------------------------------- Constructeurs - destructeur
-        ComplexObject ( std::string n = "" );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+//-------------------------------------------- Constructeurs - destructeur
+    ComplexObject ( std::string n = "" );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-        virtual ~ComplexObject ( );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+    virtual ~ComplexObject ( );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-    //------------------------------------------------------------------ PRIVE
+//------------------------------------------------------------------ PRIVE
 
-    protected:
-    //----------------------------------------------------- Méthodes protégées
+protected:
+//----------------------------------------------------- Méthodes protégées
 
-    private:
-    //------------------------------------------------------- Méthodes privées
+private:
+//------------------------------------------------------- Méthodes privées
 
-    protected:
-    //----------------------------------------------------- Attributs protégés
+protected:
+//----------------------------------------------------- Attributs protégés
     std::vector<Object*> tabObjects;
 
-    private:
-    //------------------------------------------------------- Attributs privés
+private:
+//------------------------------------------------------- Attributs privés
 
-    //---------------------------------------------------------- Classes amies
+//---------------------------------------------------------- Classes amies
 
-    //-------------------------------------------------------- Classes privées
+//-------------------------------------------------------- Classes privées
 
-    //----------------------------------------------------------- Types privés
+//----------------------------------------------------------- Types privés
 
-    };
+};
 
-    //----------------------------------------- Types dépendants de <ComplexObject>
+//----------------------------------------- Types dépendants de <ComplexObject>
 
-    #endif // COMPLEXOBJECT_H
+#endif // COMPLEXOBJECT_H

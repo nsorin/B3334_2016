@@ -66,10 +66,6 @@
         return true;
     } //----- Fin de Contains
 
-    void Polygone::Display() const
-    {
-
-    }
 
     bool Polygone::IsConvex() const
     {

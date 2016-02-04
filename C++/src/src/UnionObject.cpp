@@ -42,10 +42,6 @@
         return false;
     } //----- Fin de Contains
 
-    void UnionObject::Display() const
-    {
-
-    }
 
     //------------------------------------------------- Surcharge d'opérateurs
 

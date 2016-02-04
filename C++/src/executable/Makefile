@@ -8,7 +8,7 @@ RMFLAGS  =-f
 OUTPUT   =-o
 CPPFLAGS =-std=c++11 -Wall #-DMAP
 EDLFLAGS =
-INT      =Add.h AddPolygone.h AddRectangle.h AddSegment.h Clear.h Command.h ComplexObject.h Delete.h InterObject.h Intersection.h Load.h Move.h Object.h Operation.h Polygone.h Rectangle.h Segment.h SimpleObject.h Union.h UnionObject.h
+INT      =AddPolygone.h AddRectangle.h AddSegment.h Clear.h Command.h ComplexObject.h Delete.h InterObject.h Intersection.h Load.h Move.h Object.h Polygone.h Rectangle.h Segment.h SimpleObject.h Union.h UnionObject.h
 INTPATH  =../header/
 REAL     =$(REALPATH)$(INT:.h=.cpp) $(REALPATH)Controller.cpp
 REALPATH =../src/

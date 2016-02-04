@@ -1,82 +1,78 @@
+/*************************************************************************
+                            Segment  -  description
+                               -------------------
+    début                : 16/1/2016
+    copyright            : (C) 2016 par nsorin
+*************************************************************************/
 
-    /*************************************************************************
-                               Segment  -  description
-                                 -------------------
-        début                : 16/1/2016
-        copyright            : (C) 2016 par nsorin
-    *************************************************************************/
+//-------------- Interface de la classe <Segment> (fichier Segment) --------------
+#if ! defined ( SEGMENT_H )
+#define SEGMENT_H
 
-    //-------------- Interface de la classe <Segment> (fichier Segment) --------------
-    #if ! defined ( SEGMENT_H )
-    #define SEGMENT_H
+//--------------------------------------------------- Interfaces utilisées
+#include "SimpleObject.h"
+//------------------------------------------------------------- Constantes
 
-    //--------------------------------------------------- Interfaces utilisées
-    #include "SimpleObject.h"
-    //------------------------------------------------------------- Constantes
+//------------------------------------------------------------------ Types
 
-    //------------------------------------------------------------------ Types
+//------------------------------------------------------------------------
+// Rôle de la classe <Segment>
+//
+//
+//------------------------------------------------------------------------
 
-    //------------------------------------------------------------------------
-    // Rôle de la classe <Segment>
+class Segment : public SimpleObject
+{
+//----------------------------------------------------------------- PUBLIC
+
+public:
+//----------------------------------------------------- Méthodes publiques
+    virtual bool Contains(Point & p) const;
+    // Mode d'emploi :
     //
+
+    virtual std::ostream & doPrint(std::ostream & os) const;
+
+    virtual Object * clone();
+
+//------------------------------------------------- Surcharge d'opérateurs
+    friend std::ostream & operator<< (std::ostream & stream, const Segment & object);
+
+//-------------------------------------------- Constructeurs - destructeur
+    Segment ( std::string name, int x1, int y1, int x2, int y2 );
+    // Mode d'emploi :
     //
-    //------------------------------------------------------------------------
+    // Contrat :
+    //
 
-    class Segment : public SimpleObject
-    {
-    //----------------------------------------------------------------- PUBLIC
+    virtual ~Segment ( );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-    public:
-    //----------------------------------------------------- Méthodes publiques
-        virtual bool Contains(Point & p) const;
-        // Mode d'emploi :
-        //
+//------------------------------------------------------------------ PRIVE
 
-        void Display() const;
+protected:
+//----------------------------------------------------- Méthodes protégées
 
-        virtual std::ostream & doPrint(std::ostream & os) const;
+private:
+//------------------------------------------------------- Méthodes privées
 
-        virtual Object * clone();
+protected:
+//----------------------------------------------------- Attributs protégés
 
-    //------------------------------------------------- Surcharge d'opérateurs
-        friend std::ostream & operator<< (std::ostream & stream, const Segment & object);
+private:
+//------------------------------------------------------- Attributs privés
 
+//---------------------------------------------------------- Classes amies
 
-    //-------------------------------------------- Constructeurs - destructeur
-        Segment ( std::string name, int x1, int y1, int x2, int y2 );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+//-------------------------------------------------------- Classes privées
 
-        virtual ~Segment ( );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+//----------------------------------------------------------- Types privés
 
-    //------------------------------------------------------------------ PRIVE
+};
 
-    protected:
-    //----------------------------------------------------- Méthodes protégées
+//----------------------------------------- Types dépendants de <Segment>
 
-    private:
-    //------------------------------------------------------- Méthodes privées
-
-    protected:
-    //----------------------------------------------------- Attributs protégés
-
-    private:
-    //------------------------------------------------------- Attributs privés
-
-    //---------------------------------------------------------- Classes amies
-
-    //-------------------------------------------------------- Classes privées
-
-    //----------------------------------------------------------- Types privés
-
-    };
-
-    //----------------------------------------- Types dépendants de <Segment>
-
-    #endif // SEGMENT_H
+#endif // SEGMENT_H

@@ -1,85 +1,79 @@
+/*************************************************************************
+                            UnionObject  -  description
+                                -------------------
+    début                : 16/1/2016
+    copyright            : (C) 2016 par nsorin
+*************************************************************************/
 
-    /*************************************************************************
-                               UnionObject  -  description
-                                 -------------------
-        début                : 16/1/2016
-        copyright            : (C) 2016 par nsorin
-    *************************************************************************/
+//-------------- Interface de la classe <UnionObject> (fichier UnionObject) --------------
+#if ! defined ( UNIONOBJECT_H )
+#define UNIONOBJECT_H
 
-    //-------------- Interface de la classe <UnionObject> (fichier UnionObject) --------------
-    #if ! defined ( UNIONOBJECT_H )
-    #define UNIONOBJECT_H
+//--------------------------------------------------- Interfaces utilisées
+#include "ComplexObject.h"
+#include <string>
+//------------------------------------------------------------- Constantes
 
-    //--------------------------------------------------- Interfaces utilisées
-    #include "ComplexObject.h"
-    #include <string>
-    //------------------------------------------------------------- Constantes
+//------------------------------------------------------------------ Types
 
-    //------------------------------------------------------------------ Types
+//------------------------------------------------------------------------
+// Rôle de la classe <UnionObject>
+//
+//
+//------------------------------------------------------------------------
 
-    //------------------------------------------------------------------------
-    // Rôle de la classe <UnionObject>
+class UnionObject : public ComplexObject
+{
+//----------------------------------------------------------------- PUBLIC
+
+public:
+//----------------------------------------------------- Méthodes publiques
+    virtual bool Contains(Point & p) const;
+    // Mode d'emploi :
     //
+
+    virtual std::ostream & doPrint(std::ostream & os) const;
+
+    virtual Object * clone();
+
+//------------------------------------------------- Surcharge d'opérateurs
+    friend std::ostream & operator<< (std::ostream & stream, const UnionObject & object);
+
+//-------------------------------------------- Constructeurs - destructeur
+    UnionObject (std::string name);
+    // Mode d'emploi :
     //
-    //------------------------------------------------------------------------
+    // Contrat :
+    //
 
-    class UnionObject : public ComplexObject
-    {
-    //----------------------------------------------------------------- PUBLIC
+    virtual ~UnionObject ( );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-    public:
-    //----------------------------------------------------- Méthodes publiques
-        virtual bool Contains(Point & p) const;
-        // Mode d'emploi :
-        //
+//------------------------------------------------------------------ PRIVE
 
-        void Display() const;
-        // Mode d'emploi :
-        //
+protected:
+//----------------------------------------------------- Méthodes protégées
 
-        virtual std::ostream & doPrint(std::ostream & os) const;
+private:
+//------------------------------------------------------- Méthodes privées
 
-        virtual Object * clone();
+protected:
+//----------------------------------------------------- Attributs protégés
 
-    //------------------------------------------------- Surcharge d'opérateurs
-        friend std::ostream & operator<< (std::ostream & stream, const UnionObject & object);
+private:
+//------------------------------------------------------- Attributs privés
 
+//---------------------------------------------------------- Classes amies
 
-    //-------------------------------------------- Constructeurs - destructeur
-        UnionObject (std::string name);
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+//-------------------------------------------------------- Classes privées
 
-        virtual ~UnionObject ( );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+//----------------------------------------------------------- Types privés
 
-    //------------------------------------------------------------------ PRIVE
+};
 
-    protected:
-    //----------------------------------------------------- Méthodes protégées
+//----------------------------------------- Types dépendants de <UnionObject>
 
-    private:
-    //------------------------------------------------------- Méthodes privées
-
-    protected:
-    //----------------------------------------------------- Attributs protégés
-
-    private:
-    //------------------------------------------------------- Attributs privés
-
-    //---------------------------------------------------------- Classes amies
-
-    //-------------------------------------------------------- Classes privées
-
-    //----------------------------------------------------------- Types privés
-
-    };
-
-    //----------------------------------------- Types dépendants de <UnionObject>
-
-    #endif // UNIONOBJECT_H
+#endif // UNIONOBJECT_H

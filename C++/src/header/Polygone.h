@@ -1,88 +1,82 @@
+/*************************************************************************
+                            Polygone  -  description
+                              -------------------
+    début                : 16/1/2016
+    copyright            : (C) 2016 par nsorin
+*************************************************************************/
 
-    /*************************************************************************
-                               Polygone  -  description
-                                 -------------------
-        début                : 16/1/2016
-        copyright            : (C) 2016 par nsorin
-    *************************************************************************/
+//-------------- Interface de la classe <Polygone> (fichier Polygone) --------------
+#if ! defined ( POLYGONE_H )
+#define POLYGONE_H
 
-    //-------------- Interface de la classe <Polygone> (fichier Polygone) --------------
-    #if ! defined ( POLYGONE_H )
-    #define POLYGONE_H
+//--------------------------------------------------- Interfaces utilisées
+#include "SimpleObject.h"
+//------------------------------------------------------------- Constantes
 
-    //--------------------------------------------------- Interfaces utilisées
-    #include "SimpleObject.h"
-    //------------------------------------------------------------- Constantes
+//------------------------------------------------------------------ Types
 
-    //------------------------------------------------------------------ Types
+//------------------------------------------------------------------------
+// Rôle de la classe <Polygone>
+//
+//
+//------------------------------------------------------------------------
 
-    //------------------------------------------------------------------------
-    // Rôle de la classe <Polygone>
+class Polygone : public SimpleObject
+{
+//----------------------------------------------------------------- PUBLIC
+
+public:
+//----------------------------------------------------- Méthodes publiques
+    virtual bool Contains(Point & p) const;
+    // Mode d'emploi :
     //
+
+    bool IsConvex() const;
+    // Mode d'emploi :
     //
-    //------------------------------------------------------------------------
 
-    class Polygone : public SimpleObject
-    {
-    //----------------------------------------------------------------- PUBLIC
+    virtual std::ostream & doPrint(std::ostream & os) const;
 
-    public:
-    //----------------------------------------------------- Méthodes publiques
-        virtual bool Contains(Point & p) const;
-        // Mode d'emploi :
-        //
+    virtual Object * clone();
 
-        void Display() const;
-        // Mode d'emploi :
-        //
+//------------------------------------------------- Surcharge d'opérateurs
+    friend std::ostream & operator<< (std::ostream & stream, const Polygone & object);
 
-        bool IsConvex() const;
-        // Mode d'emploi :
-        //
+//-------------------------------------------- Constructeurs - destructeur
+    Polygone (std::string & n, std::vector<Point> & points);
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-        virtual std::ostream & doPrint(std::ostream & os) const;
+    virtual ~Polygone ( );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-        virtual Object * clone();
+//------------------------------------------------------------------ PRIVE
 
-    //------------------------------------------------- Surcharge d'opérateurs
-        friend std::ostream & operator<< (std::ostream & stream, const Polygone & object);
+protected:
+//----------------------------------------------------- Méthodes protégées
 
+private:
+//------------------------------------------------------- Méthodes privées
 
-    //-------------------------------------------- Constructeurs - destructeur
-        Polygone (std::string & n, std::vector<Point> & points);
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+protected:
+//----------------------------------------------------- Attributs protégés
 
-        virtual ~Polygone ( );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+private:
+//------------------------------------------------------- Attributs privés
 
-    //------------------------------------------------------------------ PRIVE
+//---------------------------------------------------------- Classes amies
 
-    protected:
-    //----------------------------------------------------- Méthodes protégées
+//-------------------------------------------------------- Classes privées
 
-    private:
-    //------------------------------------------------------- Méthodes privées
+//----------------------------------------------------------- Types privés
 
-    protected:
-    //----------------------------------------------------- Attributs protégés
+};
 
-    private:
-    //------------------------------------------------------- Attributs privés
+//----------------------------------------- Types dépendants de <Polygone>
 
-    //---------------------------------------------------------- Classes amies
-
-    //-------------------------------------------------------- Classes privées
-
-    //----------------------------------------------------------- Types privés
-
-    };
-
-    //----------------------------------------- Types dépendants de <Polygone>
-
-    #endif // POLYGONE_H
+#endif // POLYGONE_H

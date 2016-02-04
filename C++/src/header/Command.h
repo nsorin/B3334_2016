@@ -1,96 +1,89 @@
+/*************************************************************************
+                            Command  -  description
+                              -------------------
+    début                : 16/1/2016
+    copyright            : (C) 2016 par nsorin
+*************************************************************************/
 
-    /*************************************************************************
-                               Command  -  description
-                                 -------------------
-        début                : 16/1/2016
-        copyright            : (C) 2016 par nsorin
-    *************************************************************************/
+//-------------- Interface de la classe <Command> (fichier Command) --------------
+#if ! defined ( COMMAND_H )
+#define COMMAND_H
 
-    //-------------- Interface de la classe <Command> (fichier Command) --------------
-    #if ! defined ( COMMAND_H )
-    #define COMMAND_H
+//--------------------------------------------------- Interfaces utilisées
+#include <string>
+#include <map>
+#include <vector>
+#include <sstream>
+#include "Object.h"
 
-    //--------------------------------------------------- Interfaces utilisées
-    #include <string>
-    #include <map>
-    #include <vector>
-    #include <sstream>
-    #include "Object.h"
+//------------------------------------------------------------- Constantes
+static std::string ERROR = "ERR";
+static std::string SUCCESS = "OK";
 
-    //------------------------------------------------------------- Constantes
-    static std::string ERROR = "ERR";
-    static std::string SUCCESS = "OK";
+//------------------------------------------------------------------ Types
 
-    //------------------------------------------------------------------ Types
+//------------------------------------------------------------------------
+// Rôle de la classe <Command>
+//
+//
+//------------------------------------------------------------------------
 
-    //------------------------------------------------------------------------
-    // Rôle de la classe <Command>
+class Command
+{
+//----------------------------------------------------------------- PUBLIC
+
+public:
+//----------------------------------------------------- Méthodes publiques
+    virtual bool Do ( std::map<std::string, Object*> & model ) = 0;
+    // Mode d'emploi :
     //
+    // Contrat :
     //
-    //------------------------------------------------------------------------
 
-    class Command
-    {
-    //----------------------------------------------------------------- PUBLIC
+    virtual bool Undo ( std::map<std::string, Object*> & model ) = 0;
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-    public:
-    //----------------------------------------------------- Méthodes publiques
-        virtual void Display ( ) = 0;
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+//------------------------------------------------- Surcharge d'opérateurs
 
-        virtual bool Do ( std::map<std::string, Object*> & model ) = 0;
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+//-------------------------------------------- Constructeurs - destructeur
+    Command ( );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-        virtual bool Undo ( std::map<std::string, Object*> & model ) = 0;
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+    virtual ~Command ( );
+    // Mode d'emploi :
+    //
+    // Contrat :
+    //
 
-    //------------------------------------------------- Surcharge d'opérateurs
+//------------------------------------------------------------------ PRIVE
 
-    //-------------------------------------------- Constructeurs - destructeur
-        Command ( );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+protected:
+//----------------------------------------------------- Méthodes protégées
 
-        virtual ~Command ( );
-        // Mode d'emploi :
-        //
-        // Contrat :
-        //
+private:
+//------------------------------------------------------- Méthodes privées
 
-    //------------------------------------------------------------------ PRIVE
-
-    protected:
-    //----------------------------------------------------- Méthodes protégées
-
-    private:
-    //------------------------------------------------------- Méthodes privées
-
-    protected:
-    //----------------------------------------------------- Attributs protégés
+protected:
+//----------------------------------------------------- Attributs protégés
     bool undone;
 
-    private:
-    //------------------------------------------------------- Attributs privés
+private:
+//------------------------------------------------------- Attributs privés
 
-    //---------------------------------------------------------- Classes amies
+//---------------------------------------------------------- Classes amies
 
-    //-------------------------------------------------------- Classes privées
+//-------------------------------------------------------- Classes privées
 
-    //----------------------------------------------------------- Types privés
+//----------------------------------------------------------- Types privés
 
-    };
+};
 
-    //----------------------------------------- Types dépendants de <Command>
+//----------------------------------------- Types dépendants de <Command>
 
-    #endif // COMMAND_H
+#endif // COMMAND_H

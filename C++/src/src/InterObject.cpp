@@ -1,51 +1,46 @@
 
-    /*************************************************************************
-                               InterObject  -  description
-                                 -------------------
-        début                : 16/1/2016
-        copyright            : (C) 2016 par nsorin
-    *************************************************************************/
+/*************************************************************************
+                            InterObject  -  description
+                                -------------------
+    début                : 16/1/2016
+    copyright            : (C) 2016 par nsorin
+*************************************************************************/
 
-    //---------- Réalisation de la classe <InterObject> (fichier InterObject) --
+//---------- Réalisation de la classe <InterObject> (fichier InterObject) --
 
-    //---------------------------------------------------------------- INCLUDE
+//---------------------------------------------------------------- INCLUDE
 
-    //-------------------------------------------------------- Include système
-    using namespace std;
-    #include <iostream>
+//-------------------------------------------------------- Include système
+using namespace std;
+#include <iostream>
 
-    //------------------------------------------------------ Include personnel
-    #include "../header/InterObject.h"
+//------------------------------------------------------ Include personnel
+#include "../header/InterObject.h"
 
-    //------------------------------------------------------------- Constantes
+//------------------------------------------------------------- Constantes
 
-    //---------------------------------------------------- Variables de classe
+//---------------------------------------------------- Variables de classe
 
-    //----------------------------------------------------------- Types privés
+//----------------------------------------------------------- Types privés
 
 
-    //----------------------------------------------------------------- PUBLIC
-    //-------------------------------------------------------- Fonctions amies
+//----------------------------------------------------------------- PUBLIC
+//-------------------------------------------------------- Fonctions amies
 
-    //----------------------------------------------------- Méthodes publiques
-    bool InterObject::Contains ( Point & p ) const
-    // Algorithme :
-    //
+//----------------------------------------------------- Méthodes publiques
+bool InterObject::Contains ( Point & p ) const
+// Algorithme :
+//
+{
+    for(unsigned int i = 0; i<tabObjects.size(); i++)
     {
-        for(unsigned int i = 0; i<tabObjects.size(); i++)
+        if(!tabObjects[i]->Contains(p))
         {
-            if(!tabObjects[i]->Contains(p))
-            {
-                return false;
-            }
+            return false;
         }
-        return true;
-    } //----- Fin de Contains
-
-    void InterObject::Display() const
-    {
-
     }
+    return true;
+} //----- Fin de Contains
 
     //------------------------------------------------- Surcharge d'opérateurs
 
