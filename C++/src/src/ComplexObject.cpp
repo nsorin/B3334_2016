@@ -38,6 +38,15 @@
         this->tabObjects.push_back(object->clone());
     }
 
+    void ComplexObject::ClearObjects()
+    {
+        for(unsigned int i=0; i<tabObjects.size(); i++)
+        {
+            delete tabObjects[i];
+        }
+        tabObjects.clear();
+    }
+
     void ComplexObject::Move(int dx, int dy)
     {
         for(unsigned int i=0; i<tabObjects.size(); i++)

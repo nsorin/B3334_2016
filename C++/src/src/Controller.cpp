@@ -11,6 +11,7 @@
 
 //-------------------------------------------------------- Include système
 #include <iostream>
+#include <fstream>
 #include <deque>
 #include <map>
 #include <sstream>
@@ -23,7 +24,6 @@
 #include "../header/Intersection.h"
 #include "../header/Union.h"
 #include "../header/Clear.h"
-#include "../header/Save.h"
 #include "../header/Load.h"
 #include "../header/Move.h"
 #include "../header/Delete.h"
@@ -39,6 +39,7 @@ using namespace std;
 //-------------------------------------------------- Déclarations Méthodes
 void List(map<string, Object*> & model);
 bool Hit(map<string, Object*> & model, string & data);
+bool Save(map<string, Object*> & model, string & fileName);
 
 //------------------------------------------------------------------- Main
 int main()
@@ -76,12 +77,17 @@ int main()
     	{
             Hit(mapObjects, data);
     	}
+    	else if(firstWord == "SAVE")
+    	{
+            Save(mapObjects, data);
+    	}
     	else if(firstWord == "UNDO")
     	{
     		if(!dequeCmd.empty())
     		{
     			if(dequeCmd.front()->Undo(mapObjects))
     			{
+    				cout << "OK" << endl;
     				if(lastUndoCmd != nullptr)
                     {
                         delete lastUndoCmd;
@@ -90,7 +96,10 @@ int main()
     				lastUndoCmd = dequeCmd.front();
     				dequeCmd.pop_front();
     			}
-
+    			else
+    			{
+                    cout << "ERR" << endl;
+    			}
     		}
     	}
     	else if(firstWord == "REDO")
@@ -99,8 +108,13 @@ int main()
     		{
     			if(lastUndoCmd->Do(mapObjects))
     			{
+    				cout << "OK" << endl;
     				dequeCmd.push_front(lastUndoCmd);
     				lastUndoCmd = nullptr;
+    			}
+    			else
+    			{
+                    cout << "ERR" << endl;
     			}
     		}
     		else
@@ -142,10 +156,6 @@ int main()
     		{
 	    		currentCmd = new Load(data);
     		}
-    		else if(firstWord == "SAVE")
-    		{
-    			currentCmd = new Save(data);
-    		}
     		else if(firstWord == "CLEAR")
     		{
     			currentCmd = new Clear();
@@ -169,9 +179,11 @@ int main()
     				delete dequeCmd.back();
     				dequeCmd.pop_back();
     			}
+    			cout << "OK" << endl;
     		}
     		else
     		{
+    			cout << "ERR" << endl;
     			delete currentCmd;
     		}
     	}
@@ -211,4 +223,24 @@ bool Hit(map<string, Object*> & model, string & data)
         cout << "NO" << endl;
     }
     return result;
+}
+
+bool Save(map<string, Object*> & model, string & fileName)
+{
+    ofstream ofs(fileName, ios::trunc);
+    if(ofs)
+    {
+        for(it_model i = model.begin(); i != model.end(); i++)
+        {
+            ofs << *i->second;
+        }
+        ofs.close();
+        cout << "OK" << endl;
+        return true;
+    }
+    else
+    {
+        cout << "ERR" << endl;
+        return false;
+    }
 }

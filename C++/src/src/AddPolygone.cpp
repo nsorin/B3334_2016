@@ -45,19 +45,16 @@
             if(object->IsConvex())
             {
                 model[object->GetName()] = object;
-                cout << "OK" << endl;
                 return true;
             }
             else
             {
-                cout << "ERR" << endl;
                 delete object;
                 return false;
             }
         }
         else
         {
-            cout << "ERR" << endl;
             delete object;
             return false;
         }
@@ -69,7 +66,6 @@
     {
         undone = true;
         model.erase(object->GetName());
-        cout << "OK" << endl;
         return true;
     } //----- Fin de Display
 

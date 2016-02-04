@@ -42,13 +42,11 @@
         undone = false;
         if ( model.find(objectName) == model.end() )
         {
-            cout << "ERR" << endl;
             return false;
         }
         else
         {
             model[objectName]->Move(dx, dy);
-            cout << "OK" << endl;
             return true;
         }
     } //----- Fin de Do
@@ -60,13 +58,11 @@
         undone = true;
         if ( model.find(objectName) == model.end() )
         {
-            cout << "ERR" << endl;
             return false;
         }
         else
         {
             model[objectName]->Move(-1*dx, -1*dy);
-            cout << "OK" << endl;
             return true;
         }
     } //----- Fin de Undo
