@@ -38,30 +38,46 @@
     // Algorithme :
     //
     {
-        undone = false;
-        opIndex = 0;
-        string line;
-        ifstream ifs(fileName, ios::in);
-        if(ifs)
+        // S'il s'agit d'un redo, inutile de relire le fichier
+        if(undone == false)
         {
-            while(getline(ifs, line))
+            //undone = false;
+            opIndex = 0;
+            tempObjects.clear();
+            ops.clear();
+            string line;
+            ifstream ifs(fileName, ios::in);
+            if(ifs)
             {
-                if(!parseLine(line))
+                int n = 0;
+                while(getline(ifs, line))
                 {
-                    // On supprime les objets qu'on avait commencé à créer
-                    for(it_model i=mapObjects.begin(); i != mapObjects.end(); i++)
+                    n++;
+                    if(!parseLine(line))
                     {
-                        delete i->second;
+                        // On supprime les objets qu'on avait commencé à créer
+                        for(it_model i=mapObjects.begin(); i != mapObjects.end(); i++)
+                        {
+                            delete i->second;
+                        }
+                        mapObjects.clear();
+                        cout << "#Could not parse line "<< n << " :  " << line << endl;
+                        return false;
                     }
-                    mapObjects.clear();
-                    return false;
                 }
+                oldObjects = model;
+                model = mapObjects;
+                return true;
             }
+            cout << "#Could not read file :   " << fileName << endl;
+            return false;
+        }
+        else
+        {
             oldObjects = model;
             model = mapObjects;
             return true;
         }
-        return false;
     } //----- Fin de Do
 
     bool Load::Undo ( map<string, Object*> & model )
@@ -158,7 +174,6 @@
             }
             else
             {
-                //cout << "size=" << tempObjects.size() << endl;
                 if(!cmd.Do(tempObjects[opIndex-1]))
                 {
                     return false;
