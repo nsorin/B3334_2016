@@ -39,6 +39,7 @@
     //
     {
         undone = false;
+        opIndex = 0;
         string line;
         ifstream ifs(fileName, ios::in);
         if(ifs)
@@ -76,7 +77,7 @@
     //------------------------------------------------- Surcharge d'opérateurs
 
     //-------------------------------------------- Constructeurs - destructeur
-    Load::Load ( string & data ) : fileName(data)
+    Load::Load ( string & data ) : fileName(data), opIndex(0)
     // Algorithme :
     //
     {
@@ -120,40 +121,112 @@
     //------------------------------------------------------- Méthodes privées
     bool Load::parseLine(string & line)
     {
+        //cout << line << endl;
         unsigned int separator = line.find(" ");
     	string firstWord;
     	string data;
     	firstWord = line.substr(0, separator);
         data = line.substr(separator+1);
+        //cout << "opIndex=" << opIndex << " / firstWord=" << firstWord << " / data=" << data << endl;
         if(firstWord == "S")
         {
             AddSegment cmd(data);
-            if(!cmd.Do(mapObjects))
+            if(opIndex == 0)
             {
-                return false;
+                if(!cmd.Do(mapObjects))
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                if(!cmd.Do(tempObjects[opIndex-1]))
+                {
+                    return false;
+                }
             }
         }
         else if(firstWord == "R")
         {
             AddRectangle cmd(data);
-            if(!cmd.Do(mapObjects))
+            if(opIndex == 0)
             {
-                return false;
+                if(!cmd.Do(mapObjects))
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                //cout << "size=" << tempObjects.size() << endl;
+                if(!cmd.Do(tempObjects[opIndex-1]))
+                {
+                    return false;
+                }
             }
         }
         else if(firstWord == "PC")
         {
             AddPolygone cmd(data);
-            if(!cmd.Do(mapObjects))
+            if(opIndex == 0)
             {
-                return false;
+                if(!cmd.Do(mapObjects))
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                if(!cmd.Do(tempObjects[opIndex-1]))
+                {
+                    return false;
+                }
             }
         }
         else if(firstWord == "OI")
         {
+            InterObject* io = new InterObject(data);
+            map<string, Object*> m;
+            ops.push_back(io);
+            tempObjects.push_back(m);
         }
         else if(firstWord == "OR")
         {
+            UnionObject* uo = new UnionObject(data);
+            map<string, Object*> m;
+            ops.push_back(uo);
+            tempObjects.push_back(m);
+        }
+        else if(firstWord == "{")
+        {
+            opIndex++;
+        }
+        else if(firstWord == "}")
+        {
+            if(opIndex > 0)
+            {
+                opIndex--;
+                for(it_model i = tempObjects[opIndex].begin(); i != tempObjects[opIndex].end(); i++)
+                {
+                    ops[opIndex]->AddObject(i->second);
+                }
+                if(opIndex == 0)
+                {
+                    mapObjects[ops[0]->GetName()] = ops[0];
+                }
+                else
+                {
+                    ops[opIndex-1]->AddObject(ops[opIndex]);
+                }
+                // On supprime les objets temporaires de ce block
+                ops.pop_back();
+                for(it_model i = tempObjects.back().begin(); i != tempObjects.back().end(); i++)
+                {
+                    delete i->second;
+                }
+                tempObjects.back().clear();
+                tempObjects.pop_back();
+            }
         }
         return true;
     }

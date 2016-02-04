@@ -78,12 +78,12 @@
     ostream & UnionObject::doPrint(ostream & os) const
     {
         os << "OR ";
-        os << name << " " << "(" << tabObjects.size() << ")" << " " << endl;
+        os << name << endl << "{" << endl;
         for(unsigned int i = 0; i<tabObjects.size(); i++)
         {
-            os << "    --> ";
             tabObjects[i]->doPrint(os);
         }
+        os << "}" << endl;
         return os;
     }
 

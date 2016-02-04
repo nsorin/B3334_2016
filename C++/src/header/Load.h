@@ -15,6 +15,8 @@
     #include "AddSegment.h"
     #include "AddPolygone.h"
     #include "AddRectangle.h"
+    #include "Union.h"
+    #include "Intersection.h"
     #include <fstream>
 
     //------------------------------------------------------------- Constantes
@@ -85,6 +87,10 @@
     std::string fileName;
     std::map<std::string, Object*> mapObjects;
     std::map<std::string, Object*> oldObjects;
+
+    std::vector<ComplexObject*> ops;
+    std::vector<std::map<std::string, Object*> > tempObjects;
+    unsigned int opIndex;
 
     //---------------------------------------------------------- Classes amies
 

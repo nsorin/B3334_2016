@@ -195,6 +195,7 @@ void List(map<string, Object*> & model)
     cout << "Liste of all objects :" << endl;
     for(it_model i = model.begin(); i != model.end(); i++)
     {
+        //cout << i->first << endl;
         cout << *i->second;
     }
 }
