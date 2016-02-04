@@ -163,40 +163,42 @@ int main()
     		}
     		else
     		{
-                cerr << "Unknown command" << endl;
-                break; // temp
+                cerr << "#Unknown command" << endl;
+                currentCmd = nullptr;
     		}
 
-    		if(currentCmd->Do(mapObjects))
-    		{
-    			dequeCmd.push_front(currentCmd);
-    			if(lastUndoCmd != nullptr)
-                {
-                    delete lastUndoCmd;
-                    lastUndoCmd = nullptr;
-                }
-    			if(dequeCmd.size() > 20)
-    			{
-    				delete dequeCmd.back();
-    				dequeCmd.pop_back();
-    			}
-    			cout << "OK" << endl;
-    		}
-    		else
-    		{
-    			cout << "ERR" << endl;
-    			delete currentCmd;
-    		}
+            if(currentCmd!=nullptr)
+            {
+                if(currentCmd->Do(mapObjects))
+        		{
+        			dequeCmd.push_front(currentCmd);
+        			if(lastUndoCmd != nullptr)
+                    {
+                        delete lastUndoCmd;
+                        lastUndoCmd = nullptr;
+                    }
+        			if(dequeCmd.size() > 20)
+        			{
+        				delete dequeCmd.back();
+        				dequeCmd.pop_back();
+        			}
+        			cout << "OK" << endl;
+        		}
+        		else
+        		{
+        			cout << "ERR" << endl;
+        			delete currentCmd;
+        		}
+            }
     	}
     }
 }
 
 void List(map<string, Object*> & model)
 {
-    cout << "Liste of all objects :" << endl;
+    cout << "#Liste of all objects :" << endl;
     for(it_model i = model.begin(); i != model.end(); i++)
     {
-        //cout << i->first << endl;
         cout << *i->second;
     }
 }

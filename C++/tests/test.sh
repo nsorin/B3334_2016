@@ -51,6 +51,111 @@ if [ $? -eq 0 ]
 		nStrResult=$nStrResult" 0"
 fi
 
+echo TEST ADD SEGMENT 1
+let "nTestCount=$nTestCount+1"
+./$1 < testAddSegment.in > temp1.txt
+grep -v '^#' temp1.txt > temp2.txt
+diff -wB testAddSegment.out temp2.txt
+if [ $? -eq 0 ]
+        then
+		echo PASSED
+            	let "nSuccesfulTests=$nSuccesfulTests+1"
+		nStrResult=$nStrResult" 1"
+	else
+		echo FAILED
+		nStrResult=$nStrResult" 0"
+fi
+
+echo TEST ADD RECTANGLE 1
+let "nTestCount=$nTestCount+1"
+./$1 < testAddRectangle.in > temp1.txt
+grep -v '^#' temp1.txt > temp2.txt
+diff -wB testAddRectangle.out temp2.txt
+if [ $? -eq 0 ]
+        then
+		echo PASSED
+            	let "nSuccesfulTests=$nSuccesfulTests+1"
+		nStrResult=$nStrResult" 1"
+	else
+		echo FAILED
+		nStrResult=$nStrResult" 0"
+fi
+
+echo TEST ADD PC 1
+let "nTestCount=$nTestCount+1"
+./$1 < testAddPC.in > temp1.txt
+grep -v '^#' temp1.txt > temp2.txt
+diff -wB testAddPC.out temp2.txt
+if [ $? -eq 0 ]
+        then
+		echo PASSED
+            	let "nSuccesfulTests=$nSuccesfulTests+1"
+		nStrResult=$nStrResult" 1"
+	else
+		echo FAILED
+		nStrResult=$nStrResult" 0"
+fi
+
+echo TEST ADD SEGMENT 2
+let "nTestCount=$nTestCount+1"
+./$1 < testAddSegment2.in > temp1.txt
+grep -v '^#' temp1.txt > temp2.txt
+diff -wB testAddSegment2.out temp2.txt
+if [ $? -eq 0 ]
+        then
+		echo PASSED
+            	let "nSuccesfulTests=$nSuccesfulTests+1"
+		nStrResult=$nStrResult" 1"
+	else
+		echo FAILED
+		nStrResult=$nStrResult" 0"
+fi
+
+echo TEST UNION
+let "nTestCount=$nTestCount+1"
+./$1 < testUnion.in > temp1.txt
+grep -v '^#' temp1.txt > temp2.txt
+diff -wB testUnion.out temp2.txt
+if [ $? -eq 0 ]
+        then
+		echo PASSED
+            	let "nSuccesfulTests=$nSuccesfulTests+1"
+		nStrResult=$nStrResult" 1"
+	else
+		echo FAILED
+		nStrResult=$nStrResult" 0"
+fi
+
+echo TEST INTERSECTION
+let "nTestCount=$nTestCount+1"
+./$1 < testIntersect.in > temp1.txt
+grep -v '^#' temp1.txt > temp2.txt
+diff -wB testIntersect.out temp2.txt
+if [ $? -eq 0 ]
+        then
+		echo PASSED
+            	let "nSuccesfulTests=$nSuccesfulTests+1"
+		nStrResult=$nStrResult" 1"
+	else
+		echo FAILED
+		nStrResult=$nStrResult" 0"
+fi
+
+echo TEST HIT 1
+let "nTestCount=$nTestCount+1"
+./$1 < testHit.in > temp1.txt
+grep -v '^#' temp1.txt > temp2.txt
+diff -wB testHit.out temp2.txt
+if [ $? -eq 0 ]
+        then
+		echo PASSED
+            	let "nSuccesfulTests=$nSuccesfulTests+1"
+		nStrResult=$nStrResult" 1"
+	else
+		echo FAILED
+		nStrResult=$nStrResult" 0"
+fi
+
 rm temp1.txt
 rm temp2.txt
 

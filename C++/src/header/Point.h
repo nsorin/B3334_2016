@@ -28,25 +28,25 @@
 
     public:
     //----------------------------------------------------- Méthodes publiques
-        int GetX() const{return x;}
-        int GetY() const{return y;}
-        void SetX(int x){this->x = x;}
-        void SetY(int y){this->y = y;}
-        void Move(int dx, int dy){x+=dx; y+=dy;}
+        int GetX() const;
+        int GetY() const;
+        void SetX(int x);
+        void SetY(int y);
+        void Move(int dx, int dy);
 
     //------------------------------------------------- Surcharge d'opérateurs
-        Point & operator=( const Point & unPoint ) {this->x = unPoint.x; this->y = unPoint.y; return *this;}
-        bool operator==(const Point & unPoint){return (unPoint.GetX()==this->GetX() && unPoint.GetY()==this->GetY());}
+        Point & operator=( const Point & unPoint );
+        bool operator==(const Point & unPoint);
     //-------------------------------------------- Constructeurs - destructeur
-        Point ( const Point & unPoint ):x(unPoint.GetX()), y(unPoint.GetY()){}
+        Point ( const Point & unPoint );
         // Mode d'emploi (constructeur de copie) :
         //
 
-        Point (int x1 = 0, int y1 = 0) : x(x1), y(y1){}
+        Point (int x1 = 0, int y1 = 0);
         // Mode d'emploi :
         //
 
-        virtual ~Point ( ) {}
+        virtual ~Point ( );
         // Mode d'emploi :
         //
 
