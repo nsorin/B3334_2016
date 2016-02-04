@@ -68,6 +68,16 @@ int main()
     	}
     	if(firstWord == "EXIT")
     	{
+            while(!dequeCmd.empty())
+            {
+                delete dequeCmd.back();
+                dequeCmd.pop_back();
+            }
+            while(!mapObjects.empty())
+            {
+                delete mapObjects.begin()->second;
+                mapObjects.erase(mapObjects.begin());
+            }
     		return 0;
     	}
     	else if(firstWord == "LIST")
