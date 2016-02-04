@@ -39,7 +39,28 @@
     //
     {
         undone = false;
-        return true;
+        string line;
+        ifstream ifs(fileName, ios::in);
+        if(ifs)
+        {
+            while(getline(ifs, line))
+            {
+                if(!parseLine(line))
+                {
+                    // On supprime les objets qu'on avait commencé à créer
+                    for(it_model i=mapObjects.begin(); i != mapObjects.end(); i++)
+                    {
+                        delete i->second;
+                    }
+                    mapObjects.clear();
+                    return false;
+                }
+            }
+            oldObjects = model;
+            model = mapObjects;
+            return true;
+        }
+        return false;
     } //----- Fin de Do
 
     bool Load::Undo ( map<string, Object*> & model )
@@ -47,6 +68,7 @@
     //
     {
         undone = true;
+        model = oldObjects;
         return true;
     } //----- Fin de Undo
 
@@ -54,7 +76,7 @@
     //------------------------------------------------- Surcharge d'opérateurs
 
     //-------------------------------------------- Constructeurs - destructeur
-    Load::Load ( string & data )
+    Load::Load ( string & data ) : fileName(data)
     // Algorithme :
     //
     {
@@ -72,6 +94,22 @@
     #ifdef MAP
         cout << "Appel au destructeur de <Load>" << endl;
     #endif
+        if(undone)
+        {
+            for(it_model i=mapObjects.begin(); i != mapObjects.end(); i++)
+            {
+                delete i->second;
+            }
+            mapObjects.clear();
+        }
+        else
+        {
+            for(it_model i=oldObjects.begin(); i != oldObjects.end(); i++)
+            {
+                delete i->second;
+            }
+            oldObjects.clear();
+        }
     } //----- Fin de ~Load
 
 
@@ -80,3 +118,43 @@
     //----------------------------------------------------- Méthodes protégées
 
     //------------------------------------------------------- Méthodes privées
+    bool Load::parseLine(string & line)
+    {
+        unsigned int separator = line.find(" ");
+    	string firstWord;
+    	string data;
+    	firstWord = line.substr(0, separator);
+        data = line.substr(separator+1);
+        if(firstWord == "S")
+        {
+            AddSegment cmd(data);
+            if(!cmd.Do(mapObjects))
+            {
+                return false;
+            }
+        }
+        else if(firstWord == "R")
+        {
+            AddRectangle cmd(data);
+            if(!cmd.Do(mapObjects))
+            {
+                return false;
+            }
+        }
+        else if(firstWord == "PC")
+        {
+            AddPolygone cmd(data);
+            if(!cmd.Do(mapObjects))
+            {
+                return false;
+            }
+        }
+        else if(firstWord == "OI")
+        {
+        }
+        else if(firstWord == "OR")
+        {
+        }
+        return true;
+    }
+

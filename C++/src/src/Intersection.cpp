@@ -49,18 +49,15 @@
                 }
                 else
                 {
-                    cout << "ERR" << endl;
                     delete object;
                     return false;
                 }
             }
             model[objectName] = object;
-            cout << "OK" << endl;
             return true;
         }
         else
         {
-            cout << "ERR" << endl;
             delete object;
             return false;
         }
@@ -71,8 +68,8 @@
     //
     {
         undone = true;
+        object->ClearObjects();
         model.erase(object->GetName());
-        cout << "OK" << endl;
         return true;
     } //----- Fin de Undo
 

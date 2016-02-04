@@ -38,6 +38,10 @@
         // Mode d'emploi :
         //
 
+        void ClearObjects();
+        // Mode d'emploi :
+        //
+
         void Move(int dx, int dy);
         // Mode d'emploi :
         //

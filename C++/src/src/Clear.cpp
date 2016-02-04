@@ -42,7 +42,6 @@
         undone = false;
         mapObject = model;
         model.clear();
-        cout << "OK" << endl;
         return true;
     } //----- Fin de Display
 
@@ -53,7 +52,6 @@
         undone = true;
         model = mapObject;
         mapObject.clear();
-        cout << "OK" << endl;
         return true;
     } //----- Fin de Display
 

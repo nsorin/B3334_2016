@@ -12,6 +12,10 @@
 
     //--------------------------------------------------- Interfaces utilisées
     #include "Command.h"
+    #include "AddSegment.h"
+    #include "AddPolygone.h"
+    #include "AddRectangle.h"
+    #include <fstream>
 
     //------------------------------------------------------------- Constantes
 
@@ -71,13 +75,16 @@
 
     private:
     //------------------------------------------------------- Méthodes privées
+    bool parseLine(std::string & line);
 
     protected:
     //----------------------------------------------------- Attributs protégés
 
     private:
     //------------------------------------------------------- Attributs privés
-    std::map<std::string, Object> mapObject;
+    std::string fileName;
+    std::map<std::string, Object*> mapObjects;
+    std::map<std::string, Object*> oldObjects;
 
     //---------------------------------------------------------- Classes amies
 

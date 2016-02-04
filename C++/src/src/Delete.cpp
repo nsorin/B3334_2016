@@ -43,7 +43,6 @@
         {
             if(model.find(toDelete[i]) == model.end())
             {
-                cout << "ERR" << endl;
                 return false;
             }
         }
@@ -53,7 +52,6 @@
             mapObject[toDelete[i]] = model[toDelete[i]];
             model.erase(toDelete[i]);
         }
-        cout << "OK" << endl;
         return true;
     } //----- Fin de Do
 
@@ -67,7 +65,6 @@
             model[toDelete[i]] = mapObject[toDelete[i]];
         }
         mapObject.clear();
-        cout << "OK" << endl;
         return true;
     } //----- Fin de Undo
 
