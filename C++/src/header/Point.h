@@ -36,6 +36,7 @@
 
     //------------------------------------------------- Surcharge d'opérateurs
         Point & operator=( const Point & unPoint ) {this->x = unPoint.x; this->y = unPoint.y; return *this;}
+        bool operator==(const Point & unPoint){return (unPoint.GetX()==this->GetX() && unPoint.GetY()==this->GetY());}
     //-------------------------------------------- Constructeurs - destructeur
         Point ( const Point & unPoint ):x(unPoint.GetX()), y(unPoint.GetY()){}
         // Mode d'emploi (constructeur de copie) :
