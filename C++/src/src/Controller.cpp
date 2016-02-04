@@ -14,6 +14,12 @@
 #include <deque>
 #include <map>
 #include <sstream>
+
+using namespace std;
+
+//------------------------------------------------------ Include personnel
+#include "../header/Command.h"
+#include "../header/Object.h"
 #include "../header/InterObject.h"
 #include "../header/UnionObject.h"
 #include "../header/Polygone.h"
@@ -31,11 +37,6 @@
 #include "../header/AddRectangle.h"
 #include "../header/AddSegment.h"
 
-using namespace std;
-
-//------------------------------------------------------ Include personnel
-#include "../header/Command.h"
-#include "../header/Object.h"
 //-------------------------------------------------- Déclarations Méthodes
 void List(map<string, Object*> & model);
 bool Hit(map<string, Object*> & model, string & data);
