@@ -130,14 +130,24 @@
 
     //------------------------------------------------------- Méthodes privées
     bool Load::parseLine(string & line)
+    // Algorithme
+    // La difficulté vient des objets complexes.
+    // Les délimiteurs { et } permettent de fixer des "niveaux" d'imbrication
+    // des objets.
+    // Chacun de ces niveaux correspond à un index dans les vector ops et
+    // tempObjects. La variable opIndex retient cet index. Lorsqu'un objet est
+    // construit, il est placé dans le niveau correspondant. 
+    // opIndex == 0 => Directement dans le modèle
+    // opIndex > 0 => Dans le modèle temporaire du niveau
+    // Lorsque le délimiteur } est rencontré, on place l'objet complexe dans le
+    // niveau précédent.
+    // Chaque fois qu'un objet complexe est terminé, son niveau est vidé.
     {
-        //cout << line << endl;
         unsigned int separator = line.find(" ");
     	string firstWord;
     	string data;
     	firstWord = line.substr(0, separator);
         data = line.substr(separator+1);
-        //cout << "opIndex=" << opIndex << " / firstWord=" << firstWord << " / data=" << data << endl;
         if(firstWord == "S")
         {
             AddSegment cmd(data, true);
