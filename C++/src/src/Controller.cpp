@@ -110,8 +110,14 @@ int main()
     			else
     			{
                     cout << "ERR" << endl;
+                    cout << "#Undo failed" << endl;
     			}
     		}
+            else
+            {
+                cout << "ERR" << endl;
+                cout << "#no command to undo" << endl;
+            }
     	}
     	else if(firstWord == "REDO")
     	{
@@ -126,11 +132,13 @@ int main()
     			else
     			{
                     cout << "ERR" << endl;
+                    cout << "#Redo failed" << endl;
     			}
     		}
     		else
     		{
                 cout << "ERR" << endl;
+                cout << "#no command to redo" << endl;
     		}
     	}
     	else
@@ -197,6 +205,7 @@ int main()
         		else
         		{
         			cout << "ERR" << endl;
+                    cout << "#Command failed" << endl;
         			delete currentCmd;
         		}
             }
@@ -221,6 +230,7 @@ bool Hit(map<string, Object*> & model, string & data)
     if(model.find(name) == model.end())
     {
         cout << "ERR" << endl;
+        cout << "#Name does not exist" << endl;
         return false;
     }
     int x;
@@ -256,6 +266,7 @@ bool Save(map<string, Object*> & model, string & fileName)
     else
     {
         cout << "ERR" << endl;
+        cout << "#Save failed" << endl;
         return false;
     }
 }

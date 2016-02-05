@@ -28,11 +28,6 @@ class Move : public Command
 
 public:
 //----------------------------------------------------- Méthodes publiques
-    virtual void Display ( );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual bool Do ( std::map<std::string, Object*> & model );
     // Mode d'emploi :

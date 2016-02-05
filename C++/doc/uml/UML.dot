@@ -20,63 +20,63 @@ digraph UML
 		Point
 		[
 			label =
-				"{Point|- x : int\l- y : int\l|+ GetX() : int\l+ GetY() : int\l+ SetX() : void\l+ SetY() : void\l}",
+				"{Point|- x : int\l- y : int\l|+ GetX() : int\l+ GetY() : int\l+ SetX() : void\l+ SetY() : void\l+ Move(int dx, int dy) : void\l}",
 			shape=record
 		];
 
 		Object
 		[
 			label =
-				"{Object|# Name : string\l|+ Contains(Point *) : bool\l+ Move(int,int) : void\l+ Display() : void\l+ GetName() : string\l+ SetName() : void\l}",
+				"{Object|# Name : string\l|+ Contains(Point & p) : bool\l+ Move(int dx,int dy) : void\l+ GetName() : string\l+ clone() : Object*\l+ doPrint(ostream & os) : ostream &\l}",
 			shape=record
 		];
 
 		SimpleObject
 		[
 			label =
-				"{SimpleObject|# tabPoints : Point*\l|+ GetTabPoints() : Point*\l+ Move(int,int) : void\l+ Contains(Point *) : bool\l}",
+				"{SimpleObject|# tabPoints : Point*\l# nPoints : unsigned\l|+ GetTabPoints() : Point*\l+ GetSize() : unsigned\l+ Move(int dx,int dy) : void\l+ Contains(Point & p) : bool\l+ clone() : Object*\l+ doPrint(ostream & os) : ostream &\l}",
 			shape=record
 		];
 
 	    ComplexObject
 		[
 			label =
-				"{ComplexObject|# tabObjects : vector\<Object\>\l|+ GetTabObjects() : vector\<Object\>\l+ AddObject(Object) : void\l+ Move(int,int) : void\l+ Contains(Point *) : bool\l}",
+				"{ComplexObject|# tabObjects : vector\<Object*\>\l|+ GetTabObjects() : vector\<Object*\>\l+ AddObject(Object*) : void\l+ ClearObjects() : void\l+ Move(int,int) : void\l+ Contains(Point & p) : bool\l+ clone() : Object*\l+ doPrint(ostream & os) : ostream &\l}",
 			shape=record
 		];
 
 	    Segment
 		[
 			label =
-				"{Segment||+ Display() : void\l}",
+				"{Segment||+ Contains(Point & p) : bool\l+ clone() : Object*\l+ doPrint(ostream & os) : ostream &\l}",
 			shape=record
 		];
 
 		Rectangle
 		[
 			label =
-				"{Rectangle||+ Display() : void\l}",
+				"{Rectangle||+ Contains(Point & p) : bool\l+ clone() : Object*\l+ doPrint(ostream & os) : ostream &\l}",
 			shape=record
 		];
 
 		Polygone
 		[
 			label =
-				"{Polygone||+ Display() : void\l+ IsConvex() : bool\l}",
+				"{Polygone||+ IsConvex() : bool\l+ Contains(Point & p) : bool\l+ clone() : Object*\l+ doPrint(ostream & os) : ostream &\l}",
 			shape=record
 		];
 
 		UnionObject
 		[
 			label =
-				"{UnionObject||+ Display() : void\l}",
+				"{UnionObject||+ Contains(Point & p) : bool\l+ clone() : Object*\l+ doPrint(ostream & os) : ostream &\l}",
 			shape=record
 		];
 
 		InterObject
 		[
 			label =
-				"{InterObject||+ Display() : void\l}",
+				"{InterObject||+ Contains(Point & p) : bool\l+ clone() : Object*\l+ doPrint(ostream & os) : ostream &\l}",
 			shape=record
 		];
 	}
@@ -91,98 +91,77 @@ digraph UML
 		Controller
 		[
 			label =
-				"{Controller|+ dequeCmd : deque\<Command\>\l+ mapObjects : map\<string,Object\>\l+ lastUndo : Command*\l|+ main(int, char**) : int\l+ TreatCmd(string) : void\l}",
+				"{Controller||+ main(int, char**) : int\l+ List(map\<string, Object*\> & model) : void\l+ Save(map\<string, Object*\> & model, string & fileName) : void\l+ Hit(map\<string, Object*\> & model, string & data) : bool\l}",
 			shape=record
 		]
 
 		Command
 		[
 			label =
-				"{Command|# ERROR : string\l# SUCCESS : string\l|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
-			shape=record
-		]
-
-		Add
-		[
-			label =
-				"{Add||+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{Command|# ERROR : string\l# SUCCESS : string\l# undone : bool\l|+ Do(map\<string,Object*\> & model) : bool\l+ Undo(map\<string,Object*\> & model) : bool\l}",
 			shape=record
 		]
 
 		AddSegment
 		[
 			label =
-				"{AddSegment|# object : Segment*|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{AddSegment|- object : Segment*\l- invalid : bool\l|+ Do(map\<string,Object*\> & model) : bool\l+ Undo(map\<string,Object*\> & model) : bool\l}",
 			shape=record
 		]
 
 		AddRectangle
 		[
 			label =
-				"{AddRectangle|# object : Rectangle*|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{AddRectangle|- object : Rectangle*\l- invalid : bool\l|+ Do(map\<string,Object*\> & model) : bool\l+ Undo(map\<string,Object*\> & model) : bool\l}",
 			shape=record
 		]
 
 		AddPolygone
 		[
 			label =
-				"{AddPolygone|# object : Polygone*|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{AddPolygone|- object : Polygone*\l- invalid : bool\l|+ Do(map\<string,Object*\> & model) : bool\l+ Undo(map\<string,Object*\> & model) : bool\l}",
 			shape=record
 		]
 
 		Delete
 		[
 			label =
-				"{Delete|# mapObject : map\<string,Object\>|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{Delete|- mapObject : map\<string,Object*\>\l- toDelete : vector\<string\>\l|+ Do(map\<string,Object*\> & model) : bool\l+ Undo(map\<string,Object*\> & model) : bool\l}",
 			shape=record
 		]
 
 		Move
 		[
 			label =
-				"{Move|# name : string\l# dx : int\l# dy : int\l|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{Move|- objectName : string\l- dx : int\l- dy : int\l|+ Do(map\<string,Object*\> & model) : bool\l+ Undo(map\<string,Object*\> & model) : bool\l}",
 			shape=record
 		]
 
 		Load
 		[
 			label =
-				"{Load|# mapObject : map\<string,Object\>|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
-			shape=record
-		]
-
-		Save
-		[
-			label =
-				"{Save||+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{Load|- fileName : string\l- mapObject : map\<string,Object*\>\l- oldObjects : map\<string,Object*\>\l- ops : vector\<ComplexObject*\>\l- tempObjects : vector\<map\<string, Object*\>\>\l- opIndex : unsigned\l|- parseLine(string & line) : bool\l+ Do(map\<string,Object*\> & model) : bool\l+ Undo(map\<string,Object*\> & model) : bool\l}",
 			shape=record
 		]
 
 		Clear
 		[
 			label =
-				"{Clear|# mapObject : map\<string,Object\>|+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
-			shape=record
-		]
-
-		Operation
-		[
-			label =
-				"{Operation||+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{Clear|- mapObject : map\<string,Object*\>\l|+ Do(map\<string,Object*\> & model) : bool\l+ Undo(map\<string,Object*\> & model) : bool\l}",
 			shape=record
 		]
 
 		Union
 		[
 			label =
-				"{Union||+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{Union|- object : UnionObject*\l- components : vector\<string\>\l- objectName : string\l- invalid : bool\l|+ Do(map\<string,Object*\> & model) : bool\l+ Undo(map\<string,Object*\> & model) : bool\l}",
 			shape=record
 		]
 
 		Intersection
 		[
 			label =
-				"{Intersection||+ Display() : void\l+ Do(map\<string,Object\>*) : bool\l+ Undo(map\<string,Object\>*) : bool\l}",
+				"{Intersection|- object : InterObject*\l- components : vector\<string\>\l- objectName : string\l- invalid : bool\l|+ Do(map\<string,Object*\> & model) : bool\l+ Undo(map\<string,Object*\> & model) : bool\l}",
 			shape=record
 		]
 	}
@@ -257,37 +236,27 @@ digraph UML
 		headlabel="1 "
 	]
 
-	Add -> Command
+	AddSegment -> Command
 	[
 		arrowhead=normal,
 	]
 
-	AddSegment -> Add
+	AddPolygone -> Command
 	[
 		arrowhead=normal,
 	]
 
-	AddPolygone -> Add
+	AddRectangle -> Command
 	[
 		arrowhead=normal,
 	]
 
-	AddRectangle -> Add
+	Union -> Command
 	[
 		arrowhead=normal,
 	]
 
-	Operation -> Command
-	[
-		arrowhead=normal,
-	]
-
-	Union -> Operation
-	[
-		arrowhead=normal,
-	]
-
-	Intersection -> Operation
+	Intersection -> Command
 	[
 		arrowhead=normal,
 	]
@@ -298,11 +267,6 @@ digraph UML
 	]
 
 	Move -> Command
-	[
-		arrowhead=normal,
-	]
-
-	Save -> Command
 	[
 		arrowhead=normal,
 	]
