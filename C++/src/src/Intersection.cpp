@@ -33,7 +33,7 @@ bool Intersection::Do ( map<string, Object*> & model )
 //
 {
     undone = false;
-    if ( model.find(objectName) == model.end() )
+    if ( model.find(objectName) == model.end() && !invalid )
     {
         for(unsigned int i=0; i<components.size()-1; i++)
         {
@@ -79,6 +79,7 @@ Intersection::Intersection ( string & data )
     cout << "Appel au constructeur de <Intersection>" << endl;
 #endif
     undone = false;
+    invalid = false;
     istringstream iss(data);
     iss >> objectName;
 
@@ -88,6 +89,7 @@ Intersection::Intersection ( string & data )
         iss >> n;
         components.push_back(n);
     } while (iss);
+    invalid = components.size() < 2;
     object = new InterObject(objectName);
 } //----- Fin de Intersection
 
