@@ -71,6 +71,7 @@ protected:
 private:
 //------------------------------------------------------- Attributs privés
     Rectangle *object;
+    bool invalid;
 
 //---------------------------------------------------------- Classes amies
 

@@ -33,7 +33,7 @@
     //
     {
         undone = false;
-        if ( model.find(object->GetName()) == model.end() )
+        if ( model.find(object->GetName()) == model.end() && !invalid )
         {
             model[object->GetName()] = object;
             return true;
@@ -66,6 +66,7 @@
         cout << "Appel au constructeur de <AddSegment>" << endl;
     #endif
         undone = false;
+        invalid = false;
         string name;
         int x1;
         int x2;
@@ -76,7 +77,12 @@
         iss >> x1;
         iss >> y1;
         iss >> x2;
+        invalid = iss.eof();
         iss >> y2;
+        if(!invalid)
+        {
+            invalid = !iss.eof();
+        }
         object = new Segment(name, x1, y1, x2, y2);
     } //----- Fin de AddSegment
 
