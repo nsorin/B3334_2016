@@ -28,12 +28,6 @@
     //-------------------------------------------------------- Fonctions amies
 
     //----------------------------------------------------- Méthodes publiques
-    void Move::Display ( )
-    // Algorithme :
-    //
-    {
-
-    } //----- Fin de Display
 
     bool Move::Do ( map<string, Object*> & model )
     // Algorithme :
