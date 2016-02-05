@@ -29,8 +29,6 @@
 
     //----------------------------------------------------- Méthodes publiques
     bool AddPolygone::Do ( map<string, Object*> & model )
-    // Algorithme :
-    //
     {
         undone = false;
         if ( model.find(object->GetName()) == model.end() && !invalid )
@@ -54,8 +52,6 @@
     } //----- Fin de Display
 
     bool AddPolygone::Undo ( map<string, Object*> & model )
-    // Algorithme :
-    //
     {
         undone = true;
         model.erase(object->GetName());
@@ -66,8 +62,6 @@
 
     //-------------------------------------------- Constructeurs - destructeur
     AddPolygone::AddPolygone ( std::string & data ) //: undone(false)
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <AddPolygone>" << endl;
@@ -98,8 +92,6 @@
 
 
     AddPolygone::~AddPolygone ( )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au destructeur de <AddPolygone>" << endl;

@@ -30,8 +30,6 @@
     //----------------------------------------------------- Méthodes publiques
 
     bool Delete::Do ( map<string, Object*> & model )
-    // Algorithme :
-    //
     {
         undone = false;
         for(unsigned int i=0; i<toDelete.size(); i++)
@@ -51,8 +49,6 @@
     } //----- Fin de Do
 
     bool Delete::Undo ( map<string, Object*> & model )
-    // Algorithme :
-    //
     {
         undone = true;
         for(unsigned int i=0; i<toDelete.size(); i++)
@@ -68,8 +64,6 @@
 
     //-------------------------------------------- Constructeurs - destructeur
     Delete::Delete ( string & data )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <Delete>" << endl;
@@ -89,8 +83,6 @@
 
 
     Delete::~Delete ( )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au destructeur de <Delete>" << endl;

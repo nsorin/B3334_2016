@@ -18,7 +18,7 @@
 
 //------------------------------------------------------------------------
 // Rôle de la classe <Clear>
-//
+// Commande de suppression du modèle actuel
 //
 //------------------------------------------------------------------------
 
@@ -29,32 +29,15 @@ class Clear : public Command
 public:
 //----------------------------------------------------- Méthodes publiques
     virtual bool Do ( std::map<std::string, Object*> & model );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual bool Undo ( std::map<std::string, Object*> & model );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
-
 
 //------------------------------------------------- Surcharge d'opérateurs
 
 //-------------------------------------------- Constructeurs - destructeur
     Clear ( );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual ~Clear ( );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
 //------------------------------------------------------------------ PRIVE
 
@@ -69,7 +52,7 @@ protected:
 
 private:
 //------------------------------------------------------- Attributs privés
-    std::map<std::string, Object*> mapObject;
+    std::map<std::string, Object*> mapObject; //CModèle supprimé
 
 //---------------------------------------------------------- Classes amies
 

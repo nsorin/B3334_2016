@@ -19,7 +19,7 @@
 
 //------------------------------------------------------------------------
 // Rôle de la classe <AddRectangle>
-//
+// Commande d'ajout d'un rectangle au modèle
 //
 //------------------------------------------------------------------------
 
@@ -30,32 +30,15 @@ class AddRectangle : public Command
 public:
 //----------------------------------------------------- Méthodes publiques
     virtual bool Do ( std::map<std::string, Object*> & model );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual bool Undo ( std::map<std::string, Object*> & model );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
-
 
 //------------------------------------------------- Surcharge d'opérateurs
 
 //-------------------------------------------- Constructeurs - destructeur
     AddRectangle ( std::string & data, bool ignoreExtraValues = false );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual ~AddRectangle ( );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
 //------------------------------------------------------------------ PRIVE
 
@@ -70,7 +53,7 @@ protected:
 
 private:
 //------------------------------------------------------- Attributs privés
-    Rectangle *object;
+    Rectangle *object; //Rectangle ajouté
     bool invalid;
 
 //---------------------------------------------------------- Classes amies

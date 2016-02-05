@@ -29,8 +29,6 @@
 
     //----------------------------------------------------- Méthodes publiques
     bool UnionObject::Contains ( Point & p ) const
-    // Algorithme :
-    //
     {
         for(unsigned int i = 0; i<tabObjects.size(); i++)
         {
@@ -47,8 +45,6 @@
 
     //-------------------------------------------- Constructeurs - destructeur
     UnionObject::UnionObject (string n) : ComplexObject(n)
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <UnionObject>" << endl;
@@ -57,8 +53,6 @@
 
 
     UnionObject::~UnionObject ( )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au destructeur de <UnionObject>" << endl;

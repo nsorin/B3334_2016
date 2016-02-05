@@ -19,7 +19,7 @@
 
 //------------------------------------------------------------------------
 // Rôle de la classe <AddPolygone>
-//
+// Commande d'ajout d'un polygone convexe au modèle
 //
 //------------------------------------------------------------------------
 
@@ -30,32 +30,16 @@ class AddPolygone : public Command
 public:
 //----------------------------------------------------- Méthodes publiques
     virtual bool Do ( std::map<std::string, Object*> & model );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual bool Undo ( std::map<std::string, Object*> & model );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
 
 //------------------------------------------------- Surcharge d'opérateurs
 
 //-------------------------------------------- Constructeurs - destructeur
     AddPolygone ( std::string & data );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual ~AddPolygone ( );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
 //------------------------------------------------------------------ PRIVE
 
@@ -70,7 +54,7 @@ protected:
 
 private:
 //------------------------------------------------------- Attributs privés
-    Polygone *object;
+    Polygone *object; //Polygone ajouté
     bool invalid;
 
 //---------------------------------------------------------- Classes amies

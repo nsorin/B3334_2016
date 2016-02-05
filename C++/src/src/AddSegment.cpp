@@ -29,8 +29,6 @@
 
     //----------------------------------------------------- Méthodes publiques
     bool AddSegment::Do ( map<string, Object*> & model )
-    // Algorithme :
-    //
     {
         undone = false;
         if ( model.find(object->GetName()) == model.end() && !invalid )
@@ -46,8 +44,6 @@
     } //----- Fin de Do
 
     bool AddSegment::Undo ( map<string, Object*> & model )
-    // Algorithme :
-    //
     {
         undone = true;
         model.erase(object->GetName());
@@ -59,8 +55,6 @@
 
     //-------------------------------------------- Constructeurs - destructeur
     AddSegment::AddSegment ( string & data, bool ignoreExtraValues )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <AddSegment>" << endl;
@@ -88,8 +82,6 @@
 
 
     AddSegment::~AddSegment ( )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au destructeur de <AddSegment>" << endl;

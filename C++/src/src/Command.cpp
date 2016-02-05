@@ -33,8 +33,6 @@ using namespace std;
 
 //-------------------------------------------- Constructeurs - destructeur
 Command::Command ( )
-// Algorithme :
-//
 {
 #ifdef MAP
     cout << "Appel au constructeur de <Command>" << endl;
@@ -43,8 +41,6 @@ Command::Command ( )
 
 
 Command::~Command ( )
-// Algorithme :
-//
 {
 #ifdef MAP
     cout << "Appel au destructeur de <Command>" << endl;

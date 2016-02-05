@@ -17,7 +17,7 @@
 
 //------------------------------------------------------------------------
 // Rôle de la classe <Rectangle>
-//
+// Classe caractérisant un objet simple de type rectangle
 //
 //------------------------------------------------------------------------
 
@@ -28,8 +28,6 @@ class Rectangle : public SimpleObject
 public:
 //----------------------------------------------------- Méthodes publiques
     virtual bool Contains(Point & p) const;
-    // Mode d'emploi :
-    //
 
     virtual std::ostream & doPrint(std::ostream & os) const;
 
@@ -40,16 +38,8 @@ public:
 
 //-------------------------------------------- Constructeurs - destructeur
     Rectangle (std::string name, int x1, int y1, int x2, int y2);
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual ~Rectangle ( );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
 //------------------------------------------------------------------ PRIVE
 

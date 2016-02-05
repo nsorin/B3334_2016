@@ -38,8 +38,14 @@ using namespace std;
 #include "../header/AddSegment.h"
 
 //-------------------------------------------------- Déclarations Méthodes
+
+//Méthode listant les descriptifs des objets du modèle actuel
 void List(map<string, Object*> & model);
+
+//Méthode indiquant si un point est contenu dans un objet
 bool Hit(map<string, Object*> & model, string & data);
+
+//Méthode sauvegardant le modèle actuel dans un fichier texte
 bool Save(map<string, Object*> & model, string & fileName);
 
 //------------------------------------------------------------------- Main

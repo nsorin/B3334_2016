@@ -19,8 +19,8 @@
 
 //------------------------------------------------------------------------
 // Rôle de la classe <Union>
-//
-//
+// Commande de création d'objet complexe issu de l'union d'objets simples
+// ou complexes
 //------------------------------------------------------------------------
 
 class Union : public Command
@@ -30,32 +30,15 @@ class Union : public Command
 public:
 //----------------------------------------------------- Méthodes publiques
     virtual bool Do ( std::map<std::string, Object*> & model );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual bool Undo ( std::map<std::string, Object*> & model );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
-
 
 //------------------------------------------------- Surcharge d'opérateurs
 
 //-------------------------------------------- Constructeurs - destructeur
     Union ( std::string & data );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual ~Union ( );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
 //------------------------------------------------------------------ PRIVE
 
@@ -70,9 +53,9 @@ protected:
 
 private:
 //------------------------------------------------------- Attributs privés
-    UnionObject *object;
-    std::vector<std::string> components;
-    std::string objectName;
+    UnionObject *object; //Objet créé
+    std::vector<std::string> components; //vector des noms des composants
+    std::string objectName; //nom de l'objet
     bool invalid;
 
 //---------------------------------------------------------- Classes amies

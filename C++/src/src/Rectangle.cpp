@@ -29,8 +29,6 @@
 
     //----------------------------------------------------- Méthodes publiques
     bool Rectangle::Contains ( Point & p ) const
-    // Algorithme :
-    //
     {
         int minX = min(tabPoints[0].GetX(), tabPoints[1].GetX());
         int maxX = max(tabPoints[0].GetX(), tabPoints[1].GetX());
@@ -44,8 +42,6 @@
 
     //-------------------------------------------- Constructeurs - destructeur
     Rectangle::Rectangle (string name, int x1, int y1, int x2, int y2) : SimpleObject(name, 2)
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <Rectangle>" << endl;
@@ -58,8 +54,6 @@
 
 
     Rectangle::~Rectangle ( )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au destructeur de <Rectangle>" << endl;

@@ -18,7 +18,7 @@
 
 //------------------------------------------------------------------------
 // Rôle de la classe <SimpleObject>
-//
+// Classe caractérisant un objet simple
 //
 //------------------------------------------------------------------------
 
@@ -29,20 +29,12 @@ class SimpleObject : public Object
 public:
 //----------------------------------------------------- Méthodes publiques
     virtual bool Contains(Point & p) const;
-    // Mode d'emploi :
-    //
 
     Point * GetTabPoints( ) const;
-    // Mode d'emploi :
-    //
 
     unsigned int GetSize() const;
-    // Mode d'emploi :
-    //
 
     void Move(int dx, int dy);
-    // Mode d'emploi :
-    //
 
     virtual std::ostream & doPrint(std::ostream & os) const;
 
@@ -53,16 +45,8 @@ public:
 
 //-------------------------------------------- Constructeurs - destructeur
     SimpleObject ( std::string n = "", unsigned int np = 2 );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual ~SimpleObject ( );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
 //------------------------------------------------------------------ PRIVE
 
@@ -74,8 +58,8 @@ private:
 
 protected:
 //----------------------------------------------------- Attributs protégés
-    Point * tabPoints;
-    unsigned int nPoints;
+    Point * tabPoints; //tableau de points caractérisant l'objet
+    unsigned int nPoints; //nombre de points
 
 private:
 //------------------------------------------------------- Attributs privés

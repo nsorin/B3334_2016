@@ -17,7 +17,7 @@
 
 //------------------------------------------------------------------------
 // Rôle de la classe <Point>
-//
+// Classe caractérisant un point
 //
 //------------------------------------------------------------------------
 
@@ -28,26 +28,26 @@ class Point
 public:
 //----------------------------------------------------- Méthodes publiques
     int GetX() const;
+
     int GetY() const;
+
     void SetX(int x);
+
     void SetY(int y);
+
     void Move(int dx, int dy);
 
 //------------------------------------------------- Surcharge d'opérateurs
     Point & operator=( const Point & unPoint );
+
     bool operator==(const Point & unPoint);
+
 //-------------------------------------------- Constructeurs - destructeur
     Point ( const Point & unPoint );
-    // Mode d'emploi (constructeur de copie) :
-    //
 
     Point (int x1 = 0, int y1 = 0);
-    // Mode d'emploi :
-    //
 
     virtual ~Point ( );
-    // Mode d'emploi :
-    //
 
 //------------------------------------------------------------------ PRIVE
 
@@ -62,8 +62,8 @@ protected:
 
 private:
 //------------------------------------------------------- Attributs privés
-    int x;
-    int y;
+    int x; //abscisse du point
+    int y; //ordonné du point
 //---------------------------------------------------------- Classes amies
 
 //-------------------------------------------------------- Classes privées

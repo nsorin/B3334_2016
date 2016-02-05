@@ -30,8 +30,6 @@
     //----------------------------------------------------- Méthodes publiques
 
     bool Move::Do ( map<string, Object*> & model )
-    // Algorithme :
-    //
     {
         undone = false;
         if ( model.find(objectName) == model.end() )
@@ -46,8 +44,6 @@
     } //----- Fin de Do
 
     bool Move::Undo ( map<string, Object*> & model )
-    // Algorithme :
-    //
     {
         undone = true;
         if ( model.find(objectName) == model.end() )
@@ -65,8 +61,6 @@
 
     //-------------------------------------------- Constructeurs - destructeur
     Move::Move ( string & data )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <Move>" << endl;
@@ -80,8 +74,6 @@
 
 
     Move::~Move ( )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au destructeur de <Move>" << endl;

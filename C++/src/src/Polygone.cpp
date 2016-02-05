@@ -30,8 +30,6 @@
 
     //----------------------------------------------------- Méthodes publiques
     bool Polygone::Contains ( Point & p ) const
-    // Algorithme :
-    //
     {
         double pos = 0;
         double neg = 0;
@@ -57,7 +55,7 @@
             if (d > 0) pos++;
             if (d < 0) neg++;
 
-            //If the sign changes, then point is outside
+            //Si le signe change alors le point est en dehors du polygone
             if (pos > 0 && neg > 0)
             {
                 return false;
@@ -68,6 +66,10 @@
 
 
     bool Polygone::IsConvex() const
+    // Algorithme :
+    // vérification, pour chaque sommet du polygone, que l'angle intérieur est
+    // inférieur à 180 degrés en étudiant le signe du produit scalaire des deux
+    // vecteurs faisant l'angle.
     {
         if (nPoints<4)
         {
@@ -118,8 +120,6 @@
 
     //-------------------------------------------- Constructeurs - destructeur
     Polygone::Polygone( string & n, vector<Point> & points ) : SimpleObject(n, points.size())
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <Polygone>" << endl;
@@ -132,8 +132,6 @@
 
 
     Polygone::~Polygone ( )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au destructeur de <Polygone>" << endl;

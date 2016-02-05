@@ -19,8 +19,8 @@
 
 //------------------------------------------------------------------------
 // Rôle de la classe <Intersection>
-//
-//
+// Commande de création d'un objet issu de l'intersection d'objets simples
+// ou complexes
 //------------------------------------------------------------------------
 
 class Intersection : public Command
@@ -30,32 +30,15 @@ class Intersection : public Command
 public:
 //----------------------------------------------------- Méthodes publiques
     virtual bool Do ( std::map<std::string, Object*> & model );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual bool Undo ( std::map<std::string, Object*> & model );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
-
 
 //------------------------------------------------- Surcharge d'opérateurs
 
 //-------------------------------------------- Constructeurs - destructeur
     Intersection ( std::string & data );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual ~Intersection ( );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
 //------------------------------------------------------------------ PRIVE
 
@@ -70,9 +53,9 @@ protected:
 
 private:
 //------------------------------------------------------- Attributs privés
-    InterObject *object;
-    std::vector<std::string> components;
-    std::string objectName;
+    InterObject *object; //Objet ajouté
+    std::vector<std::string> components; //noms des composants de l'objet
+    std::string objectName; //nom de l'objet
     bool invalid;
 
 //---------------------------------------------------------- Classes amies

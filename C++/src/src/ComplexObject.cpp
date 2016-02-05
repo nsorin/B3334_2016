@@ -64,8 +64,6 @@
 
     //-------------------------------------------- Constructeurs - destructeur
     ComplexObject::ComplexObject ( string n ) : Object(n)
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <ComplexObject>" << endl;
@@ -74,8 +72,6 @@
 
 
     ComplexObject::~ComplexObject ( )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au destructeur de <ComplexObject>" << endl;

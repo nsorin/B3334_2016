@@ -29,33 +29,21 @@
 
     //----------------------------------------------------- Méthodes publiques
     bool Object::Contains ( Point & p ) const
-    // Algorithme :
-    //
     {
         return false;
     } //----- Fin de Contains
 
     string Object::GetName ( ) const
-    // Algorithme :
-    //
     {
         return name;
     } //----- Fin de GetName
 
     void Object::Move ( int dx, int dy )
-    // Algorithme :
-    //
     {
 
     } //----- Fin de GetName
 
     //------------------------------------------------- Surcharge d'opérateurs
-    /*Object & Object::operator = ( const Object & unObject )
-    // Algorithme :
-    //
-    {
-    } //----- Fin de operator =*/
-
 
     ostream & operator<< (ostream & stream, Object & object)
     {
@@ -64,8 +52,6 @@
 
     //-------------------------------------------- Constructeurs - destructeur
     Object::Object ( const Object & unObject )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au constructeur de copie de <Object>" << endl;
@@ -74,8 +60,6 @@
 
 
     Object::Object ( string n ) : name(n)
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <Object>" << endl;
@@ -84,8 +68,6 @@
 
 
     Object::~Object ( )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au destructeur de <Object>" << endl;

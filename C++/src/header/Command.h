@@ -24,7 +24,7 @@ static std::string SUCCESS = "OK";
 
 //------------------------------------------------------------------------
 // Rôle de la classe <Command>
-//
+// Classe abstraite Commande
 //
 //------------------------------------------------------------------------
 
@@ -35,31 +35,15 @@ class Command
 public:
 //----------------------------------------------------- Méthodes publiques
     virtual bool Do ( std::map<std::string, Object*> & model ) = 0;
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual bool Undo ( std::map<std::string, Object*> & model ) = 0;
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
 //------------------------------------------------- Surcharge d'opérateurs
 
 //-------------------------------------------- Constructeurs - destructeur
     Command ( );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual ~Command ( );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
 //------------------------------------------------------------------ PRIVE
 

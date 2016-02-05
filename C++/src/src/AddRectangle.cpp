@@ -29,8 +29,6 @@
 
     //----------------------------------------------------- Méthodes publiques
     bool AddRectangle::Do ( map<string, Object*> & model )
-    // Algorithme :
-    //
     {
         undone = false;
         if ( model.find(object->GetName()) == model.end() && !invalid )
@@ -46,8 +44,6 @@
     } //----- Fin de Do
 
     bool AddRectangle::Undo ( map<string, Object*> & model )
-    // Algorithme :
-    //
     {
         undone = true;
         model.erase(object->GetName());
@@ -58,8 +54,6 @@
 
     //-------------------------------------------- Constructeurs - destructeur
     AddRectangle::AddRectangle ( string & data, bool ignoreExtraValues )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <AddRectangle>" << endl;
@@ -88,8 +82,6 @@
 
 
     AddRectangle::~AddRectangle ( )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au destructeur de <AddRectangle>" << endl;
