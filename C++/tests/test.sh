@@ -81,11 +81,71 @@ if [ $? -eq 0 ]
 		nStrResult=$nStrResult" 0"
 fi
 
+echo TEST ADD RECTANGLE 2
+let "nTestCount=$nTestCount+1"
+./$1 < testAddRectangle2.in > temp1.txt
+grep -v '^#' temp1.txt > temp2.txt
+diff -wB testAddRectangle2.out temp2.txt
+if [ $? -eq 0 ]
+        then
+		echo PASSED
+            	let "nSuccesfulTests=$nSuccesfulTests+1"
+		nStrResult=$nStrResult" 1"
+	else
+		echo FAILED
+		nStrResult=$nStrResult" 0"
+fi
+
 echo TEST ADD PC 1
 let "nTestCount=$nTestCount+1"
 ./$1 < testAddPC.in > temp1.txt
 grep -v '^#' temp1.txt > temp2.txt
 diff -wB testAddPC.out temp2.txt
+if [ $? -eq 0 ]
+        then
+		echo PASSED
+            	let "nSuccesfulTests=$nSuccesfulTests+1"
+		nStrResult=$nStrResult" 1"
+	else
+		echo FAILED
+		nStrResult=$nStrResult" 0"
+fi
+
+echo TEST ADD PC 2
+let "nTestCount=$nTestCount+1"
+./$1 < testAddPC2.in > temp1.txt
+grep -v '^#' temp1.txt > temp2.txt
+diff -wB testAddPC2.out temp2.txt
+if [ $? -eq 0 ]
+        then
+		echo PASSED
+            	let "nSuccesfulTests=$nSuccesfulTests+1"
+		nStrResult=$nStrResult" 1"
+	else
+		echo FAILED
+		nStrResult=$nStrResult" 0"
+fi
+
+echo TEST ADD PC 3
+let "nTestCount=$nTestCount+1"
+./$1 < testAddPC3.in > temp1.txt
+grep -v '^#' temp1.txt > temp2.txt
+diff -wB testAddPC3.out temp2.txt
+if [ $? -eq 0 ]
+        then
+		echo PASSED
+            	let "nSuccesfulTests=$nSuccesfulTests+1"
+		nStrResult=$nStrResult" 1"
+	else
+		echo FAILED
+		nStrResult=$nStrResult" 0"
+fi
+
+echo TEST ADD PC 4
+let "nTestCount=$nTestCount+1"
+./$1 < testAddPC4.in > temp1.txt
+grep -v '^#' temp1.txt > temp2.txt
+diff -wB testAddPC4.out temp2.txt
 if [ $? -eq 0 ]
         then
 		echo PASSED
