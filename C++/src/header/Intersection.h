@@ -73,6 +73,7 @@ private:
     InterObject *object;
     std::vector<std::string> components;
     std::string objectName;
+    bool invalid;
 
 //---------------------------------------------------------- Classes amies
 
