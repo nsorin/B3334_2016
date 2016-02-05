@@ -58,7 +58,7 @@
     //------------------------------------------------- Surcharge d'opérateurs
 
     //-------------------------------------------- Constructeurs - destructeur
-    AddSegment::AddSegment ( string & data )
+    AddSegment::AddSegment ( string & data, bool ignoreExtraValues )
     // Algorithme :
     //
     {
@@ -79,7 +79,7 @@
         iss >> x2;
         invalid = iss.eof();
         iss >> y2;
-        if(!invalid)
+        if(!invalid && !ignoreExtraValues)
         {
             invalid = !iss.eof();
         }

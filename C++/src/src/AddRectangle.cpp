@@ -57,7 +57,7 @@
     //------------------------------------------------- Surcharge d'opérateurs
 
     //-------------------------------------------- Constructeurs - destructeur
-    AddRectangle::AddRectangle ( string & data )
+    AddRectangle::AddRectangle ( string & data, bool ignoreExtraValues )
     // Algorithme :
     //
     {
@@ -78,7 +78,7 @@
         iss >> x2;
         invalid = iss.eof();
         iss >> y2;
-        if(!invalid)
+        if(!invalid && !ignoreExtraValues)
         {
             invalid = !iss.eof();
         }

@@ -140,7 +140,7 @@
         //cout << "opIndex=" << opIndex << " / firstWord=" << firstWord << " / data=" << data << endl;
         if(firstWord == "S")
         {
-            AddSegment cmd(data);
+            AddSegment cmd(data, true);
             if(opIndex == 0)
             {
                 if(!cmd.Do(mapObjects))
@@ -158,7 +158,7 @@
         }
         else if(firstWord == "R")
         {
-            AddRectangle cmd(data);
+            AddRectangle cmd(data, true);
             if(opIndex == 0)
             {
                 if(!cmd.Do(mapObjects))

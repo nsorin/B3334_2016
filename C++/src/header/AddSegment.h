@@ -45,7 +45,7 @@ public:
 //------------------------------------------------- Surcharge d'opérateurs
 
 //-------------------------------------------- Constructeurs - destructeur
-    AddSegment ( std::string & data );
+    AddSegment ( std::string & data, bool ignoreExtraValues = false );
     // Mode d'emploi :
     //
     // Contrat :

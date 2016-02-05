@@ -45,7 +45,7 @@ public:
 //------------------------------------------------- Surcharge d'opérateurs
 
 //-------------------------------------------- Constructeurs - destructeur
-    AddRectangle ( std::string & data );
+    AddRectangle ( std::string & data, bool ignoreExtraValues = false );
     // Mode d'emploi :
     //
     // Contrat :
