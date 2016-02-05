@@ -33,7 +33,7 @@
     //
     {
         undone = false;
-        if ( model.find(object->GetName()) == model.end() )
+        if ( model.find(object->GetName()) == model.end() && !invalid )
         {
             if(object->IsConvex())
             {
@@ -73,18 +73,22 @@
         cout << "Appel au constructeur de <AddPolygone>" << endl;
     #endif
         undone = false;
+        invalid = false;
         istringstream iss(data);
         string name;
         vector<int> coord;
         iss >> name;
+
         do
         {
             int xy;
             iss >> xy;
             coord.push_back(xy);
         } while (iss);
+        coord.pop_back();
+        invalid = (coord.size() < 6 || coord.size() % 2 == 1);
         vector<Point> points;
-        for(unsigned int i=0; i<coord.size()-1; i+=2)
+        for(unsigned int i=0; i<coord.size(); i+=2)
         {
             Point p(coord[i], coord[i+1]);
             points.push_back(p);

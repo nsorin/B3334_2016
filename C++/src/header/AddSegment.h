@@ -71,6 +71,7 @@ protected:
 private:
 //------------------------------------------------------- Attributs privés
     Segment *object;
+    bool invalid;
 
 //---------------------------------------------------------- Classes amies
 

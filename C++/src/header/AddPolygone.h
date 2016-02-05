@@ -71,6 +71,7 @@ protected:
 private:
 //------------------------------------------------------- Attributs privés
     Polygone *object;
+    bool invalid;
 
 //---------------------------------------------------------- Classes amies
 
