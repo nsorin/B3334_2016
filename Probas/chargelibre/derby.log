@@ -1,0 +1,16 @@
+Wed Feb 10 17:36:45 CET 2016 : Apache Derby Serveur réseau - 10.8.3.2 - (1557835) démarré et prêt à accepter les connexions sur le port 1527
+----------------------------------------------------------------
+Wed Feb 10 17:36:49 CET 2016:
+Amorçage de Derby version The Apache Software Foundation - Apache Derby - 10.8.3.2 - (1557835) : instance a816c00e-0152-cc0a-cae2-000057510241 
+dans le répertoire de base de données C:\Temp\chargelibre\DatabaseTD  avec le chargeur de classe sun.misc.Launcher$AppClassLoader@2d4b1fda
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_71-b14
+user.dir=C:\Program Files\Java\jdk1.7.0_71\db
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=C:\Temp\chargelibre
+Chargeur de classe de la base de données démarré - derby.database.classpath=''
+----------------------------------------------------------------
+Wed Feb 10 17:59:32 CET 2016 : fermeture du moteur Derby
