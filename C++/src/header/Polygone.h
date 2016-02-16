@@ -17,7 +17,7 @@
 
 //------------------------------------------------------------------------
 // Rôle de la classe <Polygone>
-//
+// Classe caractérisant un objet simple de type polygone convexe
 //
 //------------------------------------------------------------------------
 
@@ -28,12 +28,8 @@ class Polygone : public SimpleObject
 public:
 //----------------------------------------------------- Méthodes publiques
     virtual bool Contains(Point & p) const;
-    // Mode d'emploi :
-    //
 
     bool IsConvex() const;
-    // Mode d'emploi :
-    //
 
     virtual std::ostream & doPrint(std::ostream & os) const;
 
@@ -44,16 +40,8 @@ public:
 
 //-------------------------------------------- Constructeurs - destructeur
     Polygone (std::string & n, std::vector<Point> & points);
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual ~Polygone ( );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
 //------------------------------------------------------------------ PRIVE
 

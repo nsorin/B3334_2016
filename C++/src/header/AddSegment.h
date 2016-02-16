@@ -19,7 +19,7 @@
 
 //------------------------------------------------------------------------
 // Rôle de la classe <AddSegment>
-//
+// Commande d'ajout d'un segment au modèle
 //
 //------------------------------------------------------------------------
 
@@ -30,32 +30,15 @@ class AddSegment : public Command
 public:
 //----------------------------------------------------- Méthodes publiques
     virtual bool Do ( std::map<std::string, Object*> & model );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual bool Undo ( std::map<std::string, Object*> & model );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
-
 
 //------------------------------------------------- Surcharge d'opérateurs
 
 //-------------------------------------------- Constructeurs - destructeur
     AddSegment ( std::string & data, bool ignoreExtraValues = false );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual ~AddSegment ( );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
 //------------------------------------------------------------------ PRIVE
 
@@ -70,7 +53,7 @@ protected:
 
 private:
 //------------------------------------------------------- Attributs privés
-    Segment *object;
+    Segment *object; //Segment ajouté
     bool invalid;
 
 //---------------------------------------------------------- Classes amies

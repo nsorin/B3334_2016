@@ -20,7 +20,7 @@
 
 //------------------------------------------------------------------------
 // Rôle de la classe <Object>
-//
+// Classe abstraite caractérisant un objet du modèle
 //
 //------------------------------------------------------------------------
 
@@ -31,20 +31,12 @@ class Object
 public:
 //----------------------------------------------------- Méthodes publiques
     virtual bool Contains(Point & p) const;
-    // Mode d'emploi :
-    //
 
     virtual void Move( int dx, int dy );
-    // Mode d'emploi :
-    //
 
     std::string GetName( ) const;
-    // Mode d'emploi :
-    //
 
     virtual std::ostream & doPrint(std::ostream & os) const;
-    // Mode d'emploi :
-    //
 
     virtual Object * clone();
 
@@ -53,16 +45,10 @@ public:
 
     //-------------------------------------------- Constructeurs - destructeur
     Object ( const Object & unObject );
-    // Mode d'emploi (constructeur de copie) :
-    //
 
     Object ( std::string n = "undefined" );
-    // Mode d'emploi :
-    //
 
     virtual ~Object ( );
-    // Mode d'emploi :
-    //
 
 //------------------------------------------------------------------ PRIVE
 
@@ -74,7 +60,7 @@ private:
 
 protected:
 //----------------------------------------------------- Attributs protégés
-    std::string name;
+    std::string name; //nom de l'objet
 
 private:
 //------------------------------------------------------- Attributs privés

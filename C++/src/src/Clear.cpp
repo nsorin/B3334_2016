@@ -29,8 +29,6 @@
 
     //----------------------------------------------------- Méthodes publiques
     bool Clear::Do ( map<string, Object*> & model )
-    // Algorithme :
-    //
     {
         undone = false;
         mapObject = model;
@@ -39,8 +37,6 @@
     } //----- Fin de Display
 
     bool Clear::Undo ( map<string, Object*> & model )
-    // Algorithme :
-    //
     {
         undone = true;
         model = mapObject;
@@ -53,8 +49,6 @@
 
     //-------------------------------------------- Constructeurs - destructeur
     Clear::Clear ( )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <Clear>" << endl;
@@ -64,8 +58,6 @@
 
 
     Clear::~Clear ( )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au destructeur de <Clear>" << endl;

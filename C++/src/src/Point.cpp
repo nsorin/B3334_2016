@@ -70,8 +70,6 @@
 
     //-------------------------------------------- Constructeurs - destructeur
     Point::Point ( const Point & unPoint ) : x(unPoint.GetX()), y(unPoint.GetY())
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au constructeur de copie de <Point>" << endl;
@@ -80,8 +78,6 @@
 
 
     Point::Point ( int x1, int y1 ) : x(x1), y(y1)
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <Point>" << endl;
@@ -90,8 +86,6 @@
 
 
     Point::~Point ( )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au destructeur de <Point>" << endl;

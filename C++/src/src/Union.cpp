@@ -29,8 +29,6 @@ using namespace std;
 
 //----------------------------------------------------- Méthodes publiques
 bool Union::Do( map<string, Object*> & model )
-// Algorithme :
-//
 {
     undone = false;
     if ( model.find(objectName) == model.end() && !invalid )
@@ -58,8 +56,6 @@ bool Union::Do( map<string, Object*> & model )
 } //----- Fin de Do
 
 bool Union::Undo ( map<string, Object*> & model )
-// Algorithme :
-//
 {
     undone = true;
     object->ClearObjects();
@@ -72,8 +68,6 @@ bool Union::Undo ( map<string, Object*> & model )
 
 //-------------------------------------------- Constructeurs - destructeur
 Union::Union ( string & data )
-// Algorithme :
-//
 {
 #ifdef MAP
     cout << "Appel au constructeur de <Union>" << endl;
@@ -95,8 +89,6 @@ Union::Union ( string & data )
 
 
 Union::~Union ( )
-// Algorithme :
-//
 {
 #ifdef MAP
     cout << "Appel au destructeur de <Union>" << endl;

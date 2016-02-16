@@ -18,7 +18,7 @@
 
 //------------------------------------------------------------------------
 // Rôle de la classe <Delete>
-//
+// Commande de suppression d'objets du modèle
 //
 //------------------------------------------------------------------------
 
@@ -29,31 +29,15 @@ class Delete : public Command
 public:
 //----------------------------------------------------- Méthodes publiques
     virtual bool Do ( std::map<std::string, Object*> & model);
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual bool Undo ( std::map<std::string, Object*> & model);
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
 //------------------------------------------------- Surcharge d'opérateurs
 
 //-------------------------------------------- Constructeurs - destructeur
     Delete ( std::string & data );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual ~Delete ( );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
 //------------------------------------------------------------------ PRIVE
 
@@ -68,8 +52,8 @@ protected:
 
 private:
 //------------------------------------------------------- Attributs privés
-    std::map<std::string, Object*> mapObject;
-    std::vector<std::string> toDelete;
+    std::map<std::string, Object*> mapObject;//modèle avant suppression
+    std::vector<std::string> toDelete;//vector des noms d'objets supprimés
 
 //---------------------------------------------------------- Classes amies
 

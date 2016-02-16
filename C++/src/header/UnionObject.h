@@ -18,8 +18,8 @@
 
 //------------------------------------------------------------------------
 // Rôle de la classe <UnionObject>
-//
-//
+// Classe caractérisant un objet complexe issu de l'union d'objets simples
+// ou complexes
 //------------------------------------------------------------------------
 
 class UnionObject : public ComplexObject
@@ -29,8 +29,6 @@ class UnionObject : public ComplexObject
 public:
 //----------------------------------------------------- Méthodes publiques
     virtual bool Contains(Point & p) const;
-    // Mode d'emploi :
-    //
 
     virtual std::ostream & doPrint(std::ostream & os) const;
 
@@ -41,16 +39,8 @@ public:
 
 //-------------------------------------------- Constructeurs - destructeur
     UnionObject (std::string name);
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual ~UnionObject ( );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
 //------------------------------------------------------------------ PRIVE
 

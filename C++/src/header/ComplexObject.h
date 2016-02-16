@@ -19,8 +19,8 @@
 
 //------------------------------------------------------------------------
 // Rôle de la classe <ComplexObject>
-//
-//
+// Classe abstraite caractérisant un objet complexe issus d'une opération
+// entre des objets simples ou complexes
 //------------------------------------------------------------------------
 
 class ComplexObject : public Object
@@ -30,28 +30,16 @@ class ComplexObject : public Object
 public:
 //----------------------------------------------------- Méthodes publiques
     std::vector<Object*> GetTabObjects() const;
-    // Mode d'emploi :
-    //
 
     void AddObject(Object * o);
-    // Mode d'emploi :
-    //
 
     void ClearObjects();
-    // Mode d'emploi :
-    //
 
     void Move(int dx, int dy);
-    // Mode d'emploi :
-    //
 
     virtual bool Contains(Point & p) const;
-    // Mode d'emploi :
-    //
 
     virtual std::ostream & doPrint(std::ostream & os) const;
-    // Mode d'emploi :
-    //
 
     virtual Object * clone();
 
@@ -61,16 +49,8 @@ public:
 
 //-------------------------------------------- Constructeurs - destructeur
     ComplexObject ( std::string n = "" );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual ~ComplexObject ( );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
 //------------------------------------------------------------------ PRIVE
 
@@ -82,7 +62,7 @@ private:
 
 protected:
 //----------------------------------------------------- Attributs protégés
-    std::vector<Object*> tabObjects;
+    std::vector<Object*> tabObjects; //Vector d'objets simples ou complexes constituant l'objet courant
 
 private:
 //------------------------------------------------------- Attributs privés

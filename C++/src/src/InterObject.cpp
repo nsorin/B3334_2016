@@ -29,8 +29,6 @@ using namespace std;
 
 //----------------------------------------------------- Méthodes publiques
 bool InterObject::Contains ( Point & p ) const
-// Algorithme :
-//
 {
     for(unsigned int i = 0; i<tabObjects.size(); i++)
     {
@@ -42,52 +40,48 @@ bool InterObject::Contains ( Point & p ) const
     return true;
 } //----- Fin de Contains
 
-    //------------------------------------------------- Surcharge d'opérateurs
+//------------------------------------------------- Surcharge d'opérateurs
 
-    //-------------------------------------------- Constructeurs - destructeur
-    InterObject::InterObject (string n) : ComplexObject(n)
-    // Algorithme :
-    //
+//-------------------------------------------- Constructeurs - destructeur
+InterObject::InterObject (string n) : ComplexObject(n)
+{
+#ifdef MAP
+    cout << "Appel au constructeur de <InterObject>" << endl;
+#endif
+} //----- Fin de InterObject
+
+
+InterObject::~InterObject ( )
+{
+#ifdef MAP
+    cout << "Appel au destructeur de <InterObject>" << endl;
+#endif
+} //----- Fin de ~InterObject
+
+
+//------------------------------------------------------------------ PRIVE
+
+//----------------------------------------------------- Méthodes protégées
+
+//------------------------------------------------------- Méthodes privées
+ostream & InterObject::doPrint(ostream & os) const
+{
+    os << "OI ";
+    os << name << endl << "{" << endl;
+    for(unsigned int i = 0; i<tabObjects.size(); i++)
     {
-    #ifdef MAP
-        cout << "Appel au constructeur de <InterObject>" << endl;
-    #endif
-    } //----- Fin de InterObject
-
-
-    InterObject::~InterObject ( )
-    // Algorithme :
-    //
-    {
-    #ifdef MAP
-        cout << "Appel au destructeur de <InterObject>" << endl;
-    #endif
-    } //----- Fin de ~InterObject
-
-
-    //------------------------------------------------------------------ PRIVE
-
-    //----------------------------------------------------- Méthodes protégées
-
-    //------------------------------------------------------- Méthodes privées
-    ostream & InterObject::doPrint(ostream & os) const
-    {
-        os << "OI ";
-        os << name << endl << "{" << endl;
-        for(unsigned int i = 0; i<tabObjects.size(); i++)
-        {
-            tabObjects[i]->doPrint(os);
-        }
-        os << "}" << endl;
-        return os;
+        tabObjects[i]->doPrint(os);
     }
+    os << "}" << endl;
+    return os;
+}
 
-    Object * InterObject::clone()
+Object * InterObject::clone()
+{
+    ComplexObject* o = new InterObject(name);
+    for(unsigned int i = 0; i<tabObjects.size(); i++)
     {
-        ComplexObject* o = new InterObject(name);
-        for(unsigned int i = 0; i<tabObjects.size(); i++)
-        {
-            o->AddObject(tabObjects[i]);
-        }
-        return o;
+        o->AddObject(tabObjects[i]);
     }
+    return o;
+}

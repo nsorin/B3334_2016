@@ -18,7 +18,7 @@
 
 //------------------------------------------------------------------------
 // Rôle de la classe <Move>
-//
+// Commande permettant de mouvoir un objet du modèle
 //
 //------------------------------------------------------------------------
 
@@ -30,32 +30,15 @@ public:
 //----------------------------------------------------- Méthodes publiques
 
     virtual bool Do ( std::map<std::string, Object*> & model );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual bool Undo ( std::map<std::string, Object*> & model );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
-
 
 //------------------------------------------------- Surcharge d'opérateurs
 
 //-------------------------------------------- Constructeurs - destructeur
     Move ( std::string & data );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual ~Move ( );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
 //------------------------------------------------------------------ PRIVE
 
@@ -70,9 +53,9 @@ protected:
 
 private:
 //------------------------------------------------------- Attributs privés
-    std::string objectName;
-    int dx;
-    int dy;
+    std::string objectName; //nom de l'objet ciblé
+    int dx; //incrément d'abscisses
+    int dy; //incrément d'ordonnées
 
 //---------------------------------------------------------- Classes amies
 

@@ -29,8 +29,6 @@ using namespace std;
 
 //----------------------------------------------------- Méthodes publiques
 bool Intersection::Do ( map<string, Object*> & model )
-// Algorithme :
-//
 {
     undone = false;
     if ( model.find(objectName) == model.end() && !invalid )
@@ -58,8 +56,6 @@ bool Intersection::Do ( map<string, Object*> & model )
 } //----- Fin de Do
 
 bool Intersection::Undo ( map<string, Object*> & model )
-// Algorithme :
-//
 {
     undone = true;
     object->ClearObjects();
@@ -72,8 +68,6 @@ bool Intersection::Undo ( map<string, Object*> & model )
 
 //-------------------------------------------- Constructeurs - destructeur
 Intersection::Intersection ( string & data )
-// Algorithme :
-//
 {
 #ifdef MAP
     cout << "Appel au constructeur de <Intersection>" << endl;
@@ -95,8 +89,6 @@ Intersection::Intersection ( string & data )
 
 
 Intersection::~Intersection ( )
-// Algorithme :
-//
 {
 #ifdef MAP
     cout << "Appel au destructeur de <Intersection>" << endl;

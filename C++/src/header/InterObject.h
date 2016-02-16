@@ -18,8 +18,8 @@
 
 //------------------------------------------------------------------------
 // Rôle de la classe <InterObject>
-//
-//
+// Classe caractérisant un objet issue de l'intersection d'objets simples
+// ou complexes
 //------------------------------------------------------------------------
 
 class InterObject : public ComplexObject
@@ -29,8 +29,6 @@ class InterObject : public ComplexObject
 public:
 //----------------------------------------------------- Méthodes publiques
     virtual bool Contains(Point & p) const;
-    // Mode d'emploi :
-    //
 
     virtual std::ostream & doPrint(std::ostream & os) const;
 
@@ -42,16 +40,8 @@ public:
 //-------------------------------------------- Constructeurs - destructeur
 
     InterObject (std::string name);
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual ~InterObject ( );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
 //------------------------------------------------------------------ PRIVE
 

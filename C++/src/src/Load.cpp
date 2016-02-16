@@ -29,8 +29,6 @@
 
     //----------------------------------------------------- Méthodes publiques
     bool Load::Do ( map<string, Object*> & model )
-    // Algorithme :
-    //
     {
         // S'il s'agit d'un redo, inutile de relire le fichier
         if(undone == false)
@@ -75,8 +73,6 @@
     } //----- Fin de Do
 
     bool Load::Undo ( map<string, Object*> & model )
-    // Algorithme :
-    //
     {
         undone = true;
         model = oldObjects;
@@ -88,8 +84,6 @@
 
     //-------------------------------------------- Constructeurs - destructeur
     Load::Load ( string & data ) : fileName(data), opIndex(0)
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <Load>" << endl;
@@ -99,8 +93,6 @@
 
 
     Load::~Load ( )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au destructeur de <Load>" << endl;
@@ -136,7 +128,7 @@
     // des objets.
     // Chacun de ces niveaux correspond à un index dans les vector ops et
     // tempObjects. La variable opIndex retient cet index. Lorsqu'un objet est
-    // construit, il est placé dans le niveau correspondant. 
+    // construit, il est placé dans le niveau correspondant.
     // opIndex == 0 => Directement dans le modèle
     // opIndex > 0 => Dans le modèle temporaire du niveau
     // Lorsque le délimiteur } est rencontré, on place l'objet complexe dans le
@@ -249,4 +241,3 @@
         }
         return true;
     }
-

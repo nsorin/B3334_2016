@@ -29,15 +29,11 @@
 
     //----------------------------------------------------- Méthodes publiques
     bool SimpleObject::Contains ( Point & p ) const
-    // Algorithme :
-    //
     {
         return false;
     } //----- Fin de Contains
 
     void SimpleObject::Move( int dx, int dy )
-    // Algorithme :
-    //
     {
         for(unsigned int i=0; i<nPoints; i++)
         {
@@ -46,15 +42,11 @@
     } //----- Fin de Move
 
     Point* SimpleObject::GetTabPoints( ) const
-    // Algorithme :
-    //
     {
       return tabPoints;
     } //----- Fin de GetTabPoints
 
     unsigned int SimpleObject::GetSize( ) const
-    // Algorithme :
-    //
     {
         return nPoints;
     } //----- Fin de GetSize
@@ -64,8 +56,6 @@
 
     //-------------------------------------------- Constructeurs - destructeur
     SimpleObject::SimpleObject ( string n, unsigned int np ) : Object(n), nPoints(np)
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <SimpleObject>" << endl;
@@ -75,8 +65,6 @@
 
 
     SimpleObject::~SimpleObject ( )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au destructeur de <SimpleObject>" << endl;

@@ -29,8 +29,6 @@
 
     //----------------------------------------------------- Méthodes publiques
     bool Segment::Contains ( Point & p ) const
-    // Algorithme :
-    //
     {
         int dy = p.GetY() - tabPoints[0].GetY();
         int dx = p.GetX() - tabPoints[0].GetX();
@@ -59,8 +57,6 @@
 
     //-------------------------------------------- Constructeurs - destructeur
     Segment::Segment (string name, int x1, int y1, int x2, int y2) : SimpleObject(name, 2)
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au constructeur de <Segment>" << endl;
@@ -73,8 +69,6 @@
 
 
     Segment::~Segment ( )
-    // Algorithme :
-    //
     {
     #ifdef MAP
         cout << "Appel au destructeur de <Segment>" << endl;

@@ -24,7 +24,7 @@
 
 //------------------------------------------------------------------------
 // Rôle de la classe <Load>
-//
+// Commande de chargement d'un modèle à partir d'un fichier texte
 //
 //------------------------------------------------------------------------
 
@@ -35,32 +35,15 @@ class Load : public Command
 public:
 //----------------------------------------------------- Méthodes publiques
     virtual bool Do ( std::map<std::string, Object*> & model );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual bool Undo ( std::map<std::string, Object*> & model );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
-
 
 //------------------------------------------------- Surcharge d'opérateurs
 
 //-------------------------------------------- Constructeurs - destructeur
     Load ( std::string & data );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
     virtual ~Load ( );
-    // Mode d'emploi :
-    //
-    // Contrat :
-    //
 
 //------------------------------------------------------------------ PRIVE
 
@@ -69,6 +52,7 @@ protected:
 
 private:
 //------------------------------------------------------- Méthodes privées
+    //méthode d'analyse d'une ligne de fichier
     bool parseLine(std::string & line);
 
 protected:
@@ -76,9 +60,9 @@ protected:
 
 private:
 //------------------------------------------------------- Attributs privés
-    std::string fileName;
-    std::map<std::string, Object*> mapObjects;
-    std::map<std::string, Object*> oldObjects;
+    std::string fileName; //nom du fichier
+    std::map<std::string, Object*> mapObjects; //modèle chargé
+    std::map<std::string, Object*> oldObjects; //ancien modèle
 
     std::vector<ComplexObject*> ops;
     std::vector<std::map<std::string, Object*> > tempObjects;
