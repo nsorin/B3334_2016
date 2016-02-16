@@ -605,7 +605,8 @@ int main(int argc, char** args)
 	}
 	free(f.arrivee);
 	free(f.depart);
-	fr
+	free(ev.nombre);
+	free(ev.temps);
 
 	//Application 2
 	f = FileMM1(0.3,0.33,180);
@@ -626,8 +627,11 @@ int main(int argc, char** args)
 	{
 		fprintf(fp,"%lf(%d);",ev.temps[i],ev.nombre[i]);
 	}
+	free(f.arrivee);
+	free(f.depart);
+	free(ev.nombre);
+	free(ev.temps);
 
-	free
 	fclose(fp);
 	return 0;
 }
