@@ -1,0 +1,14 @@
+R r1 5 10 10 5
+R r2 7 20 20 7
+PC pc1 5 5 5 10 7 20 20 20 20 7 10 5 5 5
+OI r1int2 r1 r2
+OI all r1 r2 pc1
+HIT r1int2 8 9
+HIT r1int2 8 6
+HIT r1int2 8 12
+HIT all 8 9
+HIT all 8 6
+HIT all 8 12
+HIT pc1 11 6
+HIT pc1 11 5
+EXIT

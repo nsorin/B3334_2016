@@ -1,0 +1,27 @@
+#R r1 5 5 10 10
+OK
+#R r2 7 7 20 20
+OK
+#PC pc1 5 5 5 10 7 20 20 20 20 7 10 5 5 5
+OK
+#OI r1int2 r1 r2
+OK
+#OI all r1 r2 pc1
+OK
+#HIT r1int2 8 9
+YES
+#HIT r1int2 8 6
+NO
+#HIT r1int2 8 12
+NO
+#HIT all 8 9
+YES
+#HIT all 8 6
+NO
+#HIT all 8 12
+NO
+#HIT pc1 11 6
+YES
+#HIT pc1 11 5
+NO
+#EXIT

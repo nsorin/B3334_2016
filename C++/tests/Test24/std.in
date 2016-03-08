@@ -1,0 +1,17 @@
+R r1 5 10 10 5
+R r2 7 20 20 7
+OI r1int2 r1 r2
+MOVE r1int2 10 10
+MOVE r1int2 10 10
+MOVE r1int2 10 10
+UNDO
+UNDO
+UNDO
+HIT r1int2 8 9
+REDO
+REDO
+REDO
+HIT r1int2 8 9
+HIT r1int2 8 6
+HIT r1int2 8 12
+EXIT

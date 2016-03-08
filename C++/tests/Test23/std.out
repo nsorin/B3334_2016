@@ -1,0 +1,21 @@
+#LOAD t1
+OK
+#HIT rect1 20 20
+YES
+#HIT rect1 200 200
+NO
+#HIT reu1 20 20
+YES
+#HIT reu1 200 200
+NO
+#HIT r1 7 7
+YES
+#HIT r1 3 3
+NO
+#CLEAR
+OK
+#LOAD t2
+OK
+#HIT r1 3 3
+YES
+#EXIT

@@ -1,0 +1,10986 @@
+PC poly0 5 6 5 101 102 101 102 7 5 6
+PC poly1 6 9 6 106 107 107 101 6 6 9
+OI polyTemp poly0 poly1
+OI polyAll poly0 poly1
+PC poly2 2 0 3 105 107 100 106 2 2 0
+DELETE polyAll 
+OI polyAll polyTemp poly2
+DELETE polyTemp 
+OI polyTemp polyAll poly2
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly3 9 1 9 109 102 105 107 6 9 1
+DELETE polyAll 
+OI polyAll polyTemp poly3
+DELETE polyTemp 
+OI polyTemp polyAll poly3
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly4 2 0 0 106 104 107 100 6 2 0
+DELETE polyAll 
+OI polyAll polyTemp poly4
+DELETE polyTemp 
+OI polyTemp polyAll poly4
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly5 0 2 9 108 108 107 104 2 0 2
+DELETE polyAll 
+OI polyAll polyTemp poly5
+DELETE polyTemp 
+OI polyTemp polyAll poly5
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly6 1 9 0 100 102 109 109 5 1 9
+DELETE polyAll 
+OI polyAll polyTemp poly6
+DELETE polyTemp 
+OI polyTemp polyAll poly6
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly7 0 2 1 100 102 103 104 0 0 2
+DELETE polyAll 
+OI polyAll polyTemp poly7
+DELETE polyTemp 
+OI polyTemp polyAll poly7
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly8 2 0 4 106 106 105 102 4 2 0
+DELETE polyAll 
+OI polyAll polyTemp poly8
+DELETE polyTemp 
+OI polyTemp polyAll poly8
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly9 0 6 4 104 100 107 103 1 0 6
+DELETE polyAll 
+OI polyAll polyTemp poly9
+DELETE polyTemp 
+OI polyTemp polyAll poly9
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly10 6 6 8 103 105 107 103 3 6 6
+DELETE polyAll 
+OI polyAll polyTemp poly10
+DELETE polyTemp 
+OI polyTemp polyAll poly10
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly11 1 5 6 101 106 109 104 7 1 5
+DELETE polyAll 
+OI polyAll polyTemp poly11
+DELETE polyTemp 
+OI polyTemp polyAll poly11
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly12 8 8 5 108 103 107 106 6 8 8
+DELETE polyAll 
+OI polyAll polyTemp poly12
+DELETE polyTemp 
+OI polyTemp polyAll poly12
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly13 7 5 0 106 104 104 104 2 7 5
+DELETE polyAll 
+OI polyAll polyTemp poly13
+DELETE polyTemp 
+OI polyTemp polyAll poly13
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly14 9 9 4 105 105 100 105 4 9 9
+DELETE polyAll 
+OI polyAll polyTemp poly14
+DELETE polyTemp 
+OI polyTemp polyAll poly14
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly15 6 0 5 100 109 100 108 0 6 0
+DELETE polyAll 
+OI polyAll polyTemp poly15
+DELETE polyTemp 
+OI polyTemp polyAll poly15
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly16 1 7 6 101 102 104 108 8 1 7
+DELETE polyAll 
+OI polyAll polyTemp poly16
+DELETE polyTemp 
+OI polyTemp polyAll poly16
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly17 0 1 6 109 107 107 108 6 0 1
+DELETE polyAll 
+OI polyAll polyTemp poly17
+DELETE polyTemp 
+OI polyTemp polyAll poly17
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly18 0 3 1 106 105 108 102 7 0 3
+DELETE polyAll 
+OI polyAll polyTemp poly18
+DELETE polyTemp 
+OI polyTemp polyAll poly18
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly19 3 1 2 102 102 105 106 6 3 1
+DELETE polyAll 
+OI polyAll polyTemp poly19
+DELETE polyTemp 
+OI polyTemp polyAll poly19
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly20 7 9 4 107 107 103 100 4 7 9
+DELETE polyAll 
+OI polyAll polyTemp poly20
+DELETE polyTemp 
+OI polyTemp polyAll poly20
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly21 1 5 5 103 104 106 107 9 1 5
+DELETE polyAll 
+OI polyAll polyTemp poly21
+DELETE polyTemp 
+OI polyTemp polyAll poly21
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly22 1 8 9 105 109 101 105 2 1 8
+DELETE polyAll 
+OI polyAll polyTemp poly22
+DELETE polyTemp 
+OI polyTemp polyAll poly22
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly23 5 9 8 100 102 105 106 5 5 9
+DELETE polyAll 
+OI polyAll polyTemp poly23
+DELETE polyTemp 
+OI polyTemp polyAll poly23
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly24 4 9 1 108 102 101 109 6 4 9
+DELETE polyAll 
+OI polyAll polyTemp poly24
+DELETE polyTemp 
+OI polyTemp polyAll poly24
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly25 3 7 5 100 103 108 102 6 3 7
+DELETE polyAll 
+OI polyAll polyTemp poly25
+DELETE polyTemp 
+OI polyTemp polyAll poly25
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly26 4 2 0 103 105 101 107 6 4 2
+DELETE polyAll 
+OI polyAll polyTemp poly26
+DELETE polyTemp 
+OI polyTemp polyAll poly26
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly27 3 2 1 107 105 109 101 5 3 2
+DELETE polyAll 
+OI polyAll polyTemp poly27
+DELETE polyTemp 
+OI polyTemp polyAll poly27
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly28 8 9 8 104 104 108 106 0 8 9
+DELETE polyAll 
+OI polyAll polyTemp poly28
+DELETE polyTemp 
+OI polyTemp polyAll poly28
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly29 9 3 1 101 105 105 109 6 9 3
+DELETE polyAll 
+OI polyAll polyTemp poly29
+DELETE polyTemp 
+OI polyTemp polyAll poly29
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly30 7 1 6 109 104 103 109 3 7 1
+DELETE polyAll 
+OI polyAll polyTemp poly30
+DELETE polyTemp 
+OI polyTemp polyAll poly30
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly31 2 5 4 100 100 101 101 4 2 5
+DELETE polyAll 
+OI polyAll polyTemp poly31
+DELETE polyTemp 
+OI polyTemp polyAll poly31
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly32 5 9 2 103 100 107 102 5 5 9
+DELETE polyAll 
+OI polyAll polyTemp poly32
+DELETE polyTemp 
+OI polyTemp polyAll poly32
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly33 6 0 3 102 109 105 100 7 6 0
+DELETE polyAll 
+OI polyAll polyTemp poly33
+DELETE polyTemp 
+OI polyTemp polyAll poly33
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly34 3 5 0 104 102 101 101 4 3 5
+DELETE polyAll 
+OI polyAll polyTemp poly34
+DELETE polyTemp 
+OI polyTemp polyAll poly34
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly35 0 4 2 109 103 106 100 8 0 4
+DELETE polyAll 
+OI polyAll polyTemp poly35
+DELETE polyTemp 
+OI polyTemp polyAll poly35
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly36 1 7 6 105 103 105 105 9 1 7
+DELETE polyAll 
+OI polyAll polyTemp poly36
+DELETE polyTemp 
+OI polyTemp polyAll poly36
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly37 9 1 3 103 109 107 103 7 9 1
+DELETE polyAll 
+OI polyAll polyTemp poly37
+DELETE polyTemp 
+OI polyTemp polyAll poly37
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly38 5 6 7 105 100 107 101 3 5 6
+DELETE polyAll 
+OI polyAll polyTemp poly38
+DELETE polyTemp 
+OI polyTemp polyAll poly38
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly39 8 7 3 105 105 103 101 9 8 7
+DELETE polyAll 
+OI polyAll polyTemp poly39
+DELETE polyTemp 
+OI polyTemp polyAll poly39
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly40 0 5 0 102 109 104 104 7 0 5
+DELETE polyAll 
+OI polyAll polyTemp poly40
+DELETE polyTemp 
+OI polyTemp polyAll poly40
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly41 9 1 4 101 108 107 104 2 9 1
+DELETE polyAll 
+OI polyAll polyTemp poly41
+DELETE polyTemp 
+OI polyTemp polyAll poly41
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly42 1 4 3 106 109 105 107 4 1 4
+DELETE polyAll 
+OI polyAll polyTemp poly42
+DELETE polyTemp 
+OI polyTemp polyAll poly42
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly43 5 2 7 106 101 100 103 6 5 2
+DELETE polyAll 
+OI polyAll polyTemp poly43
+DELETE polyTemp 
+OI polyTemp polyAll poly43
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly44 0 4 3 104 106 100 108 0 0 4
+DELETE polyAll 
+OI polyAll polyTemp poly44
+DELETE polyTemp 
+OI polyTemp polyAll poly44
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly45 2 9 5 109 102 100 105 0 2 9
+DELETE polyAll 
+OI polyAll polyTemp poly45
+DELETE polyTemp 
+OI polyTemp polyAll poly45
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly46 2 0 4 100 109 104 109 5 2 0
+DELETE polyAll 
+OI polyAll polyTemp poly46
+DELETE polyTemp 
+OI polyTemp polyAll poly46
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly47 7 6 6 106 107 108 106 8 7 6
+DELETE polyAll 
+OI polyAll polyTemp poly47
+DELETE polyTemp 
+OI polyTemp polyAll poly47
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly48 7 8 0 104 104 100 106 0 7 8
+DELETE polyAll 
+OI polyAll polyTemp poly48
+DELETE polyTemp 
+OI polyTemp polyAll poly48
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly49 6 3 4 100 109 107 101 5 6 3
+DELETE polyAll 
+OI polyAll polyTemp poly49
+DELETE polyTemp 
+OI polyTemp polyAll poly49
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly50 7 6 3 100 106 103 107 6 7 6
+DELETE polyAll 
+OI polyAll polyTemp poly50
+DELETE polyTemp 
+OI polyTemp polyAll poly50
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly51 4 7 6 109 103 101 102 4 4 7
+DELETE polyAll 
+OI polyAll polyTemp poly51
+DELETE polyTemp 
+OI polyTemp polyAll poly51
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly52 2 6 2 104 109 101 105 2 2 6
+DELETE polyAll 
+OI polyAll polyTemp poly52
+DELETE polyTemp 
+OI polyTemp polyAll poly52
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly53 4 3 4 105 109 109 106 0 4 3
+DELETE polyAll 
+OI polyAll polyTemp poly53
+DELETE polyTemp 
+OI polyTemp polyAll poly53
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly54 5 1 9 100 104 105 102 3 5 1
+DELETE polyAll 
+OI polyAll polyTemp poly54
+DELETE polyTemp 
+OI polyTemp polyAll poly54
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly55 0 4 9 107 103 106 106 4 0 4
+DELETE polyAll 
+OI polyAll polyTemp poly55
+DELETE polyTemp 
+OI polyTemp polyAll poly55
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly56 1 0 7 102 105 106 106 5 1 0
+DELETE polyAll 
+OI polyAll polyTemp poly56
+DELETE polyTemp 
+OI polyTemp polyAll poly56
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly57 1 1 5 102 108 101 106 4 1 1
+DELETE polyAll 
+OI polyAll polyTemp poly57
+DELETE polyTemp 
+OI polyTemp polyAll poly57
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly58 1 6 4 102 102 101 109 7 1 6
+DELETE polyAll 
+OI polyAll polyTemp poly58
+DELETE polyTemp 
+OI polyTemp polyAll poly58
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly59 3 8 3 104 101 108 108 8 3 8
+DELETE polyAll 
+OI polyAll polyTemp poly59
+DELETE polyTemp 
+OI polyTemp polyAll poly59
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly60 6 9 4 109 102 103 104 8 6 9
+DELETE polyAll 
+OI polyAll polyTemp poly60
+DELETE polyTemp 
+OI polyTemp polyAll poly60
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly61 5 3 9 103 109 100 105 8 5 3
+DELETE polyAll 
+OI polyAll polyTemp poly61
+DELETE polyTemp 
+OI polyTemp polyAll poly61
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly62 8 5 6 107 101 104 102 9 8 5
+DELETE polyAll 
+OI polyAll polyTemp poly62
+DELETE polyTemp 
+OI polyTemp polyAll poly62
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly63 0 0 8 106 103 101 104 2 0 0
+DELETE polyAll 
+OI polyAll polyTemp poly63
+DELETE polyTemp 
+OI polyTemp polyAll poly63
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly64 2 7 5 109 107 106 102 7 2 7
+DELETE polyAll 
+OI polyAll polyTemp poly64
+DELETE polyTemp 
+OI polyTemp polyAll poly64
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly65 1 6 7 108 102 105 107 3 1 6
+DELETE polyAll 
+OI polyAll polyTemp poly65
+DELETE polyTemp 
+OI polyTemp polyAll poly65
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly66 3 4 5 106 102 101 106 2 3 4
+DELETE polyAll 
+OI polyAll polyTemp poly66
+DELETE polyTemp 
+OI polyTemp polyAll poly66
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly67 6 5 8 102 105 108 105 3 6 5
+DELETE polyAll 
+OI polyAll polyTemp poly67
+DELETE polyTemp 
+OI polyTemp polyAll poly67
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly68 9 6 0 101 104 106 101 1 9 6
+DELETE polyAll 
+OI polyAll polyTemp poly68
+DELETE polyTemp 
+OI polyTemp polyAll poly68
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly69 2 8 5 105 106 104 106 5 2 8
+DELETE polyAll 
+OI polyAll polyTemp poly69
+DELETE polyTemp 
+OI polyTemp polyAll poly69
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly70 2 4 3 108 105 107 100 1 2 4
+DELETE polyAll 
+OI polyAll polyTemp poly70
+DELETE polyTemp 
+OI polyTemp polyAll poly70
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly71 1 3 2 102 108 100 101 3 1 3
+DELETE polyAll 
+OI polyAll polyTemp poly71
+DELETE polyTemp 
+OI polyTemp polyAll poly71
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly72 1 4 8 105 105 105 109 7 1 4
+DELETE polyAll 
+OI polyAll polyTemp poly72
+DELETE polyTemp 
+OI polyTemp polyAll poly72
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly73 3 4 3 103 105 100 105 1 3 4
+DELETE polyAll 
+OI polyAll polyTemp poly73
+DELETE polyTemp 
+OI polyTemp polyAll poly73
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly74 8 3 9 100 105 106 107 1 8 3
+DELETE polyAll 
+OI polyAll polyTemp poly74
+DELETE polyTemp 
+OI polyTemp polyAll poly74
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly75 6 8 0 101 103 108 103 2 6 8
+DELETE polyAll 
+OI polyAll polyTemp poly75
+DELETE polyTemp 
+OI polyTemp polyAll poly75
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly76 7 2 4 102 106 101 109 6 7 2
+DELETE polyAll 
+OI polyAll polyTemp poly76
+DELETE polyTemp 
+OI polyTemp polyAll poly76
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly77 5 5 4 101 104 107 106 0 5 5
+DELETE polyAll 
+OI polyAll polyTemp poly77
+DELETE polyTemp 
+OI polyTemp polyAll poly77
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly78 7 0 3 105 100 100 108 4 7 0
+DELETE polyAll 
+OI polyAll polyTemp poly78
+DELETE polyTemp 
+OI polyTemp polyAll poly78
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly79 6 6 8 106 105 108 104 4 6 6
+DELETE polyAll 
+OI polyAll polyTemp poly79
+DELETE polyTemp 
+OI polyTemp polyAll poly79
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly80 1 0 6 103 106 103 105 6 1 0
+DELETE polyAll 
+OI polyAll polyTemp poly80
+DELETE polyTemp 
+OI polyTemp polyAll poly80
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly81 3 2 5 109 101 105 107 9 3 2
+DELETE polyAll 
+OI polyAll polyTemp poly81
+DELETE polyTemp 
+OI polyTemp polyAll poly81
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly82 2 9 3 102 104 107 102 6 2 9
+DELETE polyAll 
+OI polyAll polyTemp poly82
+DELETE polyTemp 
+OI polyTemp polyAll poly82
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly83 3 0 5 109 102 103 101 7 3 0
+DELETE polyAll 
+OI polyAll polyTemp poly83
+DELETE polyTemp 
+OI polyTemp polyAll poly83
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly84 1 0 0 103 101 102 104 4 1 0
+DELETE polyAll 
+OI polyAll polyTemp poly84
+DELETE polyTemp 
+OI polyTemp polyAll poly84
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly85 5 7 1 107 105 108 102 0 5 7
+DELETE polyAll 
+OI polyAll polyTemp poly85
+DELETE polyTemp 
+OI polyTemp polyAll poly85
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly86 8 9 4 105 104 101 109 3 8 9
+DELETE polyAll 
+OI polyAll polyTemp poly86
+DELETE polyTemp 
+OI polyTemp polyAll poly86
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly87 8 9 9 105 107 106 104 0 8 9
+DELETE polyAll 
+OI polyAll polyTemp poly87
+DELETE polyTemp 
+OI polyTemp polyAll poly87
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly88 1 8 8 101 105 104 108 9 1 8
+DELETE polyAll 
+OI polyAll polyTemp poly88
+DELETE polyTemp 
+OI polyTemp polyAll poly88
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly89 5 9 7 107 106 105 101 5 5 9
+DELETE polyAll 
+OI polyAll polyTemp poly89
+DELETE polyTemp 
+OI polyTemp polyAll poly89
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly90 7 4 0 102 109 106 102 9 7 4
+DELETE polyAll 
+OI polyAll polyTemp poly90
+DELETE polyTemp 
+OI polyTemp polyAll poly90
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly91 0 6 5 101 103 108 106 8 0 6
+DELETE polyAll 
+OI polyAll polyTemp poly91
+DELETE polyTemp 
+OI polyTemp polyAll poly91
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly92 2 1 6 107 100 101 105 4 2 1
+DELETE polyAll 
+OI polyAll polyTemp poly92
+DELETE polyTemp 
+OI polyTemp polyAll poly92
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly93 1 4 0 104 104 101 107 2 1 4
+DELETE polyAll 
+OI polyAll polyTemp poly93
+DELETE polyTemp 
+OI polyTemp polyAll poly93
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly94 8 3 7 102 105 101 100 4 8 3
+DELETE polyAll 
+OI polyAll polyTemp poly94
+DELETE polyTemp 
+OI polyTemp polyAll poly94
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly95 5 8 0 108 109 106 105 6 5 8
+DELETE polyAll 
+OI polyAll polyTemp poly95
+DELETE polyTemp 
+OI polyTemp polyAll poly95
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly96 3 8 5 104 109 103 105 6 3 8
+DELETE polyAll 
+OI polyAll polyTemp poly96
+DELETE polyTemp 
+OI polyTemp polyAll poly96
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly97 9 6 0 104 106 108 105 8 9 6
+DELETE polyAll 
+OI polyAll polyTemp poly97
+DELETE polyTemp 
+OI polyTemp polyAll poly97
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly98 9 2 2 109 100 103 102 0 9 2
+DELETE polyAll 
+OI polyAll polyTemp poly98
+DELETE polyTemp 
+OI polyTemp polyAll poly98
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly99 0 1 1 102 100 106 104 5 0 1
+DELETE polyAll 
+OI polyAll polyTemp poly99
+DELETE polyTemp 
+OI polyTemp polyAll poly99
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly100 9 3 1 105 106 102 103 4 9 3
+DELETE polyAll 
+OI polyAll polyTemp poly100
+DELETE polyTemp 
+OI polyTemp polyAll poly100
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly101 8 1 3 109 100 106 108 7 8 1
+DELETE polyAll 
+OI polyAll polyTemp poly101
+DELETE polyTemp 
+OI polyTemp polyAll poly101
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly102 2 2 9 107 104 106 105 9 2 2
+DELETE polyAll 
+OI polyAll polyTemp poly102
+DELETE polyTemp 
+OI polyTemp polyAll poly102
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly103 6 4 4 107 102 102 106 3 6 4
+DELETE polyAll 
+OI polyAll polyTemp poly103
+DELETE polyTemp 
+OI polyTemp polyAll poly103
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly104 1 5 5 102 106 100 102 7 1 5
+DELETE polyAll 
+OI polyAll polyTemp poly104
+DELETE polyTemp 
+OI polyTemp polyAll poly104
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly105 8 7 0 109 100 102 100 4 8 7
+DELETE polyAll 
+OI polyAll polyTemp poly105
+DELETE polyTemp 
+OI polyTemp polyAll poly105
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly106 3 4 9 108 106 107 100 3 3 4
+DELETE polyAll 
+OI polyAll polyTemp poly106
+DELETE polyTemp 
+OI polyTemp polyAll poly106
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly107 8 1 9 101 108 106 102 5 8 1
+DELETE polyAll 
+OI polyAll polyTemp poly107
+DELETE polyTemp 
+OI polyTemp polyAll poly107
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly108 4 9 8 104 101 105 100 2 4 9
+DELETE polyAll 
+OI polyAll polyTemp poly108
+DELETE polyTemp 
+OI polyTemp polyAll poly108
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly109 9 2 8 106 105 105 109 3 9 2
+DELETE polyAll 
+OI polyAll polyTemp poly109
+DELETE polyTemp 
+OI polyTemp polyAll poly109
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly110 4 9 4 107 103 108 106 3 4 9
+DELETE polyAll 
+OI polyAll polyTemp poly110
+DELETE polyTemp 
+OI polyTemp polyAll poly110
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly111 5 2 4 105 100 100 108 2 5 2
+DELETE polyAll 
+OI polyAll polyTemp poly111
+DELETE polyTemp 
+OI polyTemp polyAll poly111
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly112 4 4 4 100 104 105 103 7 4 4
+DELETE polyAll 
+OI polyAll polyTemp poly112
+DELETE polyTemp 
+OI polyTemp polyAll poly112
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly113 4 6 8 104 108 103 107 2 4 6
+DELETE polyAll 
+OI polyAll polyTemp poly113
+DELETE polyTemp 
+OI polyTemp polyAll poly113
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly114 1 5 7 108 101 105 102 6 1 5
+DELETE polyAll 
+OI polyAll polyTemp poly114
+DELETE polyTemp 
+OI polyTemp polyAll poly114
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly115 3 5 9 108 101 105 101 9 3 5
+DELETE polyAll 
+OI polyAll polyTemp poly115
+DELETE polyTemp 
+OI polyTemp polyAll poly115
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly116 3 6 1 100 100 109 109 9 3 6
+DELETE polyAll 
+OI polyAll polyTemp poly116
+DELETE polyTemp 
+OI polyTemp polyAll poly116
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly117 6 7 3 106 109 101 104 1 6 7
+DELETE polyAll 
+OI polyAll polyTemp poly117
+DELETE polyTemp 
+OI polyTemp polyAll poly117
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly118 4 1 3 105 102 100 100 9 4 1
+DELETE polyAll 
+OI polyAll polyTemp poly118
+DELETE polyTemp 
+OI polyTemp polyAll poly118
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly119 2 8 6 109 105 104 105 8 2 8
+DELETE polyAll 
+OI polyAll polyTemp poly119
+DELETE polyTemp 
+OI polyTemp polyAll poly119
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly120 4 9 1 102 102 107 101 2 4 9
+DELETE polyAll 
+OI polyAll polyTemp poly120
+DELETE polyTemp 
+OI polyTemp polyAll poly120
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly121 6 8 2 104 101 105 106 2 6 8
+DELETE polyAll 
+OI polyAll polyTemp poly121
+DELETE polyTemp 
+OI polyTemp polyAll poly121
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly122 0 8 4 109 101 106 106 3 0 8
+DELETE polyAll 
+OI polyAll polyTemp poly122
+DELETE polyTemp 
+OI polyTemp polyAll poly122
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly123 6 2 7 102 102 100 103 2 6 2
+DELETE polyAll 
+OI polyAll polyTemp poly123
+DELETE polyTemp 
+OI polyTemp polyAll poly123
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly124 1 4 1 100 100 102 109 6 1 4
+DELETE polyAll 
+OI polyAll polyTemp poly124
+DELETE polyTemp 
+OI polyTemp polyAll poly124
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly125 9 0 9 104 108 106 108 6 9 0
+DELETE polyAll 
+OI polyAll polyTemp poly125
+DELETE polyTemp 
+OI polyTemp polyAll poly125
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly126 1 4 8 106 100 105 107 8 1 4
+DELETE polyAll 
+OI polyAll polyTemp poly126
+DELETE polyTemp 
+OI polyTemp polyAll poly126
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly127 3 7 6 100 109 109 109 6 3 7
+DELETE polyAll 
+OI polyAll polyTemp poly127
+DELETE polyTemp 
+OI polyTemp polyAll poly127
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly128 4 0 2 107 103 106 101 8 4 0
+DELETE polyAll 
+OI polyAll polyTemp poly128
+DELETE polyTemp 
+OI polyTemp polyAll poly128
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly129 9 7 0 100 107 101 105 9 9 7
+DELETE polyAll 
+OI polyAll polyTemp poly129
+DELETE polyTemp 
+OI polyTemp polyAll poly129
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly130 3 1 0 108 101 107 101 5 3 1
+DELETE polyAll 
+OI polyAll polyTemp poly130
+DELETE polyTemp 
+OI polyTemp polyAll poly130
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly131 7 3 6 102 106 109 107 0 7 3
+DELETE polyAll 
+OI polyAll polyTemp poly131
+DELETE polyTemp 
+OI polyTemp polyAll poly131
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly132 1 2 0 107 103 101 102 5 1 2
+DELETE polyAll 
+OI polyAll polyTemp poly132
+DELETE polyTemp 
+OI polyTemp polyAll poly132
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly133 2 0 7 103 105 106 100 1 2 0
+DELETE polyAll 
+OI polyAll polyTemp poly133
+DELETE polyTemp 
+OI polyTemp polyAll poly133
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly134 2 6 6 108 108 101 104 7 2 6
+DELETE polyAll 
+OI polyAll polyTemp poly134
+DELETE polyTemp 
+OI polyTemp polyAll poly134
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly135 8 7 9 100 109 109 101 0 8 7
+DELETE polyAll 
+OI polyAll polyTemp poly135
+DELETE polyTemp 
+OI polyTemp polyAll poly135
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly136 0 9 9 104 100 107 106 2 0 9
+DELETE polyAll 
+OI polyAll polyTemp poly136
+DELETE polyTemp 
+OI polyTemp polyAll poly136
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly137 8 5 5 100 109 108 109 0 8 5
+DELETE polyAll 
+OI polyAll polyTemp poly137
+DELETE polyTemp 
+OI polyTemp polyAll poly137
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly138 2 4 0 100 102 108 101 0 2 4
+DELETE polyAll 
+OI polyAll polyTemp poly138
+DELETE polyTemp 
+OI polyTemp polyAll poly138
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly139 7 3 9 106 101 102 105 3 7 3
+DELETE polyAll 
+OI polyAll polyTemp poly139
+DELETE polyTemp 
+OI polyTemp polyAll poly139
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly140 9 7 3 106 107 106 101 4 9 7
+DELETE polyAll 
+OI polyAll polyTemp poly140
+DELETE polyTemp 
+OI polyTemp polyAll poly140
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly141 0 3 0 103 105 104 107 0 0 3
+DELETE polyAll 
+OI polyAll polyTemp poly141
+DELETE polyTemp 
+OI polyTemp polyAll poly141
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly142 7 8 7 104 109 101 107 1 7 8
+DELETE polyAll 
+OI polyAll polyTemp poly142
+DELETE polyTemp 
+OI polyTemp polyAll poly142
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly143 7 8 6 107 107 109 101 5 7 8
+DELETE polyAll 
+OI polyAll polyTemp poly143
+DELETE polyTemp 
+OI polyTemp polyAll poly143
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly144 9 2 1 102 104 103 103 6 9 2
+DELETE polyAll 
+OI polyAll polyTemp poly144
+DELETE polyTemp 
+OI polyTemp polyAll poly144
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly145 3 5 0 109 108 108 105 3 3 5
+DELETE polyAll 
+OI polyAll polyTemp poly145
+DELETE polyTemp 
+OI polyTemp polyAll poly145
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly146 5 9 9 102 105 101 104 7 5 9
+DELETE polyAll 
+OI polyAll polyTemp poly146
+DELETE polyTemp 
+OI polyTemp polyAll poly146
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly147 9 1 8 108 109 103 107 0 9 1
+DELETE polyAll 
+OI polyAll polyTemp poly147
+DELETE polyTemp 
+OI polyTemp polyAll poly147
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly148 2 4 3 103 103 104 105 4 2 4
+DELETE polyAll 
+OI polyAll polyTemp poly148
+DELETE polyTemp 
+OI polyTemp polyAll poly148
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly149 4 0 0 103 101 108 102 8 4 0
+DELETE polyAll 
+OI polyAll polyTemp poly149
+DELETE polyTemp 
+OI polyTemp polyAll poly149
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly150 3 3 1 108 100 108 100 8 3 3
+DELETE polyAll 
+OI polyAll polyTemp poly150
+DELETE polyTemp 
+OI polyTemp polyAll poly150
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly151 7 3 2 102 104 105 107 0 7 3
+DELETE polyAll 
+OI polyAll polyTemp poly151
+DELETE polyTemp 
+OI polyTemp polyAll poly151
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly152 8 9 6 104 104 101 100 0 8 9
+DELETE polyAll 
+OI polyAll polyTemp poly152
+DELETE polyTemp 
+OI polyTemp polyAll poly152
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly153 3 4 8 104 100 100 106 1 3 4
+DELETE polyAll 
+OI polyAll polyTemp poly153
+DELETE polyTemp 
+OI polyTemp polyAll poly153
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly154 9 0 4 105 101 108 100 4 9 0
+DELETE polyAll 
+OI polyAll polyTemp poly154
+DELETE polyTemp 
+OI polyTemp polyAll poly154
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly155 3 5 5 109 102 102 109 9 3 5
+DELETE polyAll 
+OI polyAll polyTemp poly155
+DELETE polyTemp 
+OI polyTemp polyAll poly155
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly156 3 0 5 102 101 108 104 2 3 0
+DELETE polyAll 
+OI polyAll polyTemp poly156
+DELETE polyTemp 
+OI polyTemp polyAll poly156
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly157 3 0 4 105 100 106 107 6 3 0
+DELETE polyAll 
+OI polyAll polyTemp poly157
+DELETE polyTemp 
+OI polyTemp polyAll poly157
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly158 7 1 3 104 101 101 108 9 7 1
+DELETE polyAll 
+OI polyAll polyTemp poly158
+DELETE polyTemp 
+OI polyTemp polyAll poly158
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly159 9 2 0 108 105 100 108 1 9 2
+DELETE polyAll 
+OI polyAll polyTemp poly159
+DELETE polyTemp 
+OI polyTemp polyAll poly159
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly160 5 8 0 100 105 104 100 0 5 8
+DELETE polyAll 
+OI polyAll polyTemp poly160
+DELETE polyTemp 
+OI polyTemp polyAll poly160
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly161 5 2 2 100 103 104 104 7 5 2
+DELETE polyAll 
+OI polyAll polyTemp poly161
+DELETE polyTemp 
+OI polyTemp polyAll poly161
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly162 7 9 1 100 108 105 107 2 7 9
+DELETE polyAll 
+OI polyAll polyTemp poly162
+DELETE polyTemp 
+OI polyTemp polyAll poly162
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly163 1 5 2 108 108 105 106 2 1 5
+DELETE polyAll 
+OI polyAll polyTemp poly163
+DELETE polyTemp 
+OI polyTemp polyAll poly163
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly164 2 3 0 101 105 107 101 3 2 3
+DELETE polyAll 
+OI polyAll polyTemp poly164
+DELETE polyTemp 
+OI polyTemp polyAll poly164
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly165 1 3 8 109 108 108 106 4 1 3
+DELETE polyAll 
+OI polyAll polyTemp poly165
+DELETE polyTemp 
+OI polyTemp polyAll poly165
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly166 8 3 0 106 108 108 103 9 8 3
+DELETE polyAll 
+OI polyAll polyTemp poly166
+DELETE polyTemp 
+OI polyTemp polyAll poly166
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly167 1 7 8 109 101 101 102 0 1 7
+DELETE polyAll 
+OI polyAll polyTemp poly167
+DELETE polyTemp 
+OI polyTemp polyAll poly167
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly168 5 9 8 100 104 103 101 0 5 9
+DELETE polyAll 
+OI polyAll polyTemp poly168
+DELETE polyTemp 
+OI polyTemp polyAll poly168
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly169 7 8 9 104 107 108 103 3 7 8
+DELETE polyAll 
+OI polyAll polyTemp poly169
+DELETE polyTemp 
+OI polyTemp polyAll poly169
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly170 9 8 0 105 104 109 103 3 9 8
+DELETE polyAll 
+OI polyAll polyTemp poly170
+DELETE polyTemp 
+OI polyTemp polyAll poly170
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly171 9 1 0 108 109 102 102 9 9 1
+DELETE polyAll 
+OI polyAll polyTemp poly171
+DELETE polyTemp 
+OI polyTemp polyAll poly171
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly172 1 8 3 108 109 105 100 5 1 8
+DELETE polyAll 
+OI polyAll polyTemp poly172
+DELETE polyTemp 
+OI polyTemp polyAll poly172
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly173 1 0 8 100 108 108 102 2 1 0
+DELETE polyAll 
+OI polyAll polyTemp poly173
+DELETE polyTemp 
+OI polyTemp polyAll poly173
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly174 3 5 9 102 101 106 105 5 3 5
+DELETE polyAll 
+OI polyAll polyTemp poly174
+DELETE polyTemp 
+OI polyTemp polyAll poly174
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly175 6 4 0 103 103 103 100 5 6 4
+DELETE polyAll 
+OI polyAll polyTemp poly175
+DELETE polyTemp 
+OI polyTemp polyAll poly175
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly176 5 0 3 109 105 105 103 4 5 0
+DELETE polyAll 
+OI polyAll polyTemp poly176
+DELETE polyTemp 
+OI polyTemp polyAll poly176
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly177 8 5 3 103 100 103 105 1 8 5
+DELETE polyAll 
+OI polyAll polyTemp poly177
+DELETE polyTemp 
+OI polyTemp polyAll poly177
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly178 9 7 4 103 102 109 108 4 9 7
+DELETE polyAll 
+OI polyAll polyTemp poly178
+DELETE polyTemp 
+OI polyTemp polyAll poly178
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly179 2 7 2 104 104 106 102 8 2 7
+DELETE polyAll 
+OI polyAll polyTemp poly179
+DELETE polyTemp 
+OI polyTemp polyAll poly179
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly180 9 3 4 108 105 102 106 8 9 3
+DELETE polyAll 
+OI polyAll polyTemp poly180
+DELETE polyTemp 
+OI polyTemp polyAll poly180
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly181 2 5 4 105 103 102 105 2 2 5
+DELETE polyAll 
+OI polyAll polyTemp poly181
+DELETE polyTemp 
+OI polyTemp polyAll poly181
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly182 9 9 4 105 109 107 103 6 9 9
+DELETE polyAll 
+OI polyAll polyTemp poly182
+DELETE polyTemp 
+OI polyTemp polyAll poly182
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly183 1 8 7 108 102 108 109 1 1 8
+DELETE polyAll 
+OI polyAll polyTemp poly183
+DELETE polyTemp 
+OI polyTemp polyAll poly183
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly184 3 4 3 107 108 107 106 6 3 4
+DELETE polyAll 
+OI polyAll polyTemp poly184
+DELETE polyTemp 
+OI polyTemp polyAll poly184
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly185 0 5 1 106 105 102 101 9 0 5
+DELETE polyAll 
+OI polyAll polyTemp poly185
+DELETE polyTemp 
+OI polyTemp polyAll poly185
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly186 2 9 5 105 102 106 109 2 2 9
+DELETE polyAll 
+OI polyAll polyTemp poly186
+DELETE polyTemp 
+OI polyTemp polyAll poly186
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly187 0 8 6 106 105 108 106 3 0 8
+DELETE polyAll 
+OI polyAll polyTemp poly187
+DELETE polyTemp 
+OI polyTemp polyAll poly187
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly188 6 2 2 108 108 107 104 2 6 2
+DELETE polyAll 
+OI polyAll polyTemp poly188
+DELETE polyTemp 
+OI polyTemp polyAll poly188
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly189 3 7 4 103 106 106 100 8 3 7
+DELETE polyAll 
+OI polyAll polyTemp poly189
+DELETE polyTemp 
+OI polyTemp polyAll poly189
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly190 7 7 5 102 103 103 108 6 7 7
+DELETE polyAll 
+OI polyAll polyTemp poly190
+DELETE polyTemp 
+OI polyTemp polyAll poly190
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly191 5 1 7 109 100 109 100 2 5 1
+DELETE polyAll 
+OI polyAll polyTemp poly191
+DELETE polyTemp 
+OI polyTemp polyAll poly191
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly192 9 7 9 102 109 102 101 4 9 7
+DELETE polyAll 
+OI polyAll polyTemp poly192
+DELETE polyTemp 
+OI polyTemp polyAll poly192
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly193 5 3 2 104 102 105 105 3 5 3
+DELETE polyAll 
+OI polyAll polyTemp poly193
+DELETE polyTemp 
+OI polyTemp polyAll poly193
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly194 8 7 9 108 102 103 100 3 8 7
+DELETE polyAll 
+OI polyAll polyTemp poly194
+DELETE polyTemp 
+OI polyTemp polyAll poly194
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly195 3 6 3 106 100 104 101 3 3 6
+DELETE polyAll 
+OI polyAll polyTemp poly195
+DELETE polyTemp 
+OI polyTemp polyAll poly195
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly196 7 2 4 108 106 107 109 4 7 2
+DELETE polyAll 
+OI polyAll polyTemp poly196
+DELETE polyTemp 
+OI polyTemp polyAll poly196
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly197 5 1 7 109 100 104 103 9 5 1
+DELETE polyAll 
+OI polyAll polyTemp poly197
+DELETE polyTemp 
+OI polyTemp polyAll poly197
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly198 5 3 1 102 109 102 109 6 5 3
+DELETE polyAll 
+OI polyAll polyTemp poly198
+DELETE polyTemp 
+OI polyTemp polyAll poly198
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly199 6 6 8 103 109 104 103 0 6 6
+DELETE polyAll 
+OI polyAll polyTemp poly199
+DELETE polyTemp 
+OI polyTemp polyAll poly199
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly200 1 9 7 100 101 107 106 0 1 9
+DELETE polyAll 
+OI polyAll polyTemp poly200
+DELETE polyTemp 
+OI polyTemp polyAll poly200
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly201 8 4 2 101 105 100 102 9 8 4
+DELETE polyAll 
+OI polyAll polyTemp poly201
+DELETE polyTemp 
+OI polyTemp polyAll poly201
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly202 3 3 1 106 103 109 103 4 3 3
+DELETE polyAll 
+OI polyAll polyTemp poly202
+DELETE polyTemp 
+OI polyTemp polyAll poly202
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly203 2 8 1 100 109 105 104 0 2 8
+DELETE polyAll 
+OI polyAll polyTemp poly203
+DELETE polyTemp 
+OI polyTemp polyAll poly203
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly204 7 7 8 101 106 103 108 8 7 7
+DELETE polyAll 
+OI polyAll polyTemp poly204
+DELETE polyTemp 
+OI polyTemp polyAll poly204
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly205 7 1 3 105 109 107 100 6 7 1
+DELETE polyAll 
+OI polyAll polyTemp poly205
+DELETE polyTemp 
+OI polyTemp polyAll poly205
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly206 4 8 0 106 103 106 106 1 4 8
+DELETE polyAll 
+OI polyAll polyTemp poly206
+DELETE polyTemp 
+OI polyTemp polyAll poly206
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly207 5 3 7 103 105 106 100 2 5 3
+DELETE polyAll 
+OI polyAll polyTemp poly207
+DELETE polyTemp 
+OI polyTemp polyAll poly207
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly208 0 1 3 107 102 100 103 9 0 1
+DELETE polyAll 
+OI polyAll polyTemp poly208
+DELETE polyTemp 
+OI polyTemp polyAll poly208
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly209 4 2 9 102 105 108 104 4 4 2
+DELETE polyAll 
+OI polyAll polyTemp poly209
+DELETE polyTemp 
+OI polyTemp polyAll poly209
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly210 7 5 5 100 105 108 107 0 7 5
+DELETE polyAll 
+OI polyAll polyTemp poly210
+DELETE polyTemp 
+OI polyTemp polyAll poly210
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly211 1 6 6 102 105 105 102 0 1 6
+DELETE polyAll 
+OI polyAll polyTemp poly211
+DELETE polyTemp 
+OI polyTemp polyAll poly211
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly212 0 0 5 107 104 103 103 3 0 0
+DELETE polyAll 
+OI polyAll polyTemp poly212
+DELETE polyTemp 
+OI polyTemp polyAll poly212
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly213 5 0 1 100 107 104 105 6 5 0
+DELETE polyAll 
+OI polyAll polyTemp poly213
+DELETE polyTemp 
+OI polyTemp polyAll poly213
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly214 8 2 5 109 101 100 107 1 8 2
+DELETE polyAll 
+OI polyAll polyTemp poly214
+DELETE polyTemp 
+OI polyTemp polyAll poly214
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly215 4 2 6 105 104 100 104 9 4 2
+DELETE polyAll 
+OI polyAll polyTemp poly215
+DELETE polyTemp 
+OI polyTemp polyAll poly215
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly216 9 9 1 104 103 107 100 4 9 9
+DELETE polyAll 
+OI polyAll polyTemp poly216
+DELETE polyTemp 
+OI polyTemp polyAll poly216
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly217 2 1 5 105 106 106 103 6 2 1
+DELETE polyAll 
+OI polyAll polyTemp poly217
+DELETE polyTemp 
+OI polyTemp polyAll poly217
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly218 0 9 4 103 109 103 109 9 0 9
+DELETE polyAll 
+OI polyAll polyTemp poly218
+DELETE polyTemp 
+OI polyTemp polyAll poly218
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly219 3 3 3 101 106 107 109 4 3 3
+DELETE polyAll 
+OI polyAll polyTemp poly219
+DELETE polyTemp 
+OI polyTemp polyAll poly219
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly220 5 1 0 107 102 100 103 1 5 1
+DELETE polyAll 
+OI polyAll polyTemp poly220
+DELETE polyTemp 
+OI polyTemp polyAll poly220
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly221 1 1 7 109 105 101 104 7 1 1
+DELETE polyAll 
+OI polyAll polyTemp poly221
+DELETE polyTemp 
+OI polyTemp polyAll poly221
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly222 9 9 4 104 106 101 100 6 9 9
+DELETE polyAll 
+OI polyAll polyTemp poly222
+DELETE polyTemp 
+OI polyTemp polyAll poly222
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly223 0 2 1 100 103 109 107 4 0 2
+DELETE polyAll 
+OI polyAll polyTemp poly223
+DELETE polyTemp 
+OI polyTemp polyAll poly223
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly224 2 0 9 105 106 105 104 9 2 0
+DELETE polyAll 
+OI polyAll polyTemp poly224
+DELETE polyTemp 
+OI polyTemp polyAll poly224
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly225 6 3 1 107 106 100 104 1 6 3
+DELETE polyAll 
+OI polyAll polyTemp poly225
+DELETE polyTemp 
+OI polyTemp polyAll poly225
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly226 8 5 1 106 103 104 108 4 8 5
+DELETE polyAll 
+OI polyAll polyTemp poly226
+DELETE polyTemp 
+OI polyTemp polyAll poly226
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly227 0 4 7 100 109 103 107 2 0 4
+DELETE polyAll 
+OI polyAll polyTemp poly227
+DELETE polyTemp 
+OI polyTemp polyAll poly227
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly228 3 3 6 104 102 109 101 3 3 3
+DELETE polyAll 
+OI polyAll polyTemp poly228
+DELETE polyTemp 
+OI polyTemp polyAll poly228
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly229 5 4 8 102 100 103 100 0 5 4
+DELETE polyAll 
+OI polyAll polyTemp poly229
+DELETE polyTemp 
+OI polyTemp polyAll poly229
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly230 8 9 1 108 107 101 101 7 8 9
+DELETE polyAll 
+OI polyAll polyTemp poly230
+DELETE polyTemp 
+OI polyTemp polyAll poly230
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly231 2 4 4 102 108 104 100 3 2 4
+DELETE polyAll 
+OI polyAll polyTemp poly231
+DELETE polyTemp 
+OI polyTemp polyAll poly231
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly232 6 8 3 102 103 109 109 9 6 8
+DELETE polyAll 
+OI polyAll polyTemp poly232
+DELETE polyTemp 
+OI polyTemp polyAll poly232
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly233 4 8 0 108 106 105 104 7 4 8
+DELETE polyAll 
+OI polyAll polyTemp poly233
+DELETE polyTemp 
+OI polyTemp polyAll poly233
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly234 3 7 1 100 101 108 104 2 3 7
+DELETE polyAll 
+OI polyAll polyTemp poly234
+DELETE polyTemp 
+OI polyTemp polyAll poly234
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly235 2 8 1 107 105 108 104 1 2 8
+DELETE polyAll 
+OI polyAll polyTemp poly235
+DELETE polyTemp 
+OI polyTemp polyAll poly235
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly236 4 5 6 101 109 107 106 8 4 5
+DELETE polyAll 
+OI polyAll polyTemp poly236
+DELETE polyTemp 
+OI polyTemp polyAll poly236
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly237 9 2 3 109 100 102 101 7 9 2
+DELETE polyAll 
+OI polyAll polyTemp poly237
+DELETE polyTemp 
+OI polyTemp polyAll poly237
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly238 9 7 8 101 102 100 101 7 9 7
+DELETE polyAll 
+OI polyAll polyTemp poly238
+DELETE polyTemp 
+OI polyTemp polyAll poly238
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly239 4 0 0 104 108 102 104 5 4 0
+DELETE polyAll 
+OI polyAll polyTemp poly239
+DELETE polyTemp 
+OI polyTemp polyAll poly239
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly240 3 9 3 100 108 103 107 6 3 9
+DELETE polyAll 
+OI polyAll polyTemp poly240
+DELETE polyTemp 
+OI polyTemp polyAll poly240
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly241 0 3 0 109 105 105 102 9 0 3
+DELETE polyAll 
+OI polyAll polyTemp poly241
+DELETE polyTemp 
+OI polyTemp polyAll poly241
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly242 6 4 7 108 100 103 108 4 6 4
+DELETE polyAll 
+OI polyAll polyTemp poly242
+DELETE polyTemp 
+OI polyTemp polyAll poly242
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly243 3 9 6 109 106 101 100 7 3 9
+DELETE polyAll 
+OI polyAll polyTemp poly243
+DELETE polyTemp 
+OI polyTemp polyAll poly243
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly244 8 7 5 100 109 101 108 6 8 7
+DELETE polyAll 
+OI polyAll polyTemp poly244
+DELETE polyTemp 
+OI polyTemp polyAll poly244
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly245 9 2 0 109 109 102 101 8 9 2
+DELETE polyAll 
+OI polyAll polyTemp poly245
+DELETE polyTemp 
+OI polyTemp polyAll poly245
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly246 8 1 8 104 104 106 105 9 8 1
+DELETE polyAll 
+OI polyAll polyTemp poly246
+DELETE polyTemp 
+OI polyTemp polyAll poly246
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly247 0 8 7 109 106 108 109 9 0 8
+DELETE polyAll 
+OI polyAll polyTemp poly247
+DELETE polyTemp 
+OI polyTemp polyAll poly247
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly248 2 3 0 107 109 101 109 5 2 3
+DELETE polyAll 
+OI polyAll polyTemp poly248
+DELETE polyTemp 
+OI polyTemp polyAll poly248
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly249 5 1 8 108 103 109 105 1 5 1
+DELETE polyAll 
+OI polyAll polyTemp poly249
+DELETE polyTemp 
+OI polyTemp polyAll poly249
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly250 7 7 0 104 103 106 102 2 7 7
+DELETE polyAll 
+OI polyAll polyTemp poly250
+DELETE polyTemp 
+OI polyTemp polyAll poly250
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly251 2 6 0 100 104 109 109 1 2 6
+DELETE polyAll 
+OI polyAll polyTemp poly251
+DELETE polyTemp 
+OI polyTemp polyAll poly251
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly252 2 1 6 105 101 104 109 6 2 1
+DELETE polyAll 
+OI polyAll polyTemp poly252
+DELETE polyTemp 
+OI polyTemp polyAll poly252
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly253 1 2 8 103 107 107 106 0 1 2
+DELETE polyAll 
+OI polyAll polyTemp poly253
+DELETE polyTemp 
+OI polyTemp polyAll poly253
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly254 3 5 2 108 107 104 105 6 3 5
+DELETE polyAll 
+OI polyAll polyTemp poly254
+DELETE polyTemp 
+OI polyTemp polyAll poly254
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly255 1 8 4 103 101 109 101 6 1 8
+DELETE polyAll 
+OI polyAll polyTemp poly255
+DELETE polyTemp 
+OI polyTemp polyAll poly255
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly256 1 7 5 101 103 109 109 2 1 7
+DELETE polyAll 
+OI polyAll polyTemp poly256
+DELETE polyTemp 
+OI polyTemp polyAll poly256
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly257 8 3 3 100 107 108 104 5 8 3
+DELETE polyAll 
+OI polyAll polyTemp poly257
+DELETE polyTemp 
+OI polyTemp polyAll poly257
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly258 9 9 7 108 106 100 103 7 9 9
+DELETE polyAll 
+OI polyAll polyTemp poly258
+DELETE polyTemp 
+OI polyTemp polyAll poly258
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly259 6 9 4 102 109 106 105 2 6 9
+DELETE polyAll 
+OI polyAll polyTemp poly259
+DELETE polyTemp 
+OI polyTemp polyAll poly259
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly260 1 2 2 100 101 105 107 4 1 2
+DELETE polyAll 
+OI polyAll polyTemp poly260
+DELETE polyTemp 
+OI polyTemp polyAll poly260
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly261 5 9 0 103 101 104 109 2 5 9
+DELETE polyAll 
+OI polyAll polyTemp poly261
+DELETE polyTemp 
+OI polyTemp polyAll poly261
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly262 4 9 4 102 101 103 109 0 4 9
+DELETE polyAll 
+OI polyAll polyTemp poly262
+DELETE polyTemp 
+OI polyTemp polyAll poly262
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly263 3 8 5 104 104 107 102 2 3 8
+DELETE polyAll 
+OI polyAll polyTemp poly263
+DELETE polyTemp 
+OI polyTemp polyAll poly263
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly264 8 0 9 104 105 104 103 3 8 0
+DELETE polyAll 
+OI polyAll polyTemp poly264
+DELETE polyTemp 
+OI polyTemp polyAll poly264
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly265 2 3 2 106 100 109 105 1 2 3
+DELETE polyAll 
+OI polyAll polyTemp poly265
+DELETE polyTemp 
+OI polyTemp polyAll poly265
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly266 0 1 8 100 102 102 101 7 0 1
+DELETE polyAll 
+OI polyAll polyTemp poly266
+DELETE polyTemp 
+OI polyTemp polyAll poly266
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly267 3 1 6 103 109 102 109 8 3 1
+DELETE polyAll 
+OI polyAll polyTemp poly267
+DELETE polyTemp 
+OI polyTemp polyAll poly267
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly268 7 8 5 101 104 104 106 9 7 8
+DELETE polyAll 
+OI polyAll polyTemp poly268
+DELETE polyTemp 
+OI polyTemp polyAll poly268
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly269 5 0 0 108 100 102 100 3 5 0
+DELETE polyAll 
+OI polyAll polyTemp poly269
+DELETE polyTemp 
+OI polyTemp polyAll poly269
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly270 3 3 4 102 108 102 109 5 3 3
+DELETE polyAll 
+OI polyAll polyTemp poly270
+DELETE polyTemp 
+OI polyTemp polyAll poly270
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly271 9 1 1 103 107 100 103 9 9 1
+DELETE polyAll 
+OI polyAll polyTemp poly271
+DELETE polyTemp 
+OI polyTemp polyAll poly271
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly272 3 3 9 102 104 103 106 5 3 3
+DELETE polyAll 
+OI polyAll polyTemp poly272
+DELETE polyTemp 
+OI polyTemp polyAll poly272
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly273 5 8 4 101 102 102 107 0 5 8
+DELETE polyAll 
+OI polyAll polyTemp poly273
+DELETE polyTemp 
+OI polyTemp polyAll poly273
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly274 1 2 0 105 108 106 100 5 1 2
+DELETE polyAll 
+OI polyAll polyTemp poly274
+DELETE polyTemp 
+OI polyTemp polyAll poly274
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly275 8 9 2 102 102 103 102 4 8 9
+DELETE polyAll 
+OI polyAll polyTemp poly275
+DELETE polyTemp 
+OI polyTemp polyAll poly275
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly276 6 0 4 107 103 108 109 9 6 0
+DELETE polyAll 
+OI polyAll polyTemp poly276
+DELETE polyTemp 
+OI polyTemp polyAll poly276
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly277 7 8 7 109 107 108 102 6 7 8
+DELETE polyAll 
+OI polyAll polyTemp poly277
+DELETE polyTemp 
+OI polyTemp polyAll poly277
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly278 4 1 1 104 100 108 100 7 4 1
+DELETE polyAll 
+OI polyAll polyTemp poly278
+DELETE polyTemp 
+OI polyTemp polyAll poly278
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly279 2 4 3 105 100 104 103 1 2 4
+DELETE polyAll 
+OI polyAll polyTemp poly279
+DELETE polyTemp 
+OI polyTemp polyAll poly279
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly280 6 9 5 101 108 109 107 3 6 9
+DELETE polyAll 
+OI polyAll polyTemp poly280
+DELETE polyTemp 
+OI polyTemp polyAll poly280
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly281 3 0 8 100 109 100 107 0 3 0
+DELETE polyAll 
+OI polyAll polyTemp poly281
+DELETE polyTemp 
+OI polyTemp polyAll poly281
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly282 6 6 7 101 101 108 104 8 6 6
+DELETE polyAll 
+OI polyAll polyTemp poly282
+DELETE polyTemp 
+OI polyTemp polyAll poly282
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly283 0 7 4 108 104 104 108 2 0 7
+DELETE polyAll 
+OI polyAll polyTemp poly283
+DELETE polyTemp 
+OI polyTemp polyAll poly283
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly284 4 5 3 107 102 100 107 4 4 5
+DELETE polyAll 
+OI polyAll polyTemp poly284
+DELETE polyTemp 
+OI polyTemp polyAll poly284
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly285 3 8 0 100 109 109 108 1 3 8
+DELETE polyAll 
+OI polyAll polyTemp poly285
+DELETE polyTemp 
+OI polyTemp polyAll poly285
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly286 6 3 8 104 106 101 100 7 6 3
+DELETE polyAll 
+OI polyAll polyTemp poly286
+DELETE polyTemp 
+OI polyTemp polyAll poly286
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly287 5 7 1 101 105 108 109 9 5 7
+DELETE polyAll 
+OI polyAll polyTemp poly287
+DELETE polyTemp 
+OI polyTemp polyAll poly287
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly288 2 6 5 103 107 100 108 5 2 6
+DELETE polyAll 
+OI polyAll polyTemp poly288
+DELETE polyTemp 
+OI polyTemp polyAll poly288
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly289 8 3 7 103 107 104 109 0 8 3
+DELETE polyAll 
+OI polyAll polyTemp poly289
+DELETE polyTemp 
+OI polyTemp polyAll poly289
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly290 9 2 2 101 105 104 106 3 9 2
+DELETE polyAll 
+OI polyAll polyTemp poly290
+DELETE polyTemp 
+OI polyTemp polyAll poly290
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly291 4 5 1 104 109 106 109 5 4 5
+DELETE polyAll 
+OI polyAll polyTemp poly291
+DELETE polyTemp 
+OI polyTemp polyAll poly291
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly292 8 0 7 103 103 104 104 6 8 0
+DELETE polyAll 
+OI polyAll polyTemp poly292
+DELETE polyTemp 
+OI polyTemp polyAll poly292
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly293 5 2 5 103 104 107 109 1 5 2
+DELETE polyAll 
+OI polyAll polyTemp poly293
+DELETE polyTemp 
+OI polyTemp polyAll poly293
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly294 8 0 2 102 105 108 103 7 8 0
+DELETE polyAll 
+OI polyAll polyTemp poly294
+DELETE polyTemp 
+OI polyTemp polyAll poly294
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly295 9 2 8 101 108 103 106 2 9 2
+DELETE polyAll 
+OI polyAll polyTemp poly295
+DELETE polyTemp 
+OI polyTemp polyAll poly295
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly296 3 1 4 106 106 105 107 4 3 1
+DELETE polyAll 
+OI polyAll polyTemp poly296
+DELETE polyTemp 
+OI polyTemp polyAll poly296
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly297 7 5 6 102 108 103 108 7 7 5
+DELETE polyAll 
+OI polyAll polyTemp poly297
+DELETE polyTemp 
+OI polyTemp polyAll poly297
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly298 5 0 6 109 103 106 109 0 5 0
+DELETE polyAll 
+OI polyAll polyTemp poly298
+DELETE polyTemp 
+OI polyTemp polyAll poly298
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly299 6 0 3 100 106 103 108 1 6 0
+DELETE polyAll 
+OI polyAll polyTemp poly299
+DELETE polyTemp 
+OI polyTemp polyAll poly299
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly300 6 2 9 102 103 103 105 2 6 2
+DELETE polyAll 
+OI polyAll polyTemp poly300
+DELETE polyTemp 
+OI polyTemp polyAll poly300
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly301 3 7 5 100 101 101 109 6 3 7
+DELETE polyAll 
+OI polyAll polyTemp poly301
+DELETE polyTemp 
+OI polyTemp polyAll poly301
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly302 3 1 5 107 106 106 108 7 3 1
+DELETE polyAll 
+OI polyAll polyTemp poly302
+DELETE polyTemp 
+OI polyTemp polyAll poly302
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly303 2 3 9 106 102 106 108 4 2 3
+DELETE polyAll 
+OI polyAll polyTemp poly303
+DELETE polyTemp 
+OI polyTemp polyAll poly303
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly304 7 4 5 106 104 106 103 2 7 4
+DELETE polyAll 
+OI polyAll polyTemp poly304
+DELETE polyTemp 
+OI polyTemp polyAll poly304
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly305 5 4 5 106 101 109 108 5 5 4
+DELETE polyAll 
+OI polyAll polyTemp poly305
+DELETE polyTemp 
+OI polyTemp polyAll poly305
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly306 0 7 6 104 108 100 105 9 0 7
+DELETE polyAll 
+OI polyAll polyTemp poly306
+DELETE polyTemp 
+OI polyTemp polyAll poly306
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly307 4 1 0 109 103 108 100 7 4 1
+DELETE polyAll 
+OI polyAll polyTemp poly307
+DELETE polyTemp 
+OI polyTemp polyAll poly307
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly308 9 0 2 107 105 102 101 7 9 0
+DELETE polyAll 
+OI polyAll polyTemp poly308
+DELETE polyTemp 
+OI polyTemp polyAll poly308
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly309 8 2 1 102 101 102 106 2 8 2
+DELETE polyAll 
+OI polyAll polyTemp poly309
+DELETE polyTemp 
+OI polyTemp polyAll poly309
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly310 4 4 5 104 109 103 106 6 4 4
+DELETE polyAll 
+OI polyAll polyTemp poly310
+DELETE polyTemp 
+OI polyTemp polyAll poly310
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly311 8 6 2 102 106 103 109 6 8 6
+DELETE polyAll 
+OI polyAll polyTemp poly311
+DELETE polyTemp 
+OI polyTemp polyAll poly311
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly312 4 8 6 100 106 101 100 7 4 8
+DELETE polyAll 
+OI polyAll polyTemp poly312
+DELETE polyTemp 
+OI polyTemp polyAll poly312
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly313 5 9 6 105 108 103 108 1 5 9
+DELETE polyAll 
+OI polyAll polyTemp poly313
+DELETE polyTemp 
+OI polyTemp polyAll poly313
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly314 5 7 4 109 103 105 107 5 5 7
+DELETE polyAll 
+OI polyAll polyTemp poly314
+DELETE polyTemp 
+OI polyTemp polyAll poly314
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly315 4 6 8 109 100 109 101 4 4 6
+DELETE polyAll 
+OI polyAll polyTemp poly315
+DELETE polyTemp 
+OI polyTemp polyAll poly315
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly316 3 5 8 102 106 105 105 3 3 5
+DELETE polyAll 
+OI polyAll polyTemp poly316
+DELETE polyTemp 
+OI polyTemp polyAll poly316
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly317 3 7 8 100 107 100 107 5 3 7
+DELETE polyAll 
+OI polyAll polyTemp poly317
+DELETE polyTemp 
+OI polyTemp polyAll poly317
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly318 7 0 6 108 109 100 103 8 7 0
+DELETE polyAll 
+OI polyAll polyTemp poly318
+DELETE polyTemp 
+OI polyTemp polyAll poly318
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly319 1 0 5 100 103 101 107 6 1 0
+DELETE polyAll 
+OI polyAll polyTemp poly319
+DELETE polyTemp 
+OI polyTemp polyAll poly319
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly320 7 2 2 103 104 106 105 9 7 2
+DELETE polyAll 
+OI polyAll polyTemp poly320
+DELETE polyTemp 
+OI polyTemp polyAll poly320
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly321 2 1 5 106 106 107 108 4 2 1
+DELETE polyAll 
+OI polyAll polyTemp poly321
+DELETE polyTemp 
+OI polyTemp polyAll poly321
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly322 8 2 1 100 102 103 104 2 8 2
+DELETE polyAll 
+OI polyAll polyTemp poly322
+DELETE polyTemp 
+OI polyTemp polyAll poly322
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly323 1 9 1 105 100 105 109 2 1 9
+DELETE polyAll 
+OI polyAll polyTemp poly323
+DELETE polyTemp 
+OI polyTemp polyAll poly323
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly324 0 2 2 104 108 103 100 0 0 2
+DELETE polyAll 
+OI polyAll polyTemp poly324
+DELETE polyTemp 
+OI polyTemp polyAll poly324
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly325 5 6 6 107 105 107 101 3 5 6
+DELETE polyAll 
+OI polyAll polyTemp poly325
+DELETE polyTemp 
+OI polyTemp polyAll poly325
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly326 2 1 2 100 109 106 103 4 2 1
+DELETE polyAll 
+OI polyAll polyTemp poly326
+DELETE polyTemp 
+OI polyTemp polyAll poly326
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly327 7 9 2 105 105 100 109 6 7 9
+DELETE polyAll 
+OI polyAll polyTemp poly327
+DELETE polyTemp 
+OI polyTemp polyAll poly327
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly328 1 3 5 104 105 103 106 4 1 3
+DELETE polyAll 
+OI polyAll polyTemp poly328
+DELETE polyTemp 
+OI polyTemp polyAll poly328
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly329 1 1 4 105 107 107 107 4 1 1
+DELETE polyAll 
+OI polyAll polyTemp poly329
+DELETE polyTemp 
+OI polyTemp polyAll poly329
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly330 7 7 2 109 103 109 102 3 7 7
+DELETE polyAll 
+OI polyAll polyTemp poly330
+DELETE polyTemp 
+OI polyTemp polyAll poly330
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly331 9 7 7 108 101 105 104 4 9 7
+DELETE polyAll 
+OI polyAll polyTemp poly331
+DELETE polyTemp 
+OI polyTemp polyAll poly331
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly332 7 9 5 101 101 107 108 8 7 9
+DELETE polyAll 
+OI polyAll polyTemp poly332
+DELETE polyTemp 
+OI polyTemp polyAll poly332
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly333 5 7 8 108 101 107 107 0 5 7
+DELETE polyAll 
+OI polyAll polyTemp poly333
+DELETE polyTemp 
+OI polyTemp polyAll poly333
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly334 2 7 7 108 107 109 103 2 2 7
+DELETE polyAll 
+OI polyAll polyTemp poly334
+DELETE polyTemp 
+OI polyTemp polyAll poly334
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly335 0 2 4 107 106 108 103 6 0 2
+DELETE polyAll 
+OI polyAll polyTemp poly335
+DELETE polyTemp 
+OI polyTemp polyAll poly335
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly336 6 0 8 107 101 105 103 9 6 0
+DELETE polyAll 
+OI polyAll polyTemp poly336
+DELETE polyTemp 
+OI polyTemp polyAll poly336
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly337 8 3 4 105 100 104 101 1 8 3
+DELETE polyAll 
+OI polyAll polyTemp poly337
+DELETE polyTemp 
+OI polyTemp polyAll poly337
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly338 0 7 5 103 107 106 107 8 0 7
+DELETE polyAll 
+OI polyAll polyTemp poly338
+DELETE polyTemp 
+OI polyTemp polyAll poly338
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly339 5 3 1 108 102 101 102 7 5 3
+DELETE polyAll 
+OI polyAll polyTemp poly339
+DELETE polyTemp 
+OI polyTemp polyAll poly339
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly340 4 2 1 101 109 109 108 6 4 2
+DELETE polyAll 
+OI polyAll polyTemp poly340
+DELETE polyTemp 
+OI polyTemp polyAll poly340
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly341 4 7 9 103 105 107 102 5 4 7
+DELETE polyAll 
+OI polyAll polyTemp poly341
+DELETE polyTemp 
+OI polyTemp polyAll poly341
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly342 0 3 7 109 102 109 108 9 0 3
+DELETE polyAll 
+OI polyAll polyTemp poly342
+DELETE polyTemp 
+OI polyTemp polyAll poly342
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly343 2 9 2 107 104 104 106 7 2 9
+DELETE polyAll 
+OI polyAll polyTemp poly343
+DELETE polyTemp 
+OI polyTemp polyAll poly343
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly344 0 7 1 108 103 109 101 0 0 7
+DELETE polyAll 
+OI polyAll polyTemp poly344
+DELETE polyTemp 
+OI polyTemp polyAll poly344
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly345 8 8 9 109 106 103 102 7 8 8
+DELETE polyAll 
+OI polyAll polyTemp poly345
+DELETE polyTemp 
+OI polyTemp polyAll poly345
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly346 1 5 8 109 104 103 104 4 1 5
+DELETE polyAll 
+OI polyAll polyTemp poly346
+DELETE polyTemp 
+OI polyTemp polyAll poly346
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly347 3 1 9 109 107 101 102 0 3 1
+DELETE polyAll 
+OI polyAll polyTemp poly347
+DELETE polyTemp 
+OI polyTemp polyAll poly347
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly348 1 1 3 107 106 104 102 1 1 1
+DELETE polyAll 
+OI polyAll polyTemp poly348
+DELETE polyTemp 
+OI polyTemp polyAll poly348
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly349 1 6 1 103 109 108 102 9 1 6
+DELETE polyAll 
+OI polyAll polyTemp poly349
+DELETE polyTemp 
+OI polyTemp polyAll poly349
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly350 7 4 6 108 106 107 103 7 7 4
+DELETE polyAll 
+OI polyAll polyTemp poly350
+DELETE polyTemp 
+OI polyTemp polyAll poly350
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly351 2 7 4 101 100 102 103 7 2 7
+DELETE polyAll 
+OI polyAll polyTemp poly351
+DELETE polyTemp 
+OI polyTemp polyAll poly351
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly352 6 9 8 104 100 104 101 6 6 9
+DELETE polyAll 
+OI polyAll polyTemp poly352
+DELETE polyTemp 
+OI polyTemp polyAll poly352
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly353 3 7 7 107 102 100 105 4 3 7
+DELETE polyAll 
+OI polyAll polyTemp poly353
+DELETE polyTemp 
+OI polyTemp polyAll poly353
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly354 9 9 2 103 104 104 103 3 9 9
+DELETE polyAll 
+OI polyAll polyTemp poly354
+DELETE polyTemp 
+OI polyTemp polyAll poly354
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly355 8 5 5 108 109 101 100 9 8 5
+DELETE polyAll 
+OI polyAll polyTemp poly355
+DELETE polyTemp 
+OI polyTemp polyAll poly355
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly356 3 4 7 100 100 107 109 2 3 4
+DELETE polyAll 
+OI polyAll polyTemp poly356
+DELETE polyTemp 
+OI polyTemp polyAll poly356
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly357 2 9 5 109 109 105 104 1 2 9
+DELETE polyAll 
+OI polyAll polyTemp poly357
+DELETE polyTemp 
+OI polyTemp polyAll poly357
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly358 2 9 2 100 109 100 102 1 2 9
+DELETE polyAll 
+OI polyAll polyTemp poly358
+DELETE polyTemp 
+OI polyTemp polyAll poly358
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly359 5 4 6 104 109 102 107 1 5 4
+DELETE polyAll 
+OI polyAll polyTemp poly359
+DELETE polyTemp 
+OI polyTemp polyAll poly359
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly360 6 8 4 108 103 104 104 1 6 8
+DELETE polyAll 
+OI polyAll polyTemp poly360
+DELETE polyTemp 
+OI polyTemp polyAll poly360
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly361 0 0 0 104 108 104 104 2 0 0
+DELETE polyAll 
+OI polyAll polyTemp poly361
+DELETE polyTemp 
+OI polyTemp polyAll poly361
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly362 1 3 6 109 109 109 100 2 1 3
+DELETE polyAll 
+OI polyAll polyTemp poly362
+DELETE polyTemp 
+OI polyTemp polyAll poly362
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly363 1 5 4 105 101 104 102 9 1 5
+DELETE polyAll 
+OI polyAll polyTemp poly363
+DELETE polyTemp 
+OI polyTemp polyAll poly363
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly364 2 3 2 101 101 105 108 7 2 3
+DELETE polyAll 
+OI polyAll polyTemp poly364
+DELETE polyTemp 
+OI polyTemp polyAll poly364
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly365 5 0 0 109 109 108 103 0 5 0
+DELETE polyAll 
+OI polyAll polyTemp poly365
+DELETE polyTemp 
+OI polyTemp polyAll poly365
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly366 0 4 2 106 105 107 102 7 0 4
+DELETE polyAll 
+OI polyAll polyTemp poly366
+DELETE polyTemp 
+OI polyTemp polyAll poly366
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly367 8 1 7 107 100 109 109 5 8 1
+DELETE polyAll 
+OI polyAll polyTemp poly367
+DELETE polyTemp 
+OI polyTemp polyAll poly367
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly368 7 0 1 104 102 102 101 5 7 0
+DELETE polyAll 
+OI polyAll polyTemp poly368
+DELETE polyTemp 
+OI polyTemp polyAll poly368
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly369 4 9 4 108 109 100 102 2 4 9
+DELETE polyAll 
+OI polyAll polyTemp poly369
+DELETE polyTemp 
+OI polyTemp polyAll poly369
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly370 2 3 4 107 102 106 103 5 2 3
+DELETE polyAll 
+OI polyAll polyTemp poly370
+DELETE polyTemp 
+OI polyTemp polyAll poly370
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly371 1 5 3 109 108 100 107 6 1 5
+DELETE polyAll 
+OI polyAll polyTemp poly371
+DELETE polyTemp 
+OI polyTemp polyAll poly371
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly372 1 4 1 109 106 108 108 7 1 4
+DELETE polyAll 
+OI polyAll polyTemp poly372
+DELETE polyTemp 
+OI polyTemp polyAll poly372
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly373 2 7 1 106 102 103 107 7 2 7
+DELETE polyAll 
+OI polyAll polyTemp poly373
+DELETE polyTemp 
+OI polyTemp polyAll poly373
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly374 9 4 5 106 104 102 103 1 9 4
+DELETE polyAll 
+OI polyAll polyTemp poly374
+DELETE polyTemp 
+OI polyTemp polyAll poly374
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly375 6 5 3 107 109 102 107 3 6 5
+DELETE polyAll 
+OI polyAll polyTemp poly375
+DELETE polyTemp 
+OI polyTemp polyAll poly375
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly376 2 8 7 105 109 103 105 4 2 8
+DELETE polyAll 
+OI polyAll polyTemp poly376
+DELETE polyTemp 
+OI polyTemp polyAll poly376
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly377 5 7 4 104 104 107 102 7 5 7
+DELETE polyAll 
+OI polyAll polyTemp poly377
+DELETE polyTemp 
+OI polyTemp polyAll poly377
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly378 7 6 9 103 105 100 102 8 7 6
+DELETE polyAll 
+OI polyAll polyTemp poly378
+DELETE polyTemp 
+OI polyTemp polyAll poly378
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly379 0 9 2 100 105 100 107 0 0 9
+DELETE polyAll 
+OI polyAll polyTemp poly379
+DELETE polyTemp 
+OI polyTemp polyAll poly379
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly380 0 7 4 104 106 102 107 6 0 7
+DELETE polyAll 
+OI polyAll polyTemp poly380
+DELETE polyTemp 
+OI polyTemp polyAll poly380
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly381 8 0 0 107 108 108 106 9 8 0
+DELETE polyAll 
+OI polyAll polyTemp poly381
+DELETE polyTemp 
+OI polyTemp polyAll poly381
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly382 3 5 9 103 102 103 107 1 3 5
+DELETE polyAll 
+OI polyAll polyTemp poly382
+DELETE polyTemp 
+OI polyTemp polyAll poly382
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly383 6 9 4 100 100 104 109 4 6 9
+DELETE polyAll 
+OI polyAll polyTemp poly383
+DELETE polyTemp 
+OI polyTemp polyAll poly383
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly384 9 3 4 107 103 108 101 4 9 3
+DELETE polyAll 
+OI polyAll polyTemp poly384
+DELETE polyTemp 
+OI polyTemp polyAll poly384
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly385 8 3 4 105 100 104 109 1 8 3
+DELETE polyAll 
+OI polyAll polyTemp poly385
+DELETE polyTemp 
+OI polyTemp polyAll poly385
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly386 2 3 7 109 100 104 108 6 2 3
+DELETE polyAll 
+OI polyAll polyTemp poly386
+DELETE polyTemp 
+OI polyTemp polyAll poly386
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly387 9 2 8 107 107 107 105 4 9 2
+DELETE polyAll 
+OI polyAll polyTemp poly387
+DELETE polyTemp 
+OI polyTemp polyAll poly387
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly388 1 5 7 105 104 109 105 4 1 5
+DELETE polyAll 
+OI polyAll polyTemp poly388
+DELETE polyTemp 
+OI polyTemp polyAll poly388
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly389 4 5 4 108 108 102 100 1 4 5
+DELETE polyAll 
+OI polyAll polyTemp poly389
+DELETE polyTemp 
+OI polyTemp polyAll poly389
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly390 9 3 7 106 107 109 103 4 9 3
+DELETE polyAll 
+OI polyAll polyTemp poly390
+DELETE polyTemp 
+OI polyTemp polyAll poly390
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly391 4 8 7 100 109 103 107 1 4 8
+DELETE polyAll 
+OI polyAll polyTemp poly391
+DELETE polyTemp 
+OI polyTemp polyAll poly391
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly392 8 0 3 104 107 104 107 3 8 0
+DELETE polyAll 
+OI polyAll polyTemp poly392
+DELETE polyTemp 
+OI polyTemp polyAll poly392
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly393 8 2 5 105 109 100 108 6 8 2
+DELETE polyAll 
+OI polyAll polyTemp poly393
+DELETE polyTemp 
+OI polyTemp polyAll poly393
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly394 1 7 8 104 100 109 107 2 1 7
+DELETE polyAll 
+OI polyAll polyTemp poly394
+DELETE polyTemp 
+OI polyTemp polyAll poly394
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly395 1 3 0 105 102 104 104 0 1 3
+DELETE polyAll 
+OI polyAll polyTemp poly395
+DELETE polyTemp 
+OI polyTemp polyAll poly395
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly396 8 3 0 107 109 106 104 4 8 3
+DELETE polyAll 
+OI polyAll polyTemp poly396
+DELETE polyTemp 
+OI polyTemp polyAll poly396
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly397 5 3 8 104 103 107 104 4 5 3
+DELETE polyAll 
+OI polyAll polyTemp poly397
+DELETE polyTemp 
+OI polyTemp polyAll poly397
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly398 0 0 9 102 105 102 101 8 0 0
+DELETE polyAll 
+OI polyAll polyTemp poly398
+DELETE polyTemp 
+OI polyTemp polyAll poly398
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly399 3 1 2 104 104 101 101 3 3 1
+DELETE polyAll 
+OI polyAll polyTemp poly399
+DELETE polyTemp 
+OI polyTemp polyAll poly399
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly400 7 5 7 106 100 100 107 5 7 5
+DELETE polyAll 
+OI polyAll polyTemp poly400
+DELETE polyTemp 
+OI polyTemp polyAll poly400
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly401 3 3 9 106 100 102 108 3 3 3
+DELETE polyAll 
+OI polyAll polyTemp poly401
+DELETE polyTemp 
+OI polyTemp polyAll poly401
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly402 8 5 5 101 105 102 104 5 8 5
+DELETE polyAll 
+OI polyAll polyTemp poly402
+DELETE polyTemp 
+OI polyTemp polyAll poly402
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly403 1 1 3 108 103 109 100 3 1 1
+DELETE polyAll 
+OI polyAll polyTemp poly403
+DELETE polyTemp 
+OI polyTemp polyAll poly403
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly404 2 5 6 108 100 108 103 9 2 5
+DELETE polyAll 
+OI polyAll polyTemp poly404
+DELETE polyTemp 
+OI polyTemp polyAll poly404
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly405 2 3 9 102 102 104 108 0 2 3
+DELETE polyAll 
+OI polyAll polyTemp poly405
+DELETE polyTemp 
+OI polyTemp polyAll poly405
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly406 2 9 6 108 106 109 107 5 2 9
+DELETE polyAll 
+OI polyAll polyTemp poly406
+DELETE polyTemp 
+OI polyTemp polyAll poly406
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly407 0 1 4 109 106 109 102 3 0 1
+DELETE polyAll 
+OI polyAll polyTemp poly407
+DELETE polyTemp 
+OI polyTemp polyAll poly407
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly408 3 5 3 105 106 109 103 9 3 5
+DELETE polyAll 
+OI polyAll polyTemp poly408
+DELETE polyTemp 
+OI polyTemp polyAll poly408
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly409 2 5 8 102 102 102 103 7 2 5
+DELETE polyAll 
+OI polyAll polyTemp poly409
+DELETE polyTemp 
+OI polyTemp polyAll poly409
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly410 2 3 5 104 103 101 107 3 2 3
+DELETE polyAll 
+OI polyAll polyTemp poly410
+DELETE polyTemp 
+OI polyTemp polyAll poly410
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly411 8 0 8 108 103 104 103 3 8 0
+DELETE polyAll 
+OI polyAll polyTemp poly411
+DELETE polyTemp 
+OI polyTemp polyAll poly411
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly412 1 6 9 106 101 103 104 3 1 6
+DELETE polyAll 
+OI polyAll polyTemp poly412
+DELETE polyTemp 
+OI polyTemp polyAll poly412
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly413 5 6 6 100 100 104 103 7 5 6
+DELETE polyAll 
+OI polyAll polyTemp poly413
+DELETE polyTemp 
+OI polyTemp polyAll poly413
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly414 8 7 6 103 104 108 109 1 8 7
+DELETE polyAll 
+OI polyAll polyTemp poly414
+DELETE polyTemp 
+OI polyTemp polyAll poly414
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly415 8 0 6 106 100 105 106 7 8 0
+DELETE polyAll 
+OI polyAll polyTemp poly415
+DELETE polyTemp 
+OI polyTemp polyAll poly415
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly416 2 5 1 105 103 106 105 9 2 5
+DELETE polyAll 
+OI polyAll polyTemp poly416
+DELETE polyTemp 
+OI polyTemp polyAll poly416
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly417 8 1 8 107 105 107 102 3 8 1
+DELETE polyAll 
+OI polyAll polyTemp poly417
+DELETE polyTemp 
+OI polyTemp polyAll poly417
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly418 6 0 9 106 107 100 109 2 6 0
+DELETE polyAll 
+OI polyAll polyTemp poly418
+DELETE polyTemp 
+OI polyTemp polyAll poly418
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly419 6 7 8 100 106 107 103 9 6 7
+DELETE polyAll 
+OI polyAll polyTemp poly419
+DELETE polyTemp 
+OI polyTemp polyAll poly419
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly420 0 8 7 105 103 107 104 2 0 8
+DELETE polyAll 
+OI polyAll polyTemp poly420
+DELETE polyTemp 
+OI polyTemp polyAll poly420
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly421 1 7 4 102 109 102 106 0 1 7
+DELETE polyAll 
+OI polyAll polyTemp poly421
+DELETE polyTemp 
+OI polyTemp polyAll poly421
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly422 8 3 9 109 106 109 109 2 8 3
+DELETE polyAll 
+OI polyAll polyTemp poly422
+DELETE polyTemp 
+OI polyTemp polyAll poly422
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly423 5 8 8 105 107 105 102 1 5 8
+DELETE polyAll 
+OI polyAll polyTemp poly423
+DELETE polyTemp 
+OI polyTemp polyAll poly423
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly424 8 9 6 106 109 106 100 9 8 9
+DELETE polyAll 
+OI polyAll polyTemp poly424
+DELETE polyTemp 
+OI polyTemp polyAll poly424
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly425 6 6 4 100 105 106 103 4 6 6
+DELETE polyAll 
+OI polyAll polyTemp poly425
+DELETE polyTemp 
+OI polyTemp polyAll poly425
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly426 1 7 2 103 107 103 102 0 1 7
+DELETE polyAll 
+OI polyAll polyTemp poly426
+DELETE polyTemp 
+OI polyTemp polyAll poly426
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly427 8 5 0 104 108 108 104 6 8 5
+DELETE polyAll 
+OI polyAll polyTemp poly427
+DELETE polyTemp 
+OI polyTemp polyAll poly427
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly428 4 3 4 109 105 109 101 2 4 3
+DELETE polyAll 
+OI polyAll polyTemp poly428
+DELETE polyTemp 
+OI polyTemp polyAll poly428
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly429 2 0 3 109 105 109 106 9 2 0
+DELETE polyAll 
+OI polyAll polyTemp poly429
+DELETE polyTemp 
+OI polyTemp polyAll poly429
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly430 5 4 4 109 103 108 103 4 5 4
+DELETE polyAll 
+OI polyAll polyTemp poly430
+DELETE polyTemp 
+OI polyTemp polyAll poly430
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly431 6 6 8 103 106 105 100 8 6 6
+DELETE polyAll 
+OI polyAll polyTemp poly431
+DELETE polyTemp 
+OI polyTemp polyAll poly431
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly432 1 8 5 102 102 103 109 2 1 8
+DELETE polyAll 
+OI polyAll polyTemp poly432
+DELETE polyTemp 
+OI polyTemp polyAll poly432
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly433 6 0 0 107 100 103 104 8 6 0
+DELETE polyAll 
+OI polyAll polyTemp poly433
+DELETE polyTemp 
+OI polyTemp polyAll poly433
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly434 8 1 9 104 103 104 103 5 8 1
+DELETE polyAll 
+OI polyAll polyTemp poly434
+DELETE polyTemp 
+OI polyTemp polyAll poly434
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly435 0 9 3 108 101 107 106 7 0 9
+DELETE polyAll 
+OI polyAll polyTemp poly435
+DELETE polyTemp 
+OI polyTemp polyAll poly435
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly436 0 4 7 107 104 104 106 1 0 4
+DELETE polyAll 
+OI polyAll polyTemp poly436
+DELETE polyTemp 
+OI polyTemp polyAll poly436
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly437 5 2 3 103 108 105 104 3 5 2
+DELETE polyAll 
+OI polyAll polyTemp poly437
+DELETE polyTemp 
+OI polyTemp polyAll poly437
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly438 1 9 5 104 105 106 104 7 1 9
+DELETE polyAll 
+OI polyAll polyTemp poly438
+DELETE polyTemp 
+OI polyTemp polyAll poly438
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly439 5 9 2 102 100 100 100 8 5 9
+DELETE polyAll 
+OI polyAll polyTemp poly439
+DELETE polyTemp 
+OI polyTemp polyAll poly439
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly440 3 3 6 105 105 107 104 4 3 3
+DELETE polyAll 
+OI polyAll polyTemp poly440
+DELETE polyTemp 
+OI polyTemp polyAll poly440
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly441 4 8 8 101 101 109 107 4 4 8
+DELETE polyAll 
+OI polyAll polyTemp poly441
+DELETE polyTemp 
+OI polyTemp polyAll poly441
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly442 4 0 7 101 102 101 101 4 4 0
+DELETE polyAll 
+OI polyAll polyTemp poly442
+DELETE polyTemp 
+OI polyTemp polyAll poly442
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly443 0 0 2 104 102 104 101 5 0 0
+DELETE polyAll 
+OI polyAll polyTemp poly443
+DELETE polyTemp 
+OI polyTemp polyAll poly443
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly444 1 4 9 104 109 109 107 3 1 4
+DELETE polyAll 
+OI polyAll polyTemp poly444
+DELETE polyTemp 
+OI polyTemp polyAll poly444
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly445 4 0 0 107 107 103 105 5 4 0
+DELETE polyAll 
+OI polyAll polyTemp poly445
+DELETE polyTemp 
+OI polyTemp polyAll poly445
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly446 1 7 7 100 102 109 106 2 1 7
+DELETE polyAll 
+OI polyAll polyTemp poly446
+DELETE polyTemp 
+OI polyTemp polyAll poly446
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly447 2 2 4 105 105 109 102 0 2 2
+DELETE polyAll 
+OI polyAll polyTemp poly447
+DELETE polyTemp 
+OI polyTemp polyAll poly447
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly448 7 3 9 106 100 103 105 5 7 3
+DELETE polyAll 
+OI polyAll polyTemp poly448
+DELETE polyTemp 
+OI polyTemp polyAll poly448
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly449 2 3 6 102 100 103 107 7 2 3
+DELETE polyAll 
+OI polyAll polyTemp poly449
+DELETE polyTemp 
+OI polyTemp polyAll poly449
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly450 4 7 3 104 106 100 102 2 4 7
+DELETE polyAll 
+OI polyAll polyTemp poly450
+DELETE polyTemp 
+OI polyTemp polyAll poly450
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly451 8 6 2 106 104 102 108 5 8 6
+DELETE polyAll 
+OI polyAll polyTemp poly451
+DELETE polyTemp 
+OI polyTemp polyAll poly451
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly452 8 0 0 103 103 109 104 8 8 0
+DELETE polyAll 
+OI polyAll polyTemp poly452
+DELETE polyTemp 
+OI polyTemp polyAll poly452
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly453 2 1 7 109 102 104 102 8 2 1
+DELETE polyAll 
+OI polyAll polyTemp poly453
+DELETE polyTemp 
+OI polyTemp polyAll poly453
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly454 5 7 0 108 106 107 103 6 5 7
+DELETE polyAll 
+OI polyAll polyTemp poly454
+DELETE polyTemp 
+OI polyTemp polyAll poly454
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly455 1 7 7 104 100 108 101 9 1 7
+DELETE polyAll 
+OI polyAll polyTemp poly455
+DELETE polyTemp 
+OI polyTemp polyAll poly455
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly456 4 1 3 100 102 103 103 5 4 1
+DELETE polyAll 
+OI polyAll polyTemp poly456
+DELETE polyTemp 
+OI polyTemp polyAll poly456
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly457 2 4 1 104 102 103 109 4 2 4
+DELETE polyAll 
+OI polyAll polyTemp poly457
+DELETE polyTemp 
+OI polyTemp polyAll poly457
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly458 4 4 1 106 102 100 108 0 4 4
+DELETE polyAll 
+OI polyAll polyTemp poly458
+DELETE polyTemp 
+OI polyTemp polyAll poly458
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly459 6 4 1 106 101 100 108 4 6 4
+DELETE polyAll 
+OI polyAll polyTemp poly459
+DELETE polyTemp 
+OI polyTemp polyAll poly459
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly460 0 7 4 100 100 101 105 1 0 7
+DELETE polyAll 
+OI polyAll polyTemp poly460
+DELETE polyTemp 
+OI polyTemp polyAll poly460
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly461 4 5 5 101 105 109 103 8 4 5
+DELETE polyAll 
+OI polyAll polyTemp poly461
+DELETE polyTemp 
+OI polyTemp polyAll poly461
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly462 7 3 9 106 107 105 107 4 7 3
+DELETE polyAll 
+OI polyAll polyTemp poly462
+DELETE polyTemp 
+OI polyTemp polyAll poly462
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly463 3 3 4 108 102 107 103 1 3 3
+DELETE polyAll 
+OI polyAll polyTemp poly463
+DELETE polyTemp 
+OI polyTemp polyAll poly463
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly464 6 7 4 104 108 109 103 2 6 7
+DELETE polyAll 
+OI polyAll polyTemp poly464
+DELETE polyTemp 
+OI polyTemp polyAll poly464
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly465 8 9 2 107 104 106 104 6 8 9
+DELETE polyAll 
+OI polyAll polyTemp poly465
+DELETE polyTemp 
+OI polyTemp polyAll poly465
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly466 0 3 9 108 100 102 106 4 0 3
+DELETE polyAll 
+OI polyAll polyTemp poly466
+DELETE polyTemp 
+OI polyTemp polyAll poly466
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly467 0 0 7 106 107 107 109 6 0 0
+DELETE polyAll 
+OI polyAll polyTemp poly467
+DELETE polyTemp 
+OI polyTemp polyAll poly467
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly468 1 4 5 108 105 108 109 7 1 4
+DELETE polyAll 
+OI polyAll polyTemp poly468
+DELETE polyTemp 
+OI polyTemp polyAll poly468
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly469 9 7 7 107 103 100 109 6 9 7
+DELETE polyAll 
+OI polyAll polyTemp poly469
+DELETE polyTemp 
+OI polyTemp polyAll poly469
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly470 8 7 7 109 108 105 101 4 8 7
+DELETE polyAll 
+OI polyAll polyTemp poly470
+DELETE polyTemp 
+OI polyTemp polyAll poly470
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly471 1 9 4 108 101 106 104 0 1 9
+DELETE polyAll 
+OI polyAll polyTemp poly471
+DELETE polyTemp 
+OI polyTemp polyAll poly471
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly472 0 5 5 100 101 106 101 1 0 5
+DELETE polyAll 
+OI polyAll polyTemp poly472
+DELETE polyTemp 
+OI polyTemp polyAll poly472
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly473 3 1 8 103 104 108 101 9 3 1
+DELETE polyAll 
+OI polyAll polyTemp poly473
+DELETE polyTemp 
+OI polyTemp polyAll poly473
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly474 0 1 8 100 100 100 108 6 0 1
+DELETE polyAll 
+OI polyAll polyTemp poly474
+DELETE polyTemp 
+OI polyTemp polyAll poly474
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly475 2 1 6 106 104 101 105 2 2 1
+DELETE polyAll 
+OI polyAll polyTemp poly475
+DELETE polyTemp 
+OI polyTemp polyAll poly475
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly476 2 7 7 107 105 108 105 2 2 7
+DELETE polyAll 
+OI polyAll polyTemp poly476
+DELETE polyTemp 
+OI polyTemp polyAll poly476
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly477 6 5 5 107 106 107 100 2 6 5
+DELETE polyAll 
+OI polyAll polyTemp poly477
+DELETE polyTemp 
+OI polyTemp polyAll poly477
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly478 7 5 7 100 108 104 109 0 7 5
+DELETE polyAll 
+OI polyAll polyTemp poly478
+DELETE polyTemp 
+OI polyTemp polyAll poly478
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly479 6 8 7 100 109 104 107 1 6 8
+DELETE polyAll 
+OI polyAll polyTemp poly479
+DELETE polyTemp 
+OI polyTemp polyAll poly479
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly480 5 5 0 106 101 104 104 1 5 5
+DELETE polyAll 
+OI polyAll polyTemp poly480
+DELETE polyTemp 
+OI polyTemp polyAll poly480
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly481 6 5 4 105 104 101 100 5 6 5
+DELETE polyAll 
+OI polyAll polyTemp poly481
+DELETE polyTemp 
+OI polyTemp polyAll poly481
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly482 0 4 9 109 103 105 104 8 0 4
+DELETE polyAll 
+OI polyAll polyTemp poly482
+DELETE polyTemp 
+OI polyTemp polyAll poly482
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly483 7 7 0 106 101 105 102 1 7 7
+DELETE polyAll 
+OI polyAll polyTemp poly483
+DELETE polyTemp 
+OI polyTemp polyAll poly483
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly484 7 4 1 100 107 103 101 2 7 4
+DELETE polyAll 
+OI polyAll polyTemp poly484
+DELETE polyTemp 
+OI polyTemp polyAll poly484
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly485 1 6 4 103 100 104 106 5 1 6
+DELETE polyAll 
+OI polyAll polyTemp poly485
+DELETE polyTemp 
+OI polyTemp polyAll poly485
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly486 8 2 9 105 104 108 108 0 8 2
+DELETE polyAll 
+OI polyAll polyTemp poly486
+DELETE polyTemp 
+OI polyTemp polyAll poly486
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly487 1 2 8 103 103 107 100 0 1 2
+DELETE polyAll 
+OI polyAll polyTemp poly487
+DELETE polyTemp 
+OI polyTemp polyAll poly487
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly488 2 2 7 100 109 109 108 7 2 2
+DELETE polyAll 
+OI polyAll polyTemp poly488
+DELETE polyTemp 
+OI polyTemp polyAll poly488
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly489 2 6 7 107 100 101 108 3 2 6
+DELETE polyAll 
+OI polyAll polyTemp poly489
+DELETE polyTemp 
+OI polyTemp polyAll poly489
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly490 1 5 8 108 106 107 107 8 1 5
+DELETE polyAll 
+OI polyAll polyTemp poly490
+DELETE polyTemp 
+OI polyTemp polyAll poly490
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly491 5 1 9 104 104 107 109 4 5 1
+DELETE polyAll 
+OI polyAll polyTemp poly491
+DELETE polyTemp 
+OI polyTemp polyAll poly491
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly492 5 3 0 108 106 106 105 8 5 3
+DELETE polyAll 
+OI polyAll polyTemp poly492
+DELETE polyTemp 
+OI polyTemp polyAll poly492
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly493 4 1 2 108 100 100 109 0 4 1
+DELETE polyAll 
+OI polyAll polyTemp poly493
+DELETE polyTemp 
+OI polyTemp polyAll poly493
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly494 4 5 2 108 108 101 104 5 4 5
+DELETE polyAll 
+OI polyAll polyTemp poly494
+DELETE polyTemp 
+OI polyTemp polyAll poly494
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly495 5 8 4 108 100 103 102 5 5 8
+DELETE polyAll 
+OI polyAll polyTemp poly495
+DELETE polyTemp 
+OI polyTemp polyAll poly495
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly496 7 3 1 106 101 109 106 5 7 3
+DELETE polyAll 
+OI polyAll polyTemp poly496
+DELETE polyTemp 
+OI polyTemp polyAll poly496
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly497 9 9 4 104 104 108 108 4 9 9
+DELETE polyAll 
+OI polyAll polyTemp poly497
+DELETE polyTemp 
+OI polyTemp polyAll poly497
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly498 1 8 0 108 104 101 105 4 1 8
+DELETE polyAll 
+OI polyAll polyTemp poly498
+DELETE polyTemp 
+OI polyTemp polyAll poly498
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly499 8 4 3 107 101 107 108 1 8 4
+DELETE polyAll 
+OI polyAll polyTemp poly499
+DELETE polyTemp 
+OI polyTemp polyAll poly499
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly500 9 6 1 106 109 103 109 4 9 6
+DELETE polyAll 
+OI polyAll polyTemp poly500
+DELETE polyTemp 
+OI polyTemp polyAll poly500
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly501 9 7 8 108 107 100 100 6 9 7
+DELETE polyAll 
+OI polyAll polyTemp poly501
+DELETE polyTemp 
+OI polyTemp polyAll poly501
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly502 0 9 6 101 102 103 100 6 0 9
+DELETE polyAll 
+OI polyAll polyTemp poly502
+DELETE polyTemp 
+OI polyTemp polyAll poly502
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly503 8 7 7 106 106 108 103 2 8 7
+DELETE polyAll 
+OI polyAll polyTemp poly503
+DELETE polyTemp 
+OI polyTemp polyAll poly503
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly504 1 3 5 107 107 101 105 8 1 3
+DELETE polyAll 
+OI polyAll polyTemp poly504
+DELETE polyTemp 
+OI polyTemp polyAll poly504
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly505 9 5 9 106 102 106 107 8 9 5
+DELETE polyAll 
+OI polyAll polyTemp poly505
+DELETE polyTemp 
+OI polyTemp polyAll poly505
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly506 3 6 7 102 101 107 108 5 3 6
+DELETE polyAll 
+OI polyAll polyTemp poly506
+DELETE polyTemp 
+OI polyTemp polyAll poly506
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly507 6 4 8 102 105 102 108 1 6 4
+DELETE polyAll 
+OI polyAll polyTemp poly507
+DELETE polyTemp 
+OI polyTemp polyAll poly507
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly508 4 6 7 103 105 103 108 9 4 6
+DELETE polyAll 
+OI polyAll polyTemp poly508
+DELETE polyTemp 
+OI polyTemp polyAll poly508
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly509 4 7 1 107 104 103 103 2 4 7
+DELETE polyAll 
+OI polyAll polyTemp poly509
+DELETE polyTemp 
+OI polyTemp polyAll poly509
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly510 0 9 3 109 101 101 100 3 0 9
+DELETE polyAll 
+OI polyAll polyTemp poly510
+DELETE polyTemp 
+OI polyTemp polyAll poly510
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly511 5 9 1 102 103 103 102 6 5 9
+DELETE polyAll 
+OI polyAll polyTemp poly511
+DELETE polyTemp 
+OI polyTemp polyAll poly511
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly512 7 8 2 105 108 103 102 0 7 8
+DELETE polyAll 
+OI polyAll polyTemp poly512
+DELETE polyTemp 
+OI polyTemp polyAll poly512
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly513 8 7 7 103 105 101 101 2 8 7
+DELETE polyAll 
+OI polyAll polyTemp poly513
+DELETE polyTemp 
+OI polyTemp polyAll poly513
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly514 1 6 2 106 109 108 109 3 1 6
+DELETE polyAll 
+OI polyAll polyTemp poly514
+DELETE polyTemp 
+OI polyTemp polyAll poly514
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly515 5 3 8 106 101 106 106 1 5 3
+DELETE polyAll 
+OI polyAll polyTemp poly515
+DELETE polyTemp 
+OI polyTemp polyAll poly515
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly516 5 4 9 105 101 107 103 6 5 4
+DELETE polyAll 
+OI polyAll polyTemp poly516
+DELETE polyTemp 
+OI polyTemp polyAll poly516
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly517 6 3 1 103 103 107 108 4 6 3
+DELETE polyAll 
+OI polyAll polyTemp poly517
+DELETE polyTemp 
+OI polyTemp polyAll poly517
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly518 7 9 1 106 100 106 107 9 7 9
+DELETE polyAll 
+OI polyAll polyTemp poly518
+DELETE polyTemp 
+OI polyTemp polyAll poly518
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly519 8 9 0 104 104 106 108 1 8 9
+DELETE polyAll 
+OI polyAll polyTemp poly519
+DELETE polyTemp 
+OI polyTemp polyAll poly519
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly520 1 6 8 100 101 105 101 3 1 6
+DELETE polyAll 
+OI polyAll polyTemp poly520
+DELETE polyTemp 
+OI polyTemp polyAll poly520
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly521 2 5 9 106 106 106 109 8 2 5
+DELETE polyAll 
+OI polyAll polyTemp poly521
+DELETE polyTemp 
+OI polyTemp polyAll poly521
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly522 5 4 8 102 104 109 100 8 5 4
+DELETE polyAll 
+OI polyAll polyTemp poly522
+DELETE polyTemp 
+OI polyTemp polyAll poly522
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly523 7 9 7 101 107 108 101 0 7 9
+DELETE polyAll 
+OI polyAll polyTemp poly523
+DELETE polyTemp 
+OI polyTemp polyAll poly523
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly524 4 9 2 106 109 107 102 1 4 9
+DELETE polyAll 
+OI polyAll polyTemp poly524
+DELETE polyTemp 
+OI polyTemp polyAll poly524
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly525 8 7 4 105 107 100 102 1 8 7
+DELETE polyAll 
+OI polyAll polyTemp poly525
+DELETE polyTemp 
+OI polyTemp polyAll poly525
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly526 9 1 8 100 107 106 107 1 9 1
+DELETE polyAll 
+OI polyAll polyTemp poly526
+DELETE polyTemp 
+OI polyTemp polyAll poly526
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly527 6 9 3 102 107 109 105 3 6 9
+DELETE polyAll 
+OI polyAll polyTemp poly527
+DELETE polyTemp 
+OI polyTemp polyAll poly527
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly528 3 8 1 106 104 103 108 8 3 8
+DELETE polyAll 
+OI polyAll polyTemp poly528
+DELETE polyTemp 
+OI polyTemp polyAll poly528
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly529 1 6 4 106 105 104 101 6 1 6
+DELETE polyAll 
+OI polyAll polyTemp poly529
+DELETE polyTemp 
+OI polyTemp polyAll poly529
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly530 6 6 1 105 109 101 102 8 6 6
+DELETE polyAll 
+OI polyAll polyTemp poly530
+DELETE polyTemp 
+OI polyTemp polyAll poly530
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly531 2 0 9 100 104 100 104 8 2 0
+DELETE polyAll 
+OI polyAll polyTemp poly531
+DELETE polyTemp 
+OI polyTemp polyAll poly531
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly532 2 0 1 108 109 105 107 6 2 0
+DELETE polyAll 
+OI polyAll polyTemp poly532
+DELETE polyTemp 
+OI polyTemp polyAll poly532
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly533 2 0 8 100 102 100 106 2 2 0
+DELETE polyAll 
+OI polyAll polyTemp poly533
+DELETE polyTemp 
+OI polyTemp polyAll poly533
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly534 7 6 5 101 107 100 104 2 7 6
+DELETE polyAll 
+OI polyAll polyTemp poly534
+DELETE polyTemp 
+OI polyTemp polyAll poly534
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly535 6 3 4 103 103 108 103 1 6 3
+DELETE polyAll 
+OI polyAll polyTemp poly535
+DELETE polyTemp 
+OI polyTemp polyAll poly535
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly536 2 5 4 105 103 103 107 1 2 5
+DELETE polyAll 
+OI polyAll polyTemp poly536
+DELETE polyTemp 
+OI polyTemp polyAll poly536
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly537 8 5 2 108 102 101 105 2 8 5
+DELETE polyAll 
+OI polyAll polyTemp poly537
+DELETE polyTemp 
+OI polyTemp polyAll poly537
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly538 3 7 2 107 105 102 101 1 3 7
+DELETE polyAll 
+OI polyAll polyTemp poly538
+DELETE polyTemp 
+OI polyTemp polyAll poly538
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly539 6 8 2 105 101 103 102 4 6 8
+DELETE polyAll 
+OI polyAll polyTemp poly539
+DELETE polyTemp 
+OI polyTemp polyAll poly539
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly540 7 6 8 106 105 101 108 4 7 6
+DELETE polyAll 
+OI polyAll polyTemp poly540
+DELETE polyTemp 
+OI polyTemp polyAll poly540
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly541 9 4 3 102 107 105 109 4 9 4
+DELETE polyAll 
+OI polyAll polyTemp poly541
+DELETE polyTemp 
+OI polyTemp polyAll poly541
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly542 7 1 0 106 106 105 106 0 7 1
+DELETE polyAll 
+OI polyAll polyTemp poly542
+DELETE polyTemp 
+OI polyTemp polyAll poly542
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly543 4 2 9 104 101 102 109 5 4 2
+DELETE polyAll 
+OI polyAll polyTemp poly543
+DELETE polyTemp 
+OI polyTemp polyAll poly543
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly544 2 8 1 105 103 109 106 2 2 8
+DELETE polyAll 
+OI polyAll polyTemp poly544
+DELETE polyTemp 
+OI polyTemp polyAll poly544
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly545 8 7 8 101 109 108 104 0 8 7
+DELETE polyAll 
+OI polyAll polyTemp poly545
+DELETE polyTemp 
+OI polyTemp polyAll poly545
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly546 9 7 7 109 103 106 107 1 9 7
+DELETE polyAll 
+OI polyAll polyTemp poly546
+DELETE polyTemp 
+OI polyTemp polyAll poly546
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly547 0 7 2 103 102 104 103 6 0 7
+DELETE polyAll 
+OI polyAll polyTemp poly547
+DELETE polyTemp 
+OI polyTemp polyAll poly547
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly548 4 7 9 108 103 103 100 8 4 7
+DELETE polyAll 
+OI polyAll polyTemp poly548
+DELETE polyTemp 
+OI polyTemp polyAll poly548
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly549 5 8 7 108 106 104 101 5 5 8
+DELETE polyAll 
+OI polyAll polyTemp poly549
+DELETE polyTemp 
+OI polyTemp polyAll poly549
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly550 8 8 5 103 104 109 102 6 8 8
+DELETE polyAll 
+OI polyAll polyTemp poly550
+DELETE polyTemp 
+OI polyTemp polyAll poly550
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly551 0 0 5 105 106 103 109 4 0 0
+DELETE polyAll 
+OI polyAll polyTemp poly551
+DELETE polyTemp 
+OI polyTemp polyAll poly551
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly552 4 2 6 101 109 105 107 5 4 2
+DELETE polyAll 
+OI polyAll polyTemp poly552
+DELETE polyTemp 
+OI polyTemp polyAll poly552
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly553 6 8 4 104 108 109 104 5 6 8
+DELETE polyAll 
+OI polyAll polyTemp poly553
+DELETE polyTemp 
+OI polyTemp polyAll poly553
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly554 6 6 4 104 109 109 102 5 6 6
+DELETE polyAll 
+OI polyAll polyTemp poly554
+DELETE polyTemp 
+OI polyTemp polyAll poly554
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly555 5 2 8 103 108 104 102 2 5 2
+DELETE polyAll 
+OI polyAll polyTemp poly555
+DELETE polyTemp 
+OI polyTemp polyAll poly555
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly556 8 3 3 104 108 100 106 2 8 3
+DELETE polyAll 
+OI polyAll polyTemp poly556
+DELETE polyTemp 
+OI polyTemp polyAll poly556
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly557 0 9 6 105 104 107 108 1 0 9
+DELETE polyAll 
+OI polyAll polyTemp poly557
+DELETE polyTemp 
+OI polyTemp polyAll poly557
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly558 5 9 9 109 108 105 104 5 5 9
+DELETE polyAll 
+OI polyAll polyTemp poly558
+DELETE polyTemp 
+OI polyTemp polyAll poly558
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly559 9 1 5 106 107 104 106 2 9 1
+DELETE polyAll 
+OI polyAll polyTemp poly559
+DELETE polyTemp 
+OI polyTemp polyAll poly559
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly560 6 2 6 104 105 100 107 6 6 2
+DELETE polyAll 
+OI polyAll polyTemp poly560
+DELETE polyTemp 
+OI polyTemp polyAll poly560
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly561 0 2 3 109 102 106 100 8 0 2
+DELETE polyAll 
+OI polyAll polyTemp poly561
+DELETE polyTemp 
+OI polyTemp polyAll poly561
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly562 3 7 7 109 105 102 103 3 3 7
+DELETE polyAll 
+OI polyAll polyTemp poly562
+DELETE polyTemp 
+OI polyTemp polyAll poly562
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly563 9 8 4 107 104 109 104 6 9 8
+DELETE polyAll 
+OI polyAll polyTemp poly563
+DELETE polyTemp 
+OI polyTemp polyAll poly563
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly564 3 4 9 102 100 104 105 5 3 4
+DELETE polyAll 
+OI polyAll polyTemp poly564
+DELETE polyTemp 
+OI polyTemp polyAll poly564
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly565 1 3 9 105 101 105 102 3 1 3
+DELETE polyAll 
+OI polyAll polyTemp poly565
+DELETE polyTemp 
+OI polyTemp polyAll poly565
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly566 0 7 3 100 106 106 106 4 0 7
+DELETE polyAll 
+OI polyAll polyTemp poly566
+DELETE polyTemp 
+OI polyTemp polyAll poly566
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly567 8 3 5 106 105 100 101 1 8 3
+DELETE polyAll 
+OI polyAll polyTemp poly567
+DELETE polyTemp 
+OI polyTemp polyAll poly567
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly568 7 6 6 107 107 108 107 9 7 6
+DELETE polyAll 
+OI polyAll polyTemp poly568
+DELETE polyTemp 
+OI polyTemp polyAll poly568
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly569 1 2 8 101 103 107 101 4 1 2
+DELETE polyAll 
+OI polyAll polyTemp poly569
+DELETE polyTemp 
+OI polyTemp polyAll poly569
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly570 6 1 6 107 106 104 100 6 6 1
+DELETE polyAll 
+OI polyAll polyTemp poly570
+DELETE polyTemp 
+OI polyTemp polyAll poly570
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly571 8 4 3 107 109 108 109 1 8 4
+DELETE polyAll 
+OI polyAll polyTemp poly571
+DELETE polyTemp 
+OI polyTemp polyAll poly571
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly572 1 7 8 105 108 104 105 1 1 7
+DELETE polyAll 
+OI polyAll polyTemp poly572
+DELETE polyTemp 
+OI polyTemp polyAll poly572
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly573 9 3 8 103 108 105 100 1 9 3
+DELETE polyAll 
+OI polyAll polyTemp poly573
+DELETE polyTemp 
+OI polyTemp polyAll poly573
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly574 2 1 0 103 103 104 105 3 2 1
+DELETE polyAll 
+OI polyAll polyTemp poly574
+DELETE polyTemp 
+OI polyTemp polyAll poly574
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly575 6 9 9 102 104 100 109 2 6 9
+DELETE polyAll 
+OI polyAll polyTemp poly575
+DELETE polyTemp 
+OI polyTemp polyAll poly575
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly576 2 7 0 105 109 105 105 1 2 7
+DELETE polyAll 
+OI polyAll polyTemp poly576
+DELETE polyTemp 
+OI polyTemp polyAll poly576
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly577 5 5 8 102 105 107 108 2 5 5
+DELETE polyAll 
+OI polyAll polyTemp poly577
+DELETE polyTemp 
+OI polyTemp polyAll poly577
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly578 3 2 4 108 107 106 107 7 3 2
+DELETE polyAll 
+OI polyAll polyTemp poly578
+DELETE polyTemp 
+OI polyTemp polyAll poly578
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly579 2 4 9 108 104 102 107 8 2 4
+DELETE polyAll 
+OI polyAll polyTemp poly579
+DELETE polyTemp 
+OI polyTemp polyAll poly579
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly580 4 6 0 100 105 105 101 6 4 6
+DELETE polyAll 
+OI polyAll polyTemp poly580
+DELETE polyTemp 
+OI polyTemp polyAll poly580
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly581 5 9 7 108 105 102 107 8 5 9
+DELETE polyAll 
+OI polyAll polyTemp poly581
+DELETE polyTemp 
+OI polyTemp polyAll poly581
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly582 1 6 8 102 105 101 104 6 1 6
+DELETE polyAll 
+OI polyAll polyTemp poly582
+DELETE polyTemp 
+OI polyTemp polyAll poly582
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly583 9 2 2 104 106 106 106 2 9 2
+DELETE polyAll 
+OI polyAll polyTemp poly583
+DELETE polyTemp 
+OI polyTemp polyAll poly583
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly584 7 9 8 109 106 107 107 8 7 9
+DELETE polyAll 
+OI polyAll polyTemp poly584
+DELETE polyTemp 
+OI polyTemp polyAll poly584
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly585 0 8 2 108 108 109 101 0 0 8
+DELETE polyAll 
+OI polyAll polyTemp poly585
+DELETE polyTemp 
+OI polyTemp polyAll poly585
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly586 6 0 7 108 104 104 102 2 6 0
+DELETE polyAll 
+OI polyAll polyTemp poly586
+DELETE polyTemp 
+OI polyTemp polyAll poly586
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly587 1 3 1 102 102 107 100 9 1 3
+DELETE polyAll 
+OI polyAll polyTemp poly587
+DELETE polyTemp 
+OI polyTemp polyAll poly587
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly588 2 5 0 106 104 108 102 3 2 5
+DELETE polyAll 
+OI polyAll polyTemp poly588
+DELETE polyTemp 
+OI polyTemp polyAll poly588
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly589 9 0 2 107 109 106 108 0 9 0
+DELETE polyAll 
+OI polyAll polyTemp poly589
+DELETE polyTemp 
+OI polyTemp polyAll poly589
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly590 1 2 7 106 109 108 108 3 1 2
+DELETE polyAll 
+OI polyAll polyTemp poly590
+DELETE polyTemp 
+OI polyTemp polyAll poly590
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly591 7 6 8 102 106 105 106 3 7 6
+DELETE polyAll 
+OI polyAll polyTemp poly591
+DELETE polyTemp 
+OI polyTemp polyAll poly591
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly592 8 2 5 103 108 105 105 8 8 2
+DELETE polyAll 
+OI polyAll polyTemp poly592
+DELETE polyTemp 
+OI polyTemp polyAll poly592
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly593 7 3 9 104 101 104 102 5 7 3
+DELETE polyAll 
+OI polyAll polyTemp poly593
+DELETE polyTemp 
+OI polyTemp polyAll poly593
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly594 5 0 1 109 109 103 100 4 5 0
+DELETE polyAll 
+OI polyAll polyTemp poly594
+DELETE polyTemp 
+OI polyTemp polyAll poly594
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly595 6 6 8 108 100 109 107 3 6 6
+DELETE polyAll 
+OI polyAll polyTemp poly595
+DELETE polyTemp 
+OI polyTemp polyAll poly595
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly596 3 9 9 106 100 105 101 5 3 9
+DELETE polyAll 
+OI polyAll polyTemp poly596
+DELETE polyTemp 
+OI polyTemp polyAll poly596
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly597 7 9 8 105 109 104 101 2 7 9
+DELETE polyAll 
+OI polyAll polyTemp poly597
+DELETE polyTemp 
+OI polyTemp polyAll poly597
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly598 3 3 7 105 103 107 103 4 3 3
+DELETE polyAll 
+OI polyAll polyTemp poly598
+DELETE polyTemp 
+OI polyTemp polyAll poly598
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly599 2 1 6 101 106 107 107 8 2 1
+DELETE polyAll 
+OI polyAll polyTemp poly599
+DELETE polyTemp 
+OI polyTemp polyAll poly599
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly600 6 5 0 102 105 105 104 9 6 5
+DELETE polyAll 
+OI polyAll polyTemp poly600
+DELETE polyTemp 
+OI polyTemp polyAll poly600
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly601 8 5 2 109 105 104 105 1 8 5
+DELETE polyAll 
+OI polyAll polyTemp poly601
+DELETE polyTemp 
+OI polyTemp polyAll poly601
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly602 4 6 4 107 102 101 109 6 4 6
+DELETE polyAll 
+OI polyAll polyTemp poly602
+DELETE polyTemp 
+OI polyTemp polyAll poly602
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly603 5 5 3 109 108 109 109 9 5 5
+DELETE polyAll 
+OI polyAll polyTemp poly603
+DELETE polyTemp 
+OI polyTemp polyAll poly603
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly604 1 9 9 103 104 109 107 7 1 9
+DELETE polyAll 
+OI polyAll polyTemp poly604
+DELETE polyTemp 
+OI polyTemp polyAll poly604
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly605 8 7 7 108 105 104 108 7 8 7
+DELETE polyAll 
+OI polyAll polyTemp poly605
+DELETE polyTemp 
+OI polyTemp polyAll poly605
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly606 5 5 6 100 102 100 106 4 5 5
+DELETE polyAll 
+OI polyAll polyTemp poly606
+DELETE polyTemp 
+OI polyTemp polyAll poly606
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly607 5 4 6 100 102 105 101 8 5 4
+DELETE polyAll 
+OI polyAll polyTemp poly607
+DELETE polyTemp 
+OI polyTemp polyAll poly607
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly608 6 2 7 105 105 101 107 5 6 2
+DELETE polyAll 
+OI polyAll polyTemp poly608
+DELETE polyTemp 
+OI polyTemp polyAll poly608
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly609 9 7 8 104 104 101 100 0 9 7
+DELETE polyAll 
+OI polyAll polyTemp poly609
+DELETE polyTemp 
+OI polyTemp polyAll poly609
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly610 6 6 3 103 102 109 107 1 6 6
+DELETE polyAll 
+OI polyAll polyTemp poly610
+DELETE polyTemp 
+OI polyTemp polyAll poly610
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly611 3 4 8 109 102 106 105 3 3 4
+DELETE polyAll 
+OI polyAll polyTemp poly611
+DELETE polyTemp 
+OI polyTemp polyAll poly611
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly612 5 8 2 103 107 103 102 4 5 8
+DELETE polyAll 
+OI polyAll polyTemp poly612
+DELETE polyTemp 
+OI polyTemp polyAll poly612
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly613 8 1 0 105 102 101 100 4 8 1
+DELETE polyAll 
+OI polyAll polyTemp poly613
+DELETE polyTemp 
+OI polyTemp polyAll poly613
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly614 3 5 4 105 102 108 105 6 3 5
+DELETE polyAll 
+OI polyAll polyTemp poly614
+DELETE polyTemp 
+OI polyTemp polyAll poly614
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly615 5 6 1 100 103 107 102 2 5 6
+DELETE polyAll 
+OI polyAll polyTemp poly615
+DELETE polyTemp 
+OI polyTemp polyAll poly615
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly616 1 5 8 105 109 107 103 2 1 5
+DELETE polyAll 
+OI polyAll polyTemp poly616
+DELETE polyTemp 
+OI polyTemp polyAll poly616
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly617 3 9 4 101 108 101 109 2 3 9
+DELETE polyAll 
+OI polyAll polyTemp poly617
+DELETE polyTemp 
+OI polyTemp polyAll poly617
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly618 4 4 5 106 102 109 100 7 4 4
+DELETE polyAll 
+OI polyAll polyTemp poly618
+DELETE polyTemp 
+OI polyTemp polyAll poly618
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly619 2 5 7 100 101 101 100 0 2 5
+DELETE polyAll 
+OI polyAll polyTemp poly619
+DELETE polyTemp 
+OI polyTemp polyAll poly619
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly620 8 8 4 106 102 104 105 6 8 8
+DELETE polyAll 
+OI polyAll polyTemp poly620
+DELETE polyTemp 
+OI polyTemp polyAll poly620
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly621 2 1 2 102 103 104 108 3 2 1
+DELETE polyAll 
+OI polyAll polyTemp poly621
+DELETE polyTemp 
+OI polyTemp polyAll poly621
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly622 7 9 6 109 101 105 109 1 7 9
+DELETE polyAll 
+OI polyAll polyTemp poly622
+DELETE polyTemp 
+OI polyTemp polyAll poly622
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly623 4 1 3 103 109 102 101 2 4 1
+DELETE polyAll 
+OI polyAll polyTemp poly623
+DELETE polyTemp 
+OI polyTemp polyAll poly623
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly624 8 4 2 109 107 102 100 9 8 4
+DELETE polyAll 
+OI polyAll polyTemp poly624
+DELETE polyTemp 
+OI polyTemp polyAll poly624
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly625 9 9 4 101 107 108 103 7 9 9
+DELETE polyAll 
+OI polyAll polyTemp poly625
+DELETE polyTemp 
+OI polyTemp polyAll poly625
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly626 7 4 3 102 105 101 108 3 7 4
+DELETE polyAll 
+OI polyAll polyTemp poly626
+DELETE polyTemp 
+OI polyTemp polyAll poly626
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly627 9 2 1 100 101 101 106 9 9 2
+DELETE polyAll 
+OI polyAll polyTemp poly627
+DELETE polyTemp 
+OI polyTemp polyAll poly627
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly628 0 0 4 109 101 108 106 4 0 0
+DELETE polyAll 
+OI polyAll polyTemp poly628
+DELETE polyTemp 
+OI polyTemp polyAll poly628
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly629 8 6 9 102 101 107 104 6 8 6
+DELETE polyAll 
+OI polyAll polyTemp poly629
+DELETE polyTemp 
+OI polyTemp polyAll poly629
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly630 7 5 6 105 108 108 106 6 7 5
+DELETE polyAll 
+OI polyAll polyTemp poly630
+DELETE polyTemp 
+OI polyTemp polyAll poly630
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly631 5 9 0 105 101 109 108 7 5 9
+DELETE polyAll 
+OI polyAll polyTemp poly631
+DELETE polyTemp 
+OI polyTemp polyAll poly631
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly632 2 5 1 107 103 104 106 8 2 5
+DELETE polyAll 
+OI polyAll polyTemp poly632
+DELETE polyTemp 
+OI polyTemp polyAll poly632
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly633 8 9 3 108 102 106 102 1 8 9
+DELETE polyAll 
+OI polyAll polyTemp poly633
+DELETE polyTemp 
+OI polyTemp polyAll poly633
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly634 7 5 2 105 105 101 100 1 7 5
+DELETE polyAll 
+OI polyAll polyTemp poly634
+DELETE polyTemp 
+OI polyTemp polyAll poly634
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly635 3 8 4 102 108 100 103 8 3 8
+DELETE polyAll 
+OI polyAll polyTemp poly635
+DELETE polyTemp 
+OI polyTemp polyAll poly635
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly636 7 2 9 105 105 107 102 3 7 2
+DELETE polyAll 
+OI polyAll polyTemp poly636
+DELETE polyTemp 
+OI polyTemp polyAll poly636
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly637 9 7 7 109 104 107 104 8 9 7
+DELETE polyAll 
+OI polyAll polyTemp poly637
+DELETE polyTemp 
+OI polyTemp polyAll poly637
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly638 7 8 7 105 106 103 102 1 7 8
+DELETE polyAll 
+OI polyAll polyTemp poly638
+DELETE polyTemp 
+OI polyTemp polyAll poly638
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly639 4 0 3 105 109 103 100 7 4 0
+DELETE polyAll 
+OI polyAll polyTemp poly639
+DELETE polyTemp 
+OI polyTemp polyAll poly639
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly640 6 5 1 109 107 106 105 0 6 5
+DELETE polyAll 
+OI polyAll polyTemp poly640
+DELETE polyTemp 
+OI polyTemp polyAll poly640
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly641 2 8 6 107 104 101 106 5 2 8
+DELETE polyAll 
+OI polyAll polyTemp poly641
+DELETE polyTemp 
+OI polyTemp polyAll poly641
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly642 3 5 5 109 102 107 101 4 3 5
+DELETE polyAll 
+OI polyAll polyTemp poly642
+DELETE polyTemp 
+OI polyTemp polyAll poly642
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly643 0 8 0 105 103 107 104 5 0 8
+DELETE polyAll 
+OI polyAll polyTemp poly643
+DELETE polyTemp 
+OI polyTemp polyAll poly643
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly644 7 9 2 109 106 104 101 1 7 9
+DELETE polyAll 
+OI polyAll polyTemp poly644
+DELETE polyTemp 
+OI polyTemp polyAll poly644
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly645 2 7 3 108 106 104 106 3 2 7
+DELETE polyAll 
+OI polyAll polyTemp poly645
+DELETE polyTemp 
+OI polyTemp polyAll poly645
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly646 3 8 1 104 108 100 104 9 3 8
+DELETE polyAll 
+OI polyAll polyTemp poly646
+DELETE polyTemp 
+OI polyTemp polyAll poly646
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly647 3 6 9 108 105 100 106 5 3 6
+DELETE polyAll 
+OI polyAll polyTemp poly647
+DELETE polyTemp 
+OI polyTemp polyAll poly647
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly648 4 0 9 104 108 107 108 9 4 0
+DELETE polyAll 
+OI polyAll polyTemp poly648
+DELETE polyTemp 
+OI polyTemp polyAll poly648
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly649 4 4 7 105 104 103 107 5 4 4
+DELETE polyAll 
+OI polyAll polyTemp poly649
+DELETE polyTemp 
+OI polyTemp polyAll poly649
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly650 1 7 2 105 105 100 107 7 1 7
+DELETE polyAll 
+OI polyAll polyTemp poly650
+DELETE polyTemp 
+OI polyTemp polyAll poly650
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly651 5 3 6 109 105 102 105 2 5 3
+DELETE polyAll 
+OI polyAll polyTemp poly651
+DELETE polyTemp 
+OI polyTemp polyAll poly651
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly652 1 7 3 106 104 102 104 5 1 7
+DELETE polyAll 
+OI polyAll polyTemp poly652
+DELETE polyTemp 
+OI polyTemp polyAll poly652
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly653 9 2 9 103 102 109 105 9 9 2
+DELETE polyAll 
+OI polyAll polyTemp poly653
+DELETE polyTemp 
+OI polyTemp polyAll poly653
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly654 9 4 7 107 107 100 100 4 9 4
+DELETE polyAll 
+OI polyAll polyTemp poly654
+DELETE polyTemp 
+OI polyTemp polyAll poly654
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly655 2 2 8 105 100 109 103 1 2 2
+DELETE polyAll 
+OI polyAll polyTemp poly655
+DELETE polyTemp 
+OI polyTemp polyAll poly655
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly656 8 5 3 106 100 100 100 8 8 5
+DELETE polyAll 
+OI polyAll polyTemp poly656
+DELETE polyTemp 
+OI polyTemp polyAll poly656
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly657 2 6 6 102 100 103 104 6 2 6
+DELETE polyAll 
+OI polyAll polyTemp poly657
+DELETE polyTemp 
+OI polyTemp polyAll poly657
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly658 8 7 0 101 105 108 104 0 8 7
+DELETE polyAll 
+OI polyAll polyTemp poly658
+DELETE polyTemp 
+OI polyTemp polyAll poly658
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly659 7 8 4 102 103 109 105 0 7 8
+DELETE polyAll 
+OI polyAll polyTemp poly659
+DELETE polyTemp 
+OI polyTemp polyAll poly659
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly660 8 8 5 107 105 108 108 8 8 8
+DELETE polyAll 
+OI polyAll polyTemp poly660
+DELETE polyTemp 
+OI polyTemp polyAll poly660
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly661 3 8 5 101 104 107 104 8 3 8
+DELETE polyAll 
+OI polyAll polyTemp poly661
+DELETE polyTemp 
+OI polyTemp polyAll poly661
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly662 7 2 7 103 109 102 105 0 7 2
+DELETE polyAll 
+OI polyAll polyTemp poly662
+DELETE polyTemp 
+OI polyTemp polyAll poly662
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly663 0 2 8 102 106 108 105 3 0 2
+DELETE polyAll 
+OI polyAll polyTemp poly663
+DELETE polyTemp 
+OI polyTemp polyAll poly663
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly664 1 6 3 101 108 107 100 9 1 6
+DELETE polyAll 
+OI polyAll polyTemp poly664
+DELETE polyTemp 
+OI polyTemp polyAll poly664
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly665 9 1 7 107 102 103 105 0 9 1
+DELETE polyAll 
+OI polyAll polyTemp poly665
+DELETE polyTemp 
+OI polyTemp polyAll poly665
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly666 3 5 4 101 102 101 101 5 3 5
+DELETE polyAll 
+OI polyAll polyTemp poly666
+DELETE polyTemp 
+OI polyTemp polyAll poly666
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly667 3 5 6 102 100 105 102 5 3 5
+DELETE polyAll 
+OI polyAll polyTemp poly667
+DELETE polyTemp 
+OI polyTemp polyAll poly667
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly668 3 2 9 108 103 103 100 0 3 2
+DELETE polyAll 
+OI polyAll polyTemp poly668
+DELETE polyTemp 
+OI polyTemp polyAll poly668
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly669 1 7 4 107 105 107 107 7 1 7
+DELETE polyAll 
+OI polyAll polyTemp poly669
+DELETE polyTemp 
+OI polyTemp polyAll poly669
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly670 7 8 8 101 103 103 100 9 7 8
+DELETE polyAll 
+OI polyAll polyTemp poly670
+DELETE polyTemp 
+OI polyTemp polyAll poly670
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly671 5 7 7 103 100 107 108 3 5 7
+DELETE polyAll 
+OI polyAll polyTemp poly671
+DELETE polyTemp 
+OI polyTemp polyAll poly671
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly672 9 1 4 100 103 107 106 0 9 1
+DELETE polyAll 
+OI polyAll polyTemp poly672
+DELETE polyTemp 
+OI polyTemp polyAll poly672
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly673 4 3 9 104 107 103 100 5 4 3
+DELETE polyAll 
+OI polyAll polyTemp poly673
+DELETE polyTemp 
+OI polyTemp polyAll poly673
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly674 7 9 5 102 107 100 102 9 7 9
+DELETE polyAll 
+OI polyAll polyTemp poly674
+DELETE polyTemp 
+OI polyTemp polyAll poly674
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly675 1 0 3 105 106 107 100 4 1 0
+DELETE polyAll 
+OI polyAll polyTemp poly675
+DELETE polyTemp 
+OI polyTemp polyAll poly675
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly676 8 1 8 103 103 106 103 0 8 1
+DELETE polyAll 
+OI polyAll polyTemp poly676
+DELETE polyTemp 
+OI polyTemp polyAll poly676
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly677 1 8 6 109 104 105 102 1 1 8
+DELETE polyAll 
+OI polyAll polyTemp poly677
+DELETE polyTemp 
+OI polyTemp polyAll poly677
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly678 7 1 5 101 101 106 106 8 7 1
+DELETE polyAll 
+OI polyAll polyTemp poly678
+DELETE polyTemp 
+OI polyTemp polyAll poly678
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly679 9 5 9 103 103 101 104 7 9 5
+DELETE polyAll 
+OI polyAll polyTemp poly679
+DELETE polyTemp 
+OI polyTemp polyAll poly679
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly680 3 5 5 106 104 107 102 0 3 5
+DELETE polyAll 
+OI polyAll polyTemp poly680
+DELETE polyTemp 
+OI polyTemp polyAll poly680
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly681 5 5 1 108 104 102 104 5 5 5
+DELETE polyAll 
+OI polyAll polyTemp poly681
+DELETE polyTemp 
+OI polyTemp polyAll poly681
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly682 7 2 8 104 101 108 102 2 7 2
+DELETE polyAll 
+OI polyAll polyTemp poly682
+DELETE polyTemp 
+OI polyTemp polyAll poly682
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly683 4 9 3 107 107 100 106 9 4 9
+DELETE polyAll 
+OI polyAll polyTemp poly683
+DELETE polyTemp 
+OI polyTemp polyAll poly683
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly684 4 9 6 109 109 105 106 0 4 9
+DELETE polyAll 
+OI polyAll polyTemp poly684
+DELETE polyTemp 
+OI polyTemp polyAll poly684
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly685 9 4 5 105 105 107 104 7 9 4
+DELETE polyAll 
+OI polyAll polyTemp poly685
+DELETE polyTemp 
+OI polyTemp polyAll poly685
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly686 1 3 5 101 102 109 105 4 1 3
+DELETE polyAll 
+OI polyAll polyTemp poly686
+DELETE polyTemp 
+OI polyTemp polyAll poly686
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly687 2 3 1 105 103 104 102 5 2 3
+DELETE polyAll 
+OI polyAll polyTemp poly687
+DELETE polyTemp 
+OI polyTemp polyAll poly687
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly688 9 1 3 104 106 104 105 2 9 1
+DELETE polyAll 
+OI polyAll polyTemp poly688
+DELETE polyTemp 
+OI polyTemp polyAll poly688
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly689 5 8 5 107 102 106 106 7 5 8
+DELETE polyAll 
+OI polyAll polyTemp poly689
+DELETE polyTemp 
+OI polyTemp polyAll poly689
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly690 4 6 6 104 104 105 107 4 4 6
+DELETE polyAll 
+OI polyAll polyTemp poly690
+DELETE polyTemp 
+OI polyTemp polyAll poly690
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly691 3 1 7 106 104 101 106 4 3 1
+DELETE polyAll 
+OI polyAll polyTemp poly691
+DELETE polyTemp 
+OI polyTemp polyAll poly691
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly692 2 0 6 103 103 109 101 6 2 0
+DELETE polyAll 
+OI polyAll polyTemp poly692
+DELETE polyTemp 
+OI polyTemp polyAll poly692
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly693 7 3 5 104 104 108 101 5 7 3
+DELETE polyAll 
+OI polyAll polyTemp poly693
+DELETE polyTemp 
+OI polyTemp polyAll poly693
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly694 6 4 0 106 107 108 100 3 6 4
+DELETE polyAll 
+OI polyAll polyTemp poly694
+DELETE polyTemp 
+OI polyTemp polyAll poly694
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly695 4 8 1 104 107 109 108 3 4 8
+DELETE polyAll 
+OI polyAll polyTemp poly695
+DELETE polyTemp 
+OI polyTemp polyAll poly695
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly696 1 1 4 102 100 103 103 5 1 1
+DELETE polyAll 
+OI polyAll polyTemp poly696
+DELETE polyTemp 
+OI polyTemp polyAll poly696
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly697 5 0 7 100 109 102 100 5 5 0
+DELETE polyAll 
+OI polyAll polyTemp poly697
+DELETE polyTemp 
+OI polyTemp polyAll poly697
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly698 9 1 9 109 101 109 106 3 9 1
+DELETE polyAll 
+OI polyAll polyTemp poly698
+DELETE polyTemp 
+OI polyTemp polyAll poly698
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly699 0 3 9 105 108 106 108 7 0 3
+DELETE polyAll 
+OI polyAll polyTemp poly699
+DELETE polyTemp 
+OI polyTemp polyAll poly699
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly700 5 1 2 103 103 109 105 3 5 1
+DELETE polyAll 
+OI polyAll polyTemp poly700
+DELETE polyTemp 
+OI polyTemp polyAll poly700
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly701 1 5 1 107 101 100 103 1 1 5
+DELETE polyAll 
+OI polyAll polyTemp poly701
+DELETE polyTemp 
+OI polyTemp polyAll poly701
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly702 8 5 5 106 100 108 102 1 8 5
+DELETE polyAll 
+OI polyAll polyTemp poly702
+DELETE polyTemp 
+OI polyTemp polyAll poly702
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly703 4 1 2 107 103 107 106 9 4 1
+DELETE polyAll 
+OI polyAll polyTemp poly703
+DELETE polyTemp 
+OI polyTemp polyAll poly703
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly704 2 9 5 107 109 107 101 9 2 9
+DELETE polyAll 
+OI polyAll polyTemp poly704
+DELETE polyTemp 
+OI polyTemp polyAll poly704
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly705 6 5 8 105 108 109 102 9 6 5
+DELETE polyAll 
+OI polyAll polyTemp poly705
+DELETE polyTemp 
+OI polyTemp polyAll poly705
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly706 9 8 7 103 100 102 106 7 9 8
+DELETE polyAll 
+OI polyAll polyTemp poly706
+DELETE polyTemp 
+OI polyTemp polyAll poly706
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly707 8 1 8 102 107 108 100 3 8 1
+DELETE polyAll 
+OI polyAll polyTemp poly707
+DELETE polyTemp 
+OI polyTemp polyAll poly707
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly708 8 2 4 101 105 106 101 0 8 2
+DELETE polyAll 
+OI polyAll polyTemp poly708
+DELETE polyTemp 
+OI polyTemp polyAll poly708
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly709 4 5 0 105 100 107 102 5 4 5
+DELETE polyAll 
+OI polyAll polyTemp poly709
+DELETE polyTemp 
+OI polyTemp polyAll poly709
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly710 8 2 8 104 100 103 108 0 8 2
+DELETE polyAll 
+OI polyAll polyTemp poly710
+DELETE polyTemp 
+OI polyTemp polyAll poly710
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly711 2 7 8 108 109 109 102 7 2 7
+DELETE polyAll 
+OI polyAll polyTemp poly711
+DELETE polyTemp 
+OI polyTemp polyAll poly711
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly712 5 4 6 106 104 100 104 2 5 4
+DELETE polyAll 
+OI polyAll polyTemp poly712
+DELETE polyTemp 
+OI polyTemp polyAll poly712
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly713 7 6 8 105 101 101 106 1 7 6
+DELETE polyAll 
+OI polyAll polyTemp poly713
+DELETE polyTemp 
+OI polyTemp polyAll poly713
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly714 8 2 3 105 100 105 102 5 8 2
+DELETE polyAll 
+OI polyAll polyTemp poly714
+DELETE polyTemp 
+OI polyTemp polyAll poly714
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly715 3 4 8 107 107 102 101 4 3 4
+DELETE polyAll 
+OI polyAll polyTemp poly715
+DELETE polyTemp 
+OI polyTemp polyAll poly715
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly716 3 2 9 105 100 106 101 8 3 2
+DELETE polyAll 
+OI polyAll polyTemp poly716
+DELETE polyTemp 
+OI polyTemp polyAll poly716
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly717 7 5 7 104 104 103 108 1 7 5
+DELETE polyAll 
+OI polyAll polyTemp poly717
+DELETE polyTemp 
+OI polyTemp polyAll poly717
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly718 1 7 9 106 106 106 107 9 1 7
+DELETE polyAll 
+OI polyAll polyTemp poly718
+DELETE polyTemp 
+OI polyTemp polyAll poly718
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly719 2 1 2 100 101 107 105 4 2 1
+DELETE polyAll 
+OI polyAll polyTemp poly719
+DELETE polyTemp 
+OI polyTemp polyAll poly719
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly720 5 4 2 109 101 101 101 1 5 4
+DELETE polyAll 
+OI polyAll polyTemp poly720
+DELETE polyTemp 
+OI polyTemp polyAll poly720
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly721 1 4 8 105 108 108 101 0 1 4
+DELETE polyAll 
+OI polyAll polyTemp poly721
+DELETE polyTemp 
+OI polyTemp polyAll poly721
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly722 5 7 6 100 102 104 108 6 5 7
+DELETE polyAll 
+OI polyAll polyTemp poly722
+DELETE polyTemp 
+OI polyTemp polyAll poly722
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly723 5 0 3 109 104 100 106 9 5 0
+DELETE polyAll 
+OI polyAll polyTemp poly723
+DELETE polyTemp 
+OI polyTemp polyAll poly723
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly724 9 3 8 109 101 109 109 9 9 3
+DELETE polyAll 
+OI polyAll polyTemp poly724
+DELETE polyTemp 
+OI polyTemp polyAll poly724
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly725 5 8 4 101 108 102 101 3 5 8
+DELETE polyAll 
+OI polyAll polyTemp poly725
+DELETE polyTemp 
+OI polyTemp polyAll poly725
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly726 9 2 4 103 101 105 101 1 9 2
+DELETE polyAll 
+OI polyAll polyTemp poly726
+DELETE polyTemp 
+OI polyTemp polyAll poly726
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly727 6 5 3 101 107 102 107 0 6 5
+DELETE polyAll 
+OI polyAll polyTemp poly727
+DELETE polyTemp 
+OI polyTemp polyAll poly727
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly728 8 8 5 104 109 101 109 6 8 8
+DELETE polyAll 
+OI polyAll polyTemp poly728
+DELETE polyTemp 
+OI polyTemp polyAll poly728
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly729 8 6 4 104 109 106 107 3 8 6
+DELETE polyAll 
+OI polyAll polyTemp poly729
+DELETE polyTemp 
+OI polyTemp polyAll poly729
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly730 8 0 9 101 106 102 108 3 8 0
+DELETE polyAll 
+OI polyAll polyTemp poly730
+DELETE polyTemp 
+OI polyTemp polyAll poly730
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly731 1 7 3 105 105 107 102 3 1 7
+DELETE polyAll 
+OI polyAll polyTemp poly731
+DELETE polyTemp 
+OI polyTemp polyAll poly731
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly732 0 3 3 100 106 106 103 8 0 3
+DELETE polyAll 
+OI polyAll polyTemp poly732
+DELETE polyTemp 
+OI polyTemp polyAll poly732
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly733 3 8 5 104 100 106 101 9 3 8
+DELETE polyAll 
+OI polyAll polyTemp poly733
+DELETE polyTemp 
+OI polyTemp polyAll poly733
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly734 7 0 3 107 103 106 104 5 7 0
+DELETE polyAll 
+OI polyAll polyTemp poly734
+DELETE polyTemp 
+OI polyTemp polyAll poly734
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly735 9 2 3 102 107 103 100 1 9 2
+DELETE polyAll 
+OI polyAll polyTemp poly735
+DELETE polyTemp 
+OI polyTemp polyAll poly735
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly736 3 1 4 106 103 107 106 1 3 1
+DELETE polyAll 
+OI polyAll polyTemp poly736
+DELETE polyTemp 
+OI polyTemp polyAll poly736
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly737 6 1 8 108 107 103 102 5 6 1
+DELETE polyAll 
+OI polyAll polyTemp poly737
+DELETE polyTemp 
+OI polyTemp polyAll poly737
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly738 6 4 7 104 103 105 109 4 6 4
+DELETE polyAll 
+OI polyAll polyTemp poly738
+DELETE polyTemp 
+OI polyTemp polyAll poly738
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly739 9 7 0 104 103 101 100 9 9 7
+DELETE polyAll 
+OI polyAll polyTemp poly739
+DELETE polyTemp 
+OI polyTemp polyAll poly739
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly740 7 3 1 109 102 105 105 0 7 3
+DELETE polyAll 
+OI polyAll polyTemp poly740
+DELETE polyTemp 
+OI polyTemp polyAll poly740
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly741 3 1 1 102 107 105 108 5 3 1
+DELETE polyAll 
+OI polyAll polyTemp poly741
+DELETE polyTemp 
+OI polyTemp polyAll poly741
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly742 9 8 5 103 106 105 107 8 9 8
+DELETE polyAll 
+OI polyAll polyTemp poly742
+DELETE polyTemp 
+OI polyTemp polyAll poly742
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly743 1 0 6 106 106 102 108 4 1 0
+DELETE polyAll 
+OI polyAll polyTemp poly743
+DELETE polyTemp 
+OI polyTemp polyAll poly743
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly744 0 8 1 103 102 103 102 1 0 8
+DELETE polyAll 
+OI polyAll polyTemp poly744
+DELETE polyTemp 
+OI polyTemp polyAll poly744
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly745 9 6 0 102 104 107 106 4 9 6
+DELETE polyAll 
+OI polyAll polyTemp poly745
+DELETE polyTemp 
+OI polyTemp polyAll poly745
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly746 8 5 5 105 106 107 103 1 8 5
+DELETE polyAll 
+OI polyAll polyTemp poly746
+DELETE polyTemp 
+OI polyTemp polyAll poly746
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly747 6 2 7 102 108 108 104 1 6 2
+DELETE polyAll 
+OI polyAll polyTemp poly747
+DELETE polyTemp 
+OI polyTemp polyAll poly747
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly748 3 7 1 109 104 105 103 5 3 7
+DELETE polyAll 
+OI polyAll polyTemp poly748
+DELETE polyTemp 
+OI polyTemp polyAll poly748
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly749 5 4 3 109 104 104 104 4 5 4
+DELETE polyAll 
+OI polyAll polyTemp poly749
+DELETE polyTemp 
+OI polyTemp polyAll poly749
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly750 4 2 7 101 107 102 108 2 4 2
+DELETE polyAll 
+OI polyAll polyTemp poly750
+DELETE polyTemp 
+OI polyTemp polyAll poly750
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly751 4 9 6 109 105 100 102 0 4 9
+DELETE polyAll 
+OI polyAll polyTemp poly751
+DELETE polyTemp 
+OI polyTemp polyAll poly751
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly752 2 9 9 107 105 106 109 3 2 9
+DELETE polyAll 
+OI polyAll polyTemp poly752
+DELETE polyTemp 
+OI polyTemp polyAll poly752
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly753 1 9 0 101 103 104 107 1 1 9
+DELETE polyAll 
+OI polyAll polyTemp poly753
+DELETE polyTemp 
+OI polyTemp polyAll poly753
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly754 8 3 8 106 101 102 104 0 8 3
+DELETE polyAll 
+OI polyAll polyTemp poly754
+DELETE polyTemp 
+OI polyTemp polyAll poly754
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly755 8 8 4 105 108 103 109 4 8 8
+DELETE polyAll 
+OI polyAll polyTemp poly755
+DELETE polyTemp 
+OI polyTemp polyAll poly755
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly756 1 3 6 105 105 107 108 7 1 3
+DELETE polyAll 
+OI polyAll polyTemp poly756
+DELETE polyTemp 
+OI polyTemp polyAll poly756
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly757 2 3 9 108 102 106 109 0 2 3
+DELETE polyAll 
+OI polyAll polyTemp poly757
+DELETE polyTemp 
+OI polyTemp polyAll poly757
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly758 1 4 1 102 102 106 108 9 1 4
+DELETE polyAll 
+OI polyAll polyTemp poly758
+DELETE polyTemp 
+OI polyTemp polyAll poly758
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly759 5 8 8 106 101 104 105 8 5 8
+DELETE polyAll 
+OI polyAll polyTemp poly759
+DELETE polyTemp 
+OI polyTemp polyAll poly759
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly760 9 5 9 109 107 102 105 1 9 5
+DELETE polyAll 
+OI polyAll polyTemp poly760
+DELETE polyTemp 
+OI polyTemp polyAll poly760
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly761 5 0 3 107 103 105 108 2 5 0
+DELETE polyAll 
+OI polyAll polyTemp poly761
+DELETE polyTemp 
+OI polyTemp polyAll poly761
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly762 9 4 3 103 102 107 101 5 9 4
+DELETE polyAll 
+OI polyAll polyTemp poly762
+DELETE polyTemp 
+OI polyTemp polyAll poly762
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly763 5 7 9 107 109 101 105 8 5 7
+DELETE polyAll 
+OI polyAll polyTemp poly763
+DELETE polyTemp 
+OI polyTemp polyAll poly763
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly764 8 1 8 106 106 109 102 9 8 1
+DELETE polyAll 
+OI polyAll polyTemp poly764
+DELETE polyTemp 
+OI polyTemp polyAll poly764
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly765 9 0 7 102 102 100 106 9 9 0
+DELETE polyAll 
+OI polyAll polyTemp poly765
+DELETE polyTemp 
+OI polyTemp polyAll poly765
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly766 0 5 7 106 100 101 105 2 0 5
+DELETE polyAll 
+OI polyAll polyTemp poly766
+DELETE polyTemp 
+OI polyTemp polyAll poly766
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly767 4 4 4 100 102 108 101 3 4 4
+DELETE polyAll 
+OI polyAll polyTemp poly767
+DELETE polyTemp 
+OI polyTemp polyAll poly767
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly768 4 4 9 102 106 101 105 0 4 4
+DELETE polyAll 
+OI polyAll polyTemp poly768
+DELETE polyTemp 
+OI polyTemp polyAll poly768
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly769 2 4 4 102 109 109 102 4 2 4
+DELETE polyAll 
+OI polyAll polyTemp poly769
+DELETE polyTemp 
+OI polyTemp polyAll poly769
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly770 1 9 7 103 104 108 108 6 1 9
+DELETE polyAll 
+OI polyAll polyTemp poly770
+DELETE polyTemp 
+OI polyTemp polyAll poly770
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly771 5 6 2 102 104 102 106 1 5 6
+DELETE polyAll 
+OI polyAll polyTemp poly771
+DELETE polyTemp 
+OI polyTemp polyAll poly771
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly772 8 3 7 108 100 103 102 8 8 3
+DELETE polyAll 
+OI polyAll polyTemp poly772
+DELETE polyTemp 
+OI polyTemp polyAll poly772
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly773 0 7 4 106 107 103 102 4 0 7
+DELETE polyAll 
+OI polyAll polyTemp poly773
+DELETE polyTemp 
+OI polyTemp polyAll poly773
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly774 1 0 9 102 100 108 109 5 1 0
+DELETE polyAll 
+OI polyAll polyTemp poly774
+DELETE polyTemp 
+OI polyTemp polyAll poly774
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly775 6 3 7 100 108 103 105 0 6 3
+DELETE polyAll 
+OI polyAll polyTemp poly775
+DELETE polyTemp 
+OI polyTemp polyAll poly775
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly776 7 3 3 106 101 104 103 7 7 3
+DELETE polyAll 
+OI polyAll polyTemp poly776
+DELETE polyTemp 
+OI polyTemp polyAll poly776
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly777 7 8 3 106 104 102 108 1 7 8
+DELETE polyAll 
+OI polyAll polyTemp poly777
+DELETE polyTemp 
+OI polyTemp polyAll poly777
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly778 4 7 1 104 102 103 100 0 4 7
+DELETE polyAll 
+OI polyAll polyTemp poly778
+DELETE polyTemp 
+OI polyTemp polyAll poly778
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly779 3 1 1 107 105 102 109 7 3 1
+DELETE polyAll 
+OI polyAll polyTemp poly779
+DELETE polyTemp 
+OI polyTemp polyAll poly779
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly780 1 4 8 104 109 106 103 6 1 4
+DELETE polyAll 
+OI polyAll polyTemp poly780
+DELETE polyTemp 
+OI polyTemp polyAll poly780
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly781 6 1 5 102 104 102 101 4 6 1
+DELETE polyAll 
+OI polyAll polyTemp poly781
+DELETE polyTemp 
+OI polyTemp polyAll poly781
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly782 4 6 5 101 101 101 107 4 4 6
+DELETE polyAll 
+OI polyAll polyTemp poly782
+DELETE polyTemp 
+OI polyTemp polyAll poly782
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly783 3 3 2 109 103 106 101 4 3 3
+DELETE polyAll 
+OI polyAll polyTemp poly783
+DELETE polyTemp 
+OI polyTemp polyAll poly783
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly784 8 6 5 109 103 104 101 7 8 6
+DELETE polyAll 
+OI polyAll polyTemp poly784
+DELETE polyTemp 
+OI polyTemp polyAll poly784
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly785 4 4 7 100 107 107 105 1 4 4
+DELETE polyAll 
+OI polyAll polyTemp poly785
+DELETE polyTemp 
+OI polyTemp polyAll poly785
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly786 0 6 2 109 106 108 105 0 0 6
+DELETE polyAll 
+OI polyAll polyTemp poly786
+DELETE polyTemp 
+OI polyTemp polyAll poly786
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly787 6 3 1 105 104 103 103 0 6 3
+DELETE polyAll 
+OI polyAll polyTemp poly787
+DELETE polyTemp 
+OI polyTemp polyAll poly787
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly788 0 1 3 108 107 101 100 0 0 1
+DELETE polyAll 
+OI polyAll polyTemp poly788
+DELETE polyTemp 
+OI polyTemp polyAll poly788
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly789 4 7 7 107 103 107 106 5 4 7
+DELETE polyAll 
+OI polyAll polyTemp poly789
+DELETE polyTemp 
+OI polyTemp polyAll poly789
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly790 8 1 9 106 103 101 108 0 8 1
+DELETE polyAll 
+OI polyAll polyTemp poly790
+DELETE polyTemp 
+OI polyTemp polyAll poly790
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly791 1 5 2 100 103 105 103 0 1 5
+DELETE polyAll 
+OI polyAll polyTemp poly791
+DELETE polyTemp 
+OI polyTemp polyAll poly791
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly792 0 6 0 106 104 106 103 8 0 6
+DELETE polyAll 
+OI polyAll polyTemp poly792
+DELETE polyTemp 
+OI polyTemp polyAll poly792
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly793 6 1 5 108 100 107 106 9 6 1
+DELETE polyAll 
+OI polyAll polyTemp poly793
+DELETE polyTemp 
+OI polyTemp polyAll poly793
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly794 7 5 7 103 103 107 106 8 7 5
+DELETE polyAll 
+OI polyAll polyTemp poly794
+DELETE polyTemp 
+OI polyTemp polyAll poly794
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly795 3 3 7 102 109 100 107 9 3 3
+DELETE polyAll 
+OI polyAll polyTemp poly795
+DELETE polyTemp 
+OI polyTemp polyAll poly795
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly796 4 6 6 106 107 109 101 1 4 6
+DELETE polyAll 
+OI polyAll polyTemp poly796
+DELETE polyTemp 
+OI polyTemp polyAll poly796
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly797 7 1 0 102 106 109 109 3 7 1
+DELETE polyAll 
+OI polyAll polyTemp poly797
+DELETE polyTemp 
+OI polyTemp polyAll poly797
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly798 8 2 3 107 108 100 107 3 8 2
+DELETE polyAll 
+OI polyAll polyTemp poly798
+DELETE polyTemp 
+OI polyTemp polyAll poly798
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly799 9 1 3 100 109 101 109 5 9 1
+DELETE polyAll 
+OI polyAll polyTemp poly799
+DELETE polyTemp 
+OI polyTemp polyAll poly799
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly800 4 5 4 104 101 109 102 7 4 5
+DELETE polyAll 
+OI polyAll polyTemp poly800
+DELETE polyTemp 
+OI polyTemp polyAll poly800
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly801 4 5 5 102 106 104 101 3 4 5
+DELETE polyAll 
+OI polyAll polyTemp poly801
+DELETE polyTemp 
+OI polyTemp polyAll poly801
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly802 3 3 4 106 107 100 100 3 3 3
+DELETE polyAll 
+OI polyAll polyTemp poly802
+DELETE polyTemp 
+OI polyTemp polyAll poly802
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly803 9 2 7 105 106 100 101 6 9 2
+DELETE polyAll 
+OI polyAll polyTemp poly803
+DELETE polyTemp 
+OI polyTemp polyAll poly803
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly804 1 4 7 100 104 105 101 8 1 4
+DELETE polyAll 
+OI polyAll polyTemp poly804
+DELETE polyTemp 
+OI polyTemp polyAll poly804
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly805 0 6 2 102 104 104 107 4 0 6
+DELETE polyAll 
+OI polyAll polyTemp poly805
+DELETE polyTemp 
+OI polyTemp polyAll poly805
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly806 9 9 7 106 107 103 108 3 9 9
+DELETE polyAll 
+OI polyAll polyTemp poly806
+DELETE polyTemp 
+OI polyTemp polyAll poly806
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly807 5 1 4 109 102 107 100 4 5 1
+DELETE polyAll 
+OI polyAll polyTemp poly807
+DELETE polyTemp 
+OI polyTemp polyAll poly807
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly808 3 9 1 102 107 101 108 8 3 9
+DELETE polyAll 
+OI polyAll polyTemp poly808
+DELETE polyTemp 
+OI polyTemp polyAll poly808
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly809 2 5 6 100 108 107 108 5 2 5
+DELETE polyAll 
+OI polyAll polyTemp poly809
+DELETE polyTemp 
+OI polyTemp polyAll poly809
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly810 5 2 6 106 102 105 108 8 5 2
+DELETE polyAll 
+OI polyAll polyTemp poly810
+DELETE polyTemp 
+OI polyTemp polyAll poly810
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly811 5 4 5 103 100 102 105 2 5 4
+DELETE polyAll 
+OI polyAll polyTemp poly811
+DELETE polyTemp 
+OI polyTemp polyAll poly811
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly812 5 7 9 105 103 104 107 8 5 7
+DELETE polyAll 
+OI polyAll polyTemp poly812
+DELETE polyTemp 
+OI polyTemp polyAll poly812
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly813 0 8 3 101 106 107 105 7 0 8
+DELETE polyAll 
+OI polyAll polyTemp poly813
+DELETE polyTemp 
+OI polyTemp polyAll poly813
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly814 2 9 4 100 101 104 101 7 2 9
+DELETE polyAll 
+OI polyAll polyTemp poly814
+DELETE polyTemp 
+OI polyTemp polyAll poly814
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly815 0 2 6 102 105 105 108 9 0 2
+DELETE polyAll 
+OI polyAll polyTemp poly815
+DELETE polyTemp 
+OI polyTemp polyAll poly815
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly816 9 3 5 100 108 103 102 0 9 3
+DELETE polyAll 
+OI polyAll polyTemp poly816
+DELETE polyTemp 
+OI polyTemp polyAll poly816
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly817 4 7 5 104 101 107 101 7 4 7
+DELETE polyAll 
+OI polyAll polyTemp poly817
+DELETE polyTemp 
+OI polyTemp polyAll poly817
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly818 8 8 1 100 108 105 101 0 8 8
+DELETE polyAll 
+OI polyAll polyTemp poly818
+DELETE polyTemp 
+OI polyTemp polyAll poly818
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly819 5 1 4 100 108 105 103 5 5 1
+DELETE polyAll 
+OI polyAll polyTemp poly819
+DELETE polyTemp 
+OI polyTemp polyAll poly819
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly820 0 4 2 103 102 105 108 8 0 4
+DELETE polyAll 
+OI polyAll polyTemp poly820
+DELETE polyTemp 
+OI polyTemp polyAll poly820
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly821 7 3 6 103 109 107 105 3 7 3
+DELETE polyAll 
+OI polyAll polyTemp poly821
+DELETE polyTemp 
+OI polyTemp polyAll poly821
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly822 1 9 4 107 103 107 101 3 1 9
+DELETE polyAll 
+OI polyAll polyTemp poly822
+DELETE polyTemp 
+OI polyTemp polyAll poly822
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly823 1 5 4 107 109 101 102 9 1 5
+DELETE polyAll 
+OI polyAll polyTemp poly823
+DELETE polyTemp 
+OI polyTemp polyAll poly823
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly824 4 9 4 107 104 108 105 3 4 9
+DELETE polyAll 
+OI polyAll polyTemp poly824
+DELETE polyTemp 
+OI polyTemp polyAll poly824
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly825 9 2 2 104 109 108 101 8 9 2
+DELETE polyAll 
+OI polyAll polyTemp poly825
+DELETE polyTemp 
+OI polyTemp polyAll poly825
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly826 5 0 9 109 100 106 102 2 5 0
+DELETE polyAll 
+OI polyAll polyTemp poly826
+DELETE polyTemp 
+OI polyTemp polyAll poly826
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly827 2 8 1 106 100 101 109 5 2 8
+DELETE polyAll 
+OI polyAll polyTemp poly827
+DELETE polyTemp 
+OI polyTemp polyAll poly827
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly828 1 6 9 109 103 108 109 2 1 6
+DELETE polyAll 
+OI polyAll polyTemp poly828
+DELETE polyTemp 
+OI polyTemp polyAll poly828
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly829 3 1 7 100 104 106 104 3 3 1
+DELETE polyAll 
+OI polyAll polyTemp poly829
+DELETE polyTemp 
+OI polyTemp polyAll poly829
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly830 3 6 1 108 102 102 108 8 3 6
+DELETE polyAll 
+OI polyAll polyTemp poly830
+DELETE polyTemp 
+OI polyTemp polyAll poly830
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly831 7 1 4 106 106 108 102 8 7 1
+DELETE polyAll 
+OI polyAll polyTemp poly831
+DELETE polyTemp 
+OI polyTemp polyAll poly831
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly832 3 6 2 102 108 102 104 7 3 6
+DELETE polyAll 
+OI polyAll polyTemp poly832
+DELETE polyTemp 
+OI polyTemp polyAll poly832
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly833 1 6 5 109 108 101 107 6 1 6
+DELETE polyAll 
+OI polyAll polyTemp poly833
+DELETE polyTemp 
+OI polyTemp polyAll poly833
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly834 3 7 3 104 109 100 103 8 3 7
+DELETE polyAll 
+OI polyAll polyTemp poly834
+DELETE polyTemp 
+OI polyTemp polyAll poly834
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly835 8 0 1 101 103 103 106 4 8 0
+DELETE polyAll 
+OI polyAll polyTemp poly835
+DELETE polyTemp 
+OI polyTemp polyAll poly835
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly836 8 9 7 107 103 102 104 1 8 9
+DELETE polyAll 
+OI polyAll polyTemp poly836
+DELETE polyTemp 
+OI polyTemp polyAll poly836
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly837 1 4 7 105 107 109 109 6 1 4
+DELETE polyAll 
+OI polyAll polyTemp poly837
+DELETE polyTemp 
+OI polyTemp polyAll poly837
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly838 4 8 2 108 105 108 108 2 4 8
+DELETE polyAll 
+OI polyAll polyTemp poly838
+DELETE polyTemp 
+OI polyTemp polyAll poly838
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly839 3 4 3 108 100 103 104 8 3 4
+DELETE polyAll 
+OI polyAll polyTemp poly839
+DELETE polyTemp 
+OI polyTemp polyAll poly839
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly840 9 1 0 109 103 109 102 0 9 1
+DELETE polyAll 
+OI polyAll polyTemp poly840
+DELETE polyTemp 
+OI polyTemp polyAll poly840
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly841 3 2 2 105 103 107 101 9 3 2
+DELETE polyAll 
+OI polyAll polyTemp poly841
+DELETE polyTemp 
+OI polyTemp polyAll poly841
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly842 0 5 6 104 100 108 109 0 0 5
+DELETE polyAll 
+OI polyAll polyTemp poly842
+DELETE polyTemp 
+OI polyTemp polyAll poly842
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly843 0 4 4 109 108 106 100 8 0 4
+DELETE polyAll 
+OI polyAll polyTemp poly843
+DELETE polyTemp 
+OI polyTemp polyAll poly843
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly844 9 9 5 106 108 100 102 5 9 9
+DELETE polyAll 
+OI polyAll polyTemp poly844
+DELETE polyTemp 
+OI polyTemp polyAll poly844
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly845 6 1 5 102 105 102 109 5 6 1
+DELETE polyAll 
+OI polyAll polyTemp poly845
+DELETE polyTemp 
+OI polyTemp polyAll poly845
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly846 2 4 7 104 106 109 107 1 2 4
+DELETE polyAll 
+OI polyAll polyTemp poly846
+DELETE polyTemp 
+OI polyTemp polyAll poly846
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly847 1 9 8 108 104 102 101 6 1 9
+DELETE polyAll 
+OI polyAll polyTemp poly847
+DELETE polyTemp 
+OI polyTemp polyAll poly847
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly848 1 4 5 103 102 105 100 0 1 4
+DELETE polyAll 
+OI polyAll polyTemp poly848
+DELETE polyTemp 
+OI polyTemp polyAll poly848
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly849 2 1 7 108 102 106 105 8 2 1
+DELETE polyAll 
+OI polyAll polyTemp poly849
+DELETE polyTemp 
+OI polyTemp polyAll poly849
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly850 5 9 7 104 109 105 101 0 5 9
+DELETE polyAll 
+OI polyAll polyTemp poly850
+DELETE polyTemp 
+OI polyTemp polyAll poly850
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly851 1 3 4 108 101 104 100 4 1 3
+DELETE polyAll 
+OI polyAll polyTemp poly851
+DELETE polyTemp 
+OI polyTemp polyAll poly851
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly852 9 8 1 101 107 105 103 6 9 8
+DELETE polyAll 
+OI polyAll polyTemp poly852
+DELETE polyTemp 
+OI polyTemp polyAll poly852
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly853 4 6 2 104 101 108 109 5 4 6
+DELETE polyAll 
+OI polyAll polyTemp poly853
+DELETE polyTemp 
+OI polyTemp polyAll poly853
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly854 4 0 3 105 104 107 106 5 4 0
+DELETE polyAll 
+OI polyAll polyTemp poly854
+DELETE polyTemp 
+OI polyTemp polyAll poly854
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly855 2 5 1 108 101 101 108 8 2 5
+DELETE polyAll 
+OI polyAll polyTemp poly855
+DELETE polyTemp 
+OI polyTemp polyAll poly855
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly856 1 3 9 103 105 104 100 9 1 3
+DELETE polyAll 
+OI polyAll polyTemp poly856
+DELETE polyTemp 
+OI polyTemp polyAll poly856
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly857 6 0 9 102 103 106 108 3 6 0
+DELETE polyAll 
+OI polyAll polyTemp poly857
+DELETE polyTemp 
+OI polyTemp polyAll poly857
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly858 4 9 4 101 101 105 109 1 4 9
+DELETE polyAll 
+OI polyAll polyTemp poly858
+DELETE polyTemp 
+OI polyTemp polyAll poly858
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly859 1 5 8 101 104 105 105 3 1 5
+DELETE polyAll 
+OI polyAll polyTemp poly859
+DELETE polyTemp 
+OI polyTemp polyAll poly859
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly860 7 4 3 107 109 105 109 0 7 4
+DELETE polyAll 
+OI polyAll polyTemp poly860
+DELETE polyTemp 
+OI polyTemp polyAll poly860
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly861 9 3 9 104 107 104 102 5 9 3
+DELETE polyAll 
+OI polyAll polyTemp poly861
+DELETE polyTemp 
+OI polyTemp polyAll poly861
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly862 7 8 3 102 106 107 107 6 7 8
+DELETE polyAll 
+OI polyAll polyTemp poly862
+DELETE polyTemp 
+OI polyTemp polyAll poly862
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly863 4 7 1 100 105 109 105 0 4 7
+DELETE polyAll 
+OI polyAll polyTemp poly863
+DELETE polyTemp 
+OI polyTemp polyAll poly863
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly864 4 6 5 109 103 100 104 9 4 6
+DELETE polyAll 
+OI polyAll polyTemp poly864
+DELETE polyTemp 
+OI polyTemp polyAll poly864
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly865 9 4 1 107 105 104 103 7 9 4
+DELETE polyAll 
+OI polyAll polyTemp poly865
+DELETE polyTemp 
+OI polyTemp polyAll poly865
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly866 2 2 4 105 101 103 106 0 2 2
+DELETE polyAll 
+OI polyAll polyTemp poly866
+DELETE polyTemp 
+OI polyTemp polyAll poly866
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly867 6 7 3 101 103 109 104 0 6 7
+DELETE polyAll 
+OI polyAll polyTemp poly867
+DELETE polyTemp 
+OI polyTemp polyAll poly867
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly868 8 8 9 101 108 103 102 6 8 8
+DELETE polyAll 
+OI polyAll polyTemp poly868
+DELETE polyTemp 
+OI polyTemp polyAll poly868
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly869 4 3 2 102 106 100 100 9 4 3
+DELETE polyAll 
+OI polyAll polyTemp poly869
+DELETE polyTemp 
+OI polyTemp polyAll poly869
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly870 3 4 7 102 105 109 109 1 3 4
+DELETE polyAll 
+OI polyAll polyTemp poly870
+DELETE polyTemp 
+OI polyTemp polyAll poly870
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly871 0 5 2 105 106 102 106 9 0 5
+DELETE polyAll 
+OI polyAll polyTemp poly871
+DELETE polyTemp 
+OI polyTemp polyAll poly871
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly872 9 1 8 107 104 102 108 9 9 1
+DELETE polyAll 
+OI polyAll polyTemp poly872
+DELETE polyTemp 
+OI polyTemp polyAll poly872
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly873 0 7 1 107 100 103 103 6 0 7
+DELETE polyAll 
+OI polyAll polyTemp poly873
+DELETE polyTemp 
+OI polyTemp polyAll poly873
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly874 7 3 8 109 102 101 104 9 7 3
+DELETE polyAll 
+OI polyAll polyTemp poly874
+DELETE polyTemp 
+OI polyTemp polyAll poly874
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly875 9 8 1 103 100 107 109 2 9 8
+DELETE polyAll 
+OI polyAll polyTemp poly875
+DELETE polyTemp 
+OI polyTemp polyAll poly875
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly876 7 2 2 104 101 103 104 0 7 2
+DELETE polyAll 
+OI polyAll polyTemp poly876
+DELETE polyTemp 
+OI polyTemp polyAll poly876
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly877 5 7 2 108 108 101 100 6 5 7
+DELETE polyAll 
+OI polyAll polyTemp poly877
+DELETE polyTemp 
+OI polyTemp polyAll poly877
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly878 1 5 8 103 103 106 107 8 1 5
+DELETE polyAll 
+OI polyAll polyTemp poly878
+DELETE polyTemp 
+OI polyTemp polyAll poly878
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly879 6 8 7 106 101 104 108 2 6 8
+DELETE polyAll 
+OI polyAll polyTemp poly879
+DELETE polyTemp 
+OI polyTemp polyAll poly879
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly880 7 9 0 107 100 108 104 3 7 9
+DELETE polyAll 
+OI polyAll polyTemp poly880
+DELETE polyTemp 
+OI polyTemp polyAll poly880
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly881 8 7 4 104 108 106 101 8 8 7
+DELETE polyAll 
+OI polyAll polyTemp poly881
+DELETE polyTemp 
+OI polyTemp polyAll poly881
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly882 8 4 2 104 109 106 108 0 8 4
+DELETE polyAll 
+OI polyAll polyTemp poly882
+DELETE polyTemp 
+OI polyTemp polyAll poly882
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly883 5 4 8 102 105 108 109 0 5 4
+DELETE polyAll 
+OI polyAll polyTemp poly883
+DELETE polyTemp 
+OI polyTemp polyAll poly883
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly884 9 9 1 108 101 102 106 2 9 9
+DELETE polyAll 
+OI polyAll polyTemp poly884
+DELETE polyTemp 
+OI polyTemp polyAll poly884
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly885 1 4 4 105 102 103 109 0 1 4
+DELETE polyAll 
+OI polyAll polyTemp poly885
+DELETE polyTemp 
+OI polyTemp polyAll poly885
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly886 7 9 7 107 102 104 103 0 7 9
+DELETE polyAll 
+OI polyAll polyTemp poly886
+DELETE polyTemp 
+OI polyTemp polyAll poly886
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly887 0 9 2 105 100 101 108 9 0 9
+DELETE polyAll 
+OI polyAll polyTemp poly887
+DELETE polyTemp 
+OI polyTemp polyAll poly887
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly888 8 3 4 108 105 102 107 5 8 3
+DELETE polyAll 
+OI polyAll polyTemp poly888
+DELETE polyTemp 
+OI polyTemp polyAll poly888
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly889 8 0 3 104 101 103 108 1 8 0
+DELETE polyAll 
+OI polyAll polyTemp poly889
+DELETE polyTemp 
+OI polyTemp polyAll poly889
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly890 5 8 5 106 100 102 107 5 5 8
+DELETE polyAll 
+OI polyAll polyTemp poly890
+DELETE polyTemp 
+OI polyTemp polyAll poly890
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly891 5 0 8 101 109 100 102 9 5 0
+DELETE polyAll 
+OI polyAll polyTemp poly891
+DELETE polyTemp 
+OI polyTemp polyAll poly891
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly892 6 5 6 108 108 100 104 5 6 5
+DELETE polyAll 
+OI polyAll polyTemp poly892
+DELETE polyTemp 
+OI polyTemp polyAll poly892
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly893 2 1 8 102 100 109 108 7 2 1
+DELETE polyAll 
+OI polyAll polyTemp poly893
+DELETE polyTemp 
+OI polyTemp polyAll poly893
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly894 0 1 0 102 106 101 108 6 0 1
+DELETE polyAll 
+OI polyAll polyTemp poly894
+DELETE polyTemp 
+OI polyTemp polyAll poly894
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly895 5 9 2 104 104 105 106 8 5 9
+DELETE polyAll 
+OI polyAll polyTemp poly895
+DELETE polyTemp 
+OI polyTemp polyAll poly895
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly896 7 4 8 106 106 109 102 4 7 4
+DELETE polyAll 
+OI polyAll polyTemp poly896
+DELETE polyTemp 
+OI polyTemp polyAll poly896
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly897 3 0 4 109 103 105 104 6 3 0
+DELETE polyAll 
+OI polyAll polyTemp poly897
+DELETE polyTemp 
+OI polyTemp polyAll poly897
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly898 1 0 0 108 109 109 102 4 1 0
+DELETE polyAll 
+OI polyAll polyTemp poly898
+DELETE polyTemp 
+OI polyTemp polyAll poly898
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly899 6 9 2 108 107 109 100 6 6 9
+DELETE polyAll 
+OI polyAll polyTemp poly899
+DELETE polyTemp 
+OI polyTemp polyAll poly899
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly900 5 0 4 105 101 101 101 1 5 0
+DELETE polyAll 
+OI polyAll polyTemp poly900
+DELETE polyTemp 
+OI polyTemp polyAll poly900
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly901 9 5 9 106 107 109 103 0 9 5
+DELETE polyAll 
+OI polyAll polyTemp poly901
+DELETE polyTemp 
+OI polyTemp polyAll poly901
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly902 5 6 3 103 104 108 108 8 5 6
+DELETE polyAll 
+OI polyAll polyTemp poly902
+DELETE polyTemp 
+OI polyTemp polyAll poly902
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly903 1 3 0 106 106 103 107 3 1 3
+DELETE polyAll 
+OI polyAll polyTemp poly903
+DELETE polyTemp 
+OI polyTemp polyAll poly903
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly904 9 7 3 102 101 109 105 9 9 7
+DELETE polyAll 
+OI polyAll polyTemp poly904
+DELETE polyTemp 
+OI polyTemp polyAll poly904
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly905 9 9 9 104 100 106 107 6 9 9
+DELETE polyAll 
+OI polyAll polyTemp poly905
+DELETE polyTemp 
+OI polyTemp polyAll poly905
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly906 6 2 3 101 106 107 102 7 6 2
+DELETE polyAll 
+OI polyAll polyTemp poly906
+DELETE polyTemp 
+OI polyTemp polyAll poly906
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly907 1 6 3 107 101 104 105 5 1 6
+DELETE polyAll 
+OI polyAll polyTemp poly907
+DELETE polyTemp 
+OI polyTemp polyAll poly907
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly908 8 5 6 100 106 100 109 6 8 5
+DELETE polyAll 
+OI polyAll polyTemp poly908
+DELETE polyTemp 
+OI polyTemp polyAll poly908
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly909 0 3 3 104 108 104 107 5 0 3
+DELETE polyAll 
+OI polyAll polyTemp poly909
+DELETE polyTemp 
+OI polyTemp polyAll poly909
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly910 6 4 9 103 109 106 106 1 6 4
+DELETE polyAll 
+OI polyAll polyTemp poly910
+DELETE polyTemp 
+OI polyTemp polyAll poly910
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly911 4 5 1 105 105 107 108 5 4 5
+DELETE polyAll 
+OI polyAll polyTemp poly911
+DELETE polyTemp 
+OI polyTemp polyAll poly911
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly912 3 3 6 104 109 106 109 5 3 3
+DELETE polyAll 
+OI polyAll polyTemp poly912
+DELETE polyTemp 
+OI polyTemp polyAll poly912
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly913 3 7 0 102 103 107 108 7 3 7
+DELETE polyAll 
+OI polyAll polyTemp poly913
+DELETE polyTemp 
+OI polyTemp polyAll poly913
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly914 8 8 1 107 104 101 105 1 8 8
+DELETE polyAll 
+OI polyAll polyTemp poly914
+DELETE polyTemp 
+OI polyTemp polyAll poly914
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly915 8 4 6 100 109 104 100 3 8 4
+DELETE polyAll 
+OI polyAll polyTemp poly915
+DELETE polyTemp 
+OI polyTemp polyAll poly915
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly916 5 8 1 105 108 102 105 9 5 8
+DELETE polyAll 
+OI polyAll polyTemp poly916
+DELETE polyTemp 
+OI polyTemp polyAll poly916
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly917 4 4 0 102 105 103 108 6 4 4
+DELETE polyAll 
+OI polyAll polyTemp poly917
+DELETE polyTemp 
+OI polyTemp polyAll poly917
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly918 6 3 6 106 106 101 100 2 6 3
+DELETE polyAll 
+OI polyAll polyTemp poly918
+DELETE polyTemp 
+OI polyTemp polyAll poly918
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly919 7 4 5 104 100 108 106 9 7 4
+DELETE polyAll 
+OI polyAll polyTemp poly919
+DELETE polyTemp 
+OI polyTemp polyAll poly919
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly920 6 7 7 105 106 103 109 5 6 7
+DELETE polyAll 
+OI polyAll polyTemp poly920
+DELETE polyTemp 
+OI polyTemp polyAll poly920
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly921 2 1 2 100 101 103 106 5 2 1
+DELETE polyAll 
+OI polyAll polyTemp poly921
+DELETE polyTemp 
+OI polyTemp polyAll poly921
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly922 6 9 4 105 107 103 106 4 6 9
+DELETE polyAll 
+OI polyAll polyTemp poly922
+DELETE polyTemp 
+OI polyTemp polyAll poly922
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly923 8 8 7 104 106 101 109 5 8 8
+DELETE polyAll 
+OI polyAll polyTemp poly923
+DELETE polyTemp 
+OI polyTemp polyAll poly923
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly924 7 1 5 108 106 102 109 3 7 1
+DELETE polyAll 
+OI polyAll polyTemp poly924
+DELETE polyTemp 
+OI polyTemp polyAll poly924
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly925 4 0 4 104 108 109 101 4 4 0
+DELETE polyAll 
+OI polyAll polyTemp poly925
+DELETE polyTemp 
+OI polyTemp polyAll poly925
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly926 8 0 7 100 104 100 101 2 8 0
+DELETE polyAll 
+OI polyAll polyTemp poly926
+DELETE polyTemp 
+OI polyTemp polyAll poly926
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly927 0 3 7 107 105 104 109 1 0 3
+DELETE polyAll 
+OI polyAll polyTemp poly927
+DELETE polyTemp 
+OI polyTemp polyAll poly927
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly928 2 7 2 109 108 107 109 3 2 7
+DELETE polyAll 
+OI polyAll polyTemp poly928
+DELETE polyTemp 
+OI polyTemp polyAll poly928
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly929 9 0 1 107 109 101 105 8 9 0
+DELETE polyAll 
+OI polyAll polyTemp poly929
+DELETE polyTemp 
+OI polyTemp polyAll poly929
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly930 7 3 6 106 103 108 100 7 7 3
+DELETE polyAll 
+OI polyAll polyTemp poly930
+DELETE polyTemp 
+OI polyTemp polyAll poly930
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly931 9 2 7 102 105 102 107 9 9 2
+DELETE polyAll 
+OI polyAll polyTemp poly931
+DELETE polyTemp 
+OI polyTemp polyAll poly931
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly932 1 3 2 100 106 101 105 0 1 3
+DELETE polyAll 
+OI polyAll polyTemp poly932
+DELETE polyTemp 
+OI polyTemp polyAll poly932
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly933 1 3 1 103 108 104 103 8 1 3
+DELETE polyAll 
+OI polyAll polyTemp poly933
+DELETE polyTemp 
+OI polyTemp polyAll poly933
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly934 8 8 0 102 108 102 107 3 8 8
+DELETE polyAll 
+OI polyAll polyTemp poly934
+DELETE polyTemp 
+OI polyTemp polyAll poly934
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly935 6 5 0 105 100 106 108 7 6 5
+DELETE polyAll 
+OI polyAll polyTemp poly935
+DELETE polyTemp 
+OI polyTemp polyAll poly935
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly936 3 1 5 106 109 104 101 6 3 1
+DELETE polyAll 
+OI polyAll polyTemp poly936
+DELETE polyTemp 
+OI polyTemp polyAll poly936
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly937 7 5 4 109 107 106 108 5 7 5
+DELETE polyAll 
+OI polyAll polyTemp poly937
+DELETE polyTemp 
+OI polyTemp polyAll poly937
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly938 9 8 4 106 101 105 101 8 9 8
+DELETE polyAll 
+OI polyAll polyTemp poly938
+DELETE polyTemp 
+OI polyTemp polyAll poly938
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly939 5 8 4 101 100 100 109 4 5 8
+DELETE polyAll 
+OI polyAll polyTemp poly939
+DELETE polyTemp 
+OI polyTemp polyAll poly939
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly940 5 3 0 107 108 106 109 3 5 3
+DELETE polyAll 
+OI polyAll polyTemp poly940
+DELETE polyTemp 
+OI polyTemp polyAll poly940
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly941 7 3 4 102 107 108 106 0 7 3
+DELETE polyAll 
+OI polyAll polyTemp poly941
+DELETE polyTemp 
+OI polyTemp polyAll poly941
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly942 7 4 5 101 102 101 105 8 7 4
+DELETE polyAll 
+OI polyAll polyTemp poly942
+DELETE polyTemp 
+OI polyTemp polyAll poly942
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly943 0 7 1 100 100 100 105 7 0 7
+DELETE polyAll 
+OI polyAll polyTemp poly943
+DELETE polyTemp 
+OI polyTemp polyAll poly943
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly944 6 0 4 103 106 101 107 2 6 0
+DELETE polyAll 
+OI polyAll polyTemp poly944
+DELETE polyTemp 
+OI polyTemp polyAll poly944
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly945 8 0 9 108 100 108 100 6 8 0
+DELETE polyAll 
+OI polyAll polyTemp poly945
+DELETE polyTemp 
+OI polyTemp polyAll poly945
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly946 2 3 4 106 104 108 102 4 2 3
+DELETE polyAll 
+OI polyAll polyTemp poly946
+DELETE polyTemp 
+OI polyTemp polyAll poly946
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly947 8 2 6 100 105 109 102 7 8 2
+DELETE polyAll 
+OI polyAll polyTemp poly947
+DELETE polyTemp 
+OI polyTemp polyAll poly947
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly948 7 7 6 107 104 103 103 5 7 7
+DELETE polyAll 
+OI polyAll polyTemp poly948
+DELETE polyTemp 
+OI polyTemp polyAll poly948
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly949 6 3 2 101 101 107 107 2 6 3
+DELETE polyAll 
+OI polyAll polyTemp poly949
+DELETE polyTemp 
+OI polyTemp polyAll poly949
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly950 6 4 7 106 105 109 102 7 6 4
+DELETE polyAll 
+OI polyAll polyTemp poly950
+DELETE polyTemp 
+OI polyTemp polyAll poly950
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly951 8 9 5 104 104 106 107 9 8 9
+DELETE polyAll 
+OI polyAll polyTemp poly951
+DELETE polyTemp 
+OI polyTemp polyAll poly951
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly952 8 2 0 103 101 102 102 9 8 2
+DELETE polyAll 
+OI polyAll polyTemp poly952
+DELETE polyTemp 
+OI polyTemp polyAll poly952
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly953 9 8 9 101 105 100 102 0 9 8
+DELETE polyAll 
+OI polyAll polyTemp poly953
+DELETE polyTemp 
+OI polyTemp polyAll poly953
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly954 4 3 4 100 101 106 101 8 4 3
+DELETE polyAll 
+OI polyAll polyTemp poly954
+DELETE polyTemp 
+OI polyTemp polyAll poly954
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly955 4 8 9 104 107 109 100 9 4 8
+DELETE polyAll 
+OI polyAll polyTemp poly955
+DELETE polyTemp 
+OI polyTemp polyAll poly955
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly956 5 3 3 109 107 103 100 3 5 3
+DELETE polyAll 
+OI polyAll polyTemp poly956
+DELETE polyTemp 
+OI polyTemp polyAll poly956
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly957 2 8 6 107 109 101 102 7 2 8
+DELETE polyAll 
+OI polyAll polyTemp poly957
+DELETE polyTemp 
+OI polyTemp polyAll poly957
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly958 7 4 9 100 102 106 107 2 7 4
+DELETE polyAll 
+OI polyAll polyTemp poly958
+DELETE polyTemp 
+OI polyTemp polyAll poly958
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly959 0 1 9 102 103 107 101 0 0 1
+DELETE polyAll 
+OI polyAll polyTemp poly959
+DELETE polyTemp 
+OI polyTemp polyAll poly959
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly960 7 0 5 102 107 103 103 0 7 0
+DELETE polyAll 
+OI polyAll polyTemp poly960
+DELETE polyTemp 
+OI polyTemp polyAll poly960
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly961 3 0 8 102 109 104 109 2 3 0
+DELETE polyAll 
+OI polyAll polyTemp poly961
+DELETE polyTemp 
+OI polyTemp polyAll poly961
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly962 6 2 7 102 100 109 107 9 6 2
+DELETE polyAll 
+OI polyAll polyTemp poly962
+DELETE polyTemp 
+OI polyTemp polyAll poly962
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly963 5 1 9 106 104 108 100 4 5 1
+DELETE polyAll 
+OI polyAll polyTemp poly963
+DELETE polyTemp 
+OI polyTemp polyAll poly963
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly964 6 6 9 109 106 100 100 3 6 6
+DELETE polyAll 
+OI polyAll polyTemp poly964
+DELETE polyTemp 
+OI polyTemp polyAll poly964
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly965 1 8 7 101 108 105 102 6 1 8
+DELETE polyAll 
+OI polyAll polyTemp poly965
+DELETE polyTemp 
+OI polyTemp polyAll poly965
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly966 1 7 6 100 100 108 109 7 1 7
+DELETE polyAll 
+OI polyAll polyTemp poly966
+DELETE polyTemp 
+OI polyTemp polyAll poly966
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly967 2 6 6 106 103 107 106 5 2 6
+DELETE polyAll 
+OI polyAll polyTemp poly967
+DELETE polyTemp 
+OI polyTemp polyAll poly967
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly968 0 4 5 102 104 100 105 6 0 4
+DELETE polyAll 
+OI polyAll polyTemp poly968
+DELETE polyTemp 
+OI polyTemp polyAll poly968
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly969 2 3 1 102 102 105 100 0 2 3
+DELETE polyAll 
+OI polyAll polyTemp poly969
+DELETE polyTemp 
+OI polyTemp polyAll poly969
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly970 8 2 4 106 101 109 104 8 8 2
+DELETE polyAll 
+OI polyAll polyTemp poly970
+DELETE polyTemp 
+OI polyTemp polyAll poly970
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly971 7 2 6 100 103 104 109 4 7 2
+DELETE polyAll 
+OI polyAll polyTemp poly971
+DELETE polyTemp 
+OI polyTemp polyAll poly971
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly972 1 2 1 104 109 100 101 0 1 2
+DELETE polyAll 
+OI polyAll polyTemp poly972
+DELETE polyTemp 
+OI polyTemp polyAll poly972
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly973 1 9 8 106 107 107 105 6 1 9
+DELETE polyAll 
+OI polyAll polyTemp poly973
+DELETE polyTemp 
+OI polyTemp polyAll poly973
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly974 5 6 7 101 102 100 103 0 5 6
+DELETE polyAll 
+OI polyAll polyTemp poly974
+DELETE polyTemp 
+OI polyTemp polyAll poly974
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly975 0 7 5 102 104 105 102 7 0 7
+DELETE polyAll 
+OI polyAll polyTemp poly975
+DELETE polyTemp 
+OI polyTemp polyAll poly975
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly976 3 6 0 109 104 106 101 7 3 6
+DELETE polyAll 
+OI polyAll polyTemp poly976
+DELETE polyTemp 
+OI polyTemp polyAll poly976
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly977 1 3 5 102 100 107 100 9 1 3
+DELETE polyAll 
+OI polyAll polyTemp poly977
+DELETE polyTemp 
+OI polyTemp polyAll poly977
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly978 6 0 4 107 106 108 102 1 6 0
+DELETE polyAll 
+OI polyAll polyTemp poly978
+DELETE polyTemp 
+OI polyTemp polyAll poly978
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly979 9 1 4 101 105 109 106 5 9 1
+DELETE polyAll 
+OI polyAll polyTemp poly979
+DELETE polyTemp 
+OI polyTemp polyAll poly979
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly980 6 0 2 101 106 105 102 9 6 0
+DELETE polyAll 
+OI polyAll polyTemp poly980
+DELETE polyTemp 
+OI polyTemp polyAll poly980
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly981 5 9 0 108 105 101 109 2 5 9
+DELETE polyAll 
+OI polyAll polyTemp poly981
+DELETE polyTemp 
+OI polyTemp polyAll poly981
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly982 7 5 5 103 101 105 101 4 7 5
+DELETE polyAll 
+OI polyAll polyTemp poly982
+DELETE polyTemp 
+OI polyTemp polyAll poly982
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly983 4 9 0 103 102 109 102 1 4 9
+DELETE polyAll 
+OI polyAll polyTemp poly983
+DELETE polyTemp 
+OI polyTemp polyAll poly983
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly984 7 9 5 100 104 109 103 1 7 9
+DELETE polyAll 
+OI polyAll polyTemp poly984
+DELETE polyTemp 
+OI polyTemp polyAll poly984
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly985 8 5 1 106 108 103 106 8 8 5
+DELETE polyAll 
+OI polyAll polyTemp poly985
+DELETE polyTemp 
+OI polyTemp polyAll poly985
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly986 1 1 3 109 103 102 104 1 1 1
+DELETE polyAll 
+OI polyAll polyTemp poly986
+DELETE polyTemp 
+OI polyTemp polyAll poly986
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly987 9 8 6 107 105 108 106 5 9 8
+DELETE polyAll 
+OI polyAll polyTemp poly987
+DELETE polyTemp 
+OI polyTemp polyAll poly987
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly988 6 8 1 106 105 109 108 8 6 8
+DELETE polyAll 
+OI polyAll polyTemp poly988
+DELETE polyTemp 
+OI polyTemp polyAll poly988
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly989 2 4 5 106 103 104 106 0 2 4
+DELETE polyAll 
+OI polyAll polyTemp poly989
+DELETE polyTemp 
+OI polyTemp polyAll poly989
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly990 3 2 1 100 105 103 108 4 3 2
+DELETE polyAll 
+OI polyAll polyTemp poly990
+DELETE polyTemp 
+OI polyTemp polyAll poly990
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly991 4 4 0 106 102 105 106 9 4 4
+DELETE polyAll 
+OI polyAll polyTemp poly991
+DELETE polyTemp 
+OI polyTemp polyAll poly991
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly992 8 6 9 100 102 100 102 2 8 6
+DELETE polyAll 
+OI polyAll polyTemp poly992
+DELETE polyTemp 
+OI polyTemp polyAll poly992
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly993 3 5 7 109 107 108 107 4 3 5
+DELETE polyAll 
+OI polyAll polyTemp poly993
+DELETE polyTemp 
+OI polyTemp polyAll poly993
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly994 1 5 4 102 106 106 109 3 1 5
+DELETE polyAll 
+OI polyAll polyTemp poly994
+DELETE polyTemp 
+OI polyTemp polyAll poly994
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly995 0 6 1 101 108 101 105 6 0 6
+DELETE polyAll 
+OI polyAll polyTemp poly995
+DELETE polyTemp 
+OI polyTemp polyAll poly995
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly996 8 6 8 107 104 105 108 3 8 6
+DELETE polyAll 
+OI polyAll polyTemp poly996
+DELETE polyTemp 
+OI polyTemp polyAll poly996
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly997 0 9 7 100 105 108 107 6 0 9
+DELETE polyAll 
+OI polyAll polyTemp poly997
+DELETE polyTemp 
+OI polyTemp polyAll poly997
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly998 6 6 4 106 101 103 102 1 6 6
+DELETE polyAll 
+OI polyAll polyTemp poly998
+DELETE polyTemp 
+OI polyTemp polyAll poly998
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+PC poly999 7 6 0 105 108 100 103 1 7 6
+DELETE polyAll 
+OI polyAll polyTemp poly999
+DELETE polyTemp 
+OI polyTemp polyAll poly999
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+HIT polyAll 50 50
+HIT polyAll 2 50
+HIT polyAll 50 2
+EXIT
