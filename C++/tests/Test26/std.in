@@ -1,0 +1,41 @@
+R rect0 2162 5856 7787 967
+R rect1 104 5934 6698 659
+OI rectTemp rect0 rect1
+OI rectAll rect0 rect1
+R rect2 886 6749 8306 326
+DELETE rectAll 
+OI rectAll rectTemp rect2
+DELETE rectTemp 
+OI rectTemp rectAll rect2
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+R rect3 934 9193 5918 684
+DELETE rectAll 
+OI rectAll rectTemp rect3
+DELETE rectTemp 
+OI rectTemp rectAll rect3
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+R rect4 1972 9978 5017 1535
+DELETE rectAll 
+OI rectAll rectTemp rect4
+DELETE rectTemp 
+OI rectTemp rectAll rect4
+UNDO
+UNDO
+UNDO
+REDO
+REDO
+REDO
+HIT rectAll 5006 5006
+HIT rectAll 11 11
+HIT rectAll 9999 9999
+EXIT

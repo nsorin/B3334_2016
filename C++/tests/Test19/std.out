@@ -1,0 +1,34 @@
+#S seg1 0 0 10 20
+OK
+#R rect1 0 10 100 200
+OK
+#R rect2 0 0 10 10
+OK
+#OR reu1 rect1 rect2 seg1
+OK
+#HIT seg1 5 10
+YES
+#HIT seg1 5 5
+NO
+#MOVE seg1 5 5
+OK
+#HIT seg1 10 15
+YES
+#HIT seg1 10 10
+NO
+#HIT reu1 5 20
+YES
+#HIT rect1 5 20
+YES
+#HIT rect2 5 20
+NO
+#MOVE reu1 1000 1000
+OK
+#HIT reu1 5 20
+NO
+#HIT reu1 10 20
+NO
+#DELETE seg1
+OK
+#HIT reu1 10 20
+NO

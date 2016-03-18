@@ -1,0 +1,12 @@
+S seg1 0 20 10 0
+R rect1 0 200 100 10
+R rect2 0 10 10 0
+OR reu1 rect1 rect2 seg1
+R r1 5 10 10 5
+R r2 7 20 20 7
+OI r1int2 r1 r2
+SAVE t1
+CLEAR
+R r1 0 10 10 0
+SAVE t2
+EXIT
