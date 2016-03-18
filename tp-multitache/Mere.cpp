@@ -14,6 +14,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <sys/sem.h>
+#include <sys/shm.h>
 #include <unistd.h>
 
 
@@ -24,10 +25,31 @@
 //------------------------------------------------------------- Constantes
 
 //------------------------------------------------------------------ Types
+typedef struct
+{
+	TypeUsager type;
+	int num;
+	int arrivee;
+} EtatPlace;
+
+typedef struct
+{
+	TypeBarriere barriere;
+	TypeUsager usager;
+	int arrivee;
+} RequetePlace;
 
 //---------------------------------------------------- Variables statiques
+/* Processus */
 static pid_t pid_heure;
-static int sem_id;
+/* Semaphore */
+static int semEcranId;
+static int semEtatId;
+static int semRequeteId;
+static int semEntreeSortieId;
+/* Mémoire partagée */
+static int memEtatId;
+static int memRequeteId;
 //------------------------------------------------------ Fonctions privées
 int main()
 // Mode d'emploi :
@@ -38,11 +60,14 @@ int main()
 //
 {
 	InitApp();
-	/*while(true)
+	InitialiserApplication(VT220);
+	pid_heure = ActiverHeure();
+	/*for(;;)
 	{
-
 	}*/
-	sleep(3);
+	sleep(10);
+	kill(pid_heure, SIGUSR2);
+	TerminerApplication(true);
 	TermApp();
 
 	return 0;
@@ -54,8 +79,15 @@ void InitApp (  )
 // Algorithme :
 //
 {
-	pid_heure = ActiverHeure();
-	sem_id = semget(IPC_PRIVATE, 1, IPC_CREAT);
+	// Créé les processus
+	// Créé les sémaphores
+	semEcranId = semget(IPC_PRIVATE, 1, IPC_CREAT);
+	semEtatId = semget(IPC_PRIVATE, 1, IPC_CREAT);
+	semRequeteId = semget(IPC_PRIVATE, 1, IPC_CREAT);
+	semEntreeSortieId = semget(IPC_PRIVATE, 3, IPC_CREAT);
+	// Créé la mémoire partagée
+	memEtatId = shmget(IPC_PRIVATE, sizeof(EtatPlace), IPC_CREAT);
+	memRequeteId = shmget(IPC_PRIVATE, sizeof(RequetePlace), IPC_CREAT);
 
 } //----- fin de InitApp
 
@@ -63,6 +95,12 @@ void TermApp (  )
 // Algorithme :
 //
 {
-	semctl(sem_id, 1, IPC_RMID, 0);
-	kill(pid_heure, SIGUSR2);
+	// Supprime la mémoire partagée
+	shmctl(memEtatId, IPC_RMID, 0);
+	shmctl(memRequeteId, IPC_RMID, 0);
+	// Supprime les sémaphores
+	semctl(semEcranId, 1, IPC_RMID, 0);
+	semctl(semEtatId, 1, IPC_RMID, 0);
+	semctl(semRequeteId, 1, IPC_RMID, 0);
+	semctl(semEntreeSortieId, 3, IPC_RMID, 0);
 } //----- fin de TermApp

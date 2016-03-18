@@ -7,11 +7,11 @@
 *************************************************************************/
 
 //---------- Interface de la tâche <XXX> (fichier XXX.h) -------
-#if ! defined ( MERE_H )
-#define MERE_H
+#if ! defined ( SORTIE_H )
+#define SORTIE_H
 
 //------------------------------------------------------------------------
-// Rôle de la tâche <XXX>
+// Rôle de la tâche <SORTIE>
 //
 //
 //------------------------------------------------------------------------
@@ -23,7 +23,6 @@
 #include "Menu.h"
 
 //------------------------------------------------------------- Constantes
-const TypeTerminal TERM_TYPE = VT220;
 
 //------------------------------------------------------------------ Types
 
@@ -35,7 +34,5 @@ const TypeTerminal TERM_TYPE = VT220;
 // Contrat :
 //
 
-void InitApp();
-void TermApp();
+#endif // SORTIE_H
 
-#endif // MERE_H
