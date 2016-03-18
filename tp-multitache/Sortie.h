@@ -28,7 +28,9 @@
 
 //////////////////////////////////////////////////////////////////  PUBLIC
 //---------------------------------------------------- Fonctions publiques
-// type Nom ( liste de paramètres );
+void Sortie ( TypeBarriere type, int semEtatId, int memEtatId, 
+			int semRequeteId, int memRequeteId, int semEntreeSortieId, 
+			int semEcranId );
 // Mode d'emploi :
 //
 // Contrat :

@@ -41,7 +41,12 @@ typedef struct
 
 //---------------------------------------------------- Variables statiques
 /* Processus */
-static pid_t pid_heure;
+static pid_t noHeure;
+static pid_t noSimu;
+static pid_t noSortie;
+static pid_t noEntreeGB;
+static pid_t noEntreeBPP;
+static pid_t noEntreeBPA;
 /* Semaphore */
 static int semEcranId;
 static int semEtatId;
@@ -61,12 +66,35 @@ int main()
 {
 	InitApp();
 	InitialiserApplication(VT220);
-	pid_heure = ActiverHeure();
-	/*for(;;)
+	noHeure = ActiverHeure();
+	/*if((noSortie = fork()) == 0)
 	{
+		Sortie();
+	} 
+	else if((noEntreeGB = fork()) == 0)
+	{
+		Entree();
+	}
+	else if((noEntreeBPP = fork()) == 0)
+	{
+		Entree();
+	}
+	else if((noEntreeBPA = fork()) == 0)
+	{
+		Entree();
 	}*/
-	sleep(10);
-	kill(pid_heure, SIGUSR2);
+	//waitpid(noSimu, NULL, 0);
+	/*
+	kill(noSortie, SIGUSR2);
+	kill(noEntreeGB, SIGUSR2);
+	kill(noEntreeBPP, SIGUSR2);
+	kill(noEntreeBPA, SIGUSR2);
+	waitpid(noSortie, NULL, 0);
+	waitpid(noEntreeGB, NULL, 0);
+	waitpid(noEntreeBPP, NULL, 0);
+	waitpid(noEntreeBPA, NULL, 0);
+	*/
+	kill(noHeure, SIGUSR2);
 	TerminerApplication(true);
 	TermApp();
 

@@ -16,7 +16,7 @@
 #include <sys/sem.h>
 #include <sys/shm.h>
 #include <unistd.h>
-    
+
 //------------------------------------------------------ Include personnel
 #include "Sortie.h"
 
@@ -28,21 +28,52 @@
 //---------------------------------------------------- Variables statiques
 
 //------------------------------------------------------ Fonctions privées
-//static type nom ( liste de paramètres )
+static void initialisation (  )
 // Mode d'emploi :
 //
 // Contrat :
 //
 // Algorithme :
 //
-//{
-//} //----- fin de nom
+{
+} //----- fin de initialisation
 
-//////////////////////////////////////////////////////////////////  PUBLIC
-//---------------------------------------------------- Fonctions publiques
-type Nom ( liste de paramètres )
+static void moteur (  )
+// Mode d'emploi :
+//
+// Contrat :
+//
 // Algorithme :
 //
 {
-} //----- fin de Nom
+} //----- fin de moteur
 
+static void destruction (  )
+// Mode d'emploi :
+//
+// Contrat :
+//
+// Algorithme :
+//
+{
+} //----- fin de destruction
+
+//////////////////////////////////////////////////////////////////  PUBLIC
+//---------------------------------------------------- Fonctions publiques
+
+void Sortie ( TypeBarriere type, int semEtatId, int memEtatId, 
+			int semRequeteId, int memRequeteId, int semEntreeSortieId, 
+			int semEcranId )
+// Mode d'emploi :
+//
+// Contrat :
+//
+// Algorithme :
+//
+{
+	initialisation();
+	for(;;)
+	{
+		moteur();
+	}
+}
