@@ -13,6 +13,7 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <sys/sem.h>
 #include <unistd.h>
 
 
@@ -26,6 +27,7 @@
 
 //---------------------------------------------------- Variables statiques
 static pid_t pid_heure;
+static int sem_id;
 //------------------------------------------------------ Fonctions privées
 int main()
 // Mode d'emploi :
@@ -53,11 +55,14 @@ void InitApp (  )
 //
 {
 	pid_heure = ActiverHeure();
+	sem_id = semget(IPC_PRIVATE, 1, IPC_CREAT);
+
 } //----- fin de InitApp
 
 void TermApp (  )
 // Algorithme :
 //
 {
+	semctl(sem_id, 1, IPC_RMID, 0);
 	kill(pid_heure, SIGUSR2);
 } //----- fin de TermApp
