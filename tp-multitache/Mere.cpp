@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include <sys/wait.h>
-#include <dos.h>
+#include <unistd.h>
 
 
 //------------------------------------------------------ Include personnel
@@ -36,7 +36,7 @@ int main()
 //
 {
 	InitApp();
-	/*while(true) 
+	/*while(true)
 	{
 
 	}*/

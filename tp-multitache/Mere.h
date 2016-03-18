@@ -34,5 +34,7 @@
 // Contrat :
 //
 
-#endif // XXX_H
+void InitApp();
+void TermApp();
 
+#endif // XXX_H

@@ -11,8 +11,8 @@ EDLFLAGS=
 INT= Mere.h
 REAL=$(INT:.h=.cpp)
 OBJ=$(INT:.h=.o)
-LIBS= -l tp -l ncurses -l tcl
-LIBPATH=-L ./libtp.a
+LIBS= -l tp -l ncurses -l tcl8.5
+LIBPATH=-L ./
 INCPATH=#-I
 EXE= Parking
 CLEAN=clean
