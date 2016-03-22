@@ -94,6 +94,7 @@ int main()
 	waitpid(noEntreeBPP, NULL, 0);
 	waitpid(noEntreeBPA, NULL, 0);
 	*/
+	sleep(10); // TEMPORAIRE
 	kill(noHeure, SIGUSR2);
 	TerminerApplication(true);
 	TermApp();
@@ -131,4 +132,5 @@ void TermApp (  )
 	semctl(semEtatId, 1, IPC_RMID, 0);
 	semctl(semRequeteId, 1, IPC_RMID, 0);
 	semctl(semEntreeSortieId, 3, IPC_RMID, 0);
+
 } //----- fin de TermApp
