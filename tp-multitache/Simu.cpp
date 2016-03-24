@@ -9,13 +9,13 @@
 
 /////////////////////////////////////////////////////////////////  INCLUDE
 //-------------------------------------------------------- Include système
-
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdlib.h>
 //------------------------------------------------------ Include personnel
 #include "Simu.h"
 #include "Menu.h"
 #include "Donnees.h"
-#include <fcntl.h>
-#include <unistd.h>
 
 ///////////////////////////////////////////////////////////////////  PRIVE
 //------------------------------------------------------------- Constantes
@@ -65,8 +65,10 @@ void Simu()
 // Algorithme :
 //
 {
+  // Phase d'initialisation
   initialisation();
 
+  // Phase moteur
   for(;;)
   {
     moteur();
@@ -77,5 +79,30 @@ void Commande(char code, unsigned int valeur)
 // Algorithme :
 //
 {
+  if(code == 'e' || code == 'E')
+  {
+    exit(0);
+  }
+  else if(code == 'p' || code == 'P')
+  {
+    switch (valeur) {
+      case 1:
+        char prof = 'P';
+        write(descCanalBPP,&prof,sizeof(char));
+        break;
+      case 3:
+        char prof = 'P';
+        write(descCanalGB,&prof,sizeof(char));
+        break;
+      default:
+    }
+  }
+  else if(code == 'a' || code == 'A')
+  {
+    
+  }
+  else if(code == 's' || code == 'S')
+  {
 
+  }
 } //----- fin de Commande

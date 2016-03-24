@@ -25,19 +25,6 @@
 //------------------------------------------------------------- Constantes
 
 //------------------------------------------------------------------ Types
-typedef struct
-{
-	TypeUsager type;
-	int num;
-	int arrivee;
-} EtatPlace;
-
-typedef struct
-{
-	TypeBarriere barriere;
-	TypeUsager usager;
-	int arrivee;
-} RequetePlace;
 
 //---------------------------------------------------- Variables statiques
 /* Processus */
@@ -70,7 +57,7 @@ int main()
 	/*if((noSortie = fork()) == 0)
 	{
 		Sortie();
-	} 
+	}
 	else if((noEntreeGB = fork()) == 0)
 	{
 		Entree();
