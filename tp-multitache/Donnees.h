@@ -30,15 +30,20 @@ const char* NOM_CANAL_SORTIE = "canalSortie";
 typedef struct
 {
 	TypeUsager type;
-	int num;
-	int arrivee;
+	unsigned int num;
+} Voiture;
+
+typedef struct
+{
+	Voiture voiture;
+	unsigned int arrivee;
 } EtatPlace;
 
 typedef struct
 {
 	TypeBarriere barriere;
-	TypeUsager usager;
-	int arrivee;
+	Voiture voiture;
+	unsigned int arrivee;
 } RequetePlace;
 
 //////////////////////////////////////////////////////////////////  PUBLIC
