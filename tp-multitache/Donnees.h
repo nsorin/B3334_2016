@@ -21,11 +21,6 @@
 //------------------------------------------------------------- Constantes
 const TypeTerminal TERM_TYPE = VT220;
 
-const char* NOM_CANAL_BPP = "canalBPP";
-const char* NOM_CANAL_BPA = "canalBPA";
-const char* NOM_CANAL_GB = "canalGB";
-const char* NOM_CANAL_SORTIE = "canalSortie";
-
 //------------------------------------------------------------------ Types
 typedef struct
 {

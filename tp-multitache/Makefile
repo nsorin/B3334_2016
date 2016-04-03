@@ -8,7 +8,7 @@ RMFLAGS=-f
 OUTPUT=-o
 CPPFLAGS=-Wall -DMAP
 EDLFLAGS=
-INT= Mere.h
+INT= Mere.h Sortie.h Simu.h Entree.h
 REAL=$(INT:.h=.cpp)
 OBJ=$(INT:.h=.o)
 LIBS= -l tp -l ncurses -l tcl8.5

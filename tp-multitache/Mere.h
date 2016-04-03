@@ -23,7 +23,10 @@
 #include "Menu.h"
 
 //------------------------------------------------------------- Constantes
-
+const char* NOM_CANAL_BPP = "canalBPP";
+const char* NOM_CANAL_BPA = "canalBPA";
+const char* NOM_CANAL_GB = "canalGB";
+const char* NOM_CANAL_SORTIE = "canalSortie";
 
 //------------------------------------------------------------------ Types
 
@@ -35,7 +38,7 @@
 // Contrat :
 //
 
-void InitApp();
-void TermApp();
+bool InitPass();
+void DelPass();
 
 #endif // MERE_H

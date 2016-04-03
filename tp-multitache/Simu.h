@@ -25,7 +25,7 @@
 //////////////////////////////////////////////////////////////////  PUBLIC
 //---------------------------------------------------- Fonctions publiques
 
-void Simu();
+void Simu(const char* nomCanalBPP, const char* nomCanalBPA, const char* nomCanalGB, const char* nomCanalSortie);
 // Mode d'emploi :
 //
 // Contrat :

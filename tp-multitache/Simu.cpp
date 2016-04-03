@@ -30,13 +30,13 @@ static int descCanalSortie;
 static unsigned int nombreVoitures;
 
 //------------------------------------------------------ Fonctions privées
-static void initialisation()
+static void initialisation(const char* nomCanalBPP, const char* nomCanalBPA, const char* nomCanalGB, const char* nomCanalSortie)
 {
   //Ouverture des canaux de communication
-  descCanalBPP = open(NOM_CANAL_BPP, O_WRONLY);
-  descCanalBPA = open(NOM_CANAL_BPA, O_WRONLY);
-  descCanalGB = open(NOM_CANAL_GB, O_WRONLY);
-  descCanalSortie = open(NOM_CANAL_SORTIE, O_WRONLY);
+  descCanalBPP = open(nomCanalBPP, O_WRONLY);
+  descCanalBPA = open(nomCanalBPA, O_WRONLY);
+  descCanalGB = open(nomCanalGB, O_WRONLY);
+  descCanalSortie = open(nomCanalSortie, O_WRONLY);
 
   //Initialisation du compteur de voitures
   nombreVoitures = 0;
@@ -75,10 +75,10 @@ static void attribuerNumVoiture(Voiture * voiture)
 //////////////////////////////////////////////////////////////////  PUBLIC
 //---------------------------------------------------- Fonctions publiques
 
-void Simu()
+void Simu(const char* nomCanalBPP, const char* nomCanalBPA, const char* nomCanalGB, const char* nomCanalSortie)
 {
   //Phase d'initialisation
-  initialisation();
+  initialisation(nomCanalBPP, nomCanalBPA, nomCanalGB, nomCanalSortie);
 
   //Phase moteur
   for(;;)
