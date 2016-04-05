@@ -29,8 +29,7 @@
 //////////////////////////////////////////////////////////////////  PUBLIC
 //---------------------------------------------------- Fonctions publiques
 void Sortie ( TypeBarriere type, int semEtatId, int memEtatId, 
-			int semRequeteId, int memRequeteId, int semEntreeSortieId, 
-			int semEcranId );
+			int semRequeteId, int memRequeteId, int semEntreeSortieId, const char* nomCanalSortie );
 // Mode d'emploi :
 //
 // Contrat :

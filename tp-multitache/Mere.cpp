@@ -72,7 +72,7 @@ int main()
 	} 
 	else if((noSortie = fork()) == 0)
 	{
-		Sortie(SORTIE_GASTON_BERGER, semEtatId, memEtatId, semRequeteId, memRequeteId, semEntreeSortieId, semEcranId);
+		Sortie(SORTIE_GASTON_BERGER, semEtatId, memEtatId, semRequeteId, memRequeteId, semEntreeSortieId, NOM_CANAL_SORTIE);
 	}
 	else if((noEntreeGB = fork()) == 0)
 	{

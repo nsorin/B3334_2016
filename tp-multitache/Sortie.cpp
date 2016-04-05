@@ -26,9 +26,9 @@
 //------------------------------------------------------------------ Types
 
 //---------------------------------------------------- Variables statiques
-
+static int descCanalSortie;
 //------------------------------------------------------ Fonctions privées
-static void initialisation (  )
+static void initialisation ( const char* nomCanalSortie )
 // Mode d'emploi :
 //
 // Contrat :
@@ -36,6 +36,7 @@ static void initialisation (  )
 // Algorithme :
 //
 {
+	descCanalSortie = open(nomCanalSortie, O_RDONLY);
 } //----- fin de initialisation
 
 static void moteur (  )
@@ -48,7 +49,7 @@ static void moteur (  )
 {
 } //----- fin de moteur
 
-static void destruction (  )
+static void destruction ( int noSignal )
 // Mode d'emploi :
 //
 // Contrat :
@@ -56,14 +57,20 @@ static void destruction (  )
 // Algorithme :
 //
 {
+	if( noSignal == SIGUSR2 )
+	{
+		// Fermeture du canal de communication
+		close(descCanalSortie);
+		// Suicide de la tâche
+		exit(0);
+	}
 } //----- fin de destruction
 
 //////////////////////////////////////////////////////////////////  PUBLIC
 //---------------------------------------------------- Fonctions publiques
 
 void Sortie ( TypeBarriere type, int semEtatId, int memEtatId, 
-			int semRequeteId, int memRequeteId, int semEntreeSortieId, 
-			int semEcranId )
+			int semRequeteId, int memRequeteId, int semEntreeSortieId, const char* nomCanalSortie )
 // Mode d'emploi :
 //
 // Contrat :
@@ -71,7 +78,7 @@ void Sortie ( TypeBarriere type, int semEtatId, int memEtatId,
 // Algorithme :
 //
 {
-	initialisation();
+	initialisation(nomCanalSortie);
 	for(;;)
 	{
 		moteur();
