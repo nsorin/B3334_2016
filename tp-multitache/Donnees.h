@@ -36,10 +36,20 @@ typedef struct
 
 typedef struct
 {
+	EtatPlace places[NB_PLACES];
+} StructMemEtat;
+
+typedef struct
+{
 	TypeBarriere barriere;
 	Voiture voiture;
 	unsigned int arrivee;
 } RequetePlace;
+
+typedef struct
+{
+	RequetePlace requetes[NB_BARRIERES_ENTREE];
+} StructMemRequete;
 
 //////////////////////////////////////////////////////////////////  PUBLIC
 //---------------------------------------------------- Fonctions publiques

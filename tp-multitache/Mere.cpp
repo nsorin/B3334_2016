@@ -69,28 +69,28 @@ int main()
 	if((noSimu = fork()) == 0)
 	{
 		Simu(NOM_CANAL_BPP, NOM_CANAL_BPA, NOM_CANAL_GB, NOM_CANAL_SORTIE);
-	} 
+	}
 	else if((noSortie = fork()) == 0)
 	{
 		Sortie(SORTIE_GASTON_BERGER, semEtatId, memEtatId, semRequeteId, memRequeteId, semEntreeSortieId, NOM_CANAL_SORTIE);
 	}
 	else if((noEntreeGB = fork()) == 0)
 	{
-		Entree();
+		Entree(ENTREE_GASTON_BERGER, semEtatId, memEtatId, semRequeteId, memRequeteId, semEntreeSortieId, NOM_CANAL_GB);
 	}
 	else if((noEntreeBPP = fork()) == 0)
 	{
-		Entree();
+		Entree(PROF_BLAISE_PASCAL, semEtatId, memEtatId, semRequeteId, memRequeteId, semEntreeSortieId, NOM_CANAL_BPP);
 	}
 	else if((noEntreeBPA = fork()) == 0)
 	{
-		Entree();
+		Entree(AUTRE_BLAISE_PASCAL, semEtatId, memEtatId, semRequeteId, memRequeteId, semEntreeSortieId, NOM_CANAL_BPA);
 	}
 	else
 	{
 		// Attente de la fin de la simulation
 		waitpid(noSimu, NULL, 0);
-		
+
 		// Arrêt des processus fils
 		kill(noSortie, SIGUSR2);
 		waitpid(noSortie, NULL, 0);
@@ -133,10 +133,10 @@ bool InitPass (  )
 	semctl(semEntreeSortieId, 0, SETVAL, 0);
 	semctl(semEntreeSortieId, 1, SETVAL, 0);
 	semctl(semEntreeSortieId, 2, SETVAL, 0);
-	
+
 	// Cree la memoire partagee
-	memEtatId = shmget(IPC_PRIVATE, sizeof(EtatPlace), IPC_CREAT);
-	memRequeteId = shmget(IPC_PRIVATE, sizeof(RequetePlace), IPC_CREAT);
+	memEtatId = shmget(IPC_PRIVATE, sizeof(StructMemEtat), IPC_CREAT);
+	memRequeteId = shmget(IPC_PRIVATE, sizeof(StructMemRequete), IPC_CREAT);
 	if(memEtatId == -1 || memRequeteId == -1)
 	{
 		return false;
@@ -172,7 +172,7 @@ void DelPass (  )
 	unlink(NOM_CANAL_GB);
 	unlink(NOM_CANAL_SORTIE);
 	// Supprime la memoire partagee
-	if(memEtatId != -1) 
+	if(memEtatId != -1)
 	{
 		shmctl(memEtatId, IPC_RMID, 0);
 	}

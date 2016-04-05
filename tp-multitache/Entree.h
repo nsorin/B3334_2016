@@ -17,7 +17,9 @@
 
 /////////////////////////////////////////////////////////////////  INCLUDE
 //--------------------------------------------------- Interfaces utilisées
-
+#include "Heure.h"
+#include "Outils.h"
+#include "Menu.h"
 //------------------------------------------------------------- Constantes
 
 //------------------------------------------------------------------ Types
@@ -25,7 +27,8 @@
 //////////////////////////////////////////////////////////////////  PUBLIC
 //---------------------------------------------------- Fonctions publiques
 
-void Entree();
+void Entree(TypeBarriere type, int semEtatId, int memEtatId, int semRequeteId,
+  int memRequeteId, int semEntreeSortieId, const char* nomCanalSortie);
 // Mode d'emploi :
 //
 // Contrat :

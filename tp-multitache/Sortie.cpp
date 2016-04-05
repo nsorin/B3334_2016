@@ -16,6 +16,7 @@
 #include <sys/sem.h>
 #include <sys/shm.h>
 #include <unistd.h>
+#include <fcntl.h>
 
 //------------------------------------------------------ Include personnel
 #include "Sortie.h"
@@ -69,7 +70,7 @@ static void destruction ( int noSignal )
 //////////////////////////////////////////////////////////////////  PUBLIC
 //---------------------------------------------------- Fonctions publiques
 
-void Sortie ( TypeBarriere type, int semEtatId, int memEtatId, 
+void Sortie ( TypeBarriere type, int semEtatId, int memEtatId,
 			int semRequeteId, int memRequeteId, int semEntreeSortieId, const char* nomCanalSortie )
 // Mode d'emploi :
 //
