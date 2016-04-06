@@ -94,7 +94,7 @@ static void mortVoiturier ( int numSignal )
 {
 	// Création des divers sembuf
 	struct sembuf reservation = {0, 1, 0};
-	struct sembuf attente = {0, 0, 0};
+	//struct sembuf attente = {0, 0, 0};
 	struct sembuf liberation = {0, -1, 0};
 
 	int status;
@@ -127,7 +127,7 @@ static void mortVoiturier ( int numSignal )
 		while(semop(semRequeteId,&reservation,1)==-1 && errno==EINTR);
 		// On attache la mémoire
 		StructMemRequete *memRequetes = (StructMemRequete *) shmat(memRequeteId, NULL, 0);
-		// On détermine la voiture prioritaire 
+		// On détermine la voiture prioritaire
 		unsigned int voiturePrioritaire = 0;
 		for(unsigned int k=0; k<NB_BARRIERES_ENTREE; k++)
 		{
@@ -137,7 +137,7 @@ static void mortVoiturier ( int numSignal )
 				if( memRequetes->requetes[k].voiture.type == PROF )
 				{
 				// Si l'actuel prioritaire est un autre ou sil est arrivé après
-					if( memRequetes->requetes[voiturePrioritaire].voiture.type == AUTRE 
+					if( memRequetes->requetes[voiturePrioritaire].voiture.type == AUTRE
 						|| memRequetes->requetes[voiturePrioritaire].arrivee > memRequetes->requetes[k].arrivee )
 					{
 						// La requete k est prioritaire
@@ -151,16 +151,15 @@ static void mortVoiturier ( int numSignal )
 						&& memRequetes->requetes[voiturePrioritaire].arrivee > memRequetes->requetes[k].arrivee )
 					{
 						// La requete k est prioritaire
-						voiturePrioritaire = k+1;
+						voiturePrioritaire = k+2;
 					}
-				}	
+				}
 			}
-			
+
 		}
 		//On libère la mémoire
 		shmdt(memRequetes);
 		semop(semRequeteId, &liberation, 1);
-		cout << "FAISONS ENTRER CE CONNARD DE " << voiturePrioritaire << endl;
 		//On indique à l'entrée correspondante qu'elle peut faire entrer un usager, sauf si personne n'attend
 		if(voiturePrioritaire > 0)
 		{
@@ -207,7 +206,7 @@ static void destruction ( int numSignal )
 		sigemptyset(&actionChild.sa_mask);
 		actionChild.sa_flags = 0;
 		sigaction(SIGUSR2, &actionChild, NULL);
-		
+
 		// Destruction des voituriers en service
 		for(std::map<pid_t, unsigned int>::iterator i = voituriersEnService.begin(); i != voituriersEnService.end(); i++){
 			kill(i->first, SIGUSR2);

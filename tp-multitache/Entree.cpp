@@ -213,7 +213,7 @@ static void moteur()
       //Affichage de la requête
       AfficherRequete(req.barriere, req.voiture.type, req.arrivee);
       // Attente du sémaphore de la sortie
-      while(semop(semRequeteId, &attente, 1)==-1 && errno==EINTR);
+      while(semop(semEntreeSortieId, &attente, 1)==-1 && errno==EINTR);
 
       // Attente du sémaphore d'état à 0 = Mémoire Partagée libre
       while(semop(semEtatId, &attente, 1)==-1 && errno==EINTR);
@@ -229,7 +229,7 @@ static void moteur()
       while(semop(semEtatId, &liberation, 1)==-1 && errno==EINTR);
 
       // Attente du sémaphore de requêtes à 0 = Mémoire Partagée libre
-      while(semop(semEntreeSortieId, &attente, 1)==-1 && errno==EINTR);
+      while(semop(semRequeteId, &attente, 1)==-1 && errno==EINTR);
       // Réservation du sémaphore de requêtes
       while(semop(semRequeteId, &reservation, 1)==-1 && errno==EINTR);
       // Attachement à la mémoire partagée des requêtes
