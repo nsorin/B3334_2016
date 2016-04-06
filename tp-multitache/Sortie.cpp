@@ -127,34 +127,42 @@ static void mortVoiturier ( int numSignal )
 		StructMemRequete *memRequetes = (StructMemRequete *) shmat(memRequeteId, NULL, 0);
 		// On détermine la voiture prioritaire 
 		unsigned int voiturePrioritaire = 0;
-		for(unsigned int k=1; k<NB_BARRIERES_ENTREE; k++)
+		for(unsigned int k=0; k<NB_BARRIERES_ENTREE; k++)
 		{
-			if( memRequetes->requetes[k].voiture.type == PROF )
+			if(memRequetes->requetes[k].voiture.type != AUCUN)
 			{
+				// S'il y a quelqu'un qui attend à cette barrière
+				if( memRequetes->requetes[k].voiture.type == PROF )
+				{
 				// Si l'actuel prioritaire est un autre ou sil est arrivé après
-				if( memRequetes->requetes[voiturePrioritaire].voiture.type == AUTRE 
-					|| memRequetes->requetes[voiturePrioritaire].arrivee > memRequetes->requetes[k].arrivee )
-				{
-					// La requete k est prioritaire
-					voiturePrioritaire = k;
+					if( memRequetes->requetes[voiturePrioritaire].voiture.type == AUTRE 
+						|| memRequetes->requetes[voiturePrioritaire].arrivee > memRequetes->requetes[k].arrivee )
+					{
+						// La requete k est prioritaire
+						voiturePrioritaire = k+1;
+					}
 				}
-			}
-			else
-			{
-				// Si l'actuel prioritaire est un autre et qu'il est arrivé après
-				if( memRequetes->requetes[voiturePrioritaire].voiture.type == AUTRE
-					&& memRequetes->requetes[voiturePrioritaire].arrivee > memRequetes->requetes[k].arrivee )
+				else
 				{
-					// La requete k est prioritaire
-					voiturePrioritaire = k;
-				}
+					// Si l'actuel prioritaire est un autre et qu'il est arrivé après
+					if( memRequetes->requetes[voiturePrioritaire].voiture.type == AUTRE
+						&& memRequetes->requetes[voiturePrioritaire].arrivee > memRequetes->requetes[k].arrivee )
+					{
+						// La requete k est prioritaire
+						voiturePrioritaire = k+1;
+					}
+				}	
 			}
+			
 		}
 		//On libère la mémoire
 		shmdt(memRequetes);
 		semop(semRequeteId, &liberation, 1);
-		//On indique à l'entrée correspondante qu'elle peut faire entrer un usager
-		semop(semEntreeSortieId, &reservation, voiturePrioritaire);
+		//On indique à l'entrée correspondante qu'elle peut faire entrer un usager, sauf si personne n'attend
+		if(voiturePrioritaire != 0)
+		{
+			semop(semEntreeSortieId, &reservation, voiturePrioritaire);
+		}
 	}
 } //----- fin de moteur
 
