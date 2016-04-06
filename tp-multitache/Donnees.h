@@ -36,6 +36,7 @@ typedef struct
 
 typedef struct
 {
+	unsigned int nbPlacesPrises;
 	EtatPlace places[NB_PLACES];
 } StructMemEtat;
 
