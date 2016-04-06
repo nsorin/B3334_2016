@@ -131,9 +131,9 @@ bool InitPass (  )
 	semctl(semEcranId, 0, SETVAL, 0);
 	semctl(semEtatId, 0, SETVAL, 0);
 	semctl(semRequeteId, 0, SETVAL, 0);
-	semctl(semEntreeSortieId, 0, SETVAL, 0);
-	semctl(semEntreeSortieId, 1, SETVAL, 0);
-	semctl(semEntreeSortieId, 2, SETVAL, 0);
+	semctl(semEntreeSortieId, 0, SETVAL, 1);
+	semctl(semEntreeSortieId, 1, SETVAL, 1);
+	semctl(semEntreeSortieId, 2, SETVAL, 1);
 
 	// Cree la memoire partagee
 	memEtatId = shmget(IPC_PRIVATE, sizeof(StructMemEtat), IPC_CREAT | DROITS);

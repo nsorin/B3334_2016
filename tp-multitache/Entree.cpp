@@ -194,7 +194,6 @@ static void moteur()
       shmdt(memEtat);
       // Libération du sémaphore d'état
       while(semop(semEtatId, &liberation, 1)==-1 && errno==EINTR);
-
       // Attente du sémaphore de requêtes à 0 = Mémoire Partagée libre
       while(semop(semRequeteId, &attente, 1)==-1 && errno==EINTR);
       // Réservation du sémaphore de requêtes
@@ -213,7 +212,6 @@ static void moteur()
       while(semop(semRequeteId, &liberation, 1)==-1 && errno==EINTR);
       //Affichage de la requête
       AfficherRequete(req.barriere, req.voiture.type, req.arrivee);
-
       // Attente du sémaphore de la sortie
       while(semop(semRequeteId, &attente, 1)==-1 && errno==EINTR);
 
@@ -231,7 +229,7 @@ static void moteur()
       while(semop(semEtatId, &liberation, 1)==-1 && errno==EINTR);
 
       // Attente du sémaphore de requêtes à 0 = Mémoire Partagée libre
-      while(semop(semRequeteId, &attente, 1)==-1 && errno==EINTR);
+      while(semop(semEntreeSortieId, &attente, 1)==-1 && errno==EINTR);
       // Réservation du sémaphore de requêtes
       while(semop(semRequeteId, &reservation, 1)==-1 && errno==EINTR);
       // Attachement à la mémoire partagée des requêtes
@@ -242,7 +240,7 @@ static void moteur()
       voitureFausse.type = AUCUN;
       req2.barriere = barriere;
       req2.voiture = voitureFausse;
-      req2.arrivee = time(NULL);
+      req2.arrivee = 0;
       memReq2->requetes[barriere-1] = req2;
       // Détachement de la mémoire partagée des requêtes
       shmdt(memReq);

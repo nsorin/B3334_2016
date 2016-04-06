@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Netoyage des processus
-kill -9 $(pgrep Parking) 2> /dev/null
+kill -9 $(pgrep Carrefour) 2> /dev/null
 
 #Netoyage de TOUS les semaphor, mémoire partagée, fille d'attente
 ME=`whoami`
