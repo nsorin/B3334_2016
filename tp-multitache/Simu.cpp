@@ -30,7 +30,8 @@ static int descCanalSortie;
 static unsigned int nombreVoitures;
 
 //------------------------------------------------------ Fonctions privées
-static void initialisation(const char* nomCanalBPP, const char* nomCanalBPA, const char* nomCanalGB, const char* nomCanalSortie)
+static void initialisation(const char* nomCanalBPP, const char* nomCanalBPA,
+  const char* nomCanalGB, const char* nomCanalSortie)
 {
   //Ouverture des canaux de communication
   descCanalBPP = open(nomCanalBPP, O_WRONLY);
@@ -75,7 +76,8 @@ static void attribuerNumVoiture(Voiture * voiture)
 //////////////////////////////////////////////////////////////////  PUBLIC
 //---------------------------------------------------- Fonctions publiques
 
-void Simu(const char* nomCanalBPP, const char* nomCanalBPA, const char* nomCanalGB, const char* nomCanalSortie)
+void Simu(const char* nomCanalBPP, const char* nomCanalBPA,
+  const char* nomCanalGB, const char* nomCanalSortie)
 {
   //Phase d'initialisation
   initialisation(nomCanalBPP, nomCanalBPA, nomCanalGB, nomCanalSortie);

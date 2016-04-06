@@ -21,6 +21,7 @@
 #include "Heure.h"
 #include "Outils.h"
 #include "Menu.h"
+#include "Donnees.h"
 
 //------------------------------------------------------------- Constantes
 
