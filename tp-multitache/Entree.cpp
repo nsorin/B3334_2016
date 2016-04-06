@@ -261,10 +261,6 @@ static void moteur()
       sleep(1);
     }
   }
-  else
-  {
-    cerr << "Erreur lors de la lecture du canal Simu";
-  }
 } //----- fin de moteur
 
 //////////////////////////////////////////////////////////////////  PUBLIC

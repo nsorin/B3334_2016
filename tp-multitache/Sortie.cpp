@@ -94,7 +94,7 @@ static void mortVoiturier ( int numSignal )
 {
 	// Création des divers sembuf
 	struct sembuf reservation = {0, 1, 0};
-	//struct sembuf attente = {0, 0, 0};
+	struct sembuf attente = {0, 0, 0};
 	struct sembuf liberation = {0, -1, 0};
 
 	int status;
@@ -160,10 +160,11 @@ static void mortVoiturier ( int numSignal )
 		//On libère la mémoire
 		shmdt(memRequetes);
 		semop(semRequeteId, &liberation, 1);
+		cout << "FAISONS ENTRER CE CONNARD DE " << voiturePrioritaire << endl;
 		//On indique à l'entrée correspondante qu'elle peut faire entrer un usager, sauf si personne n'attend
-		if(voiturePrioritaire != 0)
+		if(voiturePrioritaire > 0)
 		{
-			semop(semEntreeSortieId, &reservation, voiturePrioritaire);
+			semctl(semEntreeSortieId, voiturePrioritaire, SETVAL, 0);
 		}
 	}
 } //----- fin de moteur

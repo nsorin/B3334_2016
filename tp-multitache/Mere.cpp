@@ -18,6 +18,7 @@
 #include <sys/shm.h>
 #include <sys/stat.h>
 #include <unistd.h>
+#include <iostream>
 
 
 //------------------------------------------------------ Include personnel
@@ -60,7 +61,7 @@ int main()
 {
 	if(!InitPass())
 	{
-		printf("Erreur à l'initialisation des objets passifs\n");
+		cerr << "Erreur à l'initialisation des objets passifs\n";
 		DelPass();
 		return -1;
 	}
