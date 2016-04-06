@@ -108,7 +108,7 @@ void Commande(char code, unsigned int valeur)
       case 1:
         write(descCanalBPP,&voiture,sizeof(Voiture));
         break;
-      case 3:
+      case 2:
         write(descCanalGB,&voiture,sizeof(Voiture));
         break;
     }
@@ -122,10 +122,10 @@ void Commande(char code, unsigned int valeur)
 
     //Envoie de la requête à la porte correspondante
     switch (valeur) {
-      case 2:
+      case 1:
         write(descCanalBPA,&voiture,sizeof(Voiture));
         break;
-      case 3:
+      case 2:
         write(descCanalGB,&voiture,sizeof(Voiture));
         break;
     }
