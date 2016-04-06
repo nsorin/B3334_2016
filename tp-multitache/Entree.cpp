@@ -39,6 +39,7 @@ static int semEntreeSortieId;
 static const char* nomCanalEntree;
 static int descCanalSimu;
 static map<pid_t,Voiture> voituriersEnService;
+static TypeZone zoneRequete;
 
 //------------------------------------------------------ Fonctions privées
 static void destruction(int noSignal)
@@ -69,8 +70,42 @@ static void destruction(int noSignal)
 
 static void mortVoiturier(int noSignal)
 {
+  // Création des divers sembuf
+  struct sembuf reservation = {0, 1, 0};
+  struct sembuf attente = {0, 0, 0};
+  struct sembuf liberation = {0, -1, 0};
+
+  // Récupération du pid de la tâche fille Voturier morte
+  int status;
+  pid_t pidVoiturier = wait(&status);
+  int numPlace = WEXITSTATUS(status);
+
+  // Récupération de la voiture du voiturier mort
+  Voiture voiture = voituriersEnService.find(pidVoiturier)->second;
+
+  // Création de l'état de la place
+  EtatPlace place;
+  place.arrivee = 3;
+  place.voiture = voiture;
+
+  // Attente du sémaphore d'état à 0 = Mémoire Partagée libre
+  while(semop(semEtatId, &attente, 1)==-1 && errno==EINTR);
+  // Réservation du sémaphore d'état
+  while(semop(semEtatId, &reservation, 1)==-1 && errno==EINTR);
+  // Attachement à la mémoire partagée d'état du parking
+  StructMemEtat* memEtat = (StructMemEtat*) shmat(memEtatId, NULL, 0);
+  // Actualisation de l'état de la place
+  memEtat->places[numPlace-1] = place;
+  // Détachement de la mémoire partagée d'état du parking
+  shmdt(memEtat);
+  // Libération du sémaphore d'état
+  while(semop(semEtatId, &liberation, 1)==-1 && errno==EINTR);
+
   // Affichage de la voiture à la place
-  // AfficherPlace()
+  AfficherPlace(numPlace,voiture.type,voiture.num,place.arrivee);
+
+  // Suppression du voiturier dans la map de voituriersEnService
+  voituriersEnService.erase(pidVoiturier);
 } //----- fin de mortVoiturier
 
 static void initialisation(TypeBarriere barriereExt, int semEtatIdExt, int memEtatIdExt,
@@ -84,6 +119,22 @@ static void initialisation(TypeBarriere barriereExt, int semEtatIdExt, int memEt
   memRequeteId = memRequeteIdExt;
   semEntreeSortieId = semEntreeSortieIdExt;
   nomCanalEntree = nomCanalEntreeExt;
+  switch(barriere)
+  {
+    case PROF_BLAISE_PASCAL:
+      zoneRequete = REQUETE_R1;
+      break;
+    case AUTRE_BLAISE_PASCAL:
+      zoneRequete = REQUETE_R2;
+      break;
+    case ENTREE_GASTON_BERGER:
+      zoneRequete = REQUETE_R3;
+      break;
+    case AUCUNE:
+      break;
+    case SORTIE_GASTON_BERGER:
+      break;
+  }
 
   // Handler de destruction
   struct sigaction actionDestruction;
@@ -143,6 +194,7 @@ static void moteur()
       shmdt(memEtat);
       // Libération du sémaphore d'état
       while(semop(semEtatId, &liberation, 1)==-1 && errno==EINTR);
+
       // Attente du sémaphore de requêtes à 0 = Mémoire Partagée libre
       while(semop(semRequeteId, &attente, 1)==-1 && errno==EINTR);
       // Réservation du sémaphore de requêtes
@@ -161,8 +213,10 @@ static void moteur()
       while(semop(semRequeteId, &liberation, 1)==-1 && errno==EINTR);
       //Affichage de la requête
       AfficherRequete(req.barriere, req.voiture.type, req.arrivee);
+
       // Attente du sémaphore de la sortie
       while(semop(semRequeteId, &attente, 1)==-1 && errno==EINTR);
+
       // Attente du sémaphore d'état à 0 = Mémoire Partagée libre
       while(semop(semEtatId, &attente, 1)==-1 && errno==EINTR);
       // Réservation du sémaphore d'état
@@ -175,10 +229,36 @@ static void moteur()
       shmdt(memEtat);
       // Libération du sémaphore d'état
       while(semop(semEtatId, &liberation, 1)==-1 && errno==EINTR);
+
+      // Attente du sémaphore de requêtes à 0 = Mémoire Partagée libre
+      while(semop(semRequeteId, &attente, 1)==-1 && errno==EINTR);
+      // Réservation du sémaphore de requêtes
+      while(semop(semRequeteId, &reservation, 1)==-1 && errno==EINTR);
+      // Attachement à la mémoire partagée des requêtes
+      StructMemRequete* memReq2 = (StructMemRequete*) shmat(memRequeteId,NULL,0);
+      // Ajout de la requête
+      RequetePlace req2;
+      Voiture voitureFausse;
+      voitureFausse.type = AUCUN;
+      req2.barriere = barriere;
+      req2.voiture = voitureFausse;
+      req2.arrivee = 3;
+      memReq2->requetes[barriere-1] = req2;
+      // Détachement de la mémoire partagée des requêtes
+      shmdt(memReq);
+      // Libération du sémaphore de requêtes
+      while(semop(semRequeteId, &liberation, 1)==-1 && errno==EINTR);
+
+      // Effacement de la requête sur l'IHM
+      Effacer(zoneRequete);
+
       // Création du voiturier en charge de la voiture
       pid_t voiturier = GarerVoiture(barriere);
       // Ajout du voiturier dans la map des voituriers en service
       voituriersEnService.insert(pair<pid_t, Voiture>(voiturier,voiture));
+
+      // Tempo de 1 seconde
+      sleep(1);
     }
   }
   else
