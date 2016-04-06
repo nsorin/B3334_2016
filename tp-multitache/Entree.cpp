@@ -85,7 +85,7 @@ static void mortVoiturier(int noSignal)
 
   // Création de l'état de la place
   EtatPlace place;
-  place.arrivee = 3;
+  place.arrivee = time(NULL);
   place.voiture = voiture;
 
   // Attente du sémaphore d'état à 0 = Mémoire Partagée libre
@@ -205,7 +205,7 @@ static void moteur()
       RequetePlace req;
       req.barriere = barriere;
       req.voiture = voiture;
-      req.arrivee = 3;
+      req.arrivee = time(NULL);
       memReq->requetes[barriere-1] = req;
       // Détachement de la mémoire partagée des requêtes
       shmdt(memReq);
@@ -242,7 +242,7 @@ static void moteur()
       voitureFausse.type = AUCUN;
       req2.barriere = barriere;
       req2.voiture = voitureFausse;
-      req2.arrivee = 3;
+      req2.arrivee = time(NULL);
       memReq2->requetes[barriere-1] = req2;
       // Détachement de la mémoire partagée des requêtes
       shmdt(memReq);
