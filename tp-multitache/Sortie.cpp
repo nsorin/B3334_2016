@@ -17,6 +17,7 @@
 #include <sys/shm.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <map>
 
 //------------------------------------------------------ Include personnel
 #include "Sortie.h"
@@ -27,9 +28,18 @@
 //------------------------------------------------------------------ Types
 
 //---------------------------------------------------- Variables statiques
+static TypeBarriere barriere;
+static int semEtatId;
+static int memEtatId;
+static int semRequeteId;
+static int memRequeteId;
+static int semEntreeSortieId;
 static int descCanalSortie;
+static const char* nomCanalSimu;
+static map<pid_t,Voiture> voituriersEnService;
 //------------------------------------------------------ Fonctions privées
-static void initialisation ( const char* nomCanalSortie )
+static void initialisation ( TypeBarriere type, int semEtatIdExt, int memEtatIdExt,
+			int semRequeteIdExt, int memRequeteIdExt, int semEntreeSortieIdExt, const char* nomCanalSortie )
 // Mode d'emploi :
 //
 // Contrat :
@@ -37,8 +47,48 @@ static void initialisation ( const char* nomCanalSortie )
 // Algorithme :
 //
 {
-	descCanalSortie = open(nomCanalSortie, O_RDONLY);
+	// Initialisation des variables static
+	barriere = type;
+	semEtatId = semEtatIdExt;
+	memEtatId = memEtatIdExt;
+	semRequeteId = semRequeteIdExt;
+	memRequeteId = memRequeteIdExt;
+	semEntreeSortieId = semEntreeSortieIdExt;
+	nomCanalSimu = nomCanalSortie;
+
+	// Handler de destruction
+	struct sigaction actionDestruction;
+	actionDestruction.sa_handler = destruction;
+	sigemptyset(&actionDestruction.sa_mask);
+	actionDestruction.sa_flags = 0;
+	sigaction(SIGUSR2, &actionDestruction, NULL);
+
+	// Handler de mort d'un voiturier
+	struct sigaction actionMortVoiturier;
+	actionMortVoiturier.sa_handler = mortVoiturier;
+	sigemptyset(&actionMortVoiturier.sa_mask);
+	actionMortVoiturier.sa_flags = 0;
+	sigaction(SIGCHLD, &actionMortVoiturier, NULL);
+
+	// Ouverture du canal de communication avec Simu
+	nomCanalSimu = nomCanalSortie;
+
+
 } //----- fin de initialisation
+
+static void handlerMortVoiturier ( int numSignal )
+// Mode d'emploi :
+//
+// Contrat :
+//
+// Algorithme :
+//
+{
+	if(numSignal == SIGCHLD)
+	{
+		
+	}
+} //----- fin de moteur
 
 static void moteur (  )
 // Mode d'emploi :
@@ -48,6 +98,14 @@ static void moteur (  )
 // Algorithme :
 //
 {
+	int numPlaceVoiture;
+
+	// On récupère le numéro de la place dans le canal relié à la simu
+	if(read(descCanalSimu, &numPlaceVoiture, sizeof(int) > 0))
+	{
+		// On ajoute un voiturier dans la liste
+		voituriersEnService.push_back(SortirVoiture(numPlaceVoiture));
+	}
 } //----- fin de moteur
 
 static void destruction ( int noSignal )
@@ -62,6 +120,16 @@ static void destruction ( int noSignal )
 	{
 		// Fermeture du canal de communication
 		close(descCanalSortie);
+		
+		// Destruction des voituriers en service
+		for(vector<pid_t>::iterator i = voituriersEnService.begin(); i != voituriersEnService.end(); i++){
+			kill(*i, SIGUSR2);
+		}
+		// Attente de confirmation
+		for(vector<pid_t>::iterator i = voituriersEnService.begin(); i != voituriersEnService.end(); i++){
+			waitpid(*i,NULL,0);
+		}
+
 		// Suicide de la tâche
 		exit(0);
 	}
@@ -70,8 +138,8 @@ static void destruction ( int noSignal )
 //////////////////////////////////////////////////////////////////  PUBLIC
 //---------------------------------------------------- Fonctions publiques
 
-void Sortie ( TypeBarriere type, int semEtatId, int memEtatId,
-			int semRequeteId, int memRequeteId, int semEntreeSortieId, const char* nomCanalSortie )
+void Sortie ( TypeBarriere type, int semEtatIdExt, int memEtatIdExt,
+			int semRequeteIdExt, int memRequeteIdExt, int semEntreeSortieIdExt, const char* nomCanalSortie )
 // Mode d'emploi :
 //
 // Contrat :
@@ -79,7 +147,8 @@ void Sortie ( TypeBarriere type, int semEtatId, int memEtatId,
 // Algorithme :
 //
 {
-	initialisation(nomCanalSortie);
+	initialisation(type, semEtatIdExt, memEtatIdExt,
+			semRequeteIdExt, memRequeteIdExt, semEntreeSortieIdExt, nomCanalSortie);
 	for(;;)
 	{
 		moteur();
