@@ -29,7 +29,8 @@
 
 ///////////////////////////////////////////////////////////////////  PRIVE
 //------------------------------------------------------------- Constantes
-
+/* Droits */
+#define DROITS 0666
 //------------------------------------------------------------------ Types
 
 //---------------------------------------------------- Variables statiques
@@ -59,7 +60,7 @@ int main()
 {
 	if(!InitPass())
 	{
-		printf("Erreur à l'initialisation des objets passifs");
+		printf("Erreur à l'initialisation des objets passifs\n");
 		DelPass();
 		return -1;
 	}
@@ -119,10 +120,10 @@ bool InitPass (  )
 // Cette fonction initialise tous les objets passifs de l'application
 {
 	// Cree les semaphores
-	semEcranId = semget(IPC_PRIVATE, 1, IPC_CREAT);
-	semEtatId = semget(IPC_PRIVATE, 1, IPC_CREAT);
-	semRequeteId = semget(IPC_PRIVATE, 1, IPC_CREAT);
-	semEntreeSortieId = semget(IPC_PRIVATE, 3, IPC_CREAT);
+	semEcranId = semget(IPC_PRIVATE, 1, IPC_CREAT | DROITS);
+	semEtatId = semget(IPC_PRIVATE, 1, IPC_CREAT | DROITS);
+	semRequeteId = semget(IPC_PRIVATE, 1, IPC_CREAT | DROITS);
+	semEntreeSortieId = semget(IPC_PRIVATE, 3, IPC_CREAT | DROITS);
 	if(semEcranId == -1 || semEtatId == -1 || semRequeteId == -1 || semEntreeSortieId == -1)
 	{
 		return false;
@@ -135,27 +136,27 @@ bool InitPass (  )
 	semctl(semEntreeSortieId, 2, SETVAL, 0);
 
 	// Cree la memoire partagee
-	memEtatId = shmget(IPC_PRIVATE, sizeof(StructMemEtat), IPC_CREAT);
-	memRequeteId = shmget(IPC_PRIVATE, sizeof(StructMemRequete), IPC_CREAT);
+	memEtatId = shmget(IPC_PRIVATE, sizeof(StructMemEtat), IPC_CREAT | DROITS);
+	memRequeteId = shmget(IPC_PRIVATE, sizeof(StructMemRequete), IPC_CREAT | DROITS);
 	if(memEtatId == -1 || memRequeteId == -1)
 	{
 		return false;
 	}
 
 	// Cree les canaux
-	if(mkfifo(NOM_CANAL_BPP, IPC_PRIVATE) == -1)
+	if(mkfifo(NOM_CANAL_BPP, DROITS) == -1)
 	{
 		return false;
 	}
-	if(mkfifo(NOM_CANAL_BPA, IPC_PRIVATE) == -1)
+	if(mkfifo(NOM_CANAL_BPA, DROITS) == -1)
 	{
 		return false;
 	}
-	if(mkfifo(NOM_CANAL_GB, IPC_PRIVATE) == -1)
+	if(mkfifo(NOM_CANAL_GB, DROITS) == -1)
 	{
 		return false;
 	}
-	if(mkfifo(NOM_CANAL_SORTIE, IPC_PRIVATE) == -1)
+	if(mkfifo(NOM_CANAL_SORTIE, DROITS) == -1)
 	{
 		return false;
 	}
