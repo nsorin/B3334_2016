@@ -78,6 +78,8 @@ static void initialisation ( TypeBarriere type, int semEtatIdExt, int memEtatIdE
 
 	// Ouverture du canal de communication avec Simu
 	nomCanalSimu = nomCanalSortie;
+	descCanalSimu = open(nomCanalSimu, O_RDONLY);
+
 
 
 } //----- fin de initialisation
@@ -177,7 +179,7 @@ static void moteur (  )
 	int numPlaceVoiture;
 
 	// On récupère le numéro de la place dans le canal relié à la simu
-	if(read(descCanalSimu, &numPlaceVoiture, sizeof(int) > 0))
+	if(read(descCanalSimu, &numPlaceVoiture, sizeof(int)) > 0)
 	{
 		// On ajoute un voiturier dans la liste
 		voituriersEnService[SortirVoiture(numPlaceVoiture)] = numPlaceVoiture;

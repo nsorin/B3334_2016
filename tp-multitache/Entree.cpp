@@ -158,7 +158,7 @@ static void moteur()
 {
   // Lecture de l'arrivée d'un véhicule
   Voiture voiture;
-  if(read(descCanalSimu, &voiture, sizeof(Voiture) > 0))
+  if(read(descCanalSimu, &voiture, sizeof(Voiture)) > 0)
   {
     // Affichage de la voiture sur l'IHM
     DessinerVoitureBarriere(barriere, voiture.type);
