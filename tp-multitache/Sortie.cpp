@@ -166,7 +166,6 @@ static void mortVoiturier ( int numSignal )
 		shmdt(memRequetes);
 		semop(semRequeteId, &liberation, 1);
 		//On indique à l'entrée correspondante qu'elle peut faire entrer un usager, sauf si personne n'attend
-		Afficher(MESSAGE,voiturePrioritaire);
 		if(voiturePrioritaire < NB_BARRIERES_ENTREE)
 		{
 			if(semctl(semEntreeSortieId, voiturePrioritaire, SETVAL, 0) == -1)
