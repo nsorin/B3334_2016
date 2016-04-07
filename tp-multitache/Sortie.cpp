@@ -191,7 +191,11 @@ static void moteur (  )
 	if(read(descCanalSimu, &numPlaceVoiture, sizeof(int)) > 0)
 	{
 		// On ajoute un voiturier dans la liste
-		voituriersEnService[SortirVoiture(numPlaceVoiture)] = numPlaceVoiture;
+		pid_t p = SortirVoiture(numPlaceVoiture);
+		if( p != -1 )
+		{
+			voituriersEnService[p] = numPlaceVoiture;
+		}
 	}
 } //----- fin de moteur
 
