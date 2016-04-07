@@ -104,7 +104,6 @@ int main()
 		waitpid(noEntreeBPA, NULL, 0);
 		kill(noHeure, SIGUSR2);
 		waitpid(noHeure, NULL, 0);
-
 		// Suppression des objets passifs
 		DelPass();
 		TerminerApplication(true);

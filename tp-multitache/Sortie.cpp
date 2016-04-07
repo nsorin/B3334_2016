@@ -214,7 +214,7 @@ static void destruction ( int numSignal )
 		actionChild.sa_handler = SIG_IGN;
 		sigemptyset(&actionChild.sa_mask);
 		actionChild.sa_flags = 0;
-		sigaction(SIGUSR2, &actionChild, NULL);
+		sigaction(SIGCHLD, &actionChild, NULL);
 
 		// Destruction des voituriers en service
 		for(std::map<pid_t, unsigned int>::iterator i = voituriersEnService.begin(); i != voituriersEnService.end(); i++){

@@ -51,7 +51,7 @@ static void destruction(int noSignal)
   actionChild.sa_handler = SIG_IGN;
   sigemptyset(&actionChild.sa_mask);
   actionChild.sa_flags = 0;
-  sigaction(SIGUSR2, &actionChild, NULL);
+  sigaction(SIGCHLD, &actionChild, NULL);
 
   // Demande de suicide à tous les voituriers en service
   for(map<pid_t,Voiture>::iterator it=voituriersEnService.begin(); it!=voituriersEnService.end(); it++)
