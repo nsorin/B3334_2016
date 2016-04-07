@@ -143,6 +143,21 @@ bool InitPass (  )
 	{
 		return false;
 	}
+	// Initialisation des requêtes vides
+	// Attachement à la mémoire partagée des requêtes
+	StructMemRequete* memReq = (StructMemRequete*) shmat(memRequeteId,NULL,0);
+	for(unsigned int i=0; i<NB_BARRIERES_ENTREE; i++)
+	{
+      	// Ajout de la requête
+      	RequetePlace req;
+      	Voiture voitureFausse;
+      	voitureFausse.type = AUCUN;
+      	req.voiture = voitureFausse;
+      	req.arrivee = 0;
+      	memReq->requetes[i] = req;
+	}
+	// Détachement de la mémoire partagée des requêtes
+    shmdt(memReq);
 
 	// Cree les canaux
 	if(mkfifo(NOM_CANAL_BPP, DROITS) == -1)

@@ -212,6 +212,8 @@ static void moteur()
       while(semop(semRequeteId, &liberation, 1)==-1 && errno==EINTR);
       //Affichage de la requête
       AfficherRequete(req.barriere, req.voiture.type, req.arrivee);
+      // NE DEVRAIT PAS ETRE NECESSAIRE
+      DessinerVoitureBarriere(barriere, voiture.type);
       // Attente du sémaphore de la sortie
       while(semop(semEntreeSortieId, &attente, 1)==-1 && errno==EINTR);
 
