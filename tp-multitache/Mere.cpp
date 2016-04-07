@@ -43,7 +43,6 @@ static pid_t noEntreeGB = -1;
 static pid_t noEntreeBPP = -1;
 static pid_t noEntreeBPA = -1;
 /* Semaphore */
-static int semEcranId = -1;
 static int semEtatId = -1;
 static int semRequeteId = -1;
 static int semEntreeSortieId = -1;
@@ -120,15 +119,13 @@ bool InitPass (  )
 // Cette fonction initialise tous les objets passifs de l'application
 {
 	// Cree les semaphores
-	semEcranId = semget(IPC_PRIVATE, 1, IPC_CREAT | DROITS);
 	semEtatId = semget(IPC_PRIVATE, 1, IPC_CREAT | DROITS);
 	semRequeteId = semget(IPC_PRIVATE, 1, IPC_CREAT | DROITS);
 	semEntreeSortieId = semget(IPC_PRIVATE, 3, IPC_CREAT | DROITS);
-	if(semEcranId == -1 || semEtatId == -1 || semRequeteId == -1 || semEntreeSortieId == -1)
+	if( semEtatId == -1 || semRequeteId == -1 || semEntreeSortieId == -1)
 	{
 		return false;
 	}
-	semctl(semEcranId, 0, SETVAL, 0);
 	semctl(semEtatId, 0, SETVAL, 0);
 	semctl(semRequeteId, 0, SETVAL, 0);
 	semctl(semEntreeSortieId, 0, SETVAL, 1);
@@ -197,10 +194,6 @@ void DelPass (  )
 		shmctl(memRequeteId, IPC_RMID, 0);
 	}
 	// Supprime les semaphores
-	if(semEcranId != -1)
-	{
-		semctl(semEcranId, 1, IPC_RMID, 0);
-	}
 	if(semEtatId != -1)
 	{
 		semctl(semEtatId, 1, IPC_RMID, 0);
