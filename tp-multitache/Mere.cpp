@@ -78,15 +78,15 @@ int main()
 	}
 	else if((noEntreeGB = fork()) == 0)
 	{
-		Entree(ENTREE_GASTON_BERGER, semEtatId, memEtatId, semRequeteId, memRequeteId, semEntreeSortieId, NOM_CANAL_GB);
+		Entree(ENTREE_GASTON_BERGER, semEtatId, memEtatId, semRequeteId, memRequeteId, semEntreeSortieId, 2, NOM_CANAL_GB);
 	}
 	else if((noEntreeBPP = fork()) == 0)
 	{
-		Entree(PROF_BLAISE_PASCAL, semEtatId, memEtatId, semRequeteId, memRequeteId, semEntreeSortieId, NOM_CANAL_BPP);
+		Entree(PROF_BLAISE_PASCAL, semEtatId, memEtatId, semRequeteId, memRequeteId, semEntreeSortieId, 0, NOM_CANAL_BPP);
 	}
 	else if((noEntreeBPA = fork()) == 0)
 	{
-		Entree(AUTRE_BLAISE_PASCAL, semEtatId, memEtatId, semRequeteId, memRequeteId, semEntreeSortieId, NOM_CANAL_BPA);
+		Entree(AUTRE_BLAISE_PASCAL, semEtatId, memEtatId, semRequeteId, memRequeteId, semEntreeSortieId, 1, NOM_CANAL_BPA);
 	}
 	else
 	{

@@ -128,20 +128,25 @@ static void mortVoiturier ( int numSignal )
 		// On attache la mémoire
 		StructMemRequete *memRequetes = (StructMemRequete *) shmat(memRequeteId, NULL, 0);
 		// On détermine la voiture prioritaire
-		unsigned int voiturePrioritaire = 0;
+		unsigned int voiturePrioritaire = NB_BARRIERES_ENTREE;
 		for(unsigned int k=0; k<NB_BARRIERES_ENTREE; k++)
 		{
 			if(memRequetes->requetes[k].voiture.type != AUCUN)
 			{
 				// S'il y a quelqu'un qui attend à cette barrière
-				if( memRequetes->requetes[k].voiture.type == PROF )
+				if(memRequetes->requetes[voiturePrioritaire].voiture.type == AUCUN)
+				{
+					// La requete k est prioritaire
+					voiturePrioritaire = k;
+				}
+				else if( memRequetes->requetes[k].voiture.type == PROF )
 				{
 				// Si l'actuel prioritaire est un autre ou sil est arrivé après
 					if( memRequetes->requetes[voiturePrioritaire].voiture.type == AUTRE
 						|| memRequetes->requetes[voiturePrioritaire].arrivee > memRequetes->requetes[k].arrivee )
 					{
 						// La requete k est prioritaire
-						voiturePrioritaire = k+1;
+						voiturePrioritaire = k;
 					}
 				}
 				else
@@ -151,7 +156,7 @@ static void mortVoiturier ( int numSignal )
 						&& memRequetes->requetes[voiturePrioritaire].arrivee > memRequetes->requetes[k].arrivee )
 					{
 						// La requete k est prioritaire
-						voiturePrioritaire = k+2;
+						voiturePrioritaire = k;
 					}
 				}
 			}
@@ -161,9 +166,13 @@ static void mortVoiturier ( int numSignal )
 		shmdt(memRequetes);
 		semop(semRequeteId, &liberation, 1);
 		//On indique à l'entrée correspondante qu'elle peut faire entrer un usager, sauf si personne n'attend
-		if(voiturePrioritaire > 0)
+		Afficher(MESSAGE,voiturePrioritaire);
+		if(voiturePrioritaire < NB_BARRIERES_ENTREE)
 		{
-			semctl(semEntreeSortieId, voiturePrioritaire, SETVAL, 0);
+			if(semctl(semEntreeSortieId, voiturePrioritaire, SETVAL, 0) == -1)
+			{
+				Afficher(MESSAGE,"Erreur de sémaphore EntreeSortie");	
+			}
 		}
 	}
 } //----- fin de moteur

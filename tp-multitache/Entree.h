@@ -28,7 +28,7 @@
 //---------------------------------------------------- Fonctions publiques
 
 void Entree(TypeBarriere type, int semEtatId, int memEtatId, int semRequeteId,
-  int memRequeteId, int semEntreeSortieId, const char* nomCanalSortie);
+  int memRequeteId, int semEntreeSortieId, short unsigned int semEntreeSortieNum, const char* nomCanalSortie);
 // Mode d'emploi :
 //
 // Contrat :

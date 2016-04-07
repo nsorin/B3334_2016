@@ -36,6 +36,7 @@ static int memEtatId;
 static int semRequeteId;
 static int memRequeteId;
 static int semEntreeSortieId;
+static short unsigned int semEntreeSortieNum;
 static const char* nomCanalEntree;
 static int descCanalSimu;
 static map<pid_t,Voiture> voituriersEnService;
@@ -109,7 +110,7 @@ static void mortVoiturier(int noSignal)
 } //----- fin de mortVoiturier
 
 static void initialisation(TypeBarriere barriereExt, int semEtatIdExt, int memEtatIdExt,
-  int semRequeteIdExt, int memRequeteIdExt, int semEntreeSortieIdExt, const char* nomCanalEntreeExt)
+  int semRequeteIdExt, int memRequeteIdExt, int semEntreeSortieIdExt, short unsigned int semEntreeSortieNumExt, const char* nomCanalEntreeExt)
 {
   // Initialisation des variables static
   barriere = barriereExt;
@@ -118,6 +119,7 @@ static void initialisation(TypeBarriere barriereExt, int semEtatIdExt, int memEt
   semRequeteId = semRequeteIdExt;
   memRequeteId = memRequeteIdExt;
   semEntreeSortieId = semEntreeSortieIdExt;
+  semEntreeSortieNum = semEntreeSortieNumExt;
   nomCanalEntree = nomCanalEntreeExt;
   switch(barriere)
   {
@@ -166,6 +168,7 @@ static void moteur()
     // Création des divers sembuf
     struct sembuf reservation = {0, 1, 0};
     struct sembuf attente = {0, 0, 0};
+    struct sembuf attenteES = {semEntreeSortieNum, 0, 0};
     struct sembuf liberation = {0, -1, 0};
 
     // Attente du sémaphore d'état à 0 = Mémoire Partagée libre
@@ -215,8 +218,9 @@ static void moteur()
       // NE DEVRAIT PAS ETRE NECESSAIRE
       DessinerVoitureBarriere(barriere, voiture.type);
       // Attente du sémaphore de la sortie
-      while(semop(semEntreeSortieId, &attente, 1)==-1 && errno==EINTR);
-
+      while(semop(semEntreeSortieId, &attenteES, 1)==-1 && errno==EINTR);
+      // On remet la valeur initiale
+      semctl(semEntreeSortieId, semEntreeSortieNum, SETVAL, 1);
       // Attente du sémaphore d'état à 0 = Mémoire Partagée libre
       while(semop(semEtatId, &attente, 1)==-1 && errno==EINTR);
       // Réservation du sémaphore d'état
@@ -267,11 +271,11 @@ static void moteur()
 //---------------------------------------------------- Fonctions publiques
 
 void Entree(TypeBarriere barriereExt, int semEtatIdExt, int memEtatIdExt,
-  int semRequeteIdExt, int memRequeteIdExt, int semEntreeSortieIdExt, const char* nomCanalEntreeExt)
+  int semRequeteIdExt, int memRequeteIdExt, int semEntreeSortieIdExt, int short unsigned semEntreeSortieNumExt, const char* nomCanalEntreeExt)
 {
   //Phase d'initialisation
   initialisation(barriereExt, semEtatIdExt, memEtatIdExt, semRequeteIdExt, memRequeteIdExt,
-    semEntreeSortieIdExt, nomCanalEntreeExt);
+    semEntreeSortieIdExt, semEntreeSortieNumExt, nomCanalEntreeExt);
 
   //Phase moteur
   for(;;)
