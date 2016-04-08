@@ -24,6 +24,7 @@ CLEAN=clean
 $(EXE): $(OBJ)
 	$(ECHO) "Edition des liens"
 	$(EDL) $(EDLFLAGS) $(OUTPUT) $(EXE) $(LIBPATH) $(OBJ) $(LIBS)
+	rm $(OBJ)
 
 %.o: %.cpp
 	$(ECHO) "Compilation de <$<>"

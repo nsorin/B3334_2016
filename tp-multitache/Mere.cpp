@@ -1,12 +1,11 @@
 /*************************************************************************
-                           XXX  -  description
+                           MERE  -  description
                              -------------------
-    debut                : XXX
-    copyright            : (C) XXX par XXX
-    e-mail               : XXX
+    debut                : 18/03/16
+    copyright            : (C) B3334 par B3334
 *************************************************************************/
 
-//---------- Realisation de la tâche <XXX> (fichier XXX.cpp) ---
+//---------- Realisation de la tâche <MERE> (fichier MERE.cpp) ---
 
 /////////////////////////////////////////////////////////////////  INCLUDE
 //-------------------------------------------------------- Include système
@@ -51,12 +50,6 @@ static int memEtatId = -1;
 static int memRequeteId = -1;
 //------------------------------------------------------ Fonctions privees
 int main()
-// Mode d'emploi :
-//
-// Contrat :
-//
-// Algorithme :
-//
 {
 	if(!InitPass())
 	{
@@ -73,19 +66,23 @@ int main()
 	}
 	else if((noSortie = fork()) == 0)
 	{
-		Sortie(SORTIE_GASTON_BERGER, semEtatId, memEtatId, semRequeteId, memRequeteId, semEntreeSortieId, NOM_CANAL_SORTIE);
+		Sortie(SORTIE_GASTON_BERGER, semEtatId, memEtatId, semRequeteId,
+			memRequeteId, semEntreeSortieId, NOM_CANAL_SORTIE);
 	}
 	else if((noEntreeGB = fork()) == 0)
 	{
-		Entree(ENTREE_GASTON_BERGER, semEtatId, memEtatId, semRequeteId, memRequeteId, semEntreeSortieId, 2, NOM_CANAL_GB);
+		Entree(ENTREE_GASTON_BERGER, semEtatId, memEtatId, semRequeteId,
+			memRequeteId, semEntreeSortieId, 2, NOM_CANAL_GB);
 	}
 	else if((noEntreeBPP = fork()) == 0)
 	{
-		Entree(PROF_BLAISE_PASCAL, semEtatId, memEtatId, semRequeteId, memRequeteId, semEntreeSortieId, 0, NOM_CANAL_BPP);
+		Entree(PROF_BLAISE_PASCAL, semEtatId, memEtatId, semRequeteId,
+			memRequeteId, semEntreeSortieId, 0, NOM_CANAL_BPP);
 	}
 	else if((noEntreeBPA = fork()) == 0)
 	{
-		Entree(AUTRE_BLAISE_PASCAL, semEtatId, memEtatId, semRequeteId, memRequeteId, semEntreeSortieId, 1, NOM_CANAL_BPA);
+		Entree(AUTRE_BLAISE_PASCAL, semEtatId, memEtatId, semRequeteId,
+			memRequeteId, semEntreeSortieId, 1, NOM_CANAL_BPA);
 	}
 	else
 	{

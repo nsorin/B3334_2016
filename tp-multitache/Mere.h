@@ -1,19 +1,18 @@
 /*************************************************************************
-                           XXX  -  description
+                           MERE  -  description
                              -------------------
-    début                : XXX
-    copyright            : (C) XXX par XXX
-    e-mail               : XXX
+    début                : 18/03/16
+    copyright            : (C) B3334 par B3334
 *************************************************************************/
 
-//---------- Interface de la tâche <XXX> (fichier XXX.h) -------
+//---------- Interface de la tâche <MERE> (fichier MERE.h) -------
 #if ! defined ( MERE_H )
 #define MERE_H
 
 //------------------------------------------------------------------------
-// Rôle de la tâche <XXX>
-//
-//
+// Rôle de la tâche <MERE>
+// Tâche mère de l'application, initialisant et détruisant tous les objets
+// et tâches utilisés par l'application.
 //------------------------------------------------------------------------
 
 /////////////////////////////////////////////////////////////////  INCLUDE
@@ -32,11 +31,6 @@ const char* NOM_CANAL_SORTIE = "canalSortie";
 
 //////////////////////////////////////////////////////////////////  PUBLIC
 //---------------------------------------------------- Fonctions publiques
-// type Nom ( liste de paramètres );
-// Mode d'emploi :
-//
-// Contrat :
-//
 
 bool InitPass();
 void DelPass();

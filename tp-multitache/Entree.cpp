@@ -54,12 +54,14 @@ static void destruction(int noSignal)
   sigaction(SIGCHLD, &actionChild, NULL);
 
   // Demande de suicide à tous les voituriers en service
-  for(map<pid_t,Voiture>::iterator it=voituriersEnService.begin(); it!=voituriersEnService.end(); it++)
+  for(map<pid_t,Voiture>::iterator it=voituriersEnService.begin();
+  it!=voituriersEnService.end(); it++)
   {
     kill(it->first,SIGUSR2);
   }
   // Attente des réponses des voituriers
-  for(map<pid_t,Voiture>::iterator it=voituriersEnService.begin(); it!=voituriersEnService.end(); it++)
+  for(map<pid_t,Voiture>::iterator it=voituriersEnService.begin();
+  it!=voituriersEnService.end(); it++)
   {
     waitpid(it->first,NULL,0);
   }
@@ -109,8 +111,10 @@ static void mortVoiturier(int noSignal)
   voituriersEnService.erase(pidVoiturier);
 } //----- fin de mortVoiturier
 
-static void initialisation(TypeBarriere barriereExt, int semEtatIdExt, int memEtatIdExt,
-  int semRequeteIdExt, int memRequeteIdExt, int semEntreeSortieIdExt, short unsigned int semEntreeSortieNumExt, const char* nomCanalEntreeExt)
+static void initialisation(TypeBarriere barriereExt, int semEtatIdExt,
+  int memEtatIdExt, int semRequeteIdExt, int memRequeteIdExt,
+  int semEntreeSortieIdExt, short unsigned int semEntreeSortieNumExt,
+  const char* nomCanalEntreeExt)
 {
   // Initialisation des variables static
   barriere = barriereExt;
@@ -273,11 +277,13 @@ static void moteur()
 //---------------------------------------------------- Fonctions publiques
 
 void Entree(TypeBarriere barriereExt, int semEtatIdExt, int memEtatIdExt,
-  int semRequeteIdExt, int memRequeteIdExt, int semEntreeSortieIdExt, int short unsigned semEntreeSortieNumExt, const char* nomCanalEntreeExt)
+  int semRequeteIdExt, int memRequeteIdExt, int semEntreeSortieIdExt,
+  int short unsigned semEntreeSortieNumExt, const char* nomCanalEntreeExt)
 {
   //Phase d'initialisation
-  initialisation(barriereExt, semEtatIdExt, memEtatIdExt, semRequeteIdExt, memRequeteIdExt,
-    semEntreeSortieIdExt, semEntreeSortieNumExt, nomCanalEntreeExt);
+  initialisation(barriereExt, semEtatIdExt, memEtatIdExt, semRequeteIdExt,
+    memRequeteIdExt,semEntreeSortieIdExt, semEntreeSortieNumExt,
+    nomCanalEntreeExt);
 
   //Phase moteur
   for(;;)

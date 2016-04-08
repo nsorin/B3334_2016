@@ -1,12 +1,11 @@
 /*************************************************************************
-                           XXX  -  description
+                           SORTIE  -  description
                              -------------------
-    début                : XXX
-    copyright            : (C) XXX par XXX
-    e-mail               : XXX
+    début                : 18/03/16
+    copyright            : (C) B3334 par B3334
 *************************************************************************/
 
-//---------- Réalisation de la tâche <XXX> (fichier XXX.cpp) ---
+//---------- Réalisation de la tâche <SORTIE> (fichier SORTIE.cpp) ---
 
 /////////////////////////////////////////////////////////////////  INCLUDE
 //-------------------------------------------------------- Include système
@@ -44,14 +43,9 @@ static std::map<pid_t,unsigned int> voituriersEnService;
 static void destruction ( int numSignal );
 static void mortVoiturier ( int numSignal );
 
-static void initialisation ( TypeBarriere type, int semEtatIdExt, int memEtatIdExt,
-			int semRequeteIdExt, int memRequeteIdExt, int semEntreeSortieIdExt, const char* nomCanalSortie )
-// Mode d'emploi :
-//
-// Contrat :
-//
-// Algorithme :
-//
+static void initialisation ( TypeBarriere type, int semEtatIdExt,
+	int memEtatIdExt, int semRequeteIdExt, int memRequeteIdExt,
+	int semEntreeSortieIdExt, const char* nomCanalSortie )
 {
 	// Initialisation des variables static
 	barriere = type;
@@ -85,12 +79,6 @@ static void initialisation ( TypeBarriere type, int semEtatIdExt, int memEtatIdE
 } //----- fin de initialisation
 
 static void mortVoiturier ( int numSignal )
-// Mode d'emploi :
-//
-// Contrat :
-//
-// Algorithme :
-//
 {
 	// Création des divers sembuf
 	struct sembuf reservation = {0, 1, 0};
@@ -110,7 +98,8 @@ static void mortVoiturier ( int numSignal )
 	StructMemEtat *etatParking = (StructMemEtat *) shmat(memEtatId, NULL, 0);
 	// On récupère l'état de la place libérée
 	EtatPlace etat = (EtatPlace) etatParking->places[WEXITSTATUS(status)];
-	// On décrémente le nombre de places prises et on retient le nombre de places libres
+	// On décrémente le nombre de places prises et on retient le nombre
+	// de places libres
 	unsigned int placesLibres = NB_PLACES - (--etatParking->nbPlacesPrises);
 	// On libère la mémoire
 	shmdt(etatParking);
@@ -122,11 +111,13 @@ static void mortVoiturier ( int numSignal )
 
 	if( placesLibres == 1 )
 	{
-		// Si le parking était plein, on sélectionne parmis les requêtes laquelle est prioritaire
+		// Si le parking était plein, on sélectionne parmis les requêtes
+		// laquelle est prioritaire
 		// On réserve la mémoire via le sémaphore correspondant
 		while(semop(semRequeteId,&reservation,1)==-1 && errno==EINTR);
 		// On attache la mémoire
-		StructMemRequete *memRequetes = (StructMemRequete *) shmat(memRequeteId, NULL, 0);
+		StructMemRequete *memRequetes = (StructMemRequete *) shmat(memRequeteId,
+			NULL, 0);
 		// On détermine la voiture prioritaire
 		unsigned int voiturePrioritaire = NB_BARRIERES_ENTREE;
 		for(unsigned int k=0; k<NB_BARRIERES_ENTREE; k++)
@@ -143,7 +134,8 @@ static void mortVoiturier ( int numSignal )
 				{
 				// Si l'actuel prioritaire est un autre ou sil est arrivé après
 					if( memRequetes->requetes[voiturePrioritaire].voiture.type == AUTRE
-						|| memRequetes->requetes[voiturePrioritaire].arrivee > memRequetes->requetes[k].arrivee )
+						|| memRequetes->requetes[voiturePrioritaire].arrivee >
+						memRequetes->requetes[k].arrivee )
 					{
 						// La requete k est prioritaire
 						voiturePrioritaire = k;
@@ -153,7 +145,8 @@ static void mortVoiturier ( int numSignal )
 				{
 					// Si l'actuel prioritaire est un autre et qu'il est arrivé après
 					if( memRequetes->requetes[voiturePrioritaire].voiture.type == AUTRE
-						&& memRequetes->requetes[voiturePrioritaire].arrivee > memRequetes->requetes[k].arrivee )
+						&& memRequetes->requetes[voiturePrioritaire].arrivee >
+						memRequetes->requetes[k].arrivee )
 					{
 						// La requete k est prioritaire
 						voiturePrioritaire = k;
@@ -165,24 +158,19 @@ static void mortVoiturier ( int numSignal )
 		//On libère la mémoire
 		shmdt(memRequetes);
 		semop(semRequeteId, &liberation, 1);
-		//On indique à l'entrée correspondante qu'elle peut faire entrer un usager, sauf si personne n'attend
+		//On indique à l'entrée correspondante qu'elle peut faire entrer un usager,
+		//sauf si personne n'attend
 		if(voiturePrioritaire < NB_BARRIERES_ENTREE)
 		{
 			if(semctl(semEntreeSortieId, voiturePrioritaire, SETVAL, 0) == -1)
 			{
-				Afficher(MESSAGE,"Erreur de sémaphore EntreeSortie");	
+				Afficher(MESSAGE,"Erreur de sémaphore EntreeSortie");
 			}
 		}
 	}
 } //----- fin de moteur
 
 static void moteur (  )
-// Mode d'emploi :
-//
-// Contrat :
-//
-// Algorithme :
-//
 {
 	int numPlaceVoiture;
 
@@ -220,11 +208,13 @@ static void destruction ( int numSignal )
 		sigaction(SIGCHLD, &actionChild, NULL);
 
 		// Destruction des voituriers en service
-		for(std::map<pid_t, unsigned int>::iterator i = voituriersEnService.begin(); i != voituriersEnService.end(); i++){
+		for(std::map<pid_t, unsigned int>::iterator i = voituriersEnService.begin();
+		 i != voituriersEnService.end(); i++){
 			kill(i->first, SIGUSR2);
 		}
 		// Attente de confirmation
-		for(std::map<pid_t, unsigned int>::iterator i = voituriersEnService.begin(); i != voituriersEnService.end(); i++){
+		for(std::map<pid_t, unsigned int>::iterator i = voituriersEnService.begin();
+		 i != voituriersEnService.end(); i++){
 			waitpid(i->first,NULL,0);
 		}
 
@@ -237,13 +227,8 @@ static void destruction ( int numSignal )
 //---------------------------------------------------- Fonctions publiques
 
 void Sortie ( TypeBarriere type, int semEtatIdExt, int memEtatIdExt,
-			int semRequeteIdExt, int memRequeteIdExt, int semEntreeSortieIdExt, const char* nomCanalSortie )
-// Mode d'emploi :
-//
-// Contrat :
-//
-// Algorithme :
-//
+			int semRequeteIdExt, int memRequeteIdExt, int semEntreeSortieIdExt,
+			const char* nomCanalSortie )
 {
 	initialisation(type, semEtatIdExt, memEtatIdExt,
 			semRequeteIdExt, memRequeteIdExt, semEntreeSortieIdExt, nomCanalSortie);

@@ -11,7 +11,7 @@
 
 //------------------------------------------------------------------------
 // Rôle de la tâche <SIMU>
-//
+// Tâche gérant les entrées clavier et l'affichage du menu
 //
 //------------------------------------------------------------------------
 
@@ -25,16 +25,9 @@
 //////////////////////////////////////////////////////////////////  PUBLIC
 //---------------------------------------------------- Fonctions publiques
 
-void Simu(const char* nomCanalBPP, const char* nomCanalBPA, const char* nomCanalGB, const char* nomCanalSortie);
-// Mode d'emploi :
-//
-// Contrat :
-//
+void Simu(const char* nomCanalBPP, const char* nomCanalBPA,
+  const char* nomCanalGB, const char* nomCanalSortie);
 
 void Commande(char code, unsigned int valeur);
-// Mode d'emploi :
-//
-// Contrat :
-//
 
 #endif // SIMU_H

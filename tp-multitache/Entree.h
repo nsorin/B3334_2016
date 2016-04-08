@@ -11,7 +11,7 @@
 
 //------------------------------------------------------------------------
 // Rôle de la tâche <ENTREE>
-//
+// Tâche gérant l'arrivée des voitures aux portes d'entrée
 //
 //------------------------------------------------------------------------
 
@@ -28,10 +28,7 @@
 //---------------------------------------------------- Fonctions publiques
 
 void Entree(TypeBarriere type, int semEtatId, int memEtatId, int semRequeteId,
-  int memRequeteId, int semEntreeSortieId, short unsigned int semEntreeSortieNum, const char* nomCanalSortie);
-// Mode d'emploi :
-//
-// Contrat :
-//
+  int memRequeteId, int semEntreeSortieId, short unsigned int semEntreeSortieNum,
+  const char* nomCanalSortie);
 
 #endif // ENTREE_H

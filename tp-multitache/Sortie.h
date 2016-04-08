@@ -1,18 +1,17 @@
 /*************************************************************************
-                           XXX  -  description
+                           SORTIE  -  description
                              -------------------
-    début                : XXX
-    copyright            : (C) XXX par XXX
-    e-mail               : XXX
+    début                : 18/03/16
+    copyright            : (C) B3334 par B3334
 *************************************************************************/
 
-//---------- Interface de la tâche <XXX> (fichier XXX.h) -------
+//---------- Interface de la tâche <SORTIE> (fichier SORTIE.h) -------
 #if ! defined ( SORTIE_H )
 #define SORTIE_H
 
 //------------------------------------------------------------------------
 // Rôle de la tâche <SORTIE>
-//
+// Tâche gérant les sorties des voitures à la porte de Sortie.
 //
 //------------------------------------------------------------------------
 
@@ -29,12 +28,8 @@
 
 //////////////////////////////////////////////////////////////////  PUBLIC
 //---------------------------------------------------- Fonctions publiques
-void Sortie ( TypeBarriere type, int semEtatId, int memEtatId, 
-			int semRequeteId, int memRequeteId, int semEntreeSortieId, const char* nomCanalSortie );
-// Mode d'emploi :
-//
-// Contrat :
-//
+void Sortie ( TypeBarriere type, int semEtatId, int memEtatId,
+			int semRequeteId, int memRequeteId, int semEntreeSortieId,
+			const char* nomCanalSortie );
 
 #endif // SORTIE_H
-
