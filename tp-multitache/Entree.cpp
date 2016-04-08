@@ -190,6 +190,8 @@ static void moteur()
       pid_t voiturier = GarerVoiture(barriere);
       // Ajout du voiturier dans la map des voituriers en service
       voituriersEnService.insert(pair<pid_t, Voiture>(voiturier,voiture));
+      // Tempo de 1 seconde
+      sleep(1);
     }
     else
     {
